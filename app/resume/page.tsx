@@ -1,64 +1,87 @@
 import { Container } from "@/components/ui/Container";
-import { H1, H2, Body } from "@/components/ui/Typography";
-import { Divider } from "@/components/ui/Divider";
+import { Display, Body, Caption } from "@/components/ui/Typography";
+import { ConstructionLine, Measure } from "@/components/ui/Structure";
+import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 const experience = [
   {
-    role: "Senior Product Designer",
-    company: "Design Studio",
-    period: "2021 — Present",
-    description: "Leading the design of complex enterprise tools and overseeing a team of 4 designers. Established the core design system used across 12 different product lines.",
+    role: "Intern",
+    company: "DataSync Systems",
+    period: "Sept 2024 to Feb 2025",
+    location: "Vadodara, Gujarat",
+    description: "Designed a responsive landing page for a hospital management system. Focused on establishing clear visual hierarchy for complex data tables and aligning interaction patterns with the existing brand system.",
   },
   {
-    role: "Product Designer",
-    company: "Tech Startup",
-    period: "2018 — 2021",
-    description: "Designed the end-to-end experience for a fintech application that scaled to 2M users. Conducted generative research to define the product roadmap.",
+    role: "Intern",
+    company: "Rishabh Software",
+    period: "Jan 2024 to June 2024",
+    location: "Vadodara, Gujarat",
+    description: "Built responsive frontend interfaces using React and Tailwind. Translated product requirements into logic, integrated APIs, and established reusable UI patterns across the application.",
+  },
+];
+
+const education = [
+  {
+    degree: "M.Des, Intelligent User Experience Design",
+    institution: "Dhirubhai Ambani University",
+    period: "2025 to Present",
+    location: "Gandhinagar, Gujarat",
   },
   {
-    role: "UX Designer",
-    company: "Creative Agency",
-    period: "2015 — 2018",
-    description: "Collaborated with global brands to design e-commerce experiences and marketing campaigns. Specialized in interaction design and accessibility.",
+    degree: "Undergraduate Degree",
+    institution: "ITM Vocational University",
+    period: "2020 to 2024",
+    location: "Vadodara, Gujarat",
   },
 ];
 
 export default function Resume() {
   return (
-    <div className="pt-32 pb-24">
+    <div className="pt-24 md:pt-40 pb-32">
       <Container>
-        <div className="max-w-3xl">
-          <H1 className="mb-6">Resume</H1>
-          <Body className="mb-16">A summary of my professional experience and education.</Body>
-          
-          <div className="flex flex-col gap-12">
-            {experience.map((job, i) => (
-              <div key={i} className="grid md:grid-cols-4 gap-4 md:gap-8 border-t border-zinc-900 pt-8 first:border-0 first:pt-0">
-                <div className="md:col-span-1">
-                  <div className="text-zinc-500 text-sm font-medium">{job.period}</div>
-                </div>
-                <div className="md:col-span-3">
-                  <h3 className="text-xl font-medium text-zinc-100 mb-1">{job.role}</h3>
-                  <div className="text-zinc-400 mb-4">{job.company}</div>
-                  <Body className="text-sm">{job.description}</Body>
-                </div>
+        <Reveal>
+          <Display className="mb-24">Experience</Display>
+        </Reveal>
+
+        <Stagger className="flex flex-col gap-24 mb-32">
+          {experience.map((job, i) => (
+            <StaggerItem key={i} className="grid md:grid-cols-12 gap-8">
+              <div className="md:col-span-3">
+                <Caption className="block mb-1">{job.period}</Caption>
+                <Caption className="block text-stone-300">{job.location}</Caption>
               </div>
-            ))}
-          </div>
-          
-          <Divider />
-          
-          <H2 className="mb-8">Education</H2>
-          <div className="grid md:grid-cols-4 gap-4 md:gap-8 border-t border-zinc-900 pt-8">
-            <div className="md:col-span-1">
-              <div className="text-zinc-500 text-sm font-medium">2011 — 2015</div>
-            </div>
-            <div className="md:col-span-3">
-              <h3 className="text-xl font-medium text-zinc-100 mb-1">Bachelor of Design</h3>
-              <div className="text-zinc-400">National Institute of Design</div>
-            </div>
-          </div>
-        </div>
+              <div className="md:col-span-6">
+                <h3 className="text-xl font-medium text-stone-900 mb-1">{job.role}</h3>
+                <p className="text-stone-400 mb-6 text-sm">{job.company}</p>
+                <Body className="text-sm">{job.description}</Body>
+              </div>
+            </StaggerItem>
+          ))}
+        </Stagger>
+
+        <ConstructionLine className="mb-24" />
+
+        <Reveal>
+          <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-stone-900 mb-16">Education</h2>
+        </Reveal>
+        <Stagger className="flex flex-col gap-16">
+          {education.map((edu, i) => (
+            <StaggerItem key={i} className="grid md:grid-cols-12 gap-8">
+              <div className="md:col-span-3">
+                <Caption className="block mb-1">{edu.period}</Caption>
+                <Caption className="block text-stone-300">{edu.location}</Caption>
+              </div>
+              <div className="md:col-span-6">
+                <h3 className="text-lg font-medium text-stone-900 mb-1">{edu.degree}</h3>
+                <p className="text-stone-400 text-sm">{edu.institution}</p>
+              </div>
+            </StaggerItem>
+          ))}
+        </Stagger>
+
+        <Reveal delay={0.2}>
+          <Measure text="updated 2025" className="mt-32 opacity-50" />
+        </Reveal>
       </Container>
     </div>
   );

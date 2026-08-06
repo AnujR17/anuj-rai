@@ -11,3 +11,19 @@ export function Container({ className, as: Component = "div", children, ...props
     </Component>
   );
 }
+
+export function Wide({ className, as: Component = "div", children, ...props }: ContainerProps) {
+  return (
+    <Component className={cn("mx-auto max-w-7xl px-6 md:px-12 w-full", className)} {...props}>
+      {children}
+    </Component>
+  );
+}
+
+export function Full({ className, as: Component = "div", children, ...props }: ContainerProps) {
+  return (
+    <Component className={cn("w-full", className)} {...props}>
+      {children}
+    </Component>
+  );
+}

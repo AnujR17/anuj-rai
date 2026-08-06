@@ -1,89 +1,71 @@
 export interface Project {
   slug: string;
   title: string;
+  observation: string;
   summary: string;
   type: string;
   year: string;
   roles: {
     led: string[];
-    contributed: string[];
-    team: string[];
+    explored: string[];
   };
   overview: string;
-  problem: string;
-  context: string;
-  research: string;
-  insights: string[];
-  designDecisions: string[];
-  iterations: string;
-  solution: string;
-  outcome: string;
-  reflection: string;
-  accentColor: string;
+  research: string[];
+  design: string[];
+  outcomes: string[];
 }
 
 export const projects: Project[] = [
   {
-    slug: "royal-enfield-himalayan",
-    title: "Royal Enfield Himalayan Dashboard",
-    summary: "Designing the digital experience for an adventure motorcycle.",
-    type: "Digital Product Design",
+    slug: "medtimer",
+    title: "Medtimer",
+    observation: "Most medication reminders assume the problem is forgetting. It isn't. The problem is that the reminder doesn't fit the routine.",
+    summary: "A medicine management system for senior citizens in India, designed around the rhythms people already have rather than the schedules doctors prescribe.",
+    type: "Field Research, Interaction Design",
     year: "2024",
     roles: {
-      led: ["UX Architecture", "Interaction Design"],
-      contributed: ["User Research", "Prototyping"],
-      team: ["Industrial Design Team", "Engineering"],
+      led: ["Field Research", "Interaction Design", "Prototyping"],
+      explored: ["Concept Ideation"],
     },
-    overview: "[Placeholder] A comprehensive overview of the digital dashboard design for the new Royal Enfield Himalayan...",
-    problem: "[Placeholder] Adventure riders need critical information at a glance without losing focus on treacherous terrain.",
-    context: "[Placeholder] The motorcycle industry is shifting towards connected digital clusters...",
-    research: "[Placeholder] Conducted field studies with 40+ adventure riders in Spiti Valley...",
-    insights: [
-      "Glare visibility is the #1 pain point.",
-      "Riders prefer physical controls over touch for safety.",
+    overview: "Medication non-adherence among Indian seniors is rarely about forgetting. It's about pill organizers that don't match meal times, labels too small to read, and digital reminders that interrupt rather than assist. Medtimer started with sitting in living rooms and watching how people actually manage their medication, then working backwards from those routines.",
+    research: [
+      "Sat with five families in Vadodara to observe daily medication routines. The most common failure point wasn't memory. It was the gap between when the reminder went off and when the person could actually take the pill.",
+      "Mapped existing routines against prescribed schedules. In every case, the prescribed timing conflicted with at least one daily habit, usually meals or prayer.",
     ],
-    designDecisions: [
-      "High-contrast day/night mode UI.",
-      "Joystick-navigable interface.",
+    design: [
+      "Abandoned the standard reminder model. Instead, anchored medication prompts to existing daily rituals the person already follows.",
+      "Reduced the interface to a single screen with three states: morning, afternoon, night. No settings, no calendars, no feature density.",
+      "Tested physical prototypes (paper mockups placed next to actual pill organizers) before building any digital interface.",
     ],
-    iterations: "[Placeholder] 3 major iterations focusing on information density vs readability...",
-    solution: "[Placeholder] A circular digital cluster featuring turn-by-turn navigation and vital stats...",
-    outcome: "[Placeholder] Deployed to production, receiving positive reviews for legibility.",
-    reflection: "[Placeholder] Designing for extreme environments requires prioritizing legibility over aesthetics.",
-    accentColor: "bg-zinc-800 text-zinc-100",
-  }
-];
-
-const otherProjectTitles = [
-  "Intelligent Waste Disposal System",
-  "India in Orbit",
-  "Meditimer App",
-  "Meditimer Product Strategy",
-];
-
-otherProjectTitles.forEach((title) => {
-  const slug = title.toLowerCase().replace(/\s+/g, '-');
-  projects.push({
-    slug,
-    title,
-    summary: "A brief summary of this placeholder project exploring complex systems.",
-    type: "Case Study",
+    outcomes: [
+      "An interface that aligns with routine rather than competing with it.",
+      "Participants in testing sessions stopped asking 'how do I use this' and started asking 'can I keep this.'"
+    ]
+  },
+  {
+    slug: "two-wheeler-dashboard",
+    title: "Two-Wheeler Dashboard",
+    observation: "Riders in India glance at their dashboard for less than half a second. Most dashboard designs assume they're looking for at least two.",
+    summary: "Redesigning the digital cluster for two-wheelers to survive real riding conditions: vibration, glare, single-hand operation, and the constant pull of a phone mounted on the handlebar.",
+    type: "Interface Design, Field Observation",
     year: "2023",
     roles: {
-      led: ["Role 1"],
-      contributed: ["Role 2"],
-      team: ["Team members"],
+      led: ["Mixed-Method Research", "UI Design"],
+      explored: ["Gesture Interaction"],
     },
-    overview: "[Placeholder] An overview of the project and its goals.",
-    problem: "[Placeholder] The core problem that needed solving.",
-    context: "[Placeholder] The background and constraints.",
-    research: "[Placeholder] Methods and findings.",
-    insights: ["[Placeholder] Insight 1", "[Placeholder] Insight 2"],
-    designDecisions: ["[Placeholder] Decision 1", "[Placeholder] Decision 2"],
-    iterations: "[Placeholder] The process of refining the design.",
-    solution: "[Placeholder] The final proposed solution.",
-    outcome: "[Placeholder] Results and metrics.",
-    reflection: "[Placeholder] Lessons learned.",
-    accentColor: "bg-zinc-900 text-zinc-300",
-  });
-});
+    overview: "Two-wheeler dashboards in India are designed in studios with controlled lighting and stable surfaces. Riders use them on potholed roads at 60 km/h in direct sunlight. This project started with riding through Spiti Valley and documenting every moment a rider looked away from the road, then redesigning the dashboard to eliminate as many of those moments as possible.",
+    research: [
+      "Rode through Spiti Valley documenting when and why riders glanced at the dashboard. Navigation was the primary trigger, followed by speed, then fuel. Everything else was ignored.",
+      "Surveyed 50+ riders. 73% had a phone mounted on the handlebar. The dashboard had become secondary to the phone, mostly because the phone showed maps.",
+    ],
+    design: [
+      "Established a strict visual hierarchy: navigation cues visible at arm's length, speed readable in peripheral vision, everything else accessible but not competing.",
+      "Tested contrast and type sizes in direct sunlight and shade. Increased minimum type size by 40% from industry standard.",
+      "Explored gesture-based mode switching so riders never need to take a hand off the handlebar to change display modes.",
+    ],
+    outcomes: [
+      "A dashboard layout that adapts to riding context and reduces glance time.",
+      "Gesture concepts that keep both hands on the handlebar during mode changes."
+    ]
+  }
+];

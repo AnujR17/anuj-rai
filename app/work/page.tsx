@@ -1,45 +1,113 @@
-import { Container } from "@/components/ui/Container";
-import { H1, Body } from "@/components/ui/Typography";
+import { Container, Wide, Full } from "@/components/ui/Container";
+import { Display, Headline, Body, Caption, Quote } from "@/components/ui/Typography";
+import { ConstructionLine } from "@/components/ui/Structure";
+import { Reveal, RevealImage } from "@/components/ui/Reveal";
 import Link from "next/link";
 import { projects } from "@/data/projects";
-import { ArrowRight } from "lucide-react";
 
 export default function Work() {
-  return (
-    <div className="pt-32 pb-24">
-      <Container>
-        <H1 className="mb-6">Selected Work</H1>
-        <Body className="max-w-2xl mb-24">
-          A collection of projects focusing on deep research, structured reasoning, and intentional execution.
-        </Body>
+  const medtimer = projects[0];
+  const dashboard = projects[1];
 
-        <div className="grid grid-cols-1 gap-32">
-          {projects.map((project) => (
-            <div key={project.slug} className="group">
-              <Link href={`/work/${project.slug}`}>
-                <div className="bg-zinc-900 aspect-[21/9] rounded-sm mb-8 relative overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center text-zinc-700">
-                    [Large Project Image Placeholder]
-                  </div>
+  return (
+    <div className="pt-24 md:pt-40 pb-32">
+      <Container className="mb-32">
+        <Reveal>
+          <Display className="max-w-3xl mb-8">Selected evidence and observations.</Display>
+          <Body className="max-w-2xl text-stone-600">
+            A collection of problems studied in the field and resolved through interface design and frontend engineering.
+          </Body>
+        </Reveal>
+      </Container>
+
+      {/* ──────────────────────────────────────────────────────────
+          PROJECT 1: Immersive image, offset text, leading with observation
+          ────────────────────────────────────────────────────────── */}
+      <section className="mb-40">
+        <Link href={`/work/${medtimer.slug}`} className="block group">
+          <Wide className="mb-12">
+            <RevealImage>
+              <div className="aspect-[16/9] md:aspect-[21/9] bg-stone-100 relative flex items-center justify-center overflow-hidden">
+                <span className="font-mono text-sm text-stone-300">[Medtimer Study Overview]</span>
+              </div>
+            </RevealImage>
+          </Wide>
+          
+          <Container>
+            <Reveal>
+              <div className="grid md:grid-cols-12 gap-8">
+                <div className="md:col-span-5">
+                  <h2 className="text-2xl md:text-4xl font-medium tracking-tight text-stone-900 mb-4 group-hover:text-stone-500 transition-colors">
+                    {medtimer.title}
+                  </h2>
+                  <Caption className="block text-stone-400 mb-2">
+                    {medtimer.type} · {medtimer.year}
+                  </Caption>
                 </div>
-                <div className="grid md:grid-cols-12 gap-8">
-                  <div className="md:col-span-8">
-                    <h2 className="text-3xl font-medium text-zinc-100 mb-4 group-hover:text-zinc-300 transition-colors">
-                      {project.title}
-                    </h2>
-                    <Body>{project.summary}</Body>
-                  </div>
-                  <div className="md:col-span-4 flex md:justify-end items-start md:mt-2">
-                    <div className="inline-flex items-center text-sm font-medium text-zinc-100 border-b border-zinc-700 pb-1 group-hover:border-zinc-400 transition-colors">
-                      Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
+                <div className="md:col-span-6 md:col-start-7">
+                  <Quote className="text-lg md:text-xl not-italic mb-6 text-stone-800">
+                    "{medtimer.observation}"
+                  </Quote>
+                  <Body className="text-sm">{medtimer.summary}</Body>
+                </div>
+              </div>
+            </Reveal>
+          </Container>
+        </Link>
+      </section>
+
+      {/* Visual Break */}
+      <div className="py-12 flex justify-center">
+        <ConstructionLine className="max-w-[100px]" />
+      </div>
+
+      {/* ──────────────────────────────────────────────────────────
+          PROJECT 2: Text-led, overlapping detail images
+          ────────────────────────────────────────────────────────── */}
+      <section className="py-24">
+        <Link href={`/work/${dashboard.slug}`} className="block group">
+          <Container>
+            <div className="grid md:grid-cols-12 gap-12 items-center">
+              
+              {/* Text Content */}
+              <div className="md:col-span-5 order-2 md:order-1">
+                <Reveal>
+                  <h2 className="text-2xl md:text-4xl font-medium tracking-tight text-stone-900 mb-6 group-hover:text-stone-500 transition-colors">
+                    {dashboard.title}
+                  </h2>
+                  <Body className="mb-6 text-stone-700">
+                    {dashboard.observation}
+                  </Body>
+                  <Body className="text-sm mb-8 text-stone-500">
+                    {dashboard.summary}
+                  </Body>
+                  <Caption className="block text-stone-400">
+                    {dashboard.type} · {dashboard.year}
+                  </Caption>
+                </Reveal>
+              </div>
+
+              {/* Image Collage */}
+              <div className="md:col-span-6 md:col-start-7 order-1 md:order-2">
+                <RevealImage>
+                  <div className="relative w-full aspect-square">
+                    {/* Back image */}
+                    <div className="absolute top-0 right-0 w-4/5 aspect-[4/3] bg-stone-100 flex items-center justify-center">
+                      <span className="font-mono text-[10px] text-stone-300">[Field test]</span>
+                    </div>
+                    {/* Front overlapping image */}
+                    <div className="absolute bottom-0 left-0 w-3/5 aspect-square bg-stone-200 border-4 border-[#fafaf9] flex items-center justify-center">
+                      <span className="font-mono text-[10px] text-stone-400">[Interface detail]</span>
                     </div>
                   </div>
-                </div>
-              </Link>
+                </RevealImage>
+              </div>
+
             </div>
-          ))}
-        </div>
-      </Container>
+          </Container>
+        </Link>
+      </section>
+
     </div>
   );
 }

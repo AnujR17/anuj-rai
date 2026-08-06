@@ -1,18 +1,16 @@
 import { Container } from "@/components/ui/Container";
-import { Body } from "@/components/ui/Typography";
-import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="mt-auto border-t border-zinc-900 py-12">
+    <footer className="mt-auto border-t border-stone-200 py-8">
       <Container className="flex flex-col md:flex-row items-center justify-between gap-4">
-        <Body className="text-sm">
-          © {new Date().getFullYear()} Designer. All rights reserved.
-        </Body>
-        <div className="flex items-center gap-6 text-sm text-zinc-500">
-          <Link href="/contact" className="hover:text-zinc-100 transition-colors">Contact</Link>
-          <a href="#" className="hover:text-zinc-100 transition-colors">LinkedIn</a>
-          <a href="#" className="hover:text-zinc-100 transition-colors">Twitter</a>
+        <p className="text-sm text-stone-400">
+          © {new Date().getFullYear()} Anuj Rai
+        </p>
+        <div className="flex items-center gap-6 text-sm text-stone-400">
+          <a href="#" className="hover:text-stone-900 transition-colors">LinkedIn</a>
+          <a href="#" className="hover:text-stone-900 transition-colors">GitHub</a>
+          <a href="#" className="hover:text-stone-900 transition-colors">Behance</a>
         </div>
       </Container>
     </footer>
