@@ -1,5 +1,5 @@
 import { Container, Wide, Full } from "@/components/ui/Container";
-import { Display, Headline, Body, Caption, Quote } from "@/components/ui/Typography";
+import { Display, Headline, Body, Quote } from "@/components/ui/Typography";
 import { ConstructionLine } from "@/components/ui/Structure";
 import { Reveal, RevealImage } from "@/components/ui/Reveal";
 import Link from "next/link";
@@ -13,9 +13,9 @@ export default function Work() {
     <div className="pt-24 md:pt-40 pb-32">
       <Container className="mb-32">
         <Reveal>
-          <Display className="max-w-3xl mb-8">Selected evidence and observations.</Display>
+          <Display className="max-w-3xl mb-8">Selected Work.</Display>
           <Body className="max-w-2xl text-stone-600">
-            A collection of problems studied in the field and resolved through interface design and frontend engineering.
+            A collection of digital products and interfaces I have designed and built.
           </Body>
         </Reveal>
       </Container>
@@ -40,9 +40,9 @@ export default function Work() {
                   <h2 className="text-2xl md:text-4xl font-medium tracking-tight text-stone-900 mb-4 group-hover:text-stone-500 transition-colors">
                     {medtimer.title}
                   </h2>
-                  <Caption className="block text-stone-400 mb-2">
+                  <p className="text-sm text-stone-400 mb-2">
                     {medtimer.type} · {medtimer.year}
-                  </Caption>
+                  </p>
                 </div>
                 <div className="md:col-span-6 md:col-start-7">
                   <Quote className="text-lg md:text-xl not-italic mb-6 text-stone-800">
@@ -81,9 +81,9 @@ export default function Work() {
                   <Body className="text-sm mb-8 text-stone-500">
                     {dashboard.summary}
                   </Body>
-                  <Caption className="block text-stone-400">
+                  <p className="text-sm text-stone-400">
                     {dashboard.type} · {dashboard.year}
-                  </Caption>
+                  </p>
                 </Reveal>
               </div>
 

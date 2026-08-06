@@ -1,5 +1,5 @@
 import { Container, Wide, Full } from "@/components/ui/Container";
-import { Display, Headline, Body, Caption, Quote } from "@/components/ui/Typography";
+import { Display, Headline, Body, Quote } from "@/components/ui/Typography";
 import { ConstructionLine, Measure } from "@/components/ui/Structure";
 import { Reveal, RevealImage, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import Link from "next/link";
@@ -18,21 +18,15 @@ export default function Home() {
           ────────────────────────────────────────────────────────── */}
       <section className="min-h-[75vh] flex flex-col justify-end pb-20 pt-32">
         <Container>
-          <Reveal>
-            <Caption className="block mb-10 text-stone-300">Anuj Rai, 2025</Caption>
-          </Reveal>
           <Stagger className="max-w-4xl">
             <StaggerItem>
-              <Display className="mb-2">I spend more time</Display>
+              <Display className="mb-2">Hi, I'm Anuj Rai.</Display>
             </StaggerItem>
             <StaggerItem>
-              <Display className="text-stone-400 mb-2">with the problem</Display>
+              <Display className="text-stone-400 mb-2">I design and build</Display>
             </StaggerItem>
             <StaggerItem>
-              <Display>than most people spend</Display>
-            </StaggerItem>
-            <StaggerItem>
-              <Display className="text-stone-400">on the solution.</Display>
+              <Display className="text-stone-400">digital products.</Display>
             </StaggerItem>
           </Stagger>
         </Container>
@@ -57,7 +51,6 @@ export default function Home() {
                     <span className="font-mono text-[10px] text-stone-300">[Artifact]</span>
                   </div>
                 </RevealImage>
-                <Caption className="block px-1">{item.label}</Caption>
               </StaggerItem>
             ))}
           </Stagger>
@@ -76,7 +69,7 @@ export default function Home() {
             </Quote>
           </Reveal>
           <Reveal delay={0.2}>
-            <Measure text="guiding principle" className="max-w-xs mx-auto mt-16 opacity-50" />
+            <Measure className="max-w-xs mx-auto mt-16 opacity-50" />
           </Reveal>
         </Container>
       </section>

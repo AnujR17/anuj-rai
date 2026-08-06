@@ -1,6 +1,6 @@
 import { Container, Wide, Full } from "@/components/ui/Container";
-import { Headline, Body, Quote, Caption } from "@/components/ui/Typography";
-import { ConstructionLine, Measure } from "@/components/ui/Structure";
+import { Headline, Body, Quote } from "@/components/ui/Typography";
+import { ConstructionLine } from "@/components/ui/Structure";
 import { Reveal, RevealImage, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
@@ -28,7 +28,7 @@ function DashboardCaseStudy({ project }: { project: typeof projects[0] }) {
       <Container className="pt-24 md:pt-32 mb-16">
         <Reveal>
           <Link href="/work" className="inline-flex items-center text-xs text-stone-400 hover:text-stone-900 transition-colors mb-16">
-            <ArrowLeft className="mr-2 w-3.5 h-3.5" /> Index
+            <ArrowLeft className="mr-2 w-3.5 h-3.5" /> Work
           </Link>
           <Headline className="text-4xl md:text-5xl lg:text-6xl mb-8 max-w-4xl">{project.title}</Headline>
           <Quote className="not-italic text-stone-700 max-w-3xl">{project.observation}</Quote>
@@ -42,7 +42,7 @@ function DashboardCaseStudy({ project }: { project: typeof projects[0] }) {
             <span className="font-mono text-sm text-stone-300">[Dashboard Context Overview]</span>
           </div>
           <Container className="mt-4">
-            <Caption>Dashboard environment mapping, Spiti Valley</Caption>
+            <p className="text-xs text-stone-500">Dashboard environment mapping, Spiti Valley</p>
           </Container>
         </Full>
       </RevealImage>
@@ -57,12 +57,12 @@ function DashboardCaseStudy({ project }: { project: typeof projects[0] }) {
             <div className="md:col-span-3 md:col-start-10">
               <div className="space-y-6 pt-2 border-t border-stone-200">
                 <div>
-                  <Caption className="block text-stone-400 mb-1">Led</Caption>
-                  {project.roles.led.map(r => <p key={r} className="text-sm text-stone-800">{r}</p>)}
+                  <p className="text-sm font-medium text-stone-900 mb-1">Led</p>
+                  {project.roles.led.map(r => <p key={r} className="text-sm text-stone-500">{r}</p>)}
                 </div>
                 <div>
-                  <Caption className="block text-stone-400 mb-1">Explored</Caption>
-                  {project.roles.explored.map(r => <p key={r} className="text-sm text-stone-800">{r}</p>)}
+                  <p className="text-sm font-medium text-stone-900 mb-1">Explored</p>
+                  {project.roles.explored.map(r => <p key={r} className="text-sm text-stone-500">{r}</p>)}
                 </div>
               </div>
             </div>
@@ -78,7 +78,7 @@ function DashboardCaseStudy({ project }: { project: typeof projects[0] }) {
               <div className="aspect-[4/3] bg-stone-100 flex items-center justify-center mb-3">
                 <span className="font-mono text-[10px] text-stone-300">[Visual Hierarchy Analysis]</span>
               </div>
-              <Caption>Analyzing glance priority under vibration.</Caption>
+              <p className="text-xs text-stone-500">Analyzing glance priority under vibration.</p>
             </div>
             <div className="md:col-span-4 md:col-start-9">
               <Stagger>
@@ -135,7 +135,7 @@ function DashboardCaseStudy({ project }: { project: typeof projects[0] }) {
         <Container>
           <Reveal>
             <div className="max-w-3xl">
-              <Caption className="block text-stone-400 mb-6">Outcome</Caption>
+              <p className="text-sm font-medium text-stone-900 mb-6">Outcome</p>
               <Quote className="text-2xl not-italic text-stone-900 mb-8">{project.outcomes[0]}</Quote>
               <Body className="text-sm">{project.outcomes[1]}</Body>
             </div>
@@ -158,7 +158,7 @@ function MedtimerCaseStudy({ project }: { project: typeof projects[0] }) {
       <Container className="pt-24 md:pt-32 mb-16">
         <Reveal>
           <Link href="/work" className="inline-flex items-center text-xs text-stone-400 hover:text-stone-900 transition-colors mb-16">
-            <ArrowLeft className="mr-2 w-3.5 h-3.5" /> Index
+            <ArrowLeft className="mr-2 w-3.5 h-3.5" /> Work
           </Link>
           <Headline className="text-4xl md:text-5xl lg:text-6xl mb-8 max-w-4xl">{project.title}</Headline>
         </Reveal>
@@ -172,7 +172,7 @@ function MedtimerCaseStudy({ project }: { project: typeof projects[0] }) {
               <div className="aspect-[3/4] bg-stone-100 flex items-center justify-center mb-3">
                 <span className="font-mono text-[10px] text-stone-300">[Pill Organizer Study]</span>
               </div>
-              <Caption>Documenting physical routine gaps.</Caption>
+              <p className="text-xs text-stone-500">Documenting physical routine gaps.</p>
             </RevealImage>
           </div>
           <div className="md:col-span-5 md:col-start-7">
@@ -181,12 +181,12 @@ function MedtimerCaseStudy({ project }: { project: typeof projects[0] }) {
               <Body className="text-sm mb-12">{project.overview}</Body>
               <div className="flex gap-12 border-t border-stone-200 pt-6">
                 <div>
-                  <Caption className="block text-stone-400 mb-1">Led</Caption>
-                  {project.roles.led.map(r => <p key={r} className="text-sm text-stone-800">{r}</p>)}
+                  <p className="text-sm font-medium text-stone-900 mb-1">Led</p>
+                  {project.roles.led.map(r => <p key={r} className="text-sm text-stone-500">{r}</p>)}
                 </div>
                 <div>
-                  <Caption className="block text-stone-400 mb-1">Explored</Caption>
-                  {project.roles.explored.map(r => <p key={r} className="text-sm text-stone-800">{r}</p>)}
+                  <p className="text-sm font-medium text-stone-900 mb-1">Explored</p>
+                  {project.roles.explored.map(r => <p key={r} className="text-sm text-stone-500">{r}</p>)}
                 </div>
               </div>
             </Reveal>
@@ -198,7 +198,7 @@ function MedtimerCaseStudy({ project }: { project: typeof projects[0] }) {
       <section className="py-24 bg-stone-50">
         <Container>
           <Reveal>
-            <Caption className="block text-stone-400 mb-12">Field Observations</Caption>
+            <p className="text-sm font-medium text-stone-900 mb-12">Field Observations</p>
           </Reveal>
           <Stagger className="space-y-16">
             {project.research.map((r, i) => (
@@ -231,19 +231,19 @@ function MedtimerCaseStudy({ project }: { project: typeof projects[0] }) {
                 <div className="aspect-[16/10] bg-stone-100 flex items-center justify-center mb-3">
                   <span className="font-mono text-[10px] text-stone-300">[Paper Test in Kitchen]</span>
                 </div>
-                <Caption>Testing physical context before digital.</Caption>
+                <p className="text-xs text-stone-500">Testing physical context before digital.</p>
               </div>
               <div className="shrink-0 w-[60vw] md:w-[400px] snap-center">
                 <div className="aspect-[4/5] bg-stone-100 flex items-center justify-center mb-3">
                   <span className="font-mono text-[10px] text-stone-300">[Digital State 1]</span>
                 </div>
-                <Caption>Morning state.</Caption>
+                <p className="text-xs text-stone-500">Morning state.</p>
               </div>
               <div className="shrink-0 w-[60vw] md:w-[400px] snap-center">
                 <div className="aspect-[4/5] bg-stone-100 flex items-center justify-center mb-3">
                   <span className="font-mono text-[10px] text-stone-300">[Digital State 2]</span>
                 </div>
-                <Caption>Evening state.</Caption>
+                <p className="text-xs text-stone-500">Evening state.</p>
               </div>
             </div>
           </RevealImage>

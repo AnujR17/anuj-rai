@@ -1,5 +1,5 @@
 import { Container } from "@/components/ui/Container";
-import { Headline, Body, Caption } from "@/components/ui/Typography";
+import { Headline, Body } from "@/components/ui/Typography";
 import { Measure } from "@/components/ui/Structure";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 import { ArrowUpRight } from "lucide-react";
@@ -21,13 +21,13 @@ export default function Contact() {
           <div className="md:col-span-3 md:col-start-9 pt-2">
             <Stagger>
               <StaggerItem className="mb-12">
-                <Caption className="block text-stone-400 mb-3">Email</Caption>
+                <p className="text-sm font-medium text-stone-900 mb-2">Email</p>
                 <a href="mailto:anujrai2025@example.com" className="text-sm font-medium text-stone-900 hover:text-stone-400 transition-colors break-all">
                   anujrai2025@example.com
                 </a>
               </StaggerItem>
               <StaggerItem>
-                <Caption className="block text-stone-400 mb-3">Network</Caption>
+                <p className="text-sm font-medium text-stone-900 mb-2">Network</p>
                 <div className="flex flex-col gap-2">
                   <a href="#" className="inline-flex items-center gap-1 text-sm font-medium text-stone-900 hover:text-stone-400 transition-colors">
                     LinkedIn <ArrowUpRight className="w-3 h-3" />

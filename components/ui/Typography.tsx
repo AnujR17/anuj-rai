@@ -7,7 +7,7 @@ interface TypographyProps extends React.HTMLAttributes<HTMLElement> {
 export function Display({ className, as: Component = "h1", ...props }: TypographyProps) {
   return (
     <Component
-      className={cn("text-4xl md:text-5xl lg:text-[4.25rem] font-medium tracking-tight text-stone-900 leading-[1.1]", className)}
+      className={cn("text-4xl md:text-5xl lg:text-[4.25rem] font-medium tracking-tighter text-stone-900 leading-[1.1]", className)}
       {...props}
     />
   );
@@ -16,7 +16,7 @@ export function Display({ className, as: Component = "h1", ...props }: Typograph
 export function Headline({ className, as: Component = "h2", ...props }: TypographyProps) {
   return (
     <Component
-      className={cn("text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight text-stone-900 leading-snug", className)}
+      className={cn("text-2xl md:text-3xl lg:text-4xl font-medium tracking-tighter text-stone-900 leading-snug", className)}
       {...props}
     />
   );
@@ -35,14 +35,7 @@ export function Body({ className, as: Component = "p", ...props }: TypographyPro
   return <Component className={cn("text-base md:text-lg text-stone-500 font-light leading-relaxed max-w-[60ch]", className)} {...props} />;
 }
 
-export function Caption({ className, as: Component = "span", ...props }: TypographyProps) {
-  return (
-    <Component
-      className={cn("font-mono text-[11px] text-stone-400 leading-tight", className)}
-      {...props}
-    />
-  );
-}
+
 
 export function Meta({ className, as: Component = "span", ...props }: TypographyProps) {
   return (

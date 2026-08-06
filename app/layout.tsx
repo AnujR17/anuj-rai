@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { UnderConstruction } from "@/components/ui/UnderConstruction";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} antialiased h-full`}>
       <body className="min-h-full flex flex-col bg-[#fafaf9] text-[#1c1917] font-sans pt-20">
+        <UnderConstruction />
         <Navbar />
         <main className="flex-1 flex flex-col relative z-0">
           {children}

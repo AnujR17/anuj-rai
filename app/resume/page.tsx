@@ -1,5 +1,5 @@
 import { Container } from "@/components/ui/Container";
-import { Display, Body, Caption } from "@/components/ui/Typography";
+import { Display, Body } from "@/components/ui/Typography";
 import { ConstructionLine, Measure } from "@/components/ui/Structure";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
@@ -47,8 +47,8 @@ export default function Resume() {
           {experience.map((job, i) => (
             <StaggerItem key={i} className="grid md:grid-cols-12 gap-8">
               <div className="md:col-span-3">
-                <Caption className="block mb-1">{job.period}</Caption>
-                <Caption className="block text-stone-300">{job.location}</Caption>
+                <p className="text-sm font-medium text-stone-900 mb-1">{job.period}</p>
+                <p className="text-sm text-stone-400">{job.location}</p>
               </div>
               <div className="md:col-span-6">
                 <h3 className="text-xl font-medium text-stone-900 mb-1">{job.role}</h3>
@@ -62,14 +62,15 @@ export default function Resume() {
         <ConstructionLine className="mb-24" />
 
         <Reveal>
-          <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-stone-900 mb-16">Education</h2>
+          <Display className="mb-24">Education</Display>
         </Reveal>
+        
         <Stagger className="flex flex-col gap-16">
           {education.map((edu, i) => (
             <StaggerItem key={i} className="grid md:grid-cols-12 gap-8">
               <div className="md:col-span-3">
-                <Caption className="block mb-1">{edu.period}</Caption>
-                <Caption className="block text-stone-300">{edu.location}</Caption>
+                <p className="text-sm font-medium text-stone-900 mb-1">{edu.period}</p>
+                <p className="text-sm text-stone-400">{edu.location}</p>
               </div>
               <div className="md:col-span-6">
                 <h3 className="text-lg font-medium text-stone-900 mb-1">{edu.degree}</h3>

@@ -6,7 +6,7 @@ import { cn } from "@/components/utils/cn";
 import { Container } from "@/components/ui/Container";
 
 const navItems = [
-  { path: "/", label: "Index" },
+  { path: "/", label: "Home" },
   { path: "/work", label: "Work" },
   { path: "/resume", label: "Resume" },
 ];

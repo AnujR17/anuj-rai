@@ -1,5 +1,5 @@
 import { Container, Wide } from "@/components/ui/Container";
-import { Display, Headline, Body, Caption, Quote } from "@/components/ui/Typography";
+import { Display, Headline, Body, Quote } from "@/components/ui/Typography";
 import { ConstructionLine, Measure } from "@/components/ui/Structure";
 import { Reveal, RevealImage, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
@@ -15,7 +15,7 @@ export default function About() {
         <Container>
           <Reveal>
             <Display className="max-w-4xl mb-16">
-              I am interested in the friction between designed systems and human reality.
+              I design interfaces and build frontend systems.
             </Display>
           </Reveal>
           
@@ -52,7 +52,7 @@ export default function About() {
           <RevealImage>
             <div className="relative aspect-[16/9] md:aspect-[21/9] bg-stone-100 flex items-center justify-center overflow-hidden">
               <span className="font-mono text-sm text-stone-300">[Large Environmental Portrait / Workspace]</span>
-              <Caption className="absolute bottom-4 right-6 text-stone-400">Gandhinagar, 2025</Caption>
+              <p className="absolute bottom-4 right-6 text-xs text-stone-400">Gandhinagar, 2025</p>
             </div>
           </RevealImage>
         </Wide>
@@ -106,7 +106,7 @@ export default function About() {
             <div className="md:col-span-4">
               <Reveal>
                 <p className="text-sm font-medium text-stone-900 mb-1">Academic Background</p>
-                <Caption className="block text-stone-400 mb-6">Dhirubhai Ambani University</Caption>
+                <p className="text-sm text-stone-400 mb-6">Dhirubhai Ambani University</p>
                 <Body className="text-sm">
                   Currently pursuing an M.Des in Intelligent User Experience Design (2025), building on a foundational undergraduate degree from ITM Vocational University (2024).
                 </Body>
