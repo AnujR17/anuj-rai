@@ -31,7 +31,7 @@ export function Navbar() {
                   aria-current={isActive ? "page" : undefined}
                   className={cn(
                     "text-sm font-medium transition-colors hover:text-stone-900",
-                    isActive ? "text-stone-900" : "text-stone-400"
+                    isActive ? "text-stone-900" : "text-stone-600"
                   )}
                 >
                   {item.label}

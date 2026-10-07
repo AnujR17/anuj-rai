@@ -15,8 +15,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Anuj Rai — Design & Research",
-  description: "Design work rooted in research, systems thinking, and intentional execution.",
+  title: "Anuj Rai — Interaction Design & Prototypes",
+  description: "Interaction design across screens and physical objects. Explore Anuj Rai’s interface concepts, interactive web projects, and working prototypes.",
 };
 
 export default function RootLayout({
