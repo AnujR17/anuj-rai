@@ -13,7 +13,7 @@ Both chats were read in this cloud task. The audit was reread when continuation 
 
 ## Skills available here
 
-The cloud skill catalog contains `cloud-environment-onboarding:setup` and `build-3d-game-rooms:build-3d-game-rooms`; the executor skill catalog is empty. The custom portfolio, critique, communication, rationale, resume, maintenance, and planning skills mentioned in the Windows task are not installed here. Their current contents and update timestamps cannot be verified from the cloud. Older skill text appearing in a chat is historical context, not an installed current skill. Do not claim to have used the updated custom skills.
+The cloud skill catalog now includes `cloud-environment:cloud-environment-runtime`, `cloud-environment-onboarding:setup`, and `build-3d-game-rooms:build-3d-game-rooms`; the executor catalog was previously empty. The custom portfolio, critique, communication, rationale, resume, maintenance, and planning skills mentioned in the Windows task are not installed here. Their current contents and update timestamps cannot be verified from the cloud. Older skill text appearing in a chat is historical context, not an installed current skill. Do not claim to have used the updated custom skills.
 
 ## Direction carried forward
 
@@ -62,3 +62,13 @@ The first continuation build succeeded on 7 October 2026 with the real Google Fo
 The user authorized a more dynamic, asymmetric redesign. The homepage and Work index now use original project media, with a visitor-controlled featured project switcher and explicit ongoing Lab work. Case routes use source-backed briefs; unsupported research metrics and participant quotes were removed. The independent medicine app still requires its own artifacts. No Library PDFs or Figma files are accessible here. Keep the old dashboard slug for link compatibility. Never merge without explicit user approval.
 
 The final creative iteration passes the production build, full repository lint, TypeScript, and Git whitespace checks. Updating About and Work also resolves the lint errors described in the earlier validation record. Chromium checked all eight pages at 1280, 768, 390, and 320px (32 route/width combinations), plus keyboard project switching, loaded images, overflow, unknown-project 404, reduced motion, and visible opening content without JavaScript. No runtime exceptions occurred. The first project image starts at 198px on desktop and 512px at 320px width. Hardware and original project research remain outside this validation.
+
+## New evidence and research cases
+
+Read [the current source inventory](project-evidence.md) before extending case studies. The user supplied a 29-page roundabout research PDF, three versions each of Sector-21, Sector-7, and Infocity records, and the medicine survey CSV. Raw sources stay outside the public repository. Correct traffic row total is 298 (98 + 87 + 113), because Infocity has a header; Sector-7/21 do not. Medicine has 52 respondents with overlapping response paths (48 caregiver, 7 senior, 3 both).
+
+The user clarified that Consumer Experience used a supplied research dataset and they were asked to analyse it. Publication status is unknown. The repository has reports/outputs but no raw workbook; do not invent recruitment, publication, or user outcomes. Skidge methods require review before model metrics are promoted. GT650 remains excluded.
+
+The portfolio now has a substantive roundabout case, three supporting analysis cases, linked bike-survey context, original figures, Work-section navigation, and an AR/VR interest on About. Figma links are recorded but unavailable (direct proxy HTTP 403; no connector). The Library folder cannot be listed. Community-template copies and the chatbot link are not verified original projects. AR/VR project details and the independent medicine app remain pending.
+
+The evidence expansion passes production build, full lint, TypeScript, whitespace checks, 48 route/width browser combinations, and eight targeted checks after the raw-data changes. Original datasets and the PDF remain outside the public repository. Only selected figures, aggregate counts, and documented interpretations were added.

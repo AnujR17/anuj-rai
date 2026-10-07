@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { FeaturedWork } from "@/components/portfolio/FeaturedWork";
 import { Lab } from "@/components/portfolio/Lab";
+import { ResearchSpotlight } from "@/components/portfolio/ResearchSpotlight";
 import { contact } from "@/data/contact";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         </div>
         <FeaturedWork />
       </section>
+      <ResearchSpotlight />
       <section className="portfolio-approach" aria-labelledby="approach-title">
         <p className="portfolio-kicker">Across screens and objects</p>
         <div>

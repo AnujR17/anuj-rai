@@ -19,7 +19,7 @@ const experiments = [
 
 export function Lab() {
   return (
-    <section className="portfolio-lab" aria-labelledby="lab-title">
+    <section id="lab" className="portfolio-lab" aria-labelledby="lab-title">
       <div className="portfolio-section-heading"><h2 id="lab-title">Also on the workbench</h2><p>Smaller experiments. Questions still open.</p></div>
       {experiments.map((experiment) => (
         <a key={experiment.project} className="lab-row" href={experiment.href}>

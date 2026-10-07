@@ -1,5 +1,7 @@
 # Portfolio direction and evidence review
 
+**Source update, 7 October:** the supplied roundabout report, traffic records, medicine CSV, and additional repositories are now inspected. Read [the current evidence inventory](project-evidence.md) for access, ownership, dataset checks, method issues, and AR/VR presentation. The earlier review below records the initial direction.
+
 ## The assessment
 
 There is a useful foundation here: interests across people, systems, interfaces, and physical objects, with working implementations to inspect. The earlier portfolio made it difficult to assess that foundation. Empty media blocks, a long opening, generic philosophy, and unsupported research claims weakened both craft and credibility.

@@ -1,12 +1,24 @@
+import { researchProjects } from "@/data/research-projects";
+
+export interface ProjectImage {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  caption: string;
+}
+
 export interface Project {
   slug: string;
   title: string;
   type: string;
   summary: string;
-  image?: { src: string; alt: string; width: number; height: number; caption: string };
+  image?: ProjectImage;
   live?: string;
+  liveLabel?: string;
   source?: string;
-  sections: { title: string; paragraphs: string[] }[];
+  resources?: { label: string; href: string }[];
+  sections: { title: string; paragraphs: string[]; figures?: ProjectImage[] }[];
   note: string;
 }
 
@@ -19,9 +31,14 @@ export const projects: Project[] = [
     image: { src: "/portfolio/himalayan-dashboard.png", alt: "Circular dashboard design with speed at the centre, an RPM arc above it, a gear indicator, and warning symbols.", width: 385, height: 385, caption: "Original interface export from the Himalayan450 repository." },
     live: "https://himalayan450.vercel.app",
     source: "https://github.com/AnujR17/Himalayan450",
+    resources: [
+      { label: "Read the two-wheeler survey analysis", href: "https://bike-dashboard-analysis.vercel.app" },
+      { label: "View the analysis source", href: "https://github.com/AnujR17/BikeDashboardAnalysis" },
+    ],
     sections: [
       { title: "The interface", paragraphs: ["A circular screen gives every element a limited amount of space. In this design, the speed reading is prominent, the RPM scale follows the upper edge, and gear and warning indicators occupy separate areas.", "The question to explore is how that hierarchy holds up when information changes: what should remain stable, and what deserves attention?"] },
       { title: "From a screen to states", paragraphs: ["The browser prototype includes ignition, throttle and brake controls, gear changes, indicators, and Eco, Performance, and Rain modes. These controls make the display’s changing states available to inspect.", "The repository documents keyboard controls as well as on-screen controls. This is a simulation for exploring an interface, rather than a connection to a motorcycle’s live data."] },
+      { title: "Research alongside the prototype", paragraphs: ["The accompanying two-wheeler survey report covers dashboard feature priorities, readability, environmental challenges, and interaction preferences. Its reported sample spans different two-wheeler types; it is not a Himalayan-only riding test.", "The feature-priority chart separates basic information from additional features. Those self-reported preferences provide questions for the design: how visible should fuel and speed remain when navigation or mode controls are introduced? The survey alone does not validate this particular layout."], figures: [{ src: "/portfolio/research/bike-feature-priorities.png", alt: "Survey-report chart ranking fuel or battery information and speed above additional dashboard features.", width: 1220, height: 706, caption: "Original feature-priority figure from BikeDashboardAnalysis. Self-reported preferences, not a performance test of this concept." }] },
       { title: "What this establishes", paragraphs: ["The design export and runnable simulation show a visual direction and implemented state behaviour. They provide a starting point for comparing layouts and checking which signals compete.", "They do not establish readability in sunlight, reduced glance time, or usability while riding. Those questions need evidence from appropriate testing."] },
     ],
     note: "Independent educational concept, unaffiliated with Royal Enfield. The prototype README credits GitHub Copilot assistance; the final case study should distinguish design decisions from generated implementation and document my individual contribution.",
@@ -53,4 +70,5 @@ export const projects: Project[] = [
     ],
     note: "Group concept, not a validated medicine-management product. Original project artifacts and the independent app will be documented separately.",
   },
+  ...researchProjects,
 ];
