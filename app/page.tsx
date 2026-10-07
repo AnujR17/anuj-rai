@@ -5,6 +5,7 @@ import { Reveal, RevealImage, Stagger, StaggerItem } from "@/components/ui/Revea
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { projects } from "@/data/projects";
+import { contact } from "@/data/contact";
 
 export default function Home() {
   const medtimer = projects.find(p => p.slug === "medtimer")!;
@@ -20,7 +21,7 @@ export default function Home() {
         <Container>
           <Stagger className="max-w-4xl">
             <StaggerItem>
-              <Display className="mb-2">Hi, I'm Anuj Rai.</Display>
+              <Display className="mb-2">Hi, I&apos;m Anuj Rai.</Display>
             </StaggerItem>
             <StaggerItem>
               <Display className="text-stone-400 mb-2">I design and build</Display>
@@ -65,7 +66,7 @@ export default function Home() {
         <Container className="text-center">
           <Reveal>
             <Quote className="not-italic max-w-3xl mx-auto text-stone-900">
-              "The interface must adapt to the physical constraints of the user, not the other way around."
+              &quot;The interface must adapt to the physical constraints of the user, not the other way around.&quot;
             </Quote>
           </Reveal>
           <Reveal delay={0.2}>
@@ -197,7 +198,7 @@ export default function Home() {
             <div className="grid md:grid-cols-12 gap-12">
               <div className="md:col-span-5">
                 <p className="text-2xl font-medium text-stone-900 mb-4">
-                  Let's discuss a problem.
+                  Let&apos;s discuss a problem.
                 </p>
                 <Body className="text-sm">
                   Available for research-driven roles or conversations about designing for reality.
@@ -206,18 +207,15 @@ export default function Home() {
 
               <div className="md:col-span-3 md:col-start-8">
                 <p className="text-sm text-stone-400 mb-2">Email</p>
-                <a href="mailto:anujrai2025@example.com" className="text-sm font-medium text-stone-900 hover:text-stone-400 transition-colors break-all">
-                  anujrai2025@example.com
+                <a href={`mailto:${contact.email}`} className="text-sm font-medium text-stone-900 hover:text-stone-400 transition-colors break-all">
+                  {contact.email}
                 </a>
               </div>
 
               <div className="md:col-span-2">
                 <p className="text-sm text-stone-400 mb-2">Network</p>
                 <div className="flex flex-col gap-1">
-                  <a href="#" className="inline-flex items-center gap-1 text-sm font-medium text-stone-900 hover:text-stone-400 transition-colors">
-                    LinkedIn <ArrowUpRight className="w-3 h-3" />
-                  </a>
-                  <a href="#" className="inline-flex items-center gap-1 text-sm font-medium text-stone-900 hover:text-stone-400 transition-colors">
+                  <a href={contact.github} className="inline-flex items-center gap-1 text-sm font-medium text-stone-900 hover:text-stone-400 transition-colors">
                     GitHub <ArrowUpRight className="w-3 h-3" />
                   </a>
                 </div>

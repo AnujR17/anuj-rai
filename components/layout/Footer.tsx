@@ -1,4 +1,6 @@
 import { Container } from "@/components/ui/Container";
+import Link from "next/link";
+import { contact } from "@/data/contact";
 
 export function Footer() {
   return (
@@ -8,9 +10,9 @@ export function Footer() {
           © {new Date().getFullYear()} Anuj Rai
         </p>
         <div className="flex items-center gap-6 text-sm text-stone-400">
-          <a href="#" className="hover:text-stone-900 transition-colors">LinkedIn</a>
-          <a href="#" className="hover:text-stone-900 transition-colors">GitHub</a>
-          <a href="#" className="hover:text-stone-900 transition-colors">Behance</a>
+          <Link href="/about" className="hover:text-stone-900 transition-colors">About</Link>
+          <Link href="/contact" className="hover:text-stone-900 transition-colors">Contact</Link>
+          <a href={contact.github} className="hover:text-stone-900 transition-colors">GitHub</a>
         </div>
       </Container>
     </footer>
