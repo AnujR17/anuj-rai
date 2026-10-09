@@ -20,6 +20,10 @@ export default function Work() {
         </nav>
       </header>
       <section id="design" className="work-project work-project-dashboard">
+        <Link href="/work/myalumnus" className="work-visual" aria-label="Read the MyAlumnus case study"><Image src="/portfolio/myalumnus/guard-record.png" alt="MyAlumnus guard console with a visitor photo and entry decisions." width={1280} height={860} preload sizes="(max-width: 700px) 90vw, 700px" className="w-full h-auto" /></Link>
+        <div className="work-project-copy"><p className="portfolio-kicker">Product design · Collaboration</p><h2>MyAlumnus</h2><p>Giving a campus guard the information to decide when a returning visitor is no longer a familiar face.</p><Link href="/work/myalumnus" className="portfolio-link">Read the case study <ArrowUpRight size={18} aria-hidden="true" /></Link></div>
+      </section>
+      <section className="work-project work-project-dashboard">
         <Link href="/work/two-wheeler-dashboard" className="work-visual dashboard-visual" aria-label="Explore Himalayan 450"><Image src="/portfolio/himalayan-dashboard.png" alt="Circular Himalayan 450 dashboard design showing speed, gear, and RPM." width={385} height={385} preload sizes="(max-width: 600px) 70vw, 385px" /></Link>
         <div className="work-project-copy"><p className="portfolio-kicker">Interface design · Browser prototype</p><h2>Himalayan 450</h2><p>Exploring hierarchy and changing states in a circular motorcycle display.</p><Link href="/work/two-wheeler-dashboard" className="portfolio-link">Explore the dashboard <ArrowUpRight size={18} aria-hidden="true" /></Link></div>
       </section>

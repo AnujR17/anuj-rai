@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { projects, type ProjectImage } from "@/data/projects";
+import { MyAlumnusCaseStudy } from "@/components/case-studies/MyAlumnusCaseStudy";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -32,6 +33,7 @@ export default async function CaseStudy({ params }: Props) {
   const { slug } = await params;
   const project = projects.find((item) => item.slug === slug);
   if (!project) notFound();
+  if (slug === "myalumnus") return <MyAlumnusCaseStudy />;
   return (
     <article className="case-shell">
       <Link href="/work" className="portfolio-link"><ArrowLeft size={16} aria-hidden="true" /> All work</Link>
