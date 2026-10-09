@@ -24,6 +24,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "myalumnus",
+    title: "MyAlumnus",
+    type: "Campus visitor verification / Collaborative product design",
+    summary: "Helping a guard make an informed decision when a returning visitor is no longer a familiar face.",
+    image: { src: "/portfolio/myalumnus/guard-record.png", alt: "MyAlumnus visitor record showing a sample alumnus photo, batch, programme, and Approve, Deny, and Put on hold actions.", width: 1280, height: 860, caption: "Guard console from the working demo. All visitor data is fictional." },
+    live: "https://myalumnus.vercel.app",
+    source: "https://github.com/sukhman0402/myalumnus",
+    sections: [],
+    note: "Collaboration with Sukhmanpreet Singh Saini, project owner. My contribution: decision-making, concept refinement, research, and UI. The full case study distinguishes field research, expert evaluation, and simulation.",
+  },
+  {
     slug: "two-wheeler-dashboard",
     title: "Himalayan 450",
     type: "Interface study / Browser simulation",

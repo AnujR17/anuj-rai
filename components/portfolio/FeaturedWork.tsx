@@ -8,6 +8,18 @@ import { ArrowUpRight, Plus } from "lucide-react";
 
 const featured = [
   {
+    name: "MyAlumnus",
+    discipline: "Product design / Collaboration",
+    description: "Helping a campus guard verify visitors, handle uncertainty, and record a decision.",
+    image: "/portfolio/myalumnus/guard-record.png",
+    alt: "MyAlumnus visitor record with a sample photo, batch information, and three entry decisions.",
+    width: 1280, height: 860,
+    href: "/work/myalumnus",
+    linkLabel: "Read the case study",
+    theme: "alumnus",
+    caption: "Working demo · Fictional campus data",
+  },
+  {
     name: "Himalayan 450",
     discipline: "Interface design / Browser prototype",
     description: "A circular motorcycle display, explored through a working simulation of speed, gears, and riding modes.",
@@ -49,7 +61,7 @@ export function FeaturedWork() {
       <motion.div key={project.name} id="featured-project" initial={reducedMotion ? false : { y: 8 }} animate={{ y: 0 }} transition={{ duration: reducedMotion ? 0 : 0.18 }}>
         <Link href={project.href} className="featured-image-link" aria-label={project.linkLabel}>
           <figure className="featured-figure">
-            <Image src={project.image} width={project.width} height={project.height} alt={project.alt} preload={selected === 0} sizes={selected === 0 ? "(max-width: 600px) 70vw, 350px" : "(max-width: 900px) 90vw, 750px"} />
+            <Image src={project.image} width={project.width} height={project.height} alt={project.alt} preload={selected === 0} sizes={project.theme === "dashboard" ? "(max-width: 600px) 70vw, 350px" : "(max-width: 900px) 90vw, 750px"} />
             <figcaption>{project.caption}</figcaption>
           </figure>
         </Link>
