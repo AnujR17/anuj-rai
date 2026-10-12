@@ -2,13 +2,13 @@
 
 A portfolio exploring screens, code, physical objects, and the space between them.
 
-The `design/skein` direction uses a gathered skein that a visitor can pull open. Chalk white, ink blue, and burnt orange replace the earlier beige treatment. Real project artifacts stay in the foreground.
+The `design/skein` direction gives each project space to tell its story. Large original project media leads into a personal perspective, a workbench for ongoing experiments, working notes, and a conversation. Inter and Instrument Serif establish a clear, expressive hierarchy; chalk, cobalt, ink blue, and green give the page different rhythms.
 
 ![Portfolio direction](docs/previews/skein.png)
 
 ## Try the movement
 
-The range control supports pointer, touch, and keyboard. “Let it unfold” opens the strands; “Gather again” brings them back. The three pins hold while free ends find separate paths. This is a browser-rendered illustration, not a photograph.
+Drag horizontally on the skein, use the native range control, or choose “Let it unfold.” The tangled strands open into separate loops and sweeping gestures; “Gather again” brings them back. There are no pins or artwork annotations. Keyboard and reduced-motion interactions are supported.
 
 ![Pull-driven unwinding](docs/previews/unwind.gif)
 
@@ -32,14 +32,14 @@ npm run start
 
 - [Homepage](app/page.tsx) and [its composition styles](app/studio.module.css).
 - [Skein drawing and interaction](components/portfolio/ThreadStudy.tsx).
-- [Art direction and evidence boundaries](docs/thread-direction.md).
-- Work and the existing case-study routes use genuine available project media.
-- About, working Notes, Resume, and Contact remain direct destinations.
+- [Art direction, portfolio references, and evidence boundaries](docs/thread-direction.md).
+- Work and existing case studies use available original project media.
+- About, Notes, Resume, and Contact remain direct destinations.
 
-The independent medicine-care app and physical group Meditimer are separate projects. Smaller experiments retain their current status. No project metrics, findings, or outcomes are invented for this presentation.
+The independent medicine-care app and physical group Meditimer remain separate projects. Smaller experiments retain their current status. Project outcomes, testimonials, portraits, and missing artifacts have not been invented.
 
 ## Verification
 
-Production build, TypeScript, lint, and whitespace checks pass. Browser review covers thirteen routes at 1440, 768, 390, and 320px, plus unwind/gather, pinned endpoints, keyboard input, pause/resume, offscreen suspension, reduced motion, focus navigation, research disclosure, 404s, and static content without JavaScript.
+See [the browser verification results](docs/previews/verification.json). Review covers thirteen routes at 1440, 768, 390, and 320px, plus motion controls, direct dragging, keyboard input, reduced motion, visibility suspension, navigation, research disclosure, 404s, and static content without JavaScript. Superscript/subscript elements and decorative numbering are checked across routes.
 
-The branch is for review. It has not been merged into main.
+The branch is for review and has not been merged into main.

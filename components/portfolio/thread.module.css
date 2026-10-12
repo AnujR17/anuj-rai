@@ -1,12 +1,22 @@
 .study{position:relative;width:100%;isolation:isolate}
+.artwork{position:relative;cursor:grab;touch-action:pan-y}
+.artwork:active{cursor:grabbing}
 .cords{width:100%;height:auto;display:block;overflow:visible}
-.interaction{display:flex;align-items:center;justify-content:flex-end;gap:22px;position:relative;margin-top:-8px;padding-right:5%;font-size:11px;color:#435460}
-.pull{display:flex;align-items:center;gap:13px}
-.pull label{white-space:nowrap}
-.pull input{width:115px;accent-color:#cd603e;cursor:ew-resize;height:28px}
-.unwind{display:inline-flex;align-items:center;gap:10px;min-height:44px;border-bottom:1px solid #8c9aa3;cursor:pointer}
+.canvas{position:absolute;inset:0;width:100%;height:100%;visibility:hidden;pointer-events:none}
+.artwork[data-ready] .canvas{visibility:visible}
+.artwork[data-ready] .cords{visibility:hidden}
+.interaction{display:flex;align-items:center;justify-content:flex-end;gap:22px;position:relative;margin-top:0;padding-right:5%;font-size:13px;color:#435460}
+.pull{display:flex;align-items:center}
+.pull input{appearance:none;width:120px;background:transparent;cursor:ew-resize;height:44px}
+.pull input::-webkit-slider-runnable-track{height:1px;background:#899fac}
+.pull input::-moz-range-track{height:1px;background:#899fac}
+.pull input::-webkit-slider-thumb{appearance:none;width:13px;height:13px;margin-top:-6px;border-radius:50%;background:#cc603e;border:2px solid #f0f4f5;box-shadow:0 0 0 1px #cc603e}
+.pull input::-moz-range-thumb{width:10px;height:10px;border-radius:50%;background:#cc603e;border:2px solid #f0f4f5;box-shadow:0 0 0 1px #cc603e}
+.pull input:focus-visible{outline:2px solid #315dc2;outline-offset:4px;border-radius:2px}
+.unwind{display:inline-flex;align-items:center;gap:12px;min-height:44px;cursor:pointer;white-space:nowrap}
 .unwind:hover{color:#cc5933}
-.pause{display:grid;place-items:center;width:32px;height:44px;cursor:pointer}
-@media(max-width:700px){.interaction{padding-right:0;gap:15px;margin-top:-4px;font-size:10px}.pull{gap:8px}.pull input{width:88px}.unwind{gap:7px}}
-@media(max-width:380px){.interaction{gap:10px}.pull input{width:70px}}
+.pause{display:grid;place-items:center;width:44px;height:44px;cursor:pointer}
+@media(max-width:1100px){.interaction{gap:15px;font-size:12px}.pull input{width:95px}}
+@media(max-width:700px){.interaction{padding-right:0;gap:18px;font-size:12px}.pull input{width:90px}}
+@media(max-width:380px){.interaction{gap:13px}.pull input{width:75px}.unwind{gap:8px}}
 @media(prefers-reduced-motion:reduce){.pause{display:none}}

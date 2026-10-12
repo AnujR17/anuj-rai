@@ -1,40 +1,41 @@
 # Skein — portfolio direction
 
-Implemented from Anuj's supplied visual reference and clarified request on 12 October 2026. Work lives on `design/skein`, created through the connected AnujR17 GitHub account. New commits use the verified repository-local identity Anuj Rai <anujrai1701@gmail.com>.
+Work lives on `design/skein`, pushed through the AnujR17 GitHub account. Commits use Anuj Rai <anujrai1701@gmail.com>. Main is unchanged.
 
-## Art direction
+## Reading order and typography
 
-A gathered skein gives the opening its tension. Separate lengths of filament cross in a raised central cluster; a few continue to pins and loose ends. Directional lighting, cast shadows, highlights, and restrained grain give the browser-rendered illustration a material reading. This is an original procedural SVG illustration, not a photograph or a flattened hero image.
+The October refinement opens the homepage into six full-width sections: the introduction, selected project stories, a personal perspective, the workbench, working notes, and contact. Individual projects have large media and a readable explanation of their question. About, Notes, the workbench, and Contact no longer share paired panels.
 
-The palette combines chalk white, ink blue, pale blue-grey, and burnt orange. Color has specific roles: orange makes an active loose end visible, blue adds depth to the material and About panel, and lighter gallery surfaces keep real project media readable. The layout follows the reference's sectional pacing rather than the previous tall, sparse two-column homepage.
+Inter handles navigation, descriptions, and clear structural headings. Instrument Serif supplies real italic forms for the expressive phrases. Larger sizes, comfortable leading, fewer competing elements, and deliberate space carry the hierarchy. There are no decorative section numbers, superscripts, subscripts, or labels floating over the artwork. The Notes page's former numbering was removed too. Normal names and interaction controls remain readable.
 
-Selected Work presents three existing artifacts: the original Himalayan dashboard export, the live India in Orbit capture, and roundabout field photography. The physical/computational experiments remain smaller, source-linked entries. The notebook scene uses a map from the actual roundabout study beneath an illustrative book. It is an art-directed browser illustration, not documentation of a physical notebook.
+The palette uses chalk, cobalt, ink blue, pale blue, muted green, and small orange accents. Project images retain their own colors. There is no uninterrupted cord stitching together the page.
 
-About and Notes have different material treatments. Their strands are independent of the hero and each other. Contact gets one open curve; there is no uninterrupted line connecting every project or section. All existing case routes remain reachable.
+## Portfolio references examined
 
-## Interaction
+- [Rauno Freiberg's Craft](https://rauno.me/craft): an interaction-focused collection that includes production work, prototypes, and smaller studies. This informed giving the workbench a distinct, honest place alongside developed projects.
+- [Maggie Appleton](https://maggieappleton.com/): notes and essays are separate ways to enter her thinking. This informed the visible working-notes section, grounded in Anuj's actual project questions.
+- [Adham Dannaway](https://www.adhamdannaway.com/): his introduction makes both design and development legible. This informed explaining Anuj's movement between questioning and building without borrowing his split-face treatment.
 
-`components/portfolio/ThreadStudy.tsx` keeps the artwork independent of the content layout.
+These are editorial references, not templates or copied layouts.
 
-- Eleven cords are generated from fixed, deterministic parameters; there is no render-time randomness or hydration-dependent composition.
-- A native range control lets a visitor pull the skein open on touch, pointer, and keyboard.
-- A button opens or gathers it again. Individual cords loosen with small phase differences rather than transforming as one rigid object.
-- Three pinned endpoints remain fixed. Free ends travel into a more deliberate arrangement of separate open paths.
-- Shadows reduce as the raised cluster settles closer to its surface.
-- Ambient movement is slight, can be paused, and stops offscreen or in a hidden tab.
-- Reduced motion keeps the resting drawing still and makes requested opening/gathering immediate.
-- The complete drawing and page content exist in server-rendered HTML without JavaScript.
+## Artwork and motion
 
-The movement is an illustrative geometric model; it is not a claim of mechanically accurate cord simulation.
+The raised, tangled composition remains an original procedural illustration. The server-rendered SVG supplies a complete static fallback; a responsive Canvas renderer draws the live movement with the same geometry. Eleven independent strands have directional shadows and highlights. All pins have been removed. Every endpoint is free to travel.
 
-## Content
+The open composition consists of deliberately placed cubic gestures: loose turns, open loops, and longer sweeps rather than a fan of parallel lines. Individual cords release with phase differences and a small travelling displacement. Shadows soften as they settle. The geometric model is illustrative, not a physical simulation of length-conserving cord.
 
-The headline is grounded in the supplied reference. The introduction says plainly what Anuj designs and builds. The independent medicine-care app remains separate from physical group Meditimer. Newly drafted Notes are tied to actual project questions rather than invented research or outcomes. Sample project names in the reference were not substituted for available evidence.
+Resting and open sample points are computed once. Live paths are drawn to a Canvas surface instead of repainting eleven individual SVG blur filters; paired translucent strokes soften the shadows. The backing resolution follows the display density, capped at 2×, and resizes with its container. Active interpolation draws on animation frames; quiet ambient motion draws less often. The range, unfold/gather button, and horizontal dragging on the artwork all drive the same continuous progress. Reversing direction starts from the current geometry. Vertical touch scrolling is retained.
 
-The existing cached mem0 context was reused. No additional remote retrieval or memory write was needed.
+Motion can be paused, stops offscreen and in hidden tabs, and cancels on cleanup. Reduced motion keeps the drawing still and makes requested changes immediate. Native range input supplies the keyboard and assistive-technology interaction. The fallback artwork and content are server-rendered; the drawing remains visible without JavaScript or a 2D canvas context.
 
-## Review and publication
+## Evidence and tone
 
-Production build, TypeScript, lint, and Git whitespace checks are required. Browser checks cover all thirteen routes at 1440, 768, 390, and 320px, including unwinding/gathering, fixed pins, keyboard slider input, pause/resume, offscreen suspension, reduced-motion input, focus navigation, research disclosure, 404 behavior, and static content without JavaScript.
+Selected work uses the original Himalayan dashboard export, the India in Orbit website capture, and roundabout field photography. Descriptions explain a project's question rather than claim unmeasured outcomes. The independent medicine-care app remains distinct from the physical group Meditimer. The workbench identifies in-progress work and links to available source or a relevant note. Missing portraits, hardware photography, testimonials, and project metrics have not been invented.
 
-Review artifacts live outside the repository under `/workspace/skein-review`. The user authorized creating and pushing this branch through AnujR17. No merge into main is authorized.
+Existing fresh mem0 context was reused without a remote retrieval or memory write.
+
+## Review
+
+Production build, lint, TypeScript, and whitespace checks accompany browser review. Review covers thirteen routes at four widths, open/gather, free endpoints, direct dragging, keyboard input, pause/resume, offscreen and hidden-tab suspension, reduced motion, navigation and note anchors, 404s, static content without JavaScript, and absence of decorative numbering or superscript/subscript elements.
+
+Review artifacts live under `/workspace/skein-review`, with selected screenshots, motion preview, and actual verification results copied into `docs/previews`. No merge into main is authorized.

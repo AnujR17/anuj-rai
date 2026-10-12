@@ -11,7 +11,7 @@
       "width": 1440,
       "route": "/about",
       "overflow": false,
-      "heading": "I’m Anuj.",
+      "heading": "I\u2019m Anuj.",
       "active": [
         "/about"
       ]
@@ -20,7 +20,7 @@
       "width": 1440,
       "route": "/notes",
       "overflow": false,
-      "heading": "Questions I’mkeeping open.",
+      "heading": "Questions I\u2019mkeeping open.",
       "active": [
         "/notes"
       ]
@@ -72,7 +72,7 @@
       "width": 1440,
       "route": "/work/medtimer",
       "overflow": false,
-      "heading": "Meditimer — physical concept",
+      "heading": "Meditimer \u2014 physical concept",
       "active": [
         "/work"
       ]
@@ -108,7 +108,7 @@
       "width": 1440,
       "route": "/work/skidge",
       "overflow": false,
-      "heading": "Skidge — graduate outcomes",
+      "heading": "Skidge \u2014 graduate outcomes",
       "active": [
         "/work"
       ]
@@ -124,7 +124,7 @@
       "width": 768,
       "route": "/about",
       "overflow": false,
-      "heading": "I’m Anuj.",
+      "heading": "I\u2019m Anuj.",
       "active": [
         "/about"
       ]
@@ -133,7 +133,7 @@
       "width": 768,
       "route": "/notes",
       "overflow": false,
-      "heading": "Questions I’mkeeping open.",
+      "heading": "Questions I\u2019mkeeping open.",
       "active": [
         "/notes"
       ]
@@ -185,7 +185,7 @@
       "width": 768,
       "route": "/work/medtimer",
       "overflow": false,
-      "heading": "Meditimer — physical concept",
+      "heading": "Meditimer \u2014 physical concept",
       "active": [
         "/work"
       ]
@@ -221,7 +221,7 @@
       "width": 768,
       "route": "/work/skidge",
       "overflow": false,
-      "heading": "Skidge — graduate outcomes",
+      "heading": "Skidge \u2014 graduate outcomes",
       "active": [
         "/work"
       ]
@@ -237,7 +237,7 @@
       "width": 390,
       "route": "/about",
       "overflow": false,
-      "heading": "I’m Anuj.",
+      "heading": "I\u2019m Anuj.",
       "active": [
         "/about"
       ]
@@ -246,7 +246,7 @@
       "width": 390,
       "route": "/notes",
       "overflow": false,
-      "heading": "Questions I’mkeeping open.",
+      "heading": "Questions I\u2019mkeeping open.",
       "active": [
         "/notes"
       ]
@@ -298,7 +298,7 @@
       "width": 390,
       "route": "/work/medtimer",
       "overflow": false,
-      "heading": "Meditimer — physical concept",
+      "heading": "Meditimer \u2014 physical concept",
       "active": [
         "/work"
       ]
@@ -334,7 +334,7 @@
       "width": 390,
       "route": "/work/skidge",
       "overflow": false,
-      "heading": "Skidge — graduate outcomes",
+      "heading": "Skidge \u2014 graduate outcomes",
       "active": [
         "/work"
       ]
@@ -350,7 +350,7 @@
       "width": 320,
       "route": "/about",
       "overflow": false,
-      "heading": "I’m Anuj.",
+      "heading": "I\u2019m Anuj.",
       "active": [
         "/about"
       ]
@@ -359,7 +359,7 @@
       "width": 320,
       "route": "/notes",
       "overflow": false,
-      "heading": "Questions I’mkeeping open.",
+      "heading": "Questions I\u2019mkeeping open.",
       "active": [
         "/notes"
       ]
@@ -411,7 +411,7 @@
       "width": 320,
       "route": "/work/medtimer",
       "overflow": false,
-      "heading": "Meditimer — physical concept",
+      "heading": "Meditimer \u2014 physical concept",
       "active": [
         "/work"
       ]
@@ -447,7 +447,7 @@
       "width": 320,
       "route": "/work/skidge",
       "overflow": false,
-      "heading": "Skidge — graduate outcomes",
+      "heading": "Skidge \u2014 graduate outcomes",
       "active": [
         "/work"
       ]
@@ -456,16 +456,31 @@
   "routeWidthChecks": 52,
   "behaviors": [
     "unwind and gather",
-    "fixed pins",
+    "free ends and no anchor pins",
+    "direct artwork drag",
+    "full-width section order",
+    "no decorative numbering or superscripts/subscripts",
+    "note anchors",
     "keyboard slider",
     "pause and resume",
     "offscreen suspension",
+    "hidden-document event suspension",
     "instant reduced-motion response",
     "skip link",
     "case navigation",
     "404",
     "no-JS content",
-    "research disclosure"
+    "research disclosure",
+    "continuous mid-motion reversal",
+    "reverse artwork drag",
+    "visible-hidden-visible event handling"
   ],
-  "errors": []
+  "errors": [],
+  "visibilityTest": "Document visibility events exercised with a controlled hidden-property fixture; offscreen suspension exercised by real scrolling.",
+  "checks": {
+    "productionBuild": "passed",
+    "lint": "passed",
+    "typescript": "passed",
+    "whitespace": "passed"
+  }
 }
