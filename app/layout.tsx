@@ -1,25 +1,13 @@
 import type { Metadata } from "next";
-import { Inter, Instrument_Serif, JetBrains_Mono } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
-const inter = Inter({
-  variable: "--font-inter",
+const dmSans = DM_Sans({
+  variable: "--font-body",
   subsets: ["latin"],
-  style: ["normal", "italic"],
-});
-
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-editorial",
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-mono",
-  subsets: ["latin"],
+  style: "normal",
 });
 
 export const metadata: Metadata = {
@@ -33,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} antialiased h-full`}>
+    <html lang="en" className={`${dmSans.variable} antialiased h-full`}>
       <body className="min-h-full flex flex-col font-sans">
         <Navbar />
         <main id="main-content" tabIndex={-1} className="flex-1 flex flex-col relative z-0">

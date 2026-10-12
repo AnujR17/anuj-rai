@@ -1,41 +1,47 @@
-# Skein — portfolio direction
+# Portfolio direction — interaction and material
 
-Work lives on `design/skein`, pushed through the AnujR17 GitHub account. Commits use Anuj Rai <anujrai1701@gmail.com>. Main is unchanged.
+Work lives on `design/skein`, pushed through AnujR17. New commits use Anuj Rai <anujrai1701@gmail.com>. Main remains unchanged.
 
-## Reading order and typography
+## The current direction
 
-The October refinement opens the homepage into six full-width sections: the introduction, selected project stories, a personal perspective, the workbench, working notes, and contact. Individual projects have large media and a readable explanation of their question. About, Notes, the workbench, and Contact no longer share paired panels.
+Anuj rejected the prior typeface, italic treatment, poetic copy, illustration, open-strand arrangement, and visible slider/control strip. The revision treats those as one composition problem.
 
-Inter handles navigation, descriptions, and clear structural headings. Instrument Serif supplies real italic forms for the expressive phrases. Larger sizes, comfortable leading, fewer competing elements, and deliberate space carry the hierarchy. There are no decorative section numbers, superscripts, subscripts, or labels floating over the artwork. The Notes page's former numbering was removed too. Normal names and interaction controls remain readable.
+DM Sans is the single visible type family, with normal styles and firmer heading weights. There are no italic display phrases, decorative numbers, superscripts, subscripts, or annotations around the artwork. Short, direct language explains Anuj's practice; real project names carry the work. Decorative line drawings have been removed from About, Notes, Contact, Resume, and Work.
 
-The palette uses chalk, cobalt, ink blue, pale blue, muted green, and small orange accents. Project images retain their own colors. There is no uninterrupted cord stitching together the page.
+The opening reads “Designing how things respond.” Its introduction explains the combination of interaction design, computer science, digital products, information, and physical computing. The six full-width sections are introduction, selected work, personal perspective, the workbench, working notes, and contact. Large original project media remains central.
 
-## Portfolio references examined
+The palette combines near-white, pale green, charcoal, copper, small blue accents in the sculpture, and the original colors of project media. Typography and space establish hierarchy without labels sitting over images or an explanatory control panel.
 
-- [Rauno Freiberg's Craft](https://rauno.me/craft): an interaction-focused collection that includes production work, prototypes, and smaller studies. This informed giving the workbench a distinct, honest place alongside developed projects.
-- [Maggie Appleton](https://maggieappleton.com/): notes and essays are separate ways to enter her thinking. This informed the visible working-notes section, grounded in Anuj's actual project questions.
-- [Adham Dannaway](https://www.adhamdannaway.com/): his introduction makes both design and development legible. This informed explaining Anuj's movement between questioning and building without borrowing his split-face treatment.
+## The sculpture
 
-These are editorial references, not templates or copied layouts.
+Six independent filaments form a compact, raised skein. They are original procedural curves, not a photograph, project artifact, or an imported model. Tube geometry, directional light, material highlights, and actual cast shadows give the live version volume. The floor receives shadows and lets the page's surface color show through.
 
-## Artwork and motion
+Each filament has a deterministic gathered and released shape. Equal-topology position and normal attributes supply GPU morph targets, avoiding per-frame geometry reconstruction. Release is staggered slightly by strand. The open composition is a set of longer, spaced sweeps with distinct directions, rather than a collection of floating calligraphic loops. No endpoints are pinned. The movement is an illustrative morph, not a length-conserving physical simulation.
 
-The raised, tangled composition remains an original procedural illustration. The server-rendered SVG supplies a complete static fallback; a responsive Canvas renderer draws the live movement with the same geometry. Eleven independent strands have directional shadows and highlights. All pins have been removed. Every endpoint is free to travel.
+The 3D module is dynamically imported when the artwork enters the viewport. The static SVG is server-rendered and remains usable without WebGL or JavaScript. Live resolution follows the display density with a cap; the camera and surface resize with the container. Geometry, materials, shadow resources, renderer, observers, and listeners are released on unmount.
 
-The open composition consists of deliberately placed cubic gestures: loose turns, open loops, and longer sweeps rather than a fan of parallel lines. Individual cords release with phase differences and a small travelling displacement. Shadows soften as they settle. The geometric model is illustrative, not a physical simulation of length-conserving cord.
+## Interaction
 
-Resting and open sample points are computed once. Live paths are drawn to a Canvas surface instead of repainting eleven individual SVG blur filters; paired translucent strokes soften the shadows. The backing resolution follows the display density, capped at 2×, and resizes with its container. Active interpolation draws on animation frames; quiet ambient motion draws less often. The range, unfold/gather button, and horizontal dragging on the artwork all drive the same continuous progress. Reversing direction starts from the current geometry. Vertical touch scrolling is retained.
+The illustration is a native button with an accessible action name. There is no visible slider, legend, subtitle, pause strip, or unfolding button beside it.
 
-Motion can be paused, stops offscreen and in hidden tabs, and cancels on cleanup. Reduced motion keeps the drawing still and makes requested changes immediate. Native range input supplies the keyboard and assistive-technology interaction. The fallback artwork and content are server-rendered; the drawing remains visible without JavaScript or a 2D canvas context.
+- Scrolling through the opening gradually releases the skein.
+- Clicking, tapping, Enter, or Space opens or gathers it.
+- Horizontal dragging gives direct control; vertical touch scrolling is retained.
+- Pointer movement gives a small change in perspective and settles back on leaving.
+- Manual interaction takes priority over scroll-derived progress.
+- Frames run only while a requested change is settling. There is no perpetual ambient loop.
+- Rendering suspends offscreen and in hidden documents.
+- Reduced motion makes requested changes immediate and removes perspective movement.
+- Context loss shows the SVG fallback; restoration redraws the live surface.
 
 ## Evidence and tone
 
-Selected work uses the original Himalayan dashboard export, the India in Orbit website capture, and roundabout field photography. Descriptions explain a project's question rather than claim unmeasured outcomes. The independent medicine-care app remains distinct from the physical group Meditimer. The workbench identifies in-progress work and links to available source or a relevant note. Missing portraits, hardware photography, testimonials, and project metrics have not been invented.
+Selected projects retain the original Himalayan display, India in Orbit capture, and roundabout field photograph. Descriptions explain visible work and its question without unmeasured outcomes. The independent medicine-care app remains separate from the physical group Meditimer. Workbench descriptions identify ongoing work. Missing portraits, hardware photography, testimonials, and project metrics have not been invented.
 
-Existing fresh mem0 context was reused without a remote retrieval or memory write.
+Fresh mem0 context was reused; no additional retrieval or memory write was needed.
 
 ## Review
 
-Production build, lint, TypeScript, and whitespace checks accompany browser review. Review covers thirteen routes at four widths, open/gather, free endpoints, direct dragging, keyboard input, pause/resume, offscreen and hidden-tab suspension, reduced motion, navigation and note anchors, 404s, static content without JavaScript, and absence of decorative numbering or superscript/subscript elements.
+Production build, TypeScript, lint, and whitespace checks accompany real browser review. Review covers routes and responsive widths, native-button keyboard interaction, direct drag and reversal, scroll-driven release, reduced motion, visibility suspension, resize, fallback content, navigation, 404s, and absence of obsolete controls and decorative typography.
 
-Review artifacts live under `/workspace/skein-review`, with selected screenshots, motion preview, and actual verification results copied into `docs/previews`. No merge into main is authorized.
+Review artifacts live under `/workspace/sculpture-review`, with selected results copied into `docs/previews`. Pushing the review branch does not authorize merging into main.

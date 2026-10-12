@@ -4,7 +4,6 @@ import { ArrowUpRight } from "lucide-react";
 import { Lab } from "@/components/portfolio/Lab";
 import { ResearchSpotlight } from "@/components/portfolio/ResearchSpotlight";
 import { ResearchList } from "@/components/portfolio/ResearchList";
-import { ThreadMark } from "@/components/portfolio/ThreadStudy";
 
 export default function Work() {
   return (
@@ -13,7 +12,7 @@ export default function Work() {
         <p className="portfolio-kicker">Interfaces, information, and physical interactions</p>
         <h1>Selected work.</h1>
         <p>Interfaces, information, and a few questions taken into making.</p>
-        <ThreadMark kind="open" className="work-thread-mark" />
+
         <nav className="work-sections" aria-label="Work sections">
           <a href="#design">Design &amp; build</a>
           <a href="#fieldwork">Fieldwork</a>

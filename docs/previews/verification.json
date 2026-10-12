@@ -1,10 +1,13 @@
 {
+  "routeWidthChecks": 52,
   "cases": [
     {
       "width": 1440,
       "route": "/",
       "overflow": false,
-      "heading": "Ideasfind their way.",
+      "heading": "Designinghow thingsrespond.",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": []
     },
     {
@@ -12,6 +15,8 @@
       "route": "/about",
       "overflow": false,
       "heading": "I\u2019m Anuj.",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/about"
       ]
@@ -21,6 +26,8 @@
       "route": "/notes",
       "overflow": false,
       "heading": "Questions I\u2019mkeeping open.",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/notes"
       ]
@@ -30,6 +37,8 @@
       "route": "/contact",
       "overflow": false,
       "heading": "Have somethingin mind?",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/contact"
       ]
@@ -39,6 +48,8 @@
       "route": "/resume",
       "overflow": false,
       "heading": "Design, code,and continuing to learn.",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": []
     },
     {
@@ -46,6 +57,8 @@
       "route": "/work",
       "overflow": false,
       "heading": "Selected work.",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -55,6 +68,8 @@
       "route": "/work/two-wheeler-dashboard",
       "overflow": false,
       "heading": "Himalayan 450",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -64,6 +79,8 @@
       "route": "/work/india-in-orbit",
       "overflow": false,
       "heading": "India in Orbit",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -73,6 +90,8 @@
       "route": "/work/medtimer",
       "overflow": false,
       "heading": "Meditimer \u2014 physical concept",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -82,6 +101,8 @@
       "route": "/work/gandhinagar-roundabouts",
       "overflow": false,
       "heading": "What actually blocks the circle?",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -91,6 +112,8 @@
       "route": "/work/medicine-storage-research",
       "overflow": false,
       "heading": "Medicine, storage, and reminders",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -100,6 +123,8 @@
       "route": "/work/consumer-experience",
       "overflow": false,
       "heading": "Consumer experience in retail",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -109,6 +134,8 @@
       "route": "/work/skidge",
       "overflow": false,
       "heading": "Skidge \u2014 graduate outcomes",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -117,7 +144,9 @@
       "width": 768,
       "route": "/",
       "overflow": false,
-      "heading": "Ideasfind their way.",
+      "heading": "Designinghow thingsrespond.",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": []
     },
     {
@@ -125,6 +154,8 @@
       "route": "/about",
       "overflow": false,
       "heading": "I\u2019m Anuj.",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/about"
       ]
@@ -134,6 +165,8 @@
       "route": "/notes",
       "overflow": false,
       "heading": "Questions I\u2019mkeeping open.",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/notes"
       ]
@@ -143,6 +176,8 @@
       "route": "/contact",
       "overflow": false,
       "heading": "Have somethingin mind?",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/contact"
       ]
@@ -152,6 +187,8 @@
       "route": "/resume",
       "overflow": false,
       "heading": "Design, code,and continuing to learn.",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": []
     },
     {
@@ -159,6 +196,8 @@
       "route": "/work",
       "overflow": false,
       "heading": "Selected work.",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -168,6 +207,8 @@
       "route": "/work/two-wheeler-dashboard",
       "overflow": false,
       "heading": "Himalayan 450",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -177,6 +218,8 @@
       "route": "/work/india-in-orbit",
       "overflow": false,
       "heading": "India in Orbit",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -186,6 +229,8 @@
       "route": "/work/medtimer",
       "overflow": false,
       "heading": "Meditimer \u2014 physical concept",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -195,6 +240,8 @@
       "route": "/work/gandhinagar-roundabouts",
       "overflow": false,
       "heading": "What actually blocks the circle?",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -204,6 +251,8 @@
       "route": "/work/medicine-storage-research",
       "overflow": false,
       "heading": "Medicine, storage, and reminders",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -213,6 +262,8 @@
       "route": "/work/consumer-experience",
       "overflow": false,
       "heading": "Consumer experience in retail",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -222,6 +273,8 @@
       "route": "/work/skidge",
       "overflow": false,
       "heading": "Skidge \u2014 graduate outcomes",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -230,7 +283,9 @@
       "width": 390,
       "route": "/",
       "overflow": false,
-      "heading": "Ideasfind their way.",
+      "heading": "Designinghow thingsrespond.",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": []
     },
     {
@@ -238,6 +293,8 @@
       "route": "/about",
       "overflow": false,
       "heading": "I\u2019m Anuj.",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/about"
       ]
@@ -247,6 +304,8 @@
       "route": "/notes",
       "overflow": false,
       "heading": "Questions I\u2019mkeeping open.",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/notes"
       ]
@@ -256,6 +315,8 @@
       "route": "/contact",
       "overflow": false,
       "heading": "Have somethingin mind?",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/contact"
       ]
@@ -265,6 +326,8 @@
       "route": "/resume",
       "overflow": false,
       "heading": "Design, code,and continuing to learn.",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": []
     },
     {
@@ -272,6 +335,8 @@
       "route": "/work",
       "overflow": false,
       "heading": "Selected work.",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -281,6 +346,8 @@
       "route": "/work/two-wheeler-dashboard",
       "overflow": false,
       "heading": "Himalayan 450",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -290,6 +357,8 @@
       "route": "/work/india-in-orbit",
       "overflow": false,
       "heading": "India in Orbit",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -299,6 +368,8 @@
       "route": "/work/medtimer",
       "overflow": false,
       "heading": "Meditimer \u2014 physical concept",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -308,6 +379,8 @@
       "route": "/work/gandhinagar-roundabouts",
       "overflow": false,
       "heading": "What actually blocks the circle?",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -317,6 +390,8 @@
       "route": "/work/medicine-storage-research",
       "overflow": false,
       "heading": "Medicine, storage, and reminders",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -326,6 +401,8 @@
       "route": "/work/consumer-experience",
       "overflow": false,
       "heading": "Consumer experience in retail",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -335,6 +412,8 @@
       "route": "/work/skidge",
       "overflow": false,
       "heading": "Skidge \u2014 graduate outcomes",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -343,7 +422,9 @@
       "width": 320,
       "route": "/",
       "overflow": false,
-      "heading": "Ideasfind their way.",
+      "heading": "Designinghow thingsrespond.",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": []
     },
     {
@@ -351,6 +432,8 @@
       "route": "/about",
       "overflow": false,
       "heading": "I\u2019m Anuj.",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/about"
       ]
@@ -360,6 +443,8 @@
       "route": "/notes",
       "overflow": false,
       "heading": "Questions I\u2019mkeeping open.",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/notes"
       ]
@@ -369,6 +454,8 @@
       "route": "/contact",
       "overflow": false,
       "heading": "Have somethingin mind?",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/contact"
       ]
@@ -378,6 +465,8 @@
       "route": "/resume",
       "overflow": false,
       "heading": "Design, code,and continuing to learn.",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": []
     },
     {
@@ -385,6 +474,8 @@
       "route": "/work",
       "overflow": false,
       "heading": "Selected work.",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -394,6 +485,8 @@
       "route": "/work/two-wheeler-dashboard",
       "overflow": false,
       "heading": "Himalayan 450",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -403,6 +496,8 @@
       "route": "/work/india-in-orbit",
       "overflow": false,
       "heading": "India in Orbit",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -412,6 +507,8 @@
       "route": "/work/medtimer",
       "overflow": false,
       "heading": "Meditimer \u2014 physical concept",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -421,6 +518,8 @@
       "route": "/work/gandhinagar-roundabouts",
       "overflow": false,
       "heading": "What actually blocks the circle?",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -430,6 +529,8 @@
       "route": "/work/medicine-storage-research",
       "overflow": false,
       "heading": "Medicine, storage, and reminders",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -439,6 +540,8 @@
       "route": "/work/consumer-experience",
       "overflow": false,
       "heading": "Consumer experience in retail",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
@@ -448,39 +551,35 @@
       "route": "/work/skidge",
       "overflow": false,
       "heading": "Skidge \u2014 graduate outcomes",
+      "font": "\"DM Sans\", \"DM Sans Fallback\", sans-serif",
+      "fontStyle": "normal",
       "active": [
         "/work"
       ]
     }
   ],
-  "routeWidthChecks": 52,
   "behaviors": [
-    "unwind and gather",
-    "free ends and no anchor pins",
-    "direct artwork drag",
-    "full-width section order",
-    "no decorative numbering or superscripts/subscripts",
-    "note anchors",
-    "keyboard slider",
-    "pause and resume",
-    "offscreen suspension",
-    "hidden-document event suspension",
-    "instant reduced-motion response",
-    "skip link",
-    "case navigation",
-    "404",
-    "no-JS content",
-    "research disclosure",
+    "visible WebGL opening and gathering",
+    "native Enter/Space and accessible state",
+    "no frames at rest",
+    "horizontal pull and reverse pull",
     "continuous mid-motion reversal",
-    "reverse artwork drag",
-    "visible-hidden-visible event handling"
+    "scroll-driven release and return",
+    "offscreen suspension",
+    "hidden-document event suspension and restoration",
+    "instant reduced-motion response and no idle frames",
+    "responsive drawing surface",
+    "skip link, navigation, note anchors, 404, research disclosure",
+    "server-rendered content without JavaScript",
+    "interactive SVG fallback when WebGL is unavailable",
+    "WebGL context loss fallback and restoration"
   ],
   "errors": [],
-  "visibilityTest": "Document visibility events exercised with a controlled hidden-property fixture; offscreen suspension exercised by real scrolling.",
+  "visibilityTest": "Hidden document events exercised with a controlled hidden-property fixture; offscreen suspension uses real scrolling.",
   "checks": {
     "productionBuild": "passed",
-    "lint": "passed",
     "typescript": "passed",
+    "lint": "passed",
     "whitespace": "passed"
   }
 }

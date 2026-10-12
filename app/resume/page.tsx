@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { ThreadMark } from "@/components/portfolio/ThreadStudy";
 import styles from "../editorial.module.css";
 export const metadata: Metadata = { title: "Resume — Anuj Rai" };
 
@@ -39,7 +38,7 @@ const education = [
 
 export default function Resume() {
   return <article className={styles.page}>
-    <header className={styles.header}><div><p className={styles.label}>Background &amp; experience</p><h1>Design, code,<br />and continuing to learn.</h1></div><ThreadMark kind="turn" className={styles.mark} /></header>
+    <header className={styles.header}><div><p className={styles.label}>Background &amp; experience</p><h1>Design, code,<br />and continuing to learn.</h1></div></header>
     <section className={styles.section}><h2>Experience</h2><div>{experience.map(job=><section key={job.company} className="resume-position"><h3>{job.role} · {job.company}</h3><p className={styles.period}>{job.period} · {job.location}</p><p>{job.description}</p></section>)}</div></section>
     <section className={styles.section}><h2>Education</h2><div>{education.map(edu=><section key={edu.institution} className="resume-position"><h3>{edu.degree}</h3><p>{edu.institution}</p><p className={styles.period}>{edu.period} · {edu.location}</p></section>)}</div></section>
     <Link className={styles.link} href="/contact">Get in touch<ArrowRight size={15} aria-hidden="true" /></Link>

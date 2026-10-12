@@ -1,27 +1,27 @@
 # Anuj Rai — interaction design & making
 
-A portfolio exploring screens, code, physical objects, and the space between them.
+A portfolio across digital products, information, and physical computing.
 
-The `design/skein` direction gives each project space to tell its story. Large original project media leads into a personal perspective, a workbench for ongoing experiments, working notes, and a conversation. Inter and Instrument Serif establish a clear, expressive hierarchy; chalk, cobalt, ink blue, and green give the page different rhythms.
+The current `design/skein` direction uses one sans-serif family, direct language, large project imagery, and open sections. A sculptural bundle of six independent filaments gives the introduction a material presence.
 
 ![Portfolio direction](docs/previews/skein.png)
 
-## Try the movement
+## Interaction
 
-Drag horizontally on the skein, use the native range control, or choose “Let it unfold.” The tangled strands open into separate loops and sweeping gestures; “Gather again” brings them back. There are no pins or artwork annotations. Keyboard and reduced-motion interactions are supported.
+Scroll through the opening, click or tap the sculpture, or pull it horizontally. Enter and Space work too. The strands loosen into separate sweeps and can be gathered again. There are no visible sliders, legends, or annotations around the artwork. Motion stops at rest and respects reduced-motion preferences.
 
-![Pull-driven unwinding](docs/previews/unwind.gif)
+![Thread sculpture](docs/previews/unwind.gif)
+
+The live artwork uses a lazily loaded 3D renderer and GPU morph targets. Its complete static SVG remains available without JavaScript or WebGL. The drawing is an original procedural illustration, not documentation of a physical project.
 
 ## Run locally
-
-Use Node.js and npm, then:
 
 ```sh
 npm ci
 npm run dev
 ```
 
-For the production version:
+For production:
 
 ```sh
 npm run build
@@ -30,16 +30,13 @@ npm run start
 
 ## Structure
 
-- [Homepage](app/page.tsx) and [its composition styles](app/studio.module.css).
-- [Skein drawing and interaction](components/portfolio/ThreadStudy.tsx).
-- [Art direction, portfolio references, and evidence boundaries](docs/thread-direction.md).
-- Work and existing case studies use available original project media.
-- About, Notes, Resume, and Contact remain direct destinations.
+- [Homepage](app/page.tsx) and [composition styles](app/studio.module.css).
+- [Accessible interaction and fallback](components/portfolio/ThreadStudy.tsx).
+- [Deterministic strand geometry](components/portfolio/skein-geometry.ts).
+- [Live sculptural renderer](components/portfolio/SkeinRenderer.ts).
+- [Art direction and evidence boundaries](docs/thread-direction.md).
+- [Browser review results](docs/previews/verification.json).
 
-The independent medicine-care app and physical group Meditimer remain separate projects. Smaller experiments retain their current status. Project outcomes, testimonials, portraits, and missing artifacts have not been invented.
-
-## Verification
-
-See [the browser verification results](docs/previews/verification.json). Review covers thirteen routes at 1440, 768, 390, and 320px, plus motion controls, direct dragging, keyboard input, reduced motion, visibility suspension, navigation, research disclosure, 404s, and static content without JavaScript. Superscript/subscript elements and decorative numbering are checked across routes.
+Original project media and the existing case routes remain available. The independent medicine-care app and physical group Meditimer remain separate. No metrics, testimonials, or missing project artifacts have been invented.
 
 The branch is for review and has not been merged into main.

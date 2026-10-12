@@ -58,7 +58,7 @@ export function Annotation({ className, as: Component = "span", ...props }: Typo
 export function Quote({ className, as: Component = "blockquote", ...props }: TypographyProps) {
   return (
     <Component
-      className={cn("text-xl md:text-2xl lg:text-3xl font-light italic text-stone-600 leading-snug", className)}
+      className={cn("text-xl md:text-2xl lg:text-3xl font-normal text-stone-600 leading-snug", className)}
       {...props}
     />
   );
