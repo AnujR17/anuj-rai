@@ -1,21 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-
-export default function About() {
-  return (
-    <article className="case-shell">
-      <header className="case-heading"><p className="portfolio-kicker">About Anuj</p><h1>Curious about how<br />things come together.</h1><p>I’m exploring interaction and product design through interfaces, code, and physical prototypes.</p></header>
-      <section className="case-section"><h2>What draws me in</h2><div><p>I’m interested in problems that sit between technology and people: how information becomes understandable, how an object communicates, and how a product responds when something changes.</p><p>Research helps me frame the question. Design and prototyping give me something concrete to examine and improve.</p></div></section>
-      <section className="case-section"><h2>What I want to develop</h2><div><p>I want to work closely with designers and engineers, take responsibility for decisions, and keep learning across the boundaries between digital and physical experiences.</p><p>My projects range from a motorcycle display and an interactive satellite explorer to experiments with connected objects. Each asks a different question about how an interaction should work.</p></div></section>
-      <section className="case-section">
-        <h2>A spatial curiosity</h2>
-        <div>
-          <p>I’m also interested in AR and VR: how people find their way through a space, understand what they can interact with, and receive feedback beyond a flat screen.</p>
-          <p>It’s a direction I want to explore alongside my work with interfaces and physical objects.</p>
-        </div>
-      </section>
-      <section className="case-section"><h2>Background</h2><div><p>I’m pursuing an M.Des in Intelligent User Experience Design at Dhirubhai Ambani University, following undergraduate study at ITM Vocational University.</p><Link href="/resume" className="portfolio-link">Experience and education <ArrowRight size={18} aria-hidden="true" /></Link></div></section>
-      <Link href="/work" className="portfolio-link">See the work <ArrowRight size={18} aria-hidden="true" /></Link>
-    </article>
-  );
-}
+import { ThreadMark } from "@/components/portfolio/ThreadStudy";
+import styles from "../editorial.module.css";
+export const metadata: Metadata = { title: "About — Anuj Rai", description: "Interaction design, computer science, and thinking through prototypes." };
+export default function About() { return <article className={styles.page}>
+<header className={styles.header}><div><p className={styles.label}>A little about me</p><h1>I’m Anuj.</h1><p className={styles.lede}>I came to interaction design through computer science. I’m interested in how people understand a screen, an object, or a system—and what happens when they try to use it.</p></div><ThreadMark kind="turn" className={styles.mark} /></header>
+<section className={styles.section}><h2>Thinking through a prototype</h2><div><p>I like having something to try while a question is still open. A sketch helps me think about a layout. A prototype lets me work through what changes, what stays still, and what happens next.</p><p>Code gives me another way to explore those decisions. My work includes a controllable motorcycle display, an interactive satellite experience, and experiments with connected objects.</p><Link href="/work" className={styles.link}>See the work<ArrowRight size={15} aria-hidden="true" /></Link></div></section>
+<section className={styles.section}><h2>People, routines, and responses</h2><div><p>The medicine-care app started with remembering medicines, but its emotional intent is about making care felt. A loved one can understand a reported status and decide whether to check in.</p><p>In the roundabout investigation, an initial parking question opened into a wider traffic question. Those projects keep me interested in the situation around an interaction, as well as the interaction itself.</p><Link href="/notes" className={styles.link}>A few working notes<ArrowRight size={15} aria-hidden="true" /></Link></div></section>
+<section className={styles.section}><h2>Beyond a flat screen</h2><div><p>I’m curious about physical computing, AR, and VR: how an object shows its state, how someone finds their way in a space, and what feedback feels like beyond a screen.</p><p>Some of this work is still exploratory. I keep smaller prototypes on the workbench alongside the more developed projects.</p></div></section>
+<section className={styles.section}><h2>Background</h2><div><p>I’m pursuing an M.Des in Intelligent User Experience Design at Dhirubhai Ambani University, following undergraduate study at ITM Vocational University.</p><p>I’m looking to work with designers and engineers, keep developing my interaction craft, and make things that can be examined and improved.</p><Link href="/resume" className={styles.link}>Experience and education<ArrowRight size={15} aria-hidden="true" /></Link></div></section>
+</article>; }

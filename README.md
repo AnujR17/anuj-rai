@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Anuj Rai — interaction design & making
 
-## Getting Started
+A portfolio exploring screens, code, physical objects, and the space between them.
 
-First, run the development server:
+The `design/skein` direction uses a gathered skein that a visitor can pull open. Chalk white, ink blue, and burnt orange replace the earlier beige treatment. Real project artifacts stay in the foreground.
 
-```bash
+![Portfolio direction](docs/previews/skein.png)
+
+## Try the movement
+
+The range control supports pointer, touch, and keyboard. “Let it unfold” opens the strands; “Gather again” brings them back. The three pins hold while free ends find separate paths. This is a browser-rendered illustration, not a photograph.
+
+![Pull-driven unwinding](docs/previews/unwind.gif)
+
+## Run locally
+
+Use Node.js and npm, then:
+
+```sh
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+For the production version:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm run build
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Structure
 
-## Learn More
+- [Homepage](app/page.tsx) and [its composition styles](app/studio.module.css).
+- [Skein drawing and interaction](components/portfolio/ThreadStudy.tsx).
+- [Art direction and evidence boundaries](docs/thread-direction.md).
+- Work and the existing case-study routes use genuine available project media.
+- About, working Notes, Resume, and Contact remain direct destinations.
 
-To learn more about Next.js, take a look at the following resources:
+The independent medicine-care app and physical group Meditimer are separate projects. Smaller experiments retain their current status. No project metrics, findings, or outcomes are invented for this presentation.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Verification
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Production build, TypeScript, lint, and whitespace checks pass. Browser review covers thirteen routes at 1440, 768, 390, and 320px, plus unwind/gather, pinned endpoints, keyboard input, pause/resume, offscreen suspension, reduced motion, focus navigation, research disclosure, 404s, and static content without JavaScript.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The branch is for review. It has not been merged into main.

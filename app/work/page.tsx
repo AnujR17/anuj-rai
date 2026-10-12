@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Lab } from "@/components/portfolio/Lab";
 import { ResearchSpotlight } from "@/components/portfolio/ResearchSpotlight";
 import { ResearchList } from "@/components/portfolio/ResearchList";
+import { ThreadMark } from "@/components/portfolio/ThreadStudy";
 
 export default function Work() {
   return (
@@ -11,11 +12,12 @@ export default function Work() {
       <header className="work-heading">
         <p className="portfolio-kicker">Interfaces, information, and physical interactions</p>
         <h1>Selected work.</h1>
-        <p>Design ideas, field questions, and working prototypes.</p>
+        <p>Interfaces, information, and a few questions taken into making.</p>
+        <ThreadMark kind="open" className="work-thread-mark" />
         <nav className="work-sections" aria-label="Work sections">
           <a href="#design">Design &amp; build</a>
           <a href="#fieldwork">Fieldwork</a>
-          <a href="#analysis">Analysis</a>
+          <a href="#supporting">Supporting studies</a>
           <a href="#lab">Experiments</a>
         </nav>
       </header>
@@ -28,7 +30,7 @@ export default function Work() {
         <div className="work-project-copy"><p className="portfolio-kicker">Information design · Interactive web</p><h2>India in Orbit</h2><p>Making satellites, missions, and their everyday relevance explorable.</p><Link href="/work/india-in-orbit" className="portfolio-link">Explore the project <ArrowUpRight size={18} aria-hidden="true" /></Link></div>
       </section>
       <ResearchSpotlight />
-      <ResearchList />
+      <details id="supporting" className="supporting-studies"><summary>Supporting research &amp; analysis <span>Medicine routines, retail experience, and graduate outcomes</span></summary><ResearchList /></details>
       <Lab />
       <aside className="work-in-development"><h2>Medicine, routines, and reminders</h2><p>The physical Meditimer concept is a separate project from my independent medicine app.</p><Link href="/work/medtimer" className="portfolio-link">Read the concept brief <ArrowUpRight size={18} aria-hidden="true" /></Link></aside>
     </div>

@@ -1,0 +1,471 @@
+{
+  "cases": [
+    {
+      "width": 1440,
+      "route": "/",
+      "overflow": false,
+      "heading": "Ideasfind their way.",
+      "active": []
+    },
+    {
+      "width": 1440,
+      "route": "/about",
+      "overflow": false,
+      "heading": "I’m Anuj.",
+      "active": [
+        "/about"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/notes",
+      "overflow": false,
+      "heading": "Questions I’mkeeping open.",
+      "active": [
+        "/notes"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/contact",
+      "overflow": false,
+      "heading": "Have somethingin mind?",
+      "active": [
+        "/contact"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/resume",
+      "overflow": false,
+      "heading": "Design, code,and continuing to learn.",
+      "active": []
+    },
+    {
+      "width": 1440,
+      "route": "/work",
+      "overflow": false,
+      "heading": "Selected work.",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/work/two-wheeler-dashboard",
+      "overflow": false,
+      "heading": "Himalayan 450",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/work/india-in-orbit",
+      "overflow": false,
+      "heading": "India in Orbit",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/work/medtimer",
+      "overflow": false,
+      "heading": "Meditimer — physical concept",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/work/gandhinagar-roundabouts",
+      "overflow": false,
+      "heading": "What actually blocks the circle?",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/work/medicine-storage-research",
+      "overflow": false,
+      "heading": "Medicine, storage, and reminders",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/work/consumer-experience",
+      "overflow": false,
+      "heading": "Consumer experience in retail",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/work/skidge",
+      "overflow": false,
+      "heading": "Skidge — graduate outcomes",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 768,
+      "route": "/",
+      "overflow": false,
+      "heading": "Ideasfind their way.",
+      "active": []
+    },
+    {
+      "width": 768,
+      "route": "/about",
+      "overflow": false,
+      "heading": "I’m Anuj.",
+      "active": [
+        "/about"
+      ]
+    },
+    {
+      "width": 768,
+      "route": "/notes",
+      "overflow": false,
+      "heading": "Questions I’mkeeping open.",
+      "active": [
+        "/notes"
+      ]
+    },
+    {
+      "width": 768,
+      "route": "/contact",
+      "overflow": false,
+      "heading": "Have somethingin mind?",
+      "active": [
+        "/contact"
+      ]
+    },
+    {
+      "width": 768,
+      "route": "/resume",
+      "overflow": false,
+      "heading": "Design, code,and continuing to learn.",
+      "active": []
+    },
+    {
+      "width": 768,
+      "route": "/work",
+      "overflow": false,
+      "heading": "Selected work.",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 768,
+      "route": "/work/two-wheeler-dashboard",
+      "overflow": false,
+      "heading": "Himalayan 450",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 768,
+      "route": "/work/india-in-orbit",
+      "overflow": false,
+      "heading": "India in Orbit",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 768,
+      "route": "/work/medtimer",
+      "overflow": false,
+      "heading": "Meditimer — physical concept",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 768,
+      "route": "/work/gandhinagar-roundabouts",
+      "overflow": false,
+      "heading": "What actually blocks the circle?",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 768,
+      "route": "/work/medicine-storage-research",
+      "overflow": false,
+      "heading": "Medicine, storage, and reminders",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 768,
+      "route": "/work/consumer-experience",
+      "overflow": false,
+      "heading": "Consumer experience in retail",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 768,
+      "route": "/work/skidge",
+      "overflow": false,
+      "heading": "Skidge — graduate outcomes",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "overflow": false,
+      "heading": "Ideasfind their way.",
+      "active": []
+    },
+    {
+      "width": 390,
+      "route": "/about",
+      "overflow": false,
+      "heading": "I’m Anuj.",
+      "active": [
+        "/about"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/notes",
+      "overflow": false,
+      "heading": "Questions I’mkeeping open.",
+      "active": [
+        "/notes"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/contact",
+      "overflow": false,
+      "heading": "Have somethingin mind?",
+      "active": [
+        "/contact"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/resume",
+      "overflow": false,
+      "heading": "Design, code,and continuing to learn.",
+      "active": []
+    },
+    {
+      "width": 390,
+      "route": "/work",
+      "overflow": false,
+      "heading": "Selected work.",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/work/two-wheeler-dashboard",
+      "overflow": false,
+      "heading": "Himalayan 450",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/work/india-in-orbit",
+      "overflow": false,
+      "heading": "India in Orbit",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/work/medtimer",
+      "overflow": false,
+      "heading": "Meditimer — physical concept",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/work/gandhinagar-roundabouts",
+      "overflow": false,
+      "heading": "What actually blocks the circle?",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/work/medicine-storage-research",
+      "overflow": false,
+      "heading": "Medicine, storage, and reminders",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/work/consumer-experience",
+      "overflow": false,
+      "heading": "Consumer experience in retail",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/work/skidge",
+      "overflow": false,
+      "heading": "Skidge — graduate outcomes",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/",
+      "overflow": false,
+      "heading": "Ideasfind their way.",
+      "active": []
+    },
+    {
+      "width": 320,
+      "route": "/about",
+      "overflow": false,
+      "heading": "I’m Anuj.",
+      "active": [
+        "/about"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/notes",
+      "overflow": false,
+      "heading": "Questions I’mkeeping open.",
+      "active": [
+        "/notes"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/contact",
+      "overflow": false,
+      "heading": "Have somethingin mind?",
+      "active": [
+        "/contact"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/resume",
+      "overflow": false,
+      "heading": "Design, code,and continuing to learn.",
+      "active": []
+    },
+    {
+      "width": 320,
+      "route": "/work",
+      "overflow": false,
+      "heading": "Selected work.",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/work/two-wheeler-dashboard",
+      "overflow": false,
+      "heading": "Himalayan 450",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/work/india-in-orbit",
+      "overflow": false,
+      "heading": "India in Orbit",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/work/medtimer",
+      "overflow": false,
+      "heading": "Meditimer — physical concept",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/work/gandhinagar-roundabouts",
+      "overflow": false,
+      "heading": "What actually blocks the circle?",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/work/medicine-storage-research",
+      "overflow": false,
+      "heading": "Medicine, storage, and reminders",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/work/consumer-experience",
+      "overflow": false,
+      "heading": "Consumer experience in retail",
+      "active": [
+        "/work"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/work/skidge",
+      "overflow": false,
+      "heading": "Skidge — graduate outcomes",
+      "active": [
+        "/work"
+      ]
+    }
+  ],
+  "routeWidthChecks": 52,
+  "behaviors": [
+    "unwind and gather",
+    "fixed pins",
+    "keyboard slider",
+    "pause and resume",
+    "offscreen suspension",
+    "instant reduced-motion response",
+    "skip link",
+    "case navigation",
+    "404",
+    "no-JS content",
+    "research disclosure"
+  ],
+  "errors": []
+}

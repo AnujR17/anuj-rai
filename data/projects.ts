@@ -41,7 +41,7 @@ export const projects: Project[] = [
       { title: "Research alongside the prototype", paragraphs: ["The accompanying two-wheeler survey report covers dashboard feature priorities, readability, environmental challenges, and interaction preferences. Its reported sample spans different two-wheeler types; it is not a Himalayan-only riding test.", "The feature-priority chart separates basic information from additional features. Those self-reported preferences provide questions for the design: how visible should fuel and speed remain when navigation or mode controls are introduced? The survey alone does not validate this particular layout."], figures: [{ src: "/portfolio/research/bike-feature-priorities.png", alt: "Survey-report chart ranking fuel or battery information and speed above additional dashboard features.", width: 1220, height: 706, caption: "Original feature-priority figure from BikeDashboardAnalysis. Self-reported preferences, not a performance test of this concept." }] },
       { title: "What this establishes", paragraphs: ["The design export and runnable simulation show a visual direction and implemented state behaviour. They provide a starting point for comparing layouts and checking which signals compete.", "They do not establish readability in sunlight, reduced glance time, or usability while riding. Those questions need evidence from appropriate testing."] },
     ],
-    note: "Independent educational concept, unaffiliated with Royal Enfield. The prototype README credits GitHub Copilot assistance; the final case study should distinguish design decisions from generated implementation and document my individual contribution.",
+    note: "Independent educational concept, unaffiliated with Royal Enfield. The prototype repository credits GitHub Copilot assistance. This browser simulation has not been evaluated on a moving motorcycle.",
   },
   {
     slug: "india-in-orbit",
@@ -54,17 +54,17 @@ export const projects: Project[] = [
     sections: [
       { title: "A way into the subject", paragraphs: ["The website moves from everyday uses of satellites into orbital regimes and mission history. That sequence connects an abstract system to familiar activities before introducing its technical structure.", "A visitor can explore communication, navigation, observation, and other satellite roles, then move through the larger story."] },
       { title: "Making the system explorable", paragraphs: ["The implementation combines a scroll-led narrative, rendered scenes, mission milestones, and an orbit explorer. The source contains satellite data and propagation logic, alongside the presentation layer.", "The visual opening shown here comes from the working website. Open the live experience to inspect the interactions and the project’s methodology and credits."] },
-      { title: "What needs a closer look", paragraphs: ["A working experience establishes execution. A stronger case study also needs to explain how the information was selected, how sources were checked, and why the interaction structure changed across iterations.", "The next review should assess whether visitors can answer a useful question, alongside mobile performance, accessible alternatives to 3D, and the distinction between live orbital data and illustrative scenes."] },
+      { title: "Scope of the work", paragraphs: ["The implemented website shows the information structure, rendered scenes, and navigation. Its source and live experience are available to inspect.", "Visitor learning outcomes have not been established. The illustrative scenes and any propagated orbital data need to be understood with their sources and assumptions; the presence of propagation code alone does not establish scientific accuracy."] },
     ],
-    note: "Interactive web project. The presence of propagation code does not establish scientific accuracy. Data provenance, interpretation, and individual contributions need to remain explicit in the full case study.",
+    note: "Interactive information-design project. Sources, methodology, and credits are available in the live experience; this case does not claim measured learning outcomes.",
   },
   {
     slug: "medtimer",
     title: "Meditimer — physical concept",
     type: "Medicine-management concept / Group project",
-    summary: "A physical medicine-management concept. This is separate from my independently developed medicine app.",
+    summary: "A physical medicine-management concept. This is separate from my independent medicine-care app design.",
     sections: [
-      { title: "My contribution", paragraphs: ["In this group project, my contribution was the problem framing and concept rationale. Teammates contributed mockups and documentation.", "The independent medicine app is a separate project, with its own interface, implementation, and case study."] },
+      { title: "My contribution", paragraphs: ["In this group project, I worked on research and interviews, synthesis, ideation, and functional and dimension decisions. Teammates drew sketches and contributed mockups and documentation.", "The independent medicine-care app is a separate design project, with its own shared-care flow."] },
       { title: "The question", paragraphs: ["How might a physical medicine-management product fit into a person’s existing routine? The concept explores the relationship between reminders, the object, and the surrounding activity."] },
       { title: "Current status", paragraphs: ["This page is a concept brief. The original project material is needed to present the design, research, and iteration in detail. No participant counts, quotes, or measured outcomes are claimed here."] },
     ],

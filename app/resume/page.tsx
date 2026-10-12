@@ -1,7 +1,9 @@
-import { Container } from "@/components/ui/Container";
-import { Display, Body } from "@/components/ui/Typography";
-import { ConstructionLine, Measure } from "@/components/ui/Structure";
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { ThreadMark } from "@/components/portfolio/ThreadStudy";
+import styles from "../editorial.module.css";
+export const metadata: Metadata = { title: "Resume — Anuj Rai" };
 
 const experience = [
   {
@@ -36,54 +38,10 @@ const education = [
 ];
 
 export default function Resume() {
-  return (
-    <div className="pt-24 md:pt-40 pb-32">
-      <Container>
-        <Reveal>
-          <Display className="mb-24">Experience</Display>
-        </Reveal>
-
-        <Stagger className="flex flex-col gap-24 mb-32">
-          {experience.map((job, i) => (
-            <StaggerItem key={i} className="grid md:grid-cols-12 gap-8">
-              <div className="md:col-span-3">
-                <p className="text-sm font-medium text-stone-900 mb-1">{job.period}</p>
-                <p className="text-sm text-stone-400">{job.location}</p>
-              </div>
-              <div className="md:col-span-6">
-                <h3 className="text-xl font-medium text-stone-900 mb-1">{job.role}</h3>
-                <p className="text-stone-400 mb-6 text-sm">{job.company}</p>
-                <Body className="text-sm">{job.description}</Body>
-              </div>
-            </StaggerItem>
-          ))}
-        </Stagger>
-
-        <ConstructionLine className="mb-24" />
-
-        <Reveal>
-          <Display className="mb-24">Education</Display>
-        </Reveal>
-        
-        <Stagger className="flex flex-col gap-16">
-          {education.map((edu, i) => (
-            <StaggerItem key={i} className="grid md:grid-cols-12 gap-8">
-              <div className="md:col-span-3">
-                <p className="text-sm font-medium text-stone-900 mb-1">{edu.period}</p>
-                <p className="text-sm text-stone-400">{edu.location}</p>
-              </div>
-              <div className="md:col-span-6">
-                <h3 className="text-lg font-medium text-stone-900 mb-1">{edu.degree}</h3>
-                <p className="text-stone-400 text-sm">{edu.institution}</p>
-              </div>
-            </StaggerItem>
-          ))}
-        </Stagger>
-
-        <Reveal delay={0.2}>
-          <Measure text="updated 2025" className="mt-32 opacity-50" />
-        </Reveal>
-      </Container>
-    </div>
-  );
+  return <article className={styles.page}>
+    <header className={styles.header}><div><p className={styles.label}>Background &amp; experience</p><h1>Design, code,<br />and continuing to learn.</h1></div><ThreadMark kind="turn" className={styles.mark} /></header>
+    <section className={styles.section}><h2>Experience</h2><div>{experience.map(job=><section key={job.company} className="resume-position"><h3>{job.role} · {job.company}</h3><p className={styles.period}>{job.period} · {job.location}</p><p>{job.description}</p></section>)}</div></section>
+    <section className={styles.section}><h2>Education</h2><div>{education.map(edu=><section key={edu.institution} className="resume-position"><h3>{edu.degree}</h3><p>{edu.institution}</p><p className={styles.period}>{edu.period} · {edu.location}</p></section>)}</div></section>
+    <Link className={styles.link} href="/contact">Get in touch<ArrowRight size={15} aria-hidden="true" /></Link>
+  </article>;
 }

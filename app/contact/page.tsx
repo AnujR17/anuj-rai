@@ -1,47 +1,7 @@
-import { Container } from "@/components/ui/Container";
-import { Headline, Body } from "@/components/ui/Typography";
-import { Measure } from "@/components/ui/Structure";
-import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import type { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
+import { ThreadMark } from "@/components/portfolio/ThreadStudy";
 import { contact } from "@/data/contact";
-
-export default function Contact() {
-  return (
-    <div className="pt-24 md:pt-40 pb-32">
-      <Container>
-        <div className="grid md:grid-cols-12 gap-12">
-          <div className="md:col-span-6">
-            <Reveal>
-              <Headline className="text-3xl md:text-5xl lg:text-6xl mb-8">Let&apos;s discuss a problem.</Headline>
-              <Body className="text-stone-600">
-                I am currently open to research-driven product roles, design collaborations, or honest conversations about how systems shape behavior.
-              </Body>
-            </Reveal>
-          </div>
-
-          <div className="md:col-span-3 md:col-start-9 pt-2">
-            <Stagger>
-              <StaggerItem className="mb-12">
-                <p className="text-sm font-medium text-stone-900 mb-2">Email</p>
-                <a href={`mailto:${contact.email}`} className="text-sm font-medium text-stone-900 hover:text-stone-400 transition-colors break-all">
-                  {contact.email}
-                </a>
-              </StaggerItem>
-              <StaggerItem>
-                <p className="text-sm font-medium text-stone-900 mb-2">Network</p>
-                <div className="flex flex-col gap-2">
-                  <a href={contact.github} className="inline-flex items-center gap-1 text-sm font-medium text-stone-900 hover:text-stone-400 transition-colors">
-                    GitHub <ArrowUpRight className="w-3 h-3" />
-                  </a>
-                </div>
-              </StaggerItem>
-            </Stagger>
-          </div>
-        </div>
-        <Reveal delay={0.2}>
-          <Measure className="mt-32 opacity-50" />
-        </Reveal>
-      </Container>
-    </div>
-  );
-}
+import styles from "../editorial.module.css";
+export const metadata: Metadata = { title: "Contact — Anuj Rai", description: "Get in touch about interaction design, prototypes, and collaborations." };
+export default function Contact() { return <article className={styles.page}><header className={styles.header}><div><p className={styles.label}>Contact</p><h1>Have something<br />in mind?</h1><p className={styles.lede}>An interaction to work through, a role to talk about, or something you’re making. I’d like to hear about it.</p></div></header><div className={styles.contact}><div><h2>Let’s start with a conversation.</h2><p>I’m interested in interaction design roles and collaborations that bring design and building close together.</p><ThreadMark kind="anchor" className={styles.contactMark} /></div><div className={styles.contactLinks}><div><p className={styles.label}>Email</p><a href={"mailto:"+contact.email} className={styles.link}>{contact.email}<ArrowUpRight size={15} aria-hidden="true" /></a></div><div><p className={styles.label}>Work in code</p><a href={contact.github} className={styles.link}>GitHub<ArrowUpRight size={15} aria-hidden="true" /></a></div></div></div></article>; }
