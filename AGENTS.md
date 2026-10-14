@@ -1,6 +1,6 @@
 # Portfolio workflow
 
-Use `code/portfolio` for this portfolio work. Verify the active branch before edits, commits, or pushes. Never merge without the user's explicit approval; permission to push this branch is not permission to merge it.
+Use `portfolioSerene` for this combined portfolio work, as explicitly requested by the user on 14 October 2026. Read `docs/portfolio-serene.md` first; it supersedes conflicting older layout and destination proposals. Verify the active branch before edits, commits, or pushes. Do not merge branches. The user explicitly confirmed that branches will not be merged; pushing or opening a review does not authorize a merge.
 
 Read [the continuation brief](docs/portfolio-continuation.md) for the design direction, project evidence gaps, and prior-chat context. Preserve the distinction between the independent Meditimer app and the physical medicine product. Do not invent research claims, outcomes, or missing project artifacts.
 

@@ -1,40 +1,153 @@
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { FeaturedWork } from "@/components/portfolio/FeaturedWork";
-import { Lab } from "@/components/portfolio/Lab";
-import { ResearchSpotlight } from "@/components/portfolio/ResearchSpotlight";
-import { contact } from "@/data/contact";
-
+import { Doodle } from "@/components/serene/Doodle";
+import {
+  DashboardPlate,
+  Laptop,
+  PhonePair,
+  ProductPlate,
+} from "@/components/serene/Mockups";
+import { HowIWork } from "@/components/serene/HowIWork";
+import { AboutIntro } from "@/components/serene/AboutIntro";
+import { Contact } from "@/components/serene/Contact";
 export default function Home() {
   return (
-    <div className="portfolio-shell">
-      <section className="portfolio-opening" aria-labelledby="intro-title">
-        <div className="portfolio-intro">
-          <p className="portfolio-kicker">Interaction design · Working prototypes</p>
-          <h1 id="intro-title">How should<br />{" "}this <em>work?</em></h1>
-          <p className="portfolio-intro-copy">I’m Anuj. I’m interested in how people, interfaces, and physical things meet. I explore those questions through design and code.</p>
-          <Link href="/work" className="portfolio-link">Explore the work <ArrowRight size={18} aria-hidden="true" /></Link>
-          <p className="portfolio-intro-note">From a motorcycle display<br />to a world of satellites.</p>
+    <>
+      <section className="hero">
+        <Doodle />
+        <div className="hero-copy">
+          <h1>
+            The little
+            <br />
+            <span>things.</span>
+          </h1>
+          <p>
+            I’m Anuj. I design interactions and build prototypes,
+            <br className="desktop-break" /> drawing on my background in
+            computer science.
+          </p>
+          <p className="hero-aside">
+            People’s habits. Everyday patterns.
+            <br />
+            The details that make an experience feel right.
+          </p>
+          <a className="inline-link" href="#work">
+            Take a look at my work <span>↓</span>
+          </a>
         </div>
-        <FeaturedWork />
+        <span className="hero-footnote">
+          A closer look, then a little making.
+        </span>
       </section>
-      <ResearchSpotlight />
-      <section className="portfolio-approach" aria-labelledby="approach-title">
-        <p className="portfolio-kicker">Across screens and objects</p>
-        <div>
-          <h2 id="approach-title">The part I keep coming back to:<br /><span>turning a question into something you can try.</span></h2>
-          <div className="portfolio-approach-copy">
-            <p>A dashboard asks what needs attention. A space explorer asks how to make a complex system understandable. A physical prototype asks how an object should respond.</p>
-            <p>I’m looking for a team where I can work through those questions with designers and engineers, from early exploration to the details of an interaction.</p>
-          </div>
-          <Link href="/about" className="portfolio-link">A little more about me <ArrowRight size={18} aria-hidden="true" /></Link>
+      <section className="selected-section section-pad" id="work">
+        <div className="section-heading">
+          <h2>
+            Selected work<span>.</span>
+          </h2>
+          <p>
+            Interfaces, information and physical objects.
+            <br />A few different ways of working things out.
+          </p>
         </div>
+        <div className="selected-grid">
+          <article className="project-preview himalayan">
+            <Link
+              href="/work/two-wheeler-dashboard/"
+              className="preview-visual"
+            >
+              <DashboardPlate />
+              <span className="open-project" aria-hidden="true">
+                ↗
+              </span>
+            </Link>
+            <div className="preview-heading">
+              <h3>
+                <Link href="/work/two-wheeler-dashboard/">Himalayan 450</Link>
+              </h3>
+              <span>Interface study · Browser simulation</span>
+            </div>
+            <p>
+              What stays visible when everything changes? A circular dashboard
+              and its changing states.
+            </p>
+            <p className="project-contribution">
+              Interface concept & prototype · Independent educational study
+            </p>
+          </article>
+          <article className="project-preview orbit">
+            <Link href="/work/india-in-orbit/" className="preview-visual">
+              <Laptop />
+              <span className="open-project" aria-hidden="true">
+                ↗
+              </span>
+            </Link>
+            <div className="preview-heading">
+              <h3>
+                <Link href="/work/india-in-orbit/">India in Orbit</Link>
+              </h3>
+              <span>Information design · Interactive web</span>
+            </div>
+            <p>
+              A way into an invisible system, starting with the satellites
+              already part of everyday life.
+            </p>
+            <p className="project-contribution">
+              Interactive web project · Working experience
+            </p>
+          </article>
+        </div>
+        <div className="more-heading">
+          <h3>More things I’ve been working on</h3>
+          <Link className="inline-link" href="/work/">
+            All work ↗
+          </Link>
+        </div>
+        <div className="further-grid">
+          <article>
+            <Link
+              className="further-visual medicine"
+              href="/work/medicine-app/"
+            >
+              <PhonePair />
+            </Link>
+            <h4>
+              <Link href="/work/medicine-app/">
+                Medicine app <span>↗</span>
+              </Link>
+            </h4>
+            <p>Medicine taker and caregiver interfaces. Independent design.</p>
+          </article>
+          <article>
+            <Link className="further-visual" href="/work/toki/">
+              <ProductPlate />
+            </Link>
+            <h4>
+              <Link href="/work/toki/">
+                Toki <span>↗</span>
+              </Link>
+            </h4>
+            <p>Exploring focus through a connected desk object.</p>
+          </article>
+          <article>
+            <Link className="further-visual" href="/work/medtimer/">
+              <ProductPlate physical />
+            </Link>
+            <h4>
+              <Link href="/work/medtimer/">
+                Physical Meditimer <span>↗</span>
+              </Link>
+            </h4>
+            <p>Problem framing and concept rationale in a group project.</p>
+          </article>
+        </div>
+        <Link className="research-note" href="/work/gandhinagar-roundabouts/">
+          <span>From the field</span>
+          <strong>What actually blocks the circle?</strong>
+          <span>A roundabout research study ↗</span>
+        </Link>
       </section>
-      <Lab />
-      <section className="portfolio-contact" aria-labelledby="contact-title">
-        <div><p className="portfolio-kicker">Have something in mind?</p><h2 id="contact-title">Let’s work through it.</h2></div>
-        <a className="portfolio-link" href={`mailto:${contact.email}`}>{contact.email} <ArrowUpRight size={20} aria-hidden="true" /></a>
-      </section>
-    </div>
+      <HowIWork />
+      <AboutIntro />
+      <Contact />
+    </>
   );
 }
