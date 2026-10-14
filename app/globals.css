@@ -148,23 +148,24 @@ h2 > span {
 .hero-copy {
   position: relative;
   z-index: 2;
-  max-width: 720px;
+  max-width: 1000px;
   pointer-events: none;
 }
 .hero-copy a,
 .hero-copy p,
 .hero-copy h1 {
   pointer-events: auto;
+  cursor: text;
+}
+.hero-copy a {
+  cursor: pointer;
 }
 .hero h1 {
-  font-size: clamp(76px, 9.4vw, 142px);
-  line-height: 0.96;
+  font-size: clamp(48px, 6.4vw, 98px);
+  line-height: 1.02;
   font-weight: 600;
-  letter-spacing: -0.07em;
+  letter-spacing: -0.06em;
   margin-bottom: 30px;
-}
-.hero h1 span {
-  color: #949d91;
 }
 .hero-copy > p {
   font-size: 19px;
@@ -197,10 +198,7 @@ h2 > span {
 }
 .doodle {
   position: absolute;
-  right: 0;
-  top: -40px;
-  width: 66%;
-  height: 70%;
+  inset: 0;
   z-index: 0;
   overflow: hidden;
 }
@@ -209,16 +207,31 @@ h2 > span {
   inset: 0;
   width: 100%;
   height: 100%;
-  cursor:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25'%3E%3Cpath d='M12 1v7m0 9v7M1 12h7m9 0h7' stroke='%23545b53'/%3E%3Ccircle cx='12' cy='12' r='1.7' fill='%23545b53'/%3E%3C/svg%3E")
-      12 12,
-    crosshair;
+  cursor: none;
+}
+.draw-cursor {
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  color: #444a44;
+  z-index: 3;
+}
+@media (pointer: coarse) {
+  .draw-cursor {
+    display: none;
+  }
+  .doodle canvas {
+    cursor: auto;
+  }
 }
 .quiet-lines {
-  width: 100%;
-  height: 100%;
+  width: 66%;
+  height: 70%;
   position: absolute;
-  inset: 0;
+  right: 0;
+  top: -40px;
   stroke: #afb7ac;
   stroke-width: 0.65;
   filter: drop-shadow(0 5px 4px #acb2a030);
@@ -230,7 +243,7 @@ h2 > span {
 .doodle-note {
   position: absolute;
   right: 12%;
-  bottom: 8%;
+  bottom: 35%;
   display: flex;
   gap: 24px;
   font-size: 12px;
@@ -1547,7 +1560,7 @@ h2 > span {
     min-height: 310px;
   }
   .hero h1 {
-    font-size: 110px;
+    font-size: clamp(48px, 6.4vw, 98px);
   }
   .about-intro {
     gap: 7vw;
@@ -1584,7 +1597,7 @@ h2 > span {
     padding: 0 6vw 60px;
   }
   .hero h1 {
-    font-size: clamp(76px, 17vw, 115px);
+    font-size: clamp(30px, 8.9vw, 60px);
     margin-bottom: 25px;
   }
   .hero-copy > p {
@@ -1597,13 +1610,14 @@ h2 > span {
   .hero-copy .hero-aside {
     font-size: 13px;
   }
-  .doodle {
+  .quiet-lines {
     width: 100%;
     height: 45%;
     top: -15px;
   }
   .doodle-note {
-    bottom: 12%;
+    top: 30%;
+    bottom: auto;
     right: 8%;
     font-size: 10px;
     gap: 18px;
@@ -1941,7 +1955,7 @@ h2 > span {
     font-size: 15px;
   }
   .hero h1 {
-    font-size: 78px;
+    font-size: 30px;
   }
   .contact-email {
     font-size: 18px;

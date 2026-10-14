@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 
 export function Doodle() {
   const canvas = useRef<HTMLCanvasElement>(null),
+    cursor = useRef<HTMLSpanElement>(null),
     clear = useRef<() => void>(() => {});
   useEffect(() => {
     const el = canvas.current!;
@@ -45,8 +46,16 @@ export function Doodle() {
       if (strokes.length > 60) strokes.shift();
       el.setPointerCapture(e.pointerId);
     };
+    const showCursor = (e: PointerEvent) => {
+      if (e.pointerType === "touch") return;
+      const p = point(e);
+      cursor.current!.style.left = `${p.x}px`;
+      cursor.current!.style.top = `${p.y}px`;
+      cursor.current!.hidden = false;
+    };
     const move = (e: PointerEvent) => {
       if (e.pointerType === "touch") return;
+      showCursor(e);
       const p = point(e);
       if (active) {
         active.push(p);
@@ -61,6 +70,7 @@ export function Doodle() {
       trail = [];
     };
     const leave = () => {
+      cursor.current!.hidden = true;
       if (trail.length) trails.push(trail);
       trail = [];
     };
@@ -90,6 +100,7 @@ export function Doodle() {
       frame = requestAnimationFrame(paint);
     };
     frame = requestAnimationFrame(paint);
+    el.addEventListener("pointerenter", showCursor);
     el.addEventListener("pointerdown", down);
     el.addEventListener("pointermove", move);
     el.addEventListener("pointerup", up);
@@ -99,6 +110,7 @@ export function Doodle() {
     return () => {
       observer.disconnect();
       cancelAnimationFrame(frame);
+      el.removeEventListener("pointerenter", showCursor);
       el.removeEventListener("pointerdown", down);
       el.removeEventListener("pointermove", move);
       el.removeEventListener("pointerup", up);
@@ -123,6 +135,12 @@ export function Doodle() {
         ref={canvas}
         aria-label="Optional drawing surface. Drag with a mouse or pen to draw. Touch scrolling is preserved."
       />
+      <span ref={cursor} className="draw-cursor" hidden aria-hidden="true">
+        <svg width="29" height="29" viewBox="0 0 29 29" fill="none">
+          <path d="M14.5 1v8m0 11v8M1 14.5h8m11 0h8" stroke="currentColor" />
+          <circle cx="14.5" cy="14.5" r="2" fill="currentColor" />
+        </svg>
+      </span>
       <div className="doodle-note">
         <span>Leave a little mark.</span>
         <button

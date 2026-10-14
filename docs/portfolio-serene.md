@@ -48,3 +48,9 @@ Cockpit: Ajay Ananth / Motofoodie, source image at `https://i0.wp.com/motofoodie
 - Five case-study controls passed: dashboard speed/mode/close-up; medicine record/pending-sync; Toki start/advance/reset; physical feedback selection; orbit-context selection.
 - Drawing persistence, Escape clearing, fading pointer trail, keyboard operation of the process selector, reduced-motion scrolling and essential content without JavaScript passed. No browser runtime exceptions occurred.
 - Screenshots are in `/workspace/serene-review` outside the repository. This verification does not establish real hardware behaviour, clinical outcomes or riding usability.
+
+## Hero correction — 14 October 2026
+
+The user clarified that “the little things” referred to the full earlier headline: “People, patterns, and the little things.” Restore the full sentence in one charcoal colour, composed at the bottom left. Replace the native SVG cursor with the pointer-following crosshair and centre dot from the earlier prototype. Drawing covers the hero’s open space; text stays selectable and links keep a pointer. Touch retains normal scrolling.
+
+The updated hero passes the production build, lint, TypeScript, and browser checks at 320, 390, 768, 1440 and 1920 pixels. Custom-cursor visibility, text/link cursor changes, drawing on the open left side, Escape clearing, and touch behaviour were checked. No browser runtime errors occurred.

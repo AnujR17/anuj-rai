@@ -16,9 +16,9 @@ export default function Home() {
         <Doodle />
         <div className="hero-copy">
           <h1>
-            The little
+            People, patterns,
             <br />
-            <span>things.</span>
+            and the little things.
           </h1>
           <p>
             I’m Anuj. I design interactions and build prototypes,
