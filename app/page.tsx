@@ -9,10 +9,14 @@ import {
 import { HowIWork } from "@/components/serene/HowIWork";
 import { AboutIntro } from "@/components/serene/AboutIntro";
 import { Contact } from "@/components/serene/Contact";
+import { ScribbleTheme } from "@/components/serene/ScribbleTheme";
+import { ScribbleAccent } from "@/components/serene/ScribbleAccent";
+import { SkillsTools } from "@/components/serene/SkillsTools";
+import { Explorations } from "@/components/serene/Explorations";
 export default function Home() {
   return (
-    <>
-      <section className="hero">
+    <ScribbleTheme>
+      <section className="hero" id="hero">
         <Doodle />
         <div className="hero-copy">
           <h1>
@@ -30,7 +34,12 @@ export default function Home() {
       <section className="selected-section section-pad" id="work">
         <div className="section-heading">
           <h2>
-            Selected work<span>.</span>
+            Selected{" "}
+            <span className="marked-word">
+              work
+              <ScribbleAccent />
+            </span>
+            .
           </h2>
           <p>
             Interfaces, information and physical objects.
@@ -135,8 +144,10 @@ export default function Home() {
         </Link>
       </section>
       <HowIWork />
+      <SkillsTools />
       <AboutIntro />
+      <Explorations />
       <Contact />
-    </>
+    </ScribbleTheme>
   );
 }

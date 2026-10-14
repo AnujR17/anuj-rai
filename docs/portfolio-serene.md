@@ -10,7 +10,7 @@ All three referenced chats were read through `read_thread` on 14 October 2026. T
 - Review Mem0 Care Study Handoffs: `01a13509-33d7-7247-9a17-74e9786b60bc` — five separate cases, DM Sans, contextual device/object mockups, a dashboard masked into a real bike display, working studies, concise reviewer-facing narrative and optional depth. The previous HTML/ZIP drafts were not present in this environment; these cases were rebuilt from available source and the chat's decisions rather than copied verbatim.
 - Review portfolio essentials: `01a1362e-8252-7197-a243-a59783fde026` — takes priority for homepage additions. Its latest turn proposes a compact Understand / Shape / Build section after Selected Work and before About. Skills/tools accompany real examples. Avoid a long timeline, repeated principles and a fabricated universal process.
 
-Homepage: Hero → Selected Work (two prominent projects, three supporting case links, compact research link) → How I Work → About → Contact. No separate AI marketing block, loose collage or empty AR/VR gallery. AI assistance is credited within relevant work. The MyAlumnus independent revision was still an unresolved proposal in the references and is not represented as completed solo work.
+Homepage: Hero → Selected Work (two prominent projects, three supporting case links, compact research link) → Making sense of the mess → Skills & Tools → About → Explorations → Contact. The user's later request adds separate skills/tools and explorations sections and replaces the original process layout. Explorations stays compact while awaiting the user's dustbin, AR/VR and other experiment images. AI assistance is credited within relevant work. The MyAlumnus independent revision was still an unresolved proposal in the references and is not represented as completed solo work.
 
 ## Implementation
 
@@ -27,6 +27,7 @@ Applied Sites presentation guidance, cloud runtime/network guidance, Mem0 cache 
 Mem0 skill was recovered from `/workspace/mem0-context-skill.zip` after its configured path was missing. Cache-only check: successful empty result from 9 October 2026. The current chats and local briefs supplied sufficient context; zero remote retrievals and no memory writes.
 
 Figma source nodes:
+
 - Medicine taker: `on1gbKHkUo4CLZ38uCiSza`, `797:3727`.
 - Caregiver: same file, `826:1236`.
 - Toki concept visualization: `ixlPXmsuwf48nzujHHUV4T`, `380:368`.
@@ -66,3 +67,15 @@ Production build, full lint, TypeScript and whitespace checks passed. Chromium c
 ## Remove preset strings — 14 October 2026
 
 Removed the three preset hero strands and their static fallback. The hero starts with open space; the custom cursor, optional drawing and bottom-right eraser remain. Erase clears to a blank canvas. Production build, lint, TypeScript and browser checks passed, including initially blank artwork, drawing/erasing and mobile layout.
+
+## Scribble theme, skills and explorations — 14 October 2026
+
+The user requested a separate skills/tools section, a fun gallery and an illustration of turning random pieces into something useful. Fine hand-drawn underlines, circles and annotations connect the homepage sections without restoring preset hero strings.
+
+“Making sense of the mess” illustrates Collect the pieces → Find a connection → Give it a useful form. Marks drawn in the hero become the starting point in this sketchbook; the paths then morph into a hierarchy and reveal the original Himalayan interface in a display housing. This is an explicitly labelled visual illustration, not AI interpretation of the drawing or a claim about the original research process. The actual case remains linked. Keyboard buttons, reduced-motion settings and normal touch scrolling are preserved. Drawings live only in page state.
+
+Skills & Tools now stands alone, with four capabilities linked to existing cases and a grouped tool list. It replaces the small list embedded in the earlier process section.
+
+The user clarified that Explorations should contain dustbin, AR/VR and other experiments they will choose and share later. No main-project images were reused as exploration content. `data/explorations.ts` intentionally has an empty list. The compact introduction is visible now; supplied images and factual captions will activate the gallery and native image dialog. That populated gallery branch has not yet been checked with real exploration assets.
+
+Production static export, ESLint, TypeScript and whitespace checks passed. Chromium checks passed at 320, 390, 768, 1440 and 1920 pixels, including hero-to-process drawing transfer, erasing, all process stages, keyboard/touch controls, reduced motion, loaded images and essential content without JavaScript. No horizontal overflow or browser runtime exceptions occurred. Screenshots are saved outside the repository in `/workspace/serene-review`.

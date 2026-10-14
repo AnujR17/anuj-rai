@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { Eraser } from "lucide-react";
+import { useScribbleTheme } from "./ScribbleTheme";
 
 type Point = { x: number; y: number };
 type Particle = Point & {
@@ -21,6 +22,7 @@ const particle = ({ x, y }: Point): Particle => ({
 });
 
 export function Doodle() {
+  const { publishSketch } = useScribbleTheme();
   const host = useRef<HTMLDivElement>(null);
   const canvas = useRef<HTMLCanvasElement>(null);
   const cursor = useRef<HTMLSpanElement>(null);
@@ -262,6 +264,11 @@ export function Doodle() {
       drawing = null;
       grabbed = null;
       trail = [];
+      publishSketch(
+        strands.map((s) =>
+          s.nodes.map((p) => ({ x: p.restX / width, y: p.restY / height })),
+        ),
+      );
       schedule();
     };
     const leave = () => {
@@ -276,6 +283,7 @@ export function Doodle() {
       grabbed = null;
       trail = [];
       pointer = null;
+      publishSketch([]);
       schedule();
     };
     const key = (e: KeyboardEvent) => {
@@ -301,7 +309,7 @@ export function Doodle() {
       el.removeEventListener("pointerleave", leave);
       window.removeEventListener("keydown", key);
     };
-  }, []);
+  }, [publishSketch]);
 
   return (
     <div ref={host} className="doodle">
