@@ -42,41 +42,6 @@ export function Doodle() {
     let previousTime = 0;
     let trail: (Point & { time: number })[] = [];
 
-    const makeStrings = (): StringLine[] => {
-      const small = width < 700;
-      const curves = small
-        ? [
-            [0.04, 0.2, 0.32, 0.23, 0.77, 0.03, 1.08, 0.12],
-            [0.13, 0.27, 0.45, 0.29, 0.84, 0.08, 1.08, 0.18],
-            [0.4, -0.1, 0.31, 0.12, 0.7, 0.32, 1.12, 0.36],
-          ]
-        : [
-            [0.35, 0.3, 0.52, 0.32, 0.79, 0.04, 1.05, 0.13],
-            [0.4, 0.36, 0.6, 0.38, 0.81, 0.08, 1.05, 0.19],
-            [0.58, -0.1, 0.54, 0.22, 0.78, 0.43, 1.08, 0.48],
-          ];
-      return curves.map((c) => ({
-        added: false,
-        nodes: Array.from({ length: 65 }, (_, i) => {
-          const t = i / 64,
-            a = 1 - t;
-          return particle({
-            x:
-              width *
-              (a * a * a * c[0] +
-                3 * a * a * t * c[2] +
-                3 * a * t * t * c[4] +
-                t * t * t * c[6]),
-            y:
-              height *
-              (a * a * a * c[1] +
-                3 * a * a * t * c[3] +
-                3 * a * t * t * c[5] +
-                t * t * t * c[7]),
-          });
-        }),
-      }));
-    };
     const path = (nodes: Point[], offset = 0) => {
       ctx.beginPath();
       ctx.moveTo(nodes[0].x, nodes[0].y + offset);
@@ -205,7 +170,7 @@ export function Doodle() {
       el.width = width * ratio;
       el.height = height * ratio;
       ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
-      strands = [...makeStrings(), ...added];
+      strands = added;
       drawing = null;
       grabbed = null;
       host.current!.dataset.ready = "true";
@@ -243,7 +208,7 @@ export function Doodle() {
       cursor.current!.style.top = `${pointer.y}px`;
       cursor.current!.dataset.mode = match ? "pull" : "draw";
       cursor.current!.hidden = false;
-      hint.current!.textContent = match ? "Pull a string" : "Draw a string";
+      hint.current!.textContent = match ? "Adjust a line" : "Draw a line";
       hint.current!.hidden = Boolean(
         drawing ||
           grabbed ||
@@ -306,7 +271,7 @@ export function Doodle() {
       schedule();
     };
     clear.current = () => {
-      strands = makeStrings();
+      strands = [];
       drawing = null;
       grabbed = null;
       trail = [];
@@ -340,29 +305,9 @@ export function Doodle() {
 
   return (
     <div ref={host} className="doodle">
-      <svg
-        className="string-fallback"
-        viewBox="0 0 1000 1000"
-        preserveAspectRatio="none"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M350 300C520 320 790 40 1050 130"
-          vectorEffect="non-scaling-stroke"
-        />
-        <path
-          d="M400 360C600 380 810 80 1050 190"
-          vectorEffect="non-scaling-stroke"
-        />
-        <path
-          d="M580-100C540 220 780 430 1080 480"
-          vectorEffect="non-scaling-stroke"
-        />
-      </svg>
       <canvas
         ref={canvas}
-        aria-label="Interactive strings. Drag an existing string to pull it, or drag open space to add a string. Use Erase or Escape to clear added strings. Touch screens keep normal scrolling."
+        aria-label="Optional drawing surface. Drag open space to draw a line. Use Erase or Escape to clear your drawing. Touch screens keep normal scrolling."
       />
       <span ref={cursor} className="draw-cursor" hidden aria-hidden="true">
         <svg width="29" height="29" viewBox="0 0 29 29" fill="none">
@@ -382,7 +327,7 @@ export function Doodle() {
         className="hero-eraser"
         type="button"
         onClick={() => clear.current()}
-        aria-label="Erase added strings"
+        aria-label="Erase drawing"
       >
         <Eraser size={15} strokeWidth={1.5} aria-hidden="true" />
         Erase
