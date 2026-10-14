@@ -25,18 +25,7 @@ export default function Home() {
             <br className="desktop-break" /> drawing on my background in
             computer science.
           </p>
-          <p className="hero-aside">
-            People’s habits. Everyday patterns.
-            <br />
-            The details that make an experience feel right.
-          </p>
-          <a className="inline-link" href="#work">
-            Take a look at my work <span>↓</span>
-          </a>
         </div>
-        <span className="hero-footnote">
-          A closer look, then a little making.
-        </span>
       </section>
       <section className="selected-section section-pad" id="work">
         <div className="section-heading">

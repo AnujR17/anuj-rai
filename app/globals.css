@@ -139,7 +139,7 @@ h2 > span {
   height: calc(100svh - 90px);
   max-height: 1000px;
   position: relative;
-  padding: 0 5.2vw 80px;
+  padding: 0 5.2vw 90px;
   display: flex;
   align-items: flex-end;
   border-bottom: 1px solid var(--line);
@@ -173,11 +173,6 @@ h2 > span {
   max-width: 570px;
   letter-spacing: -0.025em;
 }
-.hero-copy .hero-aside {
-  margin-top: 16px;
-  font-size: 15px;
-  color: var(--muted);
-}
 .inline-link {
   font-size: 14px;
   display: inline-flex;
@@ -185,16 +180,6 @@ h2 > span {
   gap: 32px;
   padding: 13px 0;
   border-bottom: 1px solid #aeb6a8;
-}
-.hero-copy .inline-link {
-  margin-top: 25px;
-}
-.hero-footnote {
-  position: absolute;
-  bottom: 32px;
-  right: 5.2vw;
-  font-size: 12px;
-  color: var(--muted);
 }
 .doodle {
   position: absolute;
@@ -226,34 +211,54 @@ h2 > span {
     cursor: auto;
   }
 }
-.quiet-lines {
-  width: 66%;
-  height: 70%;
+.string-fallback {
   position: absolute;
-  right: 0;
-  top: -40px;
-  stroke: #afb7ac;
-  stroke-width: 0.65;
-  filter: drop-shadow(0 5px 4px #acb2a030);
-  opacity: 0.7;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  stroke: rgba(99, 108, 91, 0.46);
+  stroke-width: 1.05;
+  filter: drop-shadow(0 3px 2px #353c311a);
 }
-.quiet-lines path:nth-child(2) {
-  opacity: 0.5;
+.doodle[data-ready="true"] .string-fallback {
+  visibility: hidden;
 }
-.doodle-note {
+.doodle:not([data-ready="true"]) canvas {
+  visibility: hidden;
+}
+.cursor-ring {
+  opacity: 0;
+}
+.draw-cursor[data-mode="pull"] .cursor-ring {
+  opacity: 0.6;
+}
+.draw-hint {
   position: absolute;
-  right: 12%;
-  bottom: 35%;
-  display: flex;
-  gap: 24px;
+  left: 35px;
+  top: 11px;
+  white-space: nowrap;
+  font-size: 11px;
+  letter-spacing: 0;
+  color: #70786b;
+}
+.hero-eraser {
+  position: absolute;
+  right: 5.2vw;
+  bottom: 30px;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid #d6dbd1;
+  border-radius: 24px;
+  background: #f9faf8e6;
+  color: #5f6958;
   font-size: 12px;
-  color: #707a6a;
 }
-.doodle-note button {
-  background: none;
-  border: 0;
-  padding: 0;
-  color: inherit;
+.hero-eraser:hover {
+  background: #edf0e9;
+  border-color: #a9b49f;
 }
 .section-heading {
   display: flex;
@@ -1600,32 +1605,19 @@ h2 > span {
     font-size: clamp(30px, 8.9vw, 60px);
     margin-bottom: 25px;
   }
+  .hero-eraser {
+    right: 6vw;
+    bottom: 18px;
+  }
+  .draw-hint {
+    display: none;
+  }
   .hero-copy > p {
     font-size: 17px;
     max-width: 360px;
   }
   .desktop-break {
     display: none;
-  }
-  .hero-copy .hero-aside {
-    font-size: 13px;
-  }
-  .quiet-lines {
-    width: 100%;
-    height: 45%;
-    top: -15px;
-  }
-  .doodle-note {
-    top: 30%;
-    bottom: auto;
-    right: 8%;
-    font-size: 10px;
-    gap: 18px;
-  }
-  .hero-footnote {
-    font-size: 10px;
-    bottom: 20px;
-    right: 6vw;
   }
   .section-pad {
     padding: 65px 6vw;

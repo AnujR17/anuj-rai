@@ -54,3 +54,11 @@ Cockpit: Ajay Ananth / Motofoodie, source image at `https://i0.wp.com/motofoodie
 The user clarified that “the little things” referred to the full earlier headline: “People, patterns, and the little things.” Restore the full sentence in one charcoal colour, composed at the bottom left. Replace the native SVG cursor with the pointer-following crosshair and centre dot from the earlier prototype. Drawing covers the hero’s open space; text stays selectable and links keep a pointer. Touch retains normal scrolling.
 
 The updated hero passes the production build, lint, TypeScript, and browser checks at 320, 390, 768, 1440 and 1920 pixels. Custom-cursor visibility, text/link cursor changes, drawing on the open left side, Escape clearing, and touch behaviour were checked. No browser runtime errors occurred.
+
+## String composition — 14 October 2026
+
+The hero now keeps only the full headline and short introduction. Removed the habits/patterns paragraph, work CTA, static drawing invitation and lower-right closing line. The Erase button sits at the bottom right on desktop and mobile.
+
+The existing strands and visitor drawing share one rendering: a fine line with a soft cast shadow. Nearby strings respond subtly to the pointer; dragging an existing strand pulls it and release lets it settle. Drawing in open space adds a matching strand. The cursor gives a brief “Pull a string” or “Draw a string” hint within the artwork, with no extra resting copy. Erase and Escape restore the initial composition. Animation stops when the composition settles, reduced motion removes passive movement, and touch keeps normal scrolling. A static SVG preserves the resting composition without JavaScript.
+
+Production build, full lint, TypeScript and whitespace checks passed. Chromium checks passed at 320, 390, 768, 1440 and 1920 pixels, including the lower-right eraser placement, pulling a strand, adding and clearing a strand, Escape, reduced motion, touch and the no-JavaScript fallback. No runtime exceptions occurred.
