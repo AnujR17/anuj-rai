@@ -3,7 +3,7 @@ import type { Project } from "@/data/projects";
 export const researchProjects: Project[] = [
   {
     slug: "gandhinagar-roundabouts",
-    title: "What actually blocks the circle?",
+    title: "Gandhinagar roundabout study",
     type: "Field research / Communication concepts",
     summary: "A field study of Gandhinagar roundabouts, exploring how service-road entries, unclear signals, and everyday decisions interact.",
     image: {
@@ -172,7 +172,7 @@ export const researchProjects: Project[] = [
   },
   {
     slug: "skidge",
-    title: "Skidge — graduate outcomes",
+    title: "Skidge / graduate outcomes",
     type: "Data analysis / Learning project",
     summary: "An exploration of graduate profiles, starting salaries, skills, and job-demand data, with a focus on how the definition of a measure shapes its interpretation.",
     image: {

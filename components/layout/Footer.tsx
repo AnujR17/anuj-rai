@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { contact } from "@/data/contact";
-import { ArrowUpRight } from "lucide-react";
 
 export function Footer() {
   return (
@@ -9,7 +8,7 @@ export function Footer() {
       <div className="site-footer-links">
         <Link href="/about">About</Link>
         <Link href="/contact">Contact</Link>
-        <a href={contact.github}>GitHub<ArrowUpRight size={12} aria-hidden="true" /></a>
+        <a href={contact.github}>GitHub</a>
       </div>
     </footer>
   );

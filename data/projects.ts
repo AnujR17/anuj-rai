@@ -60,7 +60,7 @@ export const projects: Project[] = [
   },
   {
     slug: "medtimer",
-    title: "Meditimer — physical concept",
+    title: "Meditimer / physical concept",
     type: "Medicine-management concept / Group project",
     summary: "A physical medicine-management concept. This is separate from my independently developed medicine app.",
     sections: [

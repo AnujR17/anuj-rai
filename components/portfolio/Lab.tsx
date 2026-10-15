@@ -1,18 +1,15 @@
-import { ArrowUpRight } from "lucide-react";
 
 const experiments = [
   {
-    title: "An object that responds",
+    title: "Intelligent Waste Disposal Systems",
     project: "Intelligent Waste Disposal Systems",
-    description: "Arduino firmware connecting proximity sensors, animated eyes, and a servo-controlled lid. A physical interaction experiment.",
-    status: "Hardware prototype / Firmware available",
+    description: "An Arduino hardware prototype connecting proximity sensors, animated eyes and a servo-controlled lid",
     href: "https://github.com/AnujR17/Intelligent-Waste-Disposal-Systems",
   },
   {
-    title: "Before the interface, the connection",
+    title: "Toki",
     project: "Toki",
-    description: "An ESP32 and app connection lab exploring Bluetooth handshakes, notifications, and recovery. The device experience is still in development.",
-    status: "Ongoing / Connection prototype",
+    description: "An ongoing ESP32 and app connection prototype for Bluetooth handshakes, notifications and recovery",
     href: "https://github.com/AnujR17/toki",
   },
 ];
@@ -20,12 +17,12 @@ const experiments = [
 export function Lab() {
   return (
     <section id="lab" className="portfolio-lab" aria-labelledby="lab-title">
-      <div className="portfolio-section-heading"><h2 id="lab-title">Also on the workbench</h2><p>Smaller experiments. Questions still open.</p></div>
+      <div className="portfolio-section-heading"><h2 id="lab-title">Experiments</h2></div>
       {experiments.map((experiment) => (
         <a key={experiment.project} className="lab-row" href={experiment.href}>
-          <div><p className="portfolio-kicker">{experiment.project}</p><h3>{experiment.title}</h3></div>
-          <div><p>{experiment.description}</p><p className="lab-status">{experiment.status}</p></div>
-          <span className="lab-source">Source <ArrowUpRight size={20} aria-hidden="true" /></span>
+          <div><h3>{experiment.title}</h3></div>
+          <div><p>{experiment.description}</p></div>
+          <span className="lab-source">Source</span>
         </a>
       ))}
     </section>

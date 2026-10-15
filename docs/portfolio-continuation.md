@@ -1,5 +1,14 @@
 # Portfolio continuation
 
+## Current user correction
+
+Read [the standing portfolio rules](portfolio-rules.md) first
+The user rejected the cobalt treatment, captions, annotations, arrow icons, decorative punctuation, and ambiguous headings in the initial concept
+Use DM Sans, direct copy and the heading "Selected work"
+Apply these requirements to `concept/diagonal-intro`
+They are also saved in the private Design Practice plugin, version 0.1.1
+Earlier proposals below do not override this correction
+
 ## Current concept branch — 16 October 2026
 
 The user now explicitly requested another branch for a new template. Work for this concept is on `concept/diagonal-intro`, based on `code/portfolio` to retain corrected content and original assets. See [the concept notes](diagonal-intro-concept.md). The earlier branch restriction below describes the preceding work; the user’s current request supersedes that branch choice. Explicit approval is still required before merging. The current opening introduces Anuj before all project work.

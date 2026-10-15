@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 
 export function ResearchSpotlight() {
   return (
@@ -23,10 +22,10 @@ export function ResearchSpotlight() {
         />
       </Link>
       <div className="research-spotlight-copy">
-        <p className="portfolio-kicker">Field research · Communication concepts</p>
-        <h2 id="fieldwork-title">What actually<br />blocks the circle?</h2>
-        <p>Parking was the starting explanation. Observations at Gandhinagar’s roundabouts brought service-road entries, unclear signals, and everyday decisions into the picture.</p>
-        <Link className="portfolio-link" href="/work/gandhinagar-roundabouts">Follow the field study <ArrowUpRight size={18} aria-hidden="true" /></Link>
+
+        <h2 id="fieldwork-title">Gandhinagar roundabout study</h2>
+        <p>A field study of service-road entries, traffic signals and driver behaviour at Gandhinagar roundabouts</p>
+        <Link className="portfolio-link" href="/work/gandhinagar-roundabouts">View field study</Link>
       </div>
     </section>
   );

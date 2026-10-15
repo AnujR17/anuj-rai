@@ -94,7 +94,6 @@ export function CuriousEyes() {
         <span className={styles.eye} data-eye aria-hidden="true"><span className={styles.socket}><span className={styles.pupil} /></span></span>
         <span className={styles.eye} data-eye aria-hidden="true"><span className={styles.socket}><span className={styles.pupil} /></span></span>
       </button>
-      <p className={styles.hint}><span className={styles.pointerHint}>Move your cursor. </span>Click to blink.</p>
     </div>
   );
 }

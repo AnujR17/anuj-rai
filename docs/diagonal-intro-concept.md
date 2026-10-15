@@ -1,55 +1,48 @@
-# Diagonal introduction concept
+# Portfolio concept
 
-Working template on `concept/diagonal-intro`, created at the user's request on 16 October 2026. It starts from local `code/portfolio` commit `83395fe` to retain original project images, corrected project claims, and working contact details. The previous visual direction is replaced on the homepage. The existing Work, About, Resume, Contact, and case-study routes remain available.
+Current branch: `concept/diagonal-intro`
 
-This is a proposal for iteration, not an approved final portfolio. Do not merge without explicit user approval.
+Read [the confirmed portfolio rules](portfolio-rules.md) before changing the design or copy
+The user's correction on 16 October 2026 supersedes the earlier cobalt concept, annotations and writing
 
-## Composition
+## Current implementation
 
-The introduction anchors the bottom left. A pair of cobalt eyes provides a smaller visual counterweight in the top right. The short introductory paragraph sits below the eyes, giving a reading path from name, to personality, to context. On narrow screens the eyes stay to the right, followed by the name and introduction in normal document order.
+DM Sans is used throughout the site
+The introduction remains at the bottom left and the eyes remain at the top right
+The interface is neutral black, white and grey
+The eye interaction follows the pointer and blinks on click, tap, Enter or Space
+Reduced-motion settings stop tracking and blinking
 
-The opening contains no project card, carousel, or prototype. An about section establishes the person before two project previews. The rest of the work is one click away rather than becoming a homepage catalogue.
+The homepage introduces Anuj, provides an About section, then shows Selected work and Contact
+Project links use their actual names
+No image captions, miniature category labels, numbered badges, arrow icons, decorative dots, or em dashes are added to the interface
+Image provenance remains in the project data and case-study source content
+Original project screenshots and research images retain their own contents and colours
 
-Three top-right treatments were considered:
-
-| Treatment | Benefit | Trade-off |
-| --- | --- | --- |
-| A short text note | Quiet and easy to maintain | Adds little personality and competes with the introduction |
-| An abstract object | Strong visual weight | Needs a reason to belong to this particular portfolio |
-| A pair of eyes, implemented here | A small, understandable response to the visitor; connects with interaction design | Could feel too playful; scale, shape, and presence are still open for review |
-
-The blue, type scale, and eye treatment are design hypotheses. The useful review is whether the name is the primary text, whether the open space feels intentional, and whether the eyes add character without delaying navigation. These have not been tested with portfolio visitors.
-
-## Reference principles
-
-- [Sogeking by Bayu Aji Sadewa / Korsa](https://dribbble.com/shots/27782025-Sogeking-Creative-Agency-Portfolio-Landing-Page): open canvas, strong type, and a concentrated electric-blue visual accent. The eyes and composition here are original code; reference artwork is not shipped.
-- [Tacto](https://tacto-inc.com/index.html): sparse navigation, typography anchored low in the opening, and introduction before the work. Page content and CSS were inspected; the live animation was not captured successfully in this environment.
-- The supplied Pinterest search could not be read. No specific Pinterest design is attributed or reproduced.
-
-## What to edit
+## Editing
 
 | File | Purpose |
 | --- | --- |
-| `data/home.ts` | Introductory copy, interests, and the two curated project previews |
-| `app/page.tsx` | Section order and homepage markup |
-| `app/page.module.css` | Diagonal composition, spacing, responsive type, and project surfaces |
-| `components/concept/CuriousEyes.tsx` | Pointer response, blink action, and motion preference handling |
-| `components/concept/CuriousEyes.module.css` | Eye shape, pupils, and blue treatment |
-| `app/globals.css` | Shared paper/accent colours, navigation, and footer |
-| `data/contact.ts` | Existing verified email and GitHub profile |
+| `data/home.ts` | Homepage introduction and project choices |
+| `app/page.tsx` | Section order and homepage content |
+| `app/page.module.css` | Composition and responsive layout |
+| `components/concept/CuriousEyes.tsx` | Eye interaction |
+| `components/concept/CuriousEyes.module.css` | Eye geometry |
+| `app/globals.css` | Shared navigation, typography tokens and neutral surfaces |
+| `app/layout.tsx` | DM Sans loading |
+| `data/contact.ts` | Verified email and GitHub destinations |
 
-The eyes inherit `--concept-accent`. The homepage defines it locally, and the shared shell defines the same default. Change both for a portfolio-wide colour revision. Removing `CuriousEyes` leaves the introduction and navigation usable; the right-hand area can take a different visual later.
+## Persistent rules
 
-## Interaction and accessibility
+The user's rules are stored in repository `AGENTS.md` and `docs/portfolio-rules.md`
+They are also saved in the private [Design Practice plugin](https://chatgpt.com/plugins/plugins_6ad0a41540788191ae8154e11191c227), version 0.1.1
+The plugin skill explicitly loads these requirements for future portfolio work
 
-Pointer movement changes only pupil positions, with bounded travel and one animation frame per update. Tracking stops when the eyes leave the viewport. Click, tap, Enter, or Space produces one short blink; there is no automatic blink loop. Touch uses the blink action without requiring hover. The system's reduced-motion preference stops tracking and blinking and removes the decorative button from keyboard interaction. Core content, navigation, and anchor links work without JavaScript. The eye interaction is optional.
+## References
 
-The introduction and about section precede all work in the document. A skip link, native links and buttons, visible keyboard focus, and labelled navigation remain available. Shared navigation includes Work, About, Resume, and Contact on mobile.
+The original brief supplied [Sogeking](https://dribbble.com/shots/27782025-Sogeking-Creative-Agency-Portfolio-Landing-Page) and [Tacto](https://tacto-inc.com/index.html)
+Their open space and asymmetric composition informed the first template
+The user's current visual and copy requirements take precedence over those references
+The Pinterest search was not accessible
 
-## Checks
-
-Production build, repository lint, TypeScript, and Git whitespace checks pass. Chromium checks cover the homepage at 1440, 1024, 768, 390, and 320px, representative existing routes at 320px, loaded images, horizontal overflow, navigation visibility, pointer response, keyboard blinking and reset, reduced motion, and core content without JavaScript. Final targeted checks also cover touch input and reduced-motion button disabling. These are implementation checks, not usability research or validation of project outcomes.
-
-## Next review
-
-Review the eye size and shape, the name's scale, and how much of the short introduction belongs in the opening. Change one of those at a time before expanding the work section. The existing project descriptions distinguish interface concepts, browser simulations, and implemented web projects; keep those distinctions when replacing copy or assets.
+Do not merge without explicit user approval

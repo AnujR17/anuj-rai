@@ -1,21 +1,14 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 export default function About() {
   return (
     <article className="case-shell">
-      <header className="case-heading"><p className="portfolio-kicker">About Anuj</p><h1>Curious about how<br />things come together.</h1><p>I’m exploring interaction and product design through interfaces, code, and physical prototypes.</p></header>
-      <section className="case-section"><h2>What draws me in</h2><div><p>I’m interested in problems that sit between technology and people: how information becomes understandable, how an object communicates, and how a product responds when something changes.</p><p>Research helps me frame the question. Design and prototyping give me something concrete to examine and improve.</p></div></section>
-      <section className="case-section"><h2>What I want to develop</h2><div><p>I want to work closely with designers and engineers, take responsibility for decisions, and keep learning across the boundaries between digital and physical experiences.</p><p>My projects range from a motorcycle display and an interactive satellite explorer to experiments with connected objects. Each asks a different question about how an interaction should work.</p></div></section>
-      <section className="case-section">
-        <h2>A spatial curiosity</h2>
-        <div>
-          <p>I’m also interested in AR and VR: how people find their way through a space, understand what they can interact with, and receive feedback beyond a flat screen.</p>
-          <p>It’s a direction I want to explore alongside my work with interfaces and physical objects.</p>
-        </div>
-      </section>
-      <section className="case-section"><h2>Background</h2><div><p>I’m pursuing an M.Des in Intelligent User Experience Design at Dhirubhai Ambani University, following undergraduate study at ITM Vocational University.</p><Link href="/resume" className="portfolio-link">Experience and education <ArrowRight size={18} aria-hidden="true" /></Link></div></section>
-      <Link href="/work" className="portfolio-link">See the work <ArrowRight size={18} aria-hidden="true" /></Link>
+      <header className="case-heading"><h1>About</h1><p>I study interaction and product design and build interfaces, websites and physical prototypes</p></header>
+      <section className="case-section"><h2>Design interests</h2><div><p>I’m interested in how people read information, use an object and understand its response</p><p>I use research to define the problem and prototypes to examine the design</p></div></section>
+      <section className="case-section"><h2>Projects</h2><div><p>My projects include a motorcycle display, a satellite website and experiments with connected objects</p><p>I want to work with designers and engineers on products that combine software and physical interaction</p></div></section>
+      <section className="case-section"><h2>AR and VR</h2><div><p>I want to explore navigation, controls and feedback in spatial interfaces</p></div></section>
+      <section className="case-section"><h2>Education</h2><div><p>I’m pursuing an M.Des in Intelligent User Experience Design at Dhirubhai Ambani University, following undergraduate study at ITM Vocational University</p><Link href="/resume" className="portfolio-link">View resume</Link></div></section>
+      <Link href="/work" className="portfolio-link">Selected work</Link>
     </article>
   );
 }

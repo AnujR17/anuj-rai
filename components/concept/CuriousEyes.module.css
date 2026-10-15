@@ -1,6 +1,6 @@
 .companion { width: 100%; }
 .eyes {
-  --eye-blue: var(--concept-accent, #243ce9);
+  --eye-ink: var(--concept-accent, #171717);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,15 +21,13 @@
   width: 46%;
   height: 87%;
   border-radius: 48%;
-  background: var(--eye-blue);
-  box-shadow: inset -6px -7px 0 #101db72b;
+  background: var(--eye-ink);
 }
 .eye:nth-child(2) { transform: translateY(-5%); }
-.socket { position: relative; display: block; width: 67%; height: 73%; overflow: hidden; border-radius: 50%; background: #f9f9f2; transition: transform 100ms ease; }
-.pupil { position: absolute; width: 54%; height: 53%; top: 23.5%; left: 23%; background: #171a21; border-radius: 50%; transform: translate(var(--look-x, 0px), var(--look-y, 0px)); transition: transform 140ms ease-out; }
-.pupil::after { content: ""; position: absolute; width: 18%; height: 18%; top: 17%; right: 21%; border-radius: 50%; background: #f9f9f2; }
+.socket { position: relative; display: block; width: 67%; height: 73%; overflow: hidden; border-radius: 50%; background: #fff; transition: transform 100ms ease; }
+.pupil { position: absolute; width: 54%; height: 53%; top: 23.5%; left: 23%; background: #171717; border-radius: 50%; transform: translate(var(--look-x, 0px), var(--look-y, 0px)); transition: transform 140ms ease-out; }
 .blinking .socket { transform: scaleY(.04); }
-.hint { text-align: center; margin-top: 22px; color: #62625c; font-size: 12px; letter-spacing: -.01em; }
-.eyes:focus-visible { outline: 2px solid var(--eye-blue); outline-offset: 10px; border-radius: 45%; }
-@media (hover: none), (pointer: coarse) { .pointerHint { display: none; } }
-@media (prefers-reduced-motion: reduce) { .pupil, .socket { transition: none; transform: none; } .hint { display: none; } .eyes { cursor: default; } }
+.eyes:focus-visible { outline: 2px solid var(--eye-ink); outline-offset: 10px; border-radius: 45%; }
+
+
+@media (prefers-reduced-motion: reduce) { .pupil, .socket { transition: none; transform: none; } .eyes { cursor: default; } }
