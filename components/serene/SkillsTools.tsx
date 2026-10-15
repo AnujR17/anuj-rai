@@ -1,27 +1,26 @@
 import Link from "next/link";
-import { ScribbleAccent } from "./ScribbleAccent";
 const capabilities = [
   {
     title: "Research & synthesis",
-    text: "Look at what’s happening, then find the useful patterns.",
+    text: "Field observations, survey analysis and research synthesis.",
     example: "Roundabout field study",
     href: "/work/gandhinagar-roundabouts/",
   },
   {
     title: "Interface & interaction design",
-    text: "Work through hierarchy, states and what someone can do next.",
+    text: "Information hierarchy, screen layouts and interaction states.",
     example: "Himalayan interface",
     href: "/work/two-wheeler-dashboard/",
   },
   {
     title: "Code & working prototypes",
-    text: "Give an idea enough form to make it possible to try.",
+    text: "Interactive websites and browser prototypes built with React and TypeScript.",
     example: "India in Orbit",
     href: "/work/india-in-orbit/",
   },
   {
     title: "Physical exploration",
-    text: "Explore how an object communicates through form and feedback.",
+    text: "Connected-object concepts, physical controls and feedback.",
     example: "Toki exploration",
     href: "/work/toki/",
   },
@@ -36,19 +35,8 @@ export function SkillsTools() {
   return (
     <section className="skills-section section-pad" id="skills">
       <div className="section-heading">
-        <h2>
-          Skills &<br />
-          <span className="marked-word">
-            tools
-            <ScribbleAccent />
-          </span>
-          .
-        </h2>
-        <p>
-          What I bring to the work,
-          <br />
-          and what I use to make it.
-        </p>
+        <h2>Skills & tools.</h2>
+        <p>Capabilities shown in the projects above, and the tools I use.</p>
       </div>
       <div className="skills-layout">
         <div className="capability-grid">
@@ -62,7 +50,7 @@ export function SkillsTools() {
           ))}
         </div>
         <aside className="tool-ledger">
-          <p className="eyebrow">The things on my desk</p>
+          <p className="eyebrow">Tools I use</p>
           <dl>
             {tools.map((t) => (
               <div key={t.use}>

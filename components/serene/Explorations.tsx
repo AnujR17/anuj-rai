@@ -17,21 +17,8 @@ export function Explorations() {
       id="explorations"
     >
       <div className="section-heading">
-        <h2>
-          A little room
-          <br />
-          to{" "}
-          <span className="marked-word">
-            play
-            <ScribbleAccent kind="circle" />
-          </span>
-          .
-        </h2>
-        <p>
-          Sometimes I just want to try something
-          <br />
-          and see what happens.
-        </p>
+        <h2>Experiments & explorations.</h2>
+        <p>Smaller projects in physical computing and spatial interaction.</p>
       </div>
       {explorations.length ? (
         <div className="exploration-gallery">
@@ -69,7 +56,7 @@ export function Explorations() {
               <br />
               AR & VR explorations.
             </p>
-            <span>A few things I’m playing with. More soon.</span>
+            <span>Images and project notes coming soon.</span>
           </div>
         </div>
       )}

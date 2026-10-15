@@ -1,5 +1,9 @@
 # Portfolio Serene — combined implementation brief
 
+## Current direction — 15 October 2026
+
+The user rejected the earlier overall design and writing, then explicitly selected **Clean gallery — white, large typography and nearly full-width work**. See [the redesign decisions](gallery-redesign.md). This supersedes the earlier poetic headlines, pale green surfaces, dotted-letter About illustration and generic medicine-case template. The introduction still precedes work. The hero now introduces Anuj's interface-design and prototyping work directly; its optional blank drawing surface and eraser remain. The independent app and physical Meditimer have separate evidence-led case layouts and explicit contribution credits.
+
 ## Destination and precedence
 
 The current user authorized a new `portfolioSerene` branch in `AnujR17/anuj-rai`, replacing the initial request for a separate repository. Base: `code/portfolio` at `83395fef92826d33ee2b237a4f1f824acb447aa7`. The user explicitly confirmed that branches will not be merged. Do not merge branches. The original `/workspace/anuj-rai` checkout was left untouched; this is a separate ordinary checkout, not a Git worktree.
@@ -11,6 +15,8 @@ All three referenced chats were read through `read_thread` on 14 October 2026. T
 - Review portfolio essentials: `01a1362e-8252-7197-a243-a59783fde026` — takes priority for homepage additions. Its latest turn proposes a compact Understand / Shape / Build section after Selected Work and before About. Skills/tools accompany real examples. Avoid a long timeline, repeated principles and a fabricated universal process.
 
 Homepage: Hero → Selected Work (two prominent projects, three supporting case links, compact research link) → Making sense of the mess → Skills & Tools → About → Explorations → Contact. The user's later request adds separate skills/tools and explorations sections and replaces the original process layout. Explorations stays compact while awaiting the user's dustbin, AR/VR and other experiment images. AI assistance is credited within relevant work. The MyAlumnus independent revision was still an unresolved proposal in the references and is not represented as completed solo work.
+
+In the current revision, the process section is titled “How I develop an idea” and the pending gallery is titled “Experiments & explorations.” Descriptive project titles and explanations replace the earlier metaphors.
 
 ## Implementation
 

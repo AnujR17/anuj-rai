@@ -17,13 +17,13 @@ The current structure is:
 
 ## The distinct story in each case
 
-| Case | What the reader should understand | Evidence boundary |
-| --- | --- | --- |
-| Himalayan 450 | Which readings stay easy to locate as the display changes? | The original export and prototype are separate from the reconstructed portfolio study. The survey is context, not a test of this layout. |
-| Medicine app | What does the medicine taker record, and what can the caregiver know? | Original Figma interfaces establish the two roles. Pending sync is an explanatory browser extension; a record is a self-report. |
-| Toki | How does the object make the current task and time present? | The concept visualization, connection experiments and illustrative timer establish different things. They do not demonstrate an integrated physical product. |
-| Physical Meditimer | How does a reminder fit an object and a routine? | Anuj contributed framing/rationale; teammates contributed mockups/documentation. The model and feedback study do not establish medical or hardware performance. |
-| India in Orbit | How can a familiar use lead into a technical system? | Describe the implemented narrative and explorer. Schematics explain relationships; they are not original wireframes, live positions or measured learning outcomes. |
+| Case               | What the reader should understand                                     | Evidence boundary                                                                                                                                                  |
+| ------------------ | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Himalayan 450      | Which readings stay easy to locate as the display changes?            | The original export and prototype are separate from the reconstructed portfolio study. The survey is context, not a test of this layout.                           |
+| Medicine app       | What does the medicine taker record, and what can the caregiver know? | Original Figma interfaces establish the two roles. Pending sync is an explanatory browser extension; a record is a self-report.                                    |
+| Toki               | How does the object make the current task and time present?           | The concept visualization, connection experiments and illustrative timer establish different things. They do not demonstrate an integrated physical product.       |
+| Physical Meditimer | How does a reminder fit an object and a routine?                      | Anuj contributed framing/rationale; teammates contributed mockups/documentation. The model and feedback study do not establish medical or hardware performance.    |
+| India in Orbit     | How can a familiar use lead into a technical system?                  | Describe the implemented narrative and explorer. Schematics explain relationships; they are not original wireframes, live positions or measured learning outcomes. |
 
 ## Add depth when the author can confirm it
 
@@ -33,4 +33,4 @@ Use measured outcomes only with the measure, method, sample and appropriate scop
 
 ## Visuals should explain something
 
-Keep DM Sans, Serene’s paper background and project accents, contextual mockups and existing studies. Every addition should help inspect the work, understand a relationship or evaluate the reasoning. Caption original assets with their source; label new diagrams and browser studies as explanatory. Preserve keyboard operation, responsive reading and essential content without JavaScript.
+Keep DM Sans, contextual mockups and existing studies. The user subsequently selected a white, clean gallery direction with larger typography and nearly full-width work; see `gallery-redesign.md`. That choice supersedes the earlier pale green treatment. Every addition should help inspect the work, understand a relationship or evaluate the reasoning. Caption original assets with their source; label new diagrams and browser studies as explanatory. Preserve keyboard operation, responsive reading and essential content without JavaScript.

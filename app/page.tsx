@@ -1,8 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Doodle } from "@/components/serene/Doodle";
 import {
   DashboardPlate,
-  Laptop,
   PhonePair,
   ProductPlate,
 } from "@/components/serene/Mockups";
@@ -10,144 +10,188 @@ import { HowIWork } from "@/components/serene/HowIWork";
 import { AboutIntro } from "@/components/serene/AboutIntro";
 import { Contact } from "@/components/serene/Contact";
 import { ScribbleTheme } from "@/components/serene/ScribbleTheme";
-import { ScribbleAccent } from "@/components/serene/ScribbleAccent";
 import { SkillsTools } from "@/components/serene/SkillsTools";
 import { Explorations } from "@/components/serene/Explorations";
+
 export default function Home() {
   return (
     <ScribbleTheme>
-      <section className="hero" id="hero">
-        <Doodle />
-        <div className="hero-copy">
-          <h1>
-            People, patterns,
-            <br />
-            and the little things.
-          </h1>
-          <p>
-            I’m Anuj. I design interactions and build prototypes,
-            <br className="desktop-break" /> drawing on my background in
-            computer science.
-          </p>
-        </div>
-      </section>
-      <section className="selected-section section-pad" id="work">
-        <div className="section-heading">
-          <h2>
-            Selected{" "}
-            <span className="marked-word">
-              work
-              <ScribbleAccent />
-            </span>
-            .
-          </h2>
-          <p>
-            Interfaces, information and physical objects.
-            <br />A few different ways of working things out.
-          </p>
-        </div>
-        <div className="selected-grid">
-          <article className="project-preview himalayan">
+      <div className="portfolio-v2">
+        <section className="hero gallery-hero" id="hero">
+          <Doodle />
+          <div className="hero-copy">
+            <p className="gallery-hello">Hi, I’m Anuj.</p>
+            <h1>
+              I design interfaces.
+              <br />
+              <span>And build prototypes.</span>
+            </h1>
+            <div className="hero-introduction">
+              <p>
+                My work spans screen interfaces, interactive websites and
+                physical product concepts.
+              </p>
+              <p>
+                A background in computer science.
+                <br />A focus on interaction design.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="gallery-work gallery-pad" id="work">
+          <div className="gallery-heading">
+            <h2>
+              Selected work<span className="gallery-count"> / 02</span>
+            </h2>
+            <p>Design, code and the interactions between them.</p>
+          </div>
+          <article className="gallery-project">
             <Link
               href="/work/two-wheeler-dashboard/"
-              className="preview-visual"
+              className="gallery-image gallery-bike"
+              aria-label="View motorcycle dashboard interface case study"
             >
               <DashboardPlate />
-              <span className="open-project" aria-hidden="true">
+              <span className="gallery-open" aria-hidden="true">
                 ↗
               </span>
             </Link>
-            <div className="preview-heading">
-              <h3>
-                <Link href="/work/two-wheeler-dashboard/">Himalayan 450</Link>
-              </h3>
-              <span>Interface study · Browser simulation</span>
+            <div className="gallery-project-caption">
+              <div>
+                <span className="gallery-index">01 / Interface design</span>
+                <h3>
+                  <Link href="/work/two-wheeler-dashboard/">
+                    Motorcycle dashboard interface
+                  </Link>
+                </h3>
+              </div>
+              <div>
+                <p>
+                  A circular dashboard for the Himalayan 450, with a browser
+                  prototype to explore speed, gear and display states.
+                </p>
+                <span className="gallery-status">
+                  Independent concept · Interface & prototype
+                </span>
+              </div>
+              <Link
+                className="gallery-case-link"
+                href="/work/two-wheeler-dashboard/"
+              >
+                View case study ↗
+              </Link>
             </div>
-            <p>
-              What stays visible when everything changes? A circular dashboard
-              and its changing states.
-            </p>
-            <p className="project-contribution">
-              Interface concept & prototype · Independent educational study
-            </p>
           </article>
-          <article className="project-preview orbit">
-            <Link href="/work/india-in-orbit/" className="preview-visual">
-              <Laptop />
-              <span className="open-project" aria-hidden="true">
-                ↗
-              </span>
-            </Link>
-            <div className="preview-heading">
-              <h3>
-                <Link href="/work/india-in-orbit/">India in Orbit</Link>
-              </h3>
-              <span>Information design · Interactive web</span>
-            </div>
-            <p>
-              A way into an invisible system, starting with the satellites
-              already part of everyday life.
-            </p>
-            <p className="project-contribution">
-              Interactive web project · Working experience
-            </p>
-          </article>
-        </div>
-        <div className="more-heading">
-          <h3>More things I’ve been working on</h3>
-          <Link className="inline-link" href="/work/">
-            All work ↗
-          </Link>
-        </div>
-        <div className="further-grid">
-          <article>
+          <article className="gallery-project">
             <Link
-              className="further-visual medicine"
-              href="/work/medicine-app/"
+              href="/work/india-in-orbit/"
+              className="gallery-image gallery-orbit"
+              aria-label="View India in Orbit case study"
             >
-              <PhonePair />
+              <Image
+                src="/portfolio/india-in-orbit.png"
+                alt="India in Orbit website with an illustrated Earth and satellite information"
+                width={1280}
+                height={850}
+                sizes="90vw"
+              />
+              <span className="gallery-open" aria-hidden="true">
+                ↗
+              </span>
             </Link>
-            <h4>
-              <Link href="/work/medicine-app/">
-                Medicine app <span>↗</span>
+            <div className="gallery-project-caption">
+              <div>
+                <span className="gallery-index">02 / Information design</span>
+                <h3>
+                  <Link href="/work/india-in-orbit/">India in Orbit</Link>
+                </h3>
+              </div>
+              <div>
+                <p>
+                  An interactive website connecting Indian satellites with the
+                  everyday services they support.
+                </p>
+                <span className="gallery-status">
+                  Web design & development · Working website
+                </span>
+              </div>
+              <Link className="gallery-case-link" href="/work/india-in-orbit/">
+                View case study ↗
               </Link>
-            </h4>
-            <p>Medicine taker and caregiver interfaces. Independent design.</p>
+            </div>
           </article>
-          <article>
-            <Link className="further-visual" href="/work/toki/">
-              <ProductPlate />
-            </Link>
-            <h4>
-              <Link href="/work/toki/">
-                Toki <span>↗</span>
+          <div className="gallery-heading gallery-secondary-heading">
+            <h2>More projects</h2>
+            <Link href="/work/">All work ↗</Link>
+          </div>
+          <div className="gallery-small-grid">
+            <article>
+              <Link
+                className="gallery-small-image gallery-medicine"
+                href="/work/medicine-app/"
+                aria-label="View medicine app case study"
+              >
+                <PhonePair />
+                <span aria-hidden="true">↗</span>
               </Link>
-            </h4>
-            <p>Exploring focus through a connected desk object.</p>
-          </article>
-          <article>
-            <Link className="further-visual" href="/work/medtimer/">
-              <ProductPlate physical />
-            </Link>
-            <h4>
-              <Link href="/work/medtimer/">
-                Physical Meditimer <span>↗</span>
+              <h3>
+                <Link href="/work/medicine-app/">Medicine app</Link>
+              </h3>
+              <p>Daily dose records and a separate caregiver view.</p>
+              <span className="gallery-status">
+                Independent interface design
+              </span>
+            </article>
+            <article>
+              <Link
+                className="gallery-small-image"
+                href="/work/toki/"
+                aria-label="View Toki case study"
+              >
+                <ProductPlate />
+                <span aria-hidden="true">↗</span>
               </Link>
-            </h4>
-            <p>Problem framing and concept rationale in a group project.</p>
-          </article>
-        </div>
-        <Link className="research-note" href="/work/gandhinagar-roundabouts/">
-          <span>From the field</span>
-          <strong>What actually blocks the circle?</strong>
-          <span>A roundabout research study ↗</span>
-        </Link>
-      </section>
-      <HowIWork />
-      <SkillsTools />
-      <AboutIntro />
-      <Explorations />
-      <Contact />
+              <h3>
+                <Link href="/work/toki/">Toki</Link>
+              </h3>
+              <p>A desk object for tasks, time and physical feedback.</p>
+              <span className="gallery-status">
+                Connected-object exploration
+              </span>
+            </article>
+            <article>
+              <Link
+                className="gallery-small-image"
+                href="/work/medtimer/"
+                aria-label="View physical Meditimer case study"
+              >
+                <ProductPlate physical />
+                <span aria-hidden="true">↗</span>
+              </Link>
+              <h3>
+                <Link href="/work/medtimer/">Physical Meditimer</Link>
+              </h3>
+              <p>Framing a medicine-storage and reminder concept.</p>
+              <span className="gallery-status">
+                Group concept · My role: framing & rationale
+              </span>
+            </article>
+          </div>
+          <Link
+            className="gallery-research"
+            href="/work/gandhinagar-roundabouts/"
+          >
+            <span className="gallery-index">Research / Field study</span>
+            <h3>Understanding congestion at Gandhinagar’s roundabouts</h3>
+            <span aria-hidden="true">↗</span>
+          </Link>
+        </section>
+        <HowIWork />
+        <SkillsTools />
+        <AboutIntro />
+        <Explorations />
+        <Contact />
+      </div>
     </ScribbleTheme>
   );
 }

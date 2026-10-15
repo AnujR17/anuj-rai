@@ -3,9 +3,9 @@ export function Contact({ standalone = false }: { standalone?: boolean }) {
   const Heading = standalone ? "h1" : "h2";
   return (
     <section className="contact-section section-pad" id="contact">
-      <p className="eyebrow">Have something in mind?</p>
+      <p className="eyebrow">Contact</p>
       <Heading>
-        Let’s talk<span>.</span>
+        Get in touch<span>.</span>
       </Heading>
       <div className="contact-bottom">
         <a className="contact-email" href="mailto:anujrai1701@gmail.com">

@@ -2,32 +2,34 @@ import Link from "next/link";
 export function AboutIntro({ standalone = false }: { standalone?: boolean }) {
   const Heading = standalone ? "h1" : "h2";
   return (
-    <section className="about-intro section-pad" id="about">
-      <div className="about-mark" aria-hidden="true">
-        <span>a</span>
-        <div className="dot-grid" />
-      </div>
-      <div className="about-copy">
-        <p className="eyebrow">The person behind the work</p>
+    <section className="gallery-about gallery-pad" id="about">
+      <div>
+        <p className="gallery-index">About me</p>
         <Heading>
-          I’m Anuj.
+          Computer science
           <br />
-          <span>Curiosity comes first.</span>
+          to interaction design.
         </Heading>
+      </div>
+      <div className="gallery-about-copy">
         <p>
-          My full name is Anuj Rai. I come from computer science, and I’m
-          exploring how systems become things people can understand and use.
+          I’m Anuj Rai. I’m studying Intelligent User Experience Design at
+          Dhirubhai Ambani University, after a background in computer science.
         </p>
         <p>
-          I notice small details in how people behave, and patterns in everyday
-          things. I often end up wondering what’s happening beneath the surface.
+          I like working across design and code: deciding what an interface
+          should communicate, then building enough of it to explore how it
+          behaves.
         </p>
         <p>
-          Outside design, I can happily lose track of time talking about
-          psychology, human behaviour or game theory.
+          Outside design, I’m interested in psychology, human behaviour and game
+          theory.
         </p>
-        <Link className="inline-link" href="/about/">
-          A little more about me <span>↗</span>
+        <Link
+          className="gallery-case-link"
+          href={standalone ? "/resume/" : "/about/"}
+        >
+          {standalone ? "View résumé" : "More about me"} ↗
         </Link>
       </div>
     </section>

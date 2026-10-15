@@ -3,26 +3,26 @@ import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
-import { ScribbleAccent } from "./ScribbleAccent";
 import { useScribbleTheme, type SketchPoint } from "./ScribbleTheme";
 
 const actions = [
   {
-    title: "Collect the pieces",
+    title: "Start with a question",
     description:
-      "An observation, a question, something that doesn’t quite fit.",
-    note: "Loose marks, with room for a few different possibilities.",
+      "What needs to be understood? Gather observations and explore different ways in.",
+    note: "An early idea can have several possible directions.",
   },
   {
-    title: "Find a connection",
+    title: "Organise the information",
     description:
-      "Look for relationships. Work out what matters and what can wait.",
+      "Decide what needs attention first and how the parts relate to each other.",
     note: "A hierarchy gives the pieces a relationship: speed, gear and warnings each have a place.",
   },
   {
-    title: "Give it a useful form",
-    description: "Make something I can examine, try and change.",
-    note: "An original Himalayan interface export gives this example a concrete form.",
+    title: "Build and examine it",
+    description:
+      "Use a screen, object or working prototype to make the next question concrete.",
+    note: "A dashboard layout gives speed, gear and warnings a place on the screen.",
   },
 ];
 const sample = (fn: (t: number) => SketchPoint) =>
@@ -95,23 +95,15 @@ export function HowIWork() {
   return (
     <section className="sense-section section-pad" id="approach">
       <div className="section-heading">
-        <h2>
-          Making{" "}
-          <span className="marked-word">
-            sense
-            <ScribbleAccent />
-          </span>
-          <br />
-          of the mess.
-        </h2>
+        <h2>How I develop an idea.</h2>
         <p>
-          I like starting with loose pieces and working out how they fit.
-          Sometimes a small connection changes the whole picture.
+          An illustration of moving from an early idea to an interface. The
+          starting marks can come from your drawing in the introduction.
         </p>
       </div>
       <div className="sense-layout">
         <div className="sense-notes">
-          <p className="eyebrow">How I work</p>
+          <p className="eyebrow">From a question to a prototype</p>
           <div className="sense-actions">
             {actions.map((a, n) => (
               <button
@@ -131,7 +123,7 @@ export function HowIWork() {
             ))}
           </div>
           <p className="sense-aside">
-            I move between these, depending on the question.
+            The next step depends on what the project still needs to answer.
           </p>
         </div>
         <div className="sense-sketchbook">
@@ -232,7 +224,7 @@ export function HowIWork() {
       </div>
       <div className="sense-footer">
         <Link href="#hero">
-          Leave a mark in the hero <span>↑</span>
+          Try a drawing in the introduction <span>↑</span>
         </Link>
         <span>Your scribble can become the starting point here.</span>
       </div>

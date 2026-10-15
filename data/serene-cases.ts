@@ -85,7 +85,7 @@ export const sereneCases: SereneCase[] = [
   {
     "slug": "medicine-app",
     "title": "Medicine app",
-    "headline": "A dose recorded. A little less uncertainty.",
+    "headline": "Medicine app: daily records and a caregiver view.",
     "theme": "medicine",
     "category": "Independent interface design / Medicine routines",
     "intro": "Two views of the same routine: a medicine taker records a dose, while a caregiver needs a clear account of confirmed and unconfirmed updates.",
@@ -197,7 +197,7 @@ export const sereneCases: SereneCase[] = [
   {
     "slug": "medtimer",
     "title": "Physical Meditimer",
-    "headline": "The reminder is also an object.",
+    "headline": "Physical Meditimer: storage and reminders.",
     "theme": "physical",
     "category": "Physical medicine-management concept / Group project",
     "intro": "A group medicine-management concept that treats storage, a reminder and the surrounding daily activity as parts of one interaction.",
