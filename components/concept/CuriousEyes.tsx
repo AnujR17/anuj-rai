@@ -45,8 +45,8 @@ export function CuriousEyes() {
         const distance = Math.hypot(dx, dy);
         const strength = Math.min(distance / 350, 1);
         const angle = Math.atan2(dy, dx);
-        eye.style.setProperty("--look-x", `${Math.cos(angle) * strength * rect.width * 0.16}px`);
-        eye.style.setProperty("--look-y", `${Math.sin(angle) * strength * rect.height * 0.18}px`);
+        eye.style.setProperty("--look-x", `${Math.cos(angle) * strength * rect.width * 0.10}px`);
+        eye.style.setProperty("--look-y", `${Math.sin(angle) * strength * rect.height * 0.10}px`);
       });
     };
     const move = (event: PointerEvent) => {
