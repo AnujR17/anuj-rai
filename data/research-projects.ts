@@ -3,6 +3,16 @@ import type { Project } from "@/data/projects";
 export const researchProjects: Project[] = [
   {
     slug: "gandhinagar-roundabouts",
+    overview: {
+      role: "Field investigation, synthesis, and communication concepts; report authored by Anuj Rai.",
+      scope: "Gandhinagar junctions, traffic interactions, and qualitative feedback on poster concepts.",
+      status: "Completed study · Communication mockups",
+    },
+    takeaway: "The question widened from parking disorder to decisions at the junction’s edges. Feedback then challenged whether a message alone could change those decisions.",
+    conclusion: {
+      result: "An observational account of interacting traffic problems, an annotated flow map, and communication concepts informed by qualitative feedback.",
+      next: "Evaluate guidance at entry points alongside reliable signals and traffic management. The study does not demonstrate a reduction in congestion or crashes.",
+    },
     title: "What actually blocks the circle?",
     type: "Field research / Communication concepts",
     summary: "A field study of Gandhinagar roundabouts, exploring how service-road entries, unclear signals, and everyday decisions interact.",
@@ -68,6 +78,7 @@ export const researchProjects: Project[] = [
       },
       {
         title: "What the feedback challenged",
+        visual: "message-tradeoff",
         paragraphs: [
           "The reported feedback made tone a tradeoff. Reflective messages were viewed more favourably by some respondents and officers, while shame-based concepts prompted concerns about discomfort, hostility, and credibility if no camera actually existed.",
           "A delivery rider’s feedback also challenged the assumption that awareness was enough: livelihood pressure could outweigh a message. Across the feedback, functional signals and consistent enforcement remained important. Communication became a supporting intervention rather than a standalone answer.",
@@ -85,6 +96,16 @@ export const researchProjects: Project[] = [
   },
   {
     slug: "medicine-storage-research",
+    overview: {
+      role: "Survey analysis and research presentation, kept distinct from product design and testing.",
+      scope: "52 respondents; overlapping caregiver and self-managed senior response paths.",
+      status: "Exploratory analysis · Product questions",
+    },
+    takeaway: "Voice and portable storage are directions worth exploring. The useful next step is to test fit with a routine, rather than treat a preference as a proven product requirement.",
+    conclusion: {
+      result: "A comparison of current habits and preferred support, with question-specific denominators and a practical set of design questions.",
+      next: "Prototype reminder choices with seniors and caregivers, then examine timing, control, and comprehension in context. Survey preference alone does not establish adoption or medical benefit.",
+    },
     title: "Medicine, storage, and reminders",
     type: "Survey analysis / Research presentation",
     summary: "Exploring how medicine routines, existing storage, and reminder preferences can inform a practical product direction.",
@@ -108,6 +129,7 @@ export const researchProjects: Project[] = [
       },
       {
         title: "Turning responses into questions",
+        visual: "medicine-signals",
         paragraphs: [
           "Comparing current habits with preferred reminders raises a useful design question: how could support fit an existing routine without requiring a person to adopt a complicated new system?",
           "Among the 46 nonblank caregiver-path answers to the preferred-reminder question, 21 selected voice reminders. That supports exploring voice as an option while keeping control and other reminder styles available.",
@@ -126,6 +148,16 @@ export const researchProjects: Project[] = [
   },
   {
     slug: "consumer-experience",
+    overview: {
+      role: "Analysis of a supplied research dataset; survey recruitment was outside my contribution.",
+      scope: "Descriptive rankings and exploratory models of reported store preferences.",
+      status: "Analysis exercise · Sample-specific findings",
+    },
+    takeaway: "In the descriptive ranking, practical store basics sit above several promotional attributes. That creates a service-design question to investigate, rather than a ready-made redesign answer.",
+    conclusion: {
+      result: "A descriptive view of store preferences and exploratory analyses that expose questions about the shopping experience.",
+      next: "Reconcile differences between the notebook and project summary, then observe a real store journey before translating the ranking into a tested service intervention.",
+    },
     title: "Consumer experience in retail",
     type: "Survey analysis / Research exploration",
     summary: "Examining store attributes and visual merchandising through survey responses, descriptive analysis, and exploratory segmentation.",
@@ -155,6 +187,7 @@ export const researchProjects: Project[] = [
       },
       {
         title: "From a ranking to a design hypothesis",
+        visual: "retail-hypothesis",
         paragraphs: [
           "In the repository’s descriptive ranking, practical basics sit above several promotional attributes. A useful design hypothesis is to make facilities, payment, and checkout support easy to understand before relying on a more elaborate visual experience.",
           "Testing that hypothesis would require examining an actual store or service journey. Survey importance ratings do not establish what causes a purchase or how much a redesign would improve it.",
@@ -172,6 +205,16 @@ export const researchProjects: Project[] = [
   },
   {
     slug: "skidge",
+    overview: {
+      role: "Graduate-data exploration and analysis, presented as a learning project.",
+      scope: "Academic measures, skills, salary, and the definition of an assessment target.",
+      status: "Exploratory work · Method reflection",
+    },
+    takeaway: "The definition of the target matters as much as the model. Reproducing a constructed score does not validate what that score is meant to represent.",
+    conclusion: {
+      result: "Descriptive relationships and a concrete lesson about separating a constructed proxy from an independently evaluated outcome.",
+      next: "Document dataset provenance, preserve unaltered statistical outputs, and evaluate against a justified independent target before making predictive claims.",
+    },
     title: "Skidge — graduate outcomes",
     type: "Data analysis / Learning project",
     summary: "An exploration of graduate profiles, starting salaries, skills, and job-demand data, with a focus on how the definition of a measure shapes its interpretation.",
@@ -195,15 +238,16 @@ export const researchProjects: Project[] = [
       },
       {
         title: "What does readiness mean?",
+        visual: "score-definition",
         paragraphs: [
           "The notebook uses both a salary-derived label and an analyst-weighted skills score in different analyses. These are constructed proxies, not independent measures of performance at work.",
           "Predicting a score from the same inputs used to construct it can show that a model reproduces the formula. It does not independently validate employability. The proxy, benchmark, and evaluation need to be kept separate.",
         ],
       },
       {
-        title: "What I would strengthen next",
+        title: "The method is part of the result",
         paragraphs: [
-          "The next iteration should make dataset provenance and the definition of every target explicit, preserve unaltered statistical outputs, and distinguish descriptive relationships from predictive claims.",
+          "Dataset provenance and the definition of the target determine what a result can mean. Without an independent benchmark, a model’s fit is not enough to establish a useful assessment.",
           "This is presented as a learning project. Model-accuracy figures and assertions about hiring validity are not used as proof of a successful employment assessment system.",
         ],
       },

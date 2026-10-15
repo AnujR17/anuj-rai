@@ -72,3 +72,13 @@ The user clarified that Consumer Experience used a supplied research dataset and
 The portfolio now has a substantive roundabout case, three supporting analysis cases, linked bike-survey context, original figures, Work-section navigation, and an AR/VR interest on About. Figma links are recorded but unavailable (direct proxy HTTP 403; no connector). The Library folder cannot be listed. Community-template copies and the chatbot link are not verified original projects. AR/VR project details and the independent medicine app remain pending.
 
 The evidence expansion passes production build, full lint, TypeScript, whitespace checks, 48 route/width browser combinations, and eight targeted checks after the raw-data changes. Original datasets and the PDF remain outside the public repository. Only selected figures, aggregate counts, and documented interpretations were added.
+
+## Case-study content and visual pass — 15 October 2026
+
+The seven case routes now open with the project question, contribution, scope, and status. A central takeaway and section links give readers a short path into the narrative; results and next evaluation questions are separated at the end. Original images keep source captions and full-size links.
+
+Himalayan includes a keyboard-accessible annotation inspector on the original export. Orbit includes a schematic of its information structure. The roundabout case compares the reported communication tradeoffs. Supporting cases include clearly labelled survey signals (with denominators), a contribution map, and explanations distinguishing hypotheses and constructed measures from evaluated outcomes. The physical Meditimer brief remains separate from the app and survey. Existing case slugs are preserved.
+
+Read `docs/case-study-writing-guide.md` for the content structure and project-specific evidence boundaries. Unrecorded author intent, original alternatives, personal iterations, and app artifacts are still not supplied by these presentation changes.
+
+Validation: production build, full lint, TypeScript, and whitespace checks pass. Chromium checked all seven cases at 1280, 768, 390, and 320px (28 combinations), original image loading, overflow, heading-anchor clearance, active navigation, annotation selection/reset by keyboard, source disclosure, survey denominators, unknown-project 404, no-JavaScript reading, and interaction under reduced motion. No runtime exceptions were observed. The supplied Vercel URL redirects to authentication; live publication is not verified by this local review. Work remains on `code/portfolio`; no merge is authorized.
