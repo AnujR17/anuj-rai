@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { sereneCases, type SereneCase } from "@/data/serene-cases";
+import { CaseEvidence } from "./CaseEvidence";
 import { DashboardPlate, Laptop, PhonePair, ProductPlate } from "./Mockups";
 import {
   DashboardDemo,
@@ -45,16 +46,17 @@ export function CasePage({ project: p }: { project: SereneCase }) {
             <dd>{p.status}</dd>
           </div>
         </dl>
+        <a className="case-original-link" href={p.links[0].href}>{p.links[0].label} <span aria-hidden="true">↗</span></a>
       </header>
-      <div className="case-hero-scene">
-        <CaseVisual project={p} />
-      </div>
-      <p className="caption scene-caption">{p.sceneCaption}</p>
+      <figure className="case-scene-figure">
+        <div className="case-hero-scene"><CaseVisual project={p} /></div>
+        <figcaption className="caption scene-caption">{p.sceneCaption}</figcaption>
+      </figure>
       <nav className="chapter-nav" aria-label="Case study chapters">
         <a href="#context">The question</a>
-        <a href="#decisions">The choices</a>
+        <a href="#decisions">Evidence &amp; choices</a>
         <a href="#study">Try the study</a>
-        <a href="#reflection">What it shows</a>
+        <a href="#reflection">Result &amp; next question</a>
       </nav>
       <section id="context" className="case-story">
         <h2 className="statement">{p.question}</h2>
@@ -63,30 +65,28 @@ export function CasePage({ project: p }: { project: SereneCase }) {
             <p key={text}>{text}</p>
           ))}
         </div>
-        <div className="case-links">
-          {p.links.map((l) => (
-            <a key={l.href} href={l.href}>
-              {l.label} ↗
-            </a>
-          ))}
-        </div>
       </section>
       <section id="decisions" className="case-story">
         <p className="eyebrow">A closer look</p>
-        <h2>The choices in the work.</h2>
+        <h2>Evidence, choices and tradeoffs.</h2>
+        <CaseEvidence theme={p.theme} />
         <div className="decision-grid">
           {p.decisions.map((d, n) => (
             <article key={d.title}>
               <span>0{n + 1}</span>
+              <p className="decision-evidence">{d.evidence}</p>
               <h3>{d.title}</h3>
               <p>{d.text}</p>
+              <div className="decision-tradeoff"><h4>The tradeoff</h4><p>{d.tradeoff}</p></div>
             </article>
           ))}
         </div>
       </section>
       <section id="study" className="study-section">
-        <h2>Something to try.</h2>
+        <p className="eyebrow">A separate portfolio interaction study</p>
+        <h2>{p.studyTitle}</h2>
         <p className="study-intro">{p.studyIntro}</p>
+        <div className="study-reading"><div><h3>Try this</h3><p>{p.studyTask}</p></div><div><h3>Look for</h3><p>{p.studyNotice}</p></div></div>
         {p.theme === "himalayan" ? (
           <DashboardDemo />
         ) : p.theme === "medicine" ? (
@@ -100,20 +100,16 @@ export function CasePage({ project: p }: { project: SereneCase }) {
         )}
       </section>
       <section className="case-story" id="reflection">
-        <p className="eyebrow">What it shows</p>
-        <h2>
-          Made visible.
-          <br />
-          Still open to questions.
-        </h2>
-        <div className="body-copy">
-          {p.reflection.map((t) => (
-            <p key={t}>{t}</p>
-          ))}
+        <p className="eyebrow">The result and the next question</p>
+        <h2>{p.result.title}</h2>
+        <div className="case-result-grid">
+          <div><h3>What was made</h3><p>{p.result.delivered}</p></div>
+          <div><h3>What to evaluate next</h3><p>{p.result.next}</p></div>
         </div>
         <details className="case-detail">
           <summary>Sources, contribution and scope</summary>
           <p>{p.detail}</p>
+          <div className="case-links">{p.links.map(link => <a key={link.href} href={link.href}>{link.label} ↗</a>)}</div>
         </details>
       </section>
       <div className="case-end">

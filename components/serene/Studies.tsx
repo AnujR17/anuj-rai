@@ -130,6 +130,7 @@ export function MedicineDemo() {
         <button
           type="button"
           className="text-button"
+          aria-pressed={pending}
           onClick={() => setPending(!pending)}
         >
           {pending ? "Restore connection" : "Simulate pending sync"}
@@ -146,6 +147,12 @@ export function MedicineDemo() {
 export function TokiDemo() {
   const [seconds, setSeconds] = useState(1800);
   const [running, setRunning] = useState(false);
+  const [started, setStarted] = useState(false);
+  const toggleTimer = () => {
+    if (seconds === 0) return;
+    setStarted(true);
+    setRunning(!running);
+  };
   useEffect(() => {
     if (!running) return;
     const timer = setInterval(
@@ -165,7 +172,7 @@ export function TokiDemo() {
     <div className="toki-demo">
       <div className="toki-object">
         <div className="pen-slot" />
-        <div className="toki-face">
+        <div className="toki-face" role="group" aria-label="Timer state">
           <span>One thing at a time</span>
           <strong>
             {String(Math.floor(seconds / 60)).padStart(2, "0")}:
@@ -176,26 +183,33 @@ export function TokiDemo() {
               ? "Session complete"
               : running
                 ? "In progress"
-                : "Ready when you are"}
+                : started
+                  ? "Paused"
+                  : "Ready when you are"}
           </small>
         </div>
         <button
           type="button"
           className="knob"
-          aria-label={running ? "Pause timer" : "Start timer"}
+          aria-label={running ? "Pause timer" : started ? "Resume timer" : "Start timer"}
           aria-pressed={running}
-          onClick={() => setRunning(!running)}
+          disabled={seconds === 0}
+          onClick={toggleTimer}
         >
           <span />
         </button>
       </div>
       <div className="demo-actions">
-        <button type="button" onClick={() => setRunning(!running)}>
-          {running ? "Pause" : "Start"}
+        <button type="button" onClick={toggleTimer} disabled={seconds === 0}>
+          {running ? "Pause" : started && seconds > 0 ? "Resume" : "Start"}
         </button>
         <button
           type="button"
-          onClick={() => setSeconds((v) => Math.max(0, v - 900))}
+          onClick={() => {
+            setStarted(true);
+            if (seconds <= 900) setRunning(false);
+            setSeconds((v) => Math.max(0, v - 900));
+          }}
         >
           Preview +15 minutes
         </button>
@@ -203,6 +217,7 @@ export function TokiDemo() {
           type="button"
           onClick={() => {
             setRunning(false);
+            setStarted(false);
             setSeconds(1800);
           }}
         >
@@ -288,7 +303,7 @@ export function PhysicalDemo() {
         <div className="physical-lid">
           <span>Morning</span>
           <strong>
-            {index === 0 ? "Dose due" : index === 1 ? "Recorded" : "Next: 1:30"}
+            {index === 0 ? "Dose due" : index === 1 ? "Acknowledged" : "Next: 1:30"}
           </strong>
         </div>
         <div className="compartments">
