@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Anuj Rai — portfolio concept
 
-## Getting Started
+A Next.js 16 portfolio template with an introduction at the bottom left, interactive eyes at the top right, an about section, and two curated project previews.
 
-First, run the development server:
+The working concept is on `concept/diagonal-intro`. See [the concept notes](docs/diagonal-intro-concept.md) for the design rationale, reference links, interactions, and editing map. This branch retains verified content and original media from `code/portfolio`. It has not been merged or deployed by this task.
+
+## Run locally
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [localhost:3000](http://localhost:3000). Edit `data/home.ts` for homepage copy and projects, and `app/page.module.css` for the composition. Existing case studies live under `/work`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Check
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run build
+npx tsc --noEmit
+```
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The build downloads the existing Inter and JetBrains Mono font configuration from Google Fonts. The eyes require no additional dependency or external asset. Never merge a portfolio branch without the user's explicit approval.

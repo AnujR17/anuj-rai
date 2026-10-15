@@ -2,45 +2,29 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { cn } from "@/components/utils/cn";
-import { Container } from "@/components/ui/Container";
+import { ArrowUpRight } from "lucide-react";
 
 const navItems = [
   { path: "/work", label: "Work" },
+  { path: "/about", label: "About" },
   { path: "/resume", label: "Resume" },
-  { path: "/contact", label: "Contact" },
 ];
 
 export function Navbar() {
   const pathname = usePathname();
-
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#fafaf9]/80 backdrop-blur-md border-b border-stone-200">
-      <Container>
-        <nav aria-label="Main navigation" className="flex items-center justify-between gap-4 h-16">
-          <Link href="/" className="shrink-0 text-stone-900 font-medium tracking-tight hover:text-stone-500 transition-colors">
-            Anuj Rai
-          </Link>
-          <div className="flex items-center gap-4 sm:gap-8">
-            {navItems.map((item) => {
-              const isActive = pathname === item.path || (item.path !== "/" && pathname?.startsWith(item.path));
-              return (
-                <Link
-                  key={item.path}
-                  href={item.path}
-                  aria-current={isActive ? "page" : undefined}
-                  className={cn(
-                    "text-sm font-medium transition-colors hover:text-stone-900",
-                    isActive ? "text-stone-900" : "text-stone-600"
-                  )}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
-          </div>
-        </nav>
-      </Container>
+    <header className="site-header">
+      <a href="#main-content" className="skip-link">Skip to content</a>
+      <nav aria-label="Main navigation" className="site-nav">
+        <Link href="/" className="site-identity" aria-label="Anuj Rai — Home"><span className="site-monogram" aria-hidden="true">a</span>Anuj Rai</Link>
+        <div className="site-nav-links">
+          {navItems.map(item => {
+            const active = pathname === item.path || pathname.startsWith(`${item.path}/`);
+            return <Link key={item.path} href={item.path} aria-current={active ? "page" : undefined}>{item.label}</Link>;
+          })}
+        </div>
+        <Link href="/contact" className="site-contact" aria-current={pathname === "/contact" ? "page" : undefined}>Let’s talk<ArrowUpRight size={14} aria-hidden="true" /></Link>
+      </nav>
     </header>
   );
 }

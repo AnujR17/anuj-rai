@@ -1,5 +1,9 @@
 # Portfolio continuation
 
+## Current concept branch — 16 October 2026
+
+The user now explicitly requested another branch for a new template. Work for this concept is on `concept/diagonal-intro`, based on `code/portfolio` to retain corrected content and original assets. See [the concept notes](diagonal-intro-concept.md). The earlier branch restriction below describes the preceding work; the user’s current request supersedes that branch choice. Explicit approval is still required before merging. The current opening introduces Anuj before all project work.
+
 ## Branch and review agreement
 
 Work only on `code/portfolio` in `AnujR17/anuj-rai`. The user explicitly requires approval before every merge. Pushing this branch does not authorize merging it. Keep the existing checkout; do not create another worktree without a request. Confirm the active branch and preserve existing changes before editing.
