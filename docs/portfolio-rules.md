@@ -27,7 +27,7 @@ The user explicitly requested that they be saved for future work
 - The exact requested headline may retain its final period
 - Type the hero and section headings once on entry; ease supporting content into view selectively
 - Keep all content readable without JavaScript and immediately visible with reduced motion
-- Use full desktop browser folds with large titles anchored at bottom left; Selected work reserves the right two-thirds for one large and two smaller project previews with text beneath
+- Use full desktop browser folds with large titles anchored at bottom left; Selected work reserves the right two-thirds for one large and two smaller project previews with only the project title beneath
 - Show Anuj at the upper left and Work, About and Resume at the upper right
 - Replace the blue accent with the current vermilion accent
 - Show Meditimer app, Himalayan 450 and Toki in homepage Selected work; do not show India in Orbit or roundabouts there
@@ -52,7 +52,8 @@ The user reaffirmed the existing no-work-in-the-hero rule
 The current request explicitly authorizes social icons in the contact section
 
 Read `collage-copy-update.md` for the latest supplied copy, Hello-to-headline cursor sequence and expanding project collages
-The user’s supplied descriptors and contact arrow are explicit exceptions for those exact strings
+The user has since removed the supplied project descriptors, separators and short explainers from project cards
+The supplied contact arrow remains an explicit exception for that exact CTA
 
 Read `compact-layout-update.md` for the latest geometry, compact work, questions, skills, cursor and footer requirements
 The user subsequently removed the point and polygon experiment; do not reintroduce it

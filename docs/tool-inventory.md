@@ -29,12 +29,15 @@ Currently exploring deliberately identifies tools the user is developing further
 
 Edit categories and tools in data/tools.ts
 Each category has a consistent heading column and an adaptive icon grid to its right on desktop
-Smaller screens put the category heading above a two-column icon grid
+Smaller screens put the category heading above a compact icon grid
 Currently exploring has its own row with additional space above
 Marks are local SVGs with provenance in public/icons/tools/README.md
 FigJam uses the shared Figma mark, React Native uses React and ESP32 uses Espressif
-Labels beside the marks are primary tool names
+The user subsequently requested icons only
+Remove visible tool names and retain names as image alt text for screen readers
+Do not add captions, tooltips or name badges
+Keep the category headings and Currently exploring
 
-The Tools title and the inventory's final text baseline align in the desktop side-by-side layout
+The Tools title aligns with the final icon row in the desktop side-by-side layout
 Do not emulate alignment with fixed pixel offsets or clip inventory to a viewport height
 On narrow screens content stacks with the title below it

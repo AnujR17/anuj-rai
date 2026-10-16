@@ -14,3 +14,17 @@ Make About me shorter, reduce the gap between its upper content and lower title 
 Remove Contact's forced full-viewport height and mobile minimum height
 Keep the dark contact section, social links, email, contact copy, CTA and footer links
 Align the Contact me title with Get in touch in its bottom row
+
+## Image links and title-only project cards
+
+Latest user correction on 16 October 2026
+
+Each project image opens its case study directly on click or tap
+Use a native link around the image and title, with no preview-only click step
+Keep hover and keyboard expansion with visible keyboard focus
+The initial homepage composition places Meditimer between Himalayan 450 and Toki
+The two smaller projects fill the bottom-left and bottom-right sides of the gallery
+All project titles share the bottom baseline on desktop
+Remove project descriptors, dot separators and short explanation paragraphs from these cards
+Show only the image and project title, including on the Work index
+Keep the actual case-study narrative intact

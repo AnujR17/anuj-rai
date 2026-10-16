@@ -5,8 +5,7 @@ import styles from "./SkillsTools.module.css";
 
 function ToolList({ tools }: { tools: Tool[] }) {
   return <ul>{tools.map(tool => <li key={tool.name}>
-    <Image src={`/icons/tools/mono/${tool.icon}.svg`} alt="" width={28} height={28} />
-    <span>{tool.name}</span>
+    <Image src={`/icons/tools/mono/${tool.icon}.svg`} alt={tool.name} width={28} height={28} />
   </li>)}</ul>;
 }
 

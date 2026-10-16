@@ -10,7 +10,9 @@ The user rejected the eyes; do not reintroduce them
 The hero is text-only and separate from Selected work; the user has removed the geometry experiment
 Never put project images, project cards, work, prototypes or eye illustrations in the hero
 Read the latest copy, hero and collage interaction direction in `docs/collage-copy-update.md`
-The supplied copy has explicit exceptions for its project descriptors and contact arrow
+Project cards show only the linked image and project title, with no descriptors, dot separators or explanation text
+Tool entries show icons only with accessible names; category headings remain
+The supplied contact arrow remains an explicit exception
 Read `docs/case-study-editorial-update.md` for the latest smaller title scale, removal of shapes, personal case-study narratives and vertical navigation
 Read `docs/large-layout-update.md` for the remaining full-height section, bottom-left title, question, collage, tool-logo and cursor direction
 It supersedes the compact scale in `docs/compact-layout-update.md`
