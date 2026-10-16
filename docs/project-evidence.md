@@ -1,5 +1,13 @@
 # Project sources and evidence update
 
+## 16 October case-study update
+
+Read [the case-study system](case-study-system.md) for the current five main cases, user-confirmed ownership and durations, recovered Serene artifacts, and the updated Toki implementation account
+The earlier access and project-placement notes below are historical
+Original medicine screens, the physical model and the Toki visualization are now available from `portfolioSerene`
+The app, physical Meditimer and medicine survey remain separate projects
+
+
 Reviewed 7 October 2026. Continue only on `code/portfolio`. Never merge without explicit approval.
 
 ## What is accessible

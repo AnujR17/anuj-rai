@@ -7,10 +7,10 @@ const experiments = [
     href: "https://github.com/AnujR17/Intelligent-Waste-Disposal-Systems",
   },
   {
-    title: "Toki",
+    title: "Toki development",
     project: "Toki",
-    description: "An ongoing ESP32 and app connection prototype for Bluetooth handshakes, notifications and recovery",
-    href: "https://github.com/AnujR17/toki",
+    description: "Companion app and device firmware for a four-task desk object, with physical acceptance pending",
+    href: "/work/toki",
   },
 ];
 

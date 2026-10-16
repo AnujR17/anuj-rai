@@ -1,74 +1,116 @@
 import { researchProjects } from "@/data/research-projects";
+import type { Project } from "@/data/case-study";
+export type { Project, ProjectImage } from "@/data/case-study";
 
-export interface ProjectImage {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-  caption: string;
-}
-
-export interface Project {
-  slug: string;
-  title: string;
-  type: string;
-  summary: string;
-  image?: ProjectImage;
-  live?: string;
-  liveLabel?: string;
-  source?: string;
-  resources?: { label: string; href: string }[];
-  sections: { title: string; paragraphs: string[]; figures?: ProjectImage[] }[];
-  note: string;
-}
-
-export const projects: Project[] = [
+export const mainProjects: Project[] = [
+  {
+    slug: "medicine-app",
+    title: "Meditimer app",
+    headline: "Daily medicine records and a caregiver view",
+    summary: "An app with separate views for recording a dose and following someone’s medicine routine",
+    brief: "Design a medicine-management app that gives the person taking medicine a daily view and gives their caregiver a way to follow the recorded routine",
+    problem: "The person taking medicine needs to know what is due and record an update. Their caregiver needs to understand what has been recorded before deciding whether to follow up. An absent record does not establish that a dose was missed",
+    duration: "3 weeks",
+    contribution: "Designed and developed the app independently, including the medicine-taker and caregiver interfaces",
+    visual: "medicine",
+    resources: [
+      { label: "Medicine-taker interface in Figma", href: "https://www.figma.com/design/on1gbKHkUo4CLZ38uCiSza/?node-id=797-3727" },
+      { label: "Caregiver interface in Figma", href: "https://www.figma.com/design/on1gbKHkUo4CLZ38uCiSza/?node-id=826-1236" },
+    ],
+    stages: {
+      research: [{ paragraphs: ["The related medicine-routine survey contains caregiver and direct senior response paths. It compares current storage and reminder habits with preferred forms of support", "The medicine survey is a separate research project. Its responses do not establish whether people could use these app screens successfully"] }],
+      insights: [{ title: "Recording and following up need different information", paragraphs: ["The medicine-taker screen centres on a current dose and a recording action. The caregiver screen combines day-level progress with dose-specific information and a call action", "A caregiver needs to distinguish a missing record from a confirmed update. The interface cannot establish whether medicine was physically taken"] }],
+      concept: [{ title: "Two views of the same routine", paragraphs: ["Keep the immediate dose action in the medicine-taker view and the wider daily record in the caregiver view. Each person can focus on the information needed for their next action"] }],
+      design: [{ title: "Keep the dose beside its recording action", paragraphs: ["The medicine-taker interface places “Mark as taken” with the current dose. Morning, afternoon and night organise the rest of the day", "The caregiver interface presents daily progress alongside the dose record and a way to call. Sample names and medicine details in the screens are prototype content"] }],
+      outcome: [{ title: "Separate interfaces with a shared recording question", paragraphs: ["The original Figma interfaces show the medicine-taker and caregiver experiences. The app was an individual project", "The next evaluation should ask whether both people understand an unrecorded dose, a recorded dose and an update awaiting confirmation. No clinical or behavioural improvement is established by these screens"] }],
+    },
+    note: "Original interfaces recovered from portfolioSerene and its linked Figma sources. The independent app is separate from physical Meditimer and the medicine survey. A browser study in that branch illustrated pending updates; it was not evidence of a deployed synchronization service",
+  },
   {
     slug: "two-wheeler-dashboard",
     title: "Himalayan 450",
-    type: "Interface study / Browser simulation",
-    summary: "Exploring what a circular motorcycle display shows, and how it changes as the vehicle’s state changes.",
-    image: { src: "/portfolio/himalayan-dashboard.png", alt: "Circular dashboard design with speed at the centre, an RPM arc above it, a gear indicator, and warning symbols.", width: 385, height: 385, caption: "Original interface export from the Himalayan450 repository." },
+    headline: "Speed, gears and warnings on a circular motorcycle display",
+    summary: "A circular dashboard design and browser simulation for examining information hierarchy as the vehicle state changes",
+    brief: "Create a circular motorcycle dashboard concept and a browser prototype that makes its changing readings and controls available to inspect",
+    problem: "Speed, gear, RPM, fuel and warnings compete for a limited circular surface. Riders need a recognisable location for each reading as values and warning states change",
+    duration: "3 weeks",
+    contribution: "Designed the dashboard interface and developed the browser simulation as an individual project",
+    image: { src: "/portfolio/himalayan-dashboard.png", alt: "Circular dashboard design with speed at the centre, an RPM arc, gear and warning indicators", width: 385, height: 385, caption: "Original interface export from the Himalayan450 repository" },
     live: "https://himalayan450.vercel.app",
     source: "https://github.com/AnujR17/Himalayan450",
-    resources: [
-      { label: "Read the two-wheeler survey analysis", href: "https://bike-dashboard-analysis.vercel.app" },
-      { label: "View the analysis source", href: "https://github.com/AnujR17/BikeDashboardAnalysis" },
-    ],
-    sections: [
-      { title: "The interface", paragraphs: ["A circular screen gives every element a limited amount of space. In this design, the speed reading is prominent, the RPM scale follows the upper edge, and gear and warning indicators occupy separate areas.", "The question to explore is how that hierarchy holds up when information changes: what should remain stable, and what deserves attention?"] },
-      { title: "From a screen to states", paragraphs: ["The browser prototype includes ignition, throttle and brake controls, gear changes, indicators, and Eco, Performance, and Rain modes. These controls make the display’s changing states available to inspect.", "The repository documents keyboard controls as well as on-screen controls. This is a simulation for exploring an interface, rather than a connection to a motorcycle’s live data."] },
-      { title: "Research alongside the prototype", paragraphs: ["The accompanying two-wheeler survey report covers dashboard feature priorities, readability, environmental challenges, and interaction preferences. Its reported sample spans different two-wheeler types; it is not a Himalayan-only riding test.", "The feature-priority chart separates basic information from additional features. Those self-reported preferences provide questions for the design: how visible should fuel and speed remain when navigation or mode controls are introduced? The survey alone does not validate this particular layout."], figures: [{ src: "/portfolio/research/bike-feature-priorities.png", alt: "Survey-report chart ranking fuel or battery information and speed above additional dashboard features.", width: 1220, height: 706, caption: "Original feature-priority figure from BikeDashboardAnalysis. Self-reported preferences, not a performance test of this concept." }] },
-      { title: "What this establishes", paragraphs: ["The design export and runnable simulation show a visual direction and implemented state behaviour. They provide a starting point for comparing layouts and checking which signals compete.", "They do not establish readability in sunlight, reduced glance time, or usability while riding. Those questions need evidence from appropriate testing."] },
-    ],
-    note: "Independent educational concept, unaffiliated with Royal Enfield. The prototype README credits GitHub Copilot assistance; the final case study should distinguish design decisions from generated implementation and document my individual contribution.",
+    resources: [{ label: "Two-wheeler survey analysis", href: "https://bike-dashboard-analysis.vercel.app" }],
+    stages: {
+      research: [{ paragraphs: ["The accompanying two-wheeler survey report covers feature priorities, readability, environmental challenges and interaction preferences. Its sample spans different types of two-wheelers", "The report provides context for deciding what information needs attention. It is not a Himalayan-only riding test or an evaluation of this layout"], figures: [{ src: "/portfolio/research/bike-feature-priorities.png", alt: "Survey chart ranking fuel or battery information and speed above additional dashboard features", width: 1220, height: 706, caption: "Original feature-priority chart from BikeDashboardAnalysis" }] }],
+      insights: [{ title: "Basic readings need to remain easy to find", paragraphs: ["The survey’s feature-priority chart places fuel and speed above additional features. This raises a layout question: what happens to those readings when navigation or mode controls also need space?", "Changing values and competing signals need to be examined together. A single screen cannot show how the hierarchy behaves across states"] }],
+      concept: [{ title: "Give each reading a consistent region", paragraphs: ["Place speed in the centre, follow the upper edge with RPM and separate gear, fuel and warning areas. Use a browser simulation to inspect what changes while the locations stay stable"] }],
+      design: [{ title: "A fixed hierarchy with changing states", paragraphs: ["Speed uses the largest type. RPM follows the circular edge, while the gear and warning indicators occupy separate areas", "The prototype includes ignition, throttle and brake controls, gear changes, indicators, and Eco, Performance and Rain modes. Keyboard and on-screen controls let a viewer repeat an input and compare the resulting state"] }],
+      outcome: [{ title: "A design export and runnable simulation", paragraphs: ["The export shows the composition and the browser prototype demonstrates implemented state changes. Together they make the hierarchy available to inspect", "Sunlight readability, vibration, glance time and use while riding remain untested. The next comparison should examine simultaneous warnings and navigation cues under appropriate viewing conditions"] }],
+    },
+    note: "Independent educational concept, unaffiliated with Royal Enfield. The original prototype README credits GitHub Copilot implementation assistance. Browser behaviour does not establish motorcycle hardware performance",
+  },
+  {
+    slug: "medtimer",
+    title: "Physical Meditimer",
+    headline: "Medicine storage and reminders in one physical object",
+    summary: "A group product concept exploring how medicine storage, a reminder and a person’s daily routine work together",
+    brief: "Develop a physical medicine-management concept that combines storage and reminders, considering how the object is placed, handled and understood in use",
+    problem: "A reminder has to fit where medicines are stored and how a person uses them. Its signal, physical arrangement and response need to make sense within that routine",
+    duration: "3 weeks",
+    contribution: "Developed the concept, functions and interactions, considered human factors and ergonomics, and conducted field research. Teammates contributed mockups and documentation",
+    image: { src: "/portfolio/physical.jpg", alt: "Original physical Meditimer model with an upper storage compartment, display and lower tray", width: 500, height: 744, caption: "Original group model recovered from portfolioSerene; Figma n7STT935qXcNGC5x49AcNm, node 155:38" },
+    resources: [{ label: "Original physical model in Figma", href: "https://www.figma.com/design/n7STT935qXcNGC5x49AcNm/?node-id=155-38" }],
+    stages: {
+      research: [{ title: "Investigating the routine in the field", paragraphs: ["I conducted field research for the project and considered human factors and ergonomics alongside the functions and interactions. The investigation informed how I framed the product concept"] }],
+      insights: [{ title: "Placement and response are part of the interaction", paragraphs: ["The concept treats storing medicine, noticing a reminder and responding as connected activities. Its physical arrangement matters alongside the signal", "The group model gives the project a tangible form for discussing storage and access. It does not establish that the arrangement is comfortable or suitable for every household"] }],
+      concept: [{ title: "Combine storage with an understandable reminder", paragraphs: ["My concept work covered the product’s functions, interaction and physical use. The direction brings storage and reminders into one object so that the signal relates to the medicine and the action around it"] }],
+      design: [{ title: "Use the model to examine arrangement", paragraphs: ["The original model shows an upper storage area, display and lower tray. It communicates the arrangement beyond a flat interface", "The functions and interactions need to distinguish noticing a reminder from responding to it. Acknowledging a signal would not confirm that medicine was taken"] }],
+      outcome: [{ title: "A physical concept with defined ownership", paragraphs: ["The group produced a physical concept artifact. I developed the concept, functions and interaction, considered human factors and ergonomics, and conducted the field research. Teammates contributed mockups and documentation", "The next step is to examine placement, reach, recognition and response using the model in a real routine. The model does not demonstrate dispensing, sensing or medical performance"] }],
+    },
+    note: "User-confirmed contribution and duration, 16 October 2026. The physical group project is separate from the independent Meditimer app. Original model and source link recovered from portfolioSerene",
+  },
+  {
+    slug: "toki",
+    title: "Toki",
+    headline: "A task app connected to a physical desk object",
+    summary: "A phone app for capturing and arranging tasks, paired with an ESP32 desk object for selecting, starting, pausing and completing them",
+    brief: "Develop a connected desk object and companion app that let someone capture tasks on a phone and work through a small queue on the object",
+    problem: "Returning to a full phone or computer workspace can interrupt the task someone is doing. The object needs to keep the current task visible and make its controls understandable, including when the connection changes",
+    duration: "3 weeks",
+    contribution: "Developed the product concept, companion app and device prototype as an individual project",
+    image: { src: "/portfolio/toki.jpg", alt: "Original Toki desk-object concept visualization, showing the intended object rather than a photograph of integrated hardware", width: 830, height: 830, caption: "Concept visualization recovered from portfolioSerene; Figma ixlPXmsuwf48nzujHHUV4T, node 380:368" },
+    source: "https://github.com/AnujR17/toki",
+    resources: [{ label: "Original Toki visualization in Figma", href: "https://www.figma.com/design/ixlPXmsuwf48nzujHHUV4T/?node-id=380-368" }, { label: "App and device interaction documentation", href: "https://github.com/AnujR17/toki/blob/main/docs/EXPERIENCE.md" }],
+    stages: {
+      research: [{ title: "Investigating the app and device relationship", paragraphs: ["The implementation work includes Bluetooth connection probes, recovery notes and an examination of what happens when app, storage or device state changes", "The current documentation identifies hardware constraints: slow e-paper refresh, phone background limits and an unreferenced motor. These constrain which interactions can be promised"] }],
+      insights: [{ title: "Capture and focused work need different controls", paragraphs: ["Writing a task should not require a Bluetooth connection. Tasks can stay on the phone while a smaller queue is sent to the object", "Elapsed time and explicit completion communicate different things. A timer reaching zero should not automatically mean the work is done"] }],
+      concept: [{ title: "Capture on the phone, act on the object", paragraphs: ["The app holds writing, ordering and the full task list. The object presents one task at a time from a queue of four, with separate actions for starting, pausing and completing", "The sequence stays under the person’s control. Priority does not silently reorder the queue"] }],
+      design: [{ title: "Separate writing, tasks and device controls", paragraphs: ["The documented app has Write, Tasks and Device tabs. Drafts remain local, the first four unfinished tasks synchronize while the object is idle, and edits during a running task wait until pause or completion", "The firmware presents one task on the e-paper display. A middle tap starts tracking, a middle hold completes the task and a left hold pauses it. The current motor remains inactive until a position-reference strategy is established"] }],
+      outcome: [{ title: "An app and firmware prototype awaiting physical acceptance", paragraphs: ["The current repository documents app and firmware builds, state tests and recovery behaviour. This is more developed than the earlier connection-only experiment", "A signed app build and physical acceptance are still required. The next demonstration should cover reading the display, touch actions, audio, queue retention and reconnection on the actual phone and object. Cloud builds do not verify those behaviours"] }],
+    },
+    note: "Concept visualization from portfolioSerene. Implementation account checked against the current Toki README, EXPERIENCE.md and TOKI_V3.md on 16 October 2026. The earlier portfolio countdown study is not presented as current device behaviour",
   },
   {
     slug: "india-in-orbit",
     title: "India in Orbit",
-    type: "Information design / Interactive web experience",
-    summary: "An explorable introduction to satellites: what they do, where they orbit, and how they connect to everyday life.",
-    image: { src: "/portfolio/india-in-orbit.png", alt: "India in Orbit website opening with a star field, introduction, and rendered Earth.", width: 1280, height: 850, caption: "Screen captured from the live India in Orbit website." },
+    headline: "An interactive introduction to satellites and their orbits",
+    summary: "A website connecting the everyday uses of satellites with orbital regimes, mission history and an interactive explorer",
+    brief: "Build an explorable introduction to satellites, using familiar applications as an entry into the larger orbital system",
+    problem: "Satellites support familiar activities, but their roles and orbital structure are difficult to see directly. Visitors need a way to connect those activities to the system before exploring its technical detail",
+    duration: "3 weeks",
+    contribution: "Designed and developed the interactive website, with guidance from Dr Anupam Rana",
+    image: { src: "/portfolio/india-in-orbit.png", alt: "India in Orbit website with a star field, introduction and rendered Earth", width: 1280, height: 850, caption: "Opening captured from the live India in Orbit website" },
     live: "https://india-in-orbit.vercel.app",
+    liveLabel: "Open India in Orbit",
     source: "https://github.com/AnujR17/india-in-orbit",
-    sections: [
-      { title: "A way into the subject", paragraphs: ["The website moves from everyday uses of satellites into orbital regimes and mission history. That sequence connects an abstract system to familiar activities before introducing its technical structure.", "A visitor can explore communication, navigation, observation, and other satellite roles, then move through the larger story."] },
-      { title: "Making the system explorable", paragraphs: ["The implementation combines a scroll-led narrative, rendered scenes, mission milestones, and an orbit explorer. The source contains satellite data and propagation logic, alongside the presentation layer.", "The visual opening shown here comes from the working website. Open the live experience to inspect the interactions and the project’s methodology and credits."] },
-      { title: "What needs a closer look", paragraphs: ["A working experience establishes execution. A stronger case study also needs to explain how the information was selected, how sources were checked, and why the interaction structure changed across iterations.", "The next review should assess whether visitors can answer a useful question, alongside mobile performance, accessible alternatives to 3D, and the distinction between live orbital data and illustrative scenes."] },
-    ],
-    note: "Interactive web project. The presence of propagation code does not establish scientific accuracy. Data provenance, interpretation, and individual contributions need to remain explicit in the full case study.",
+    stages: {
+      research: [{ title: "Connecting a technical subject to familiar uses", paragraphs: ["The website brings together satellite roles, orbital regimes and mission history. Communication, navigation and observation provide familiar ways into the subject", "The project’s methodology and credits identify source and implementation context. The presence of orbital propagation code alone does not establish scientific accuracy"] }],
+      insights: [{ title: "Everyday uses give orbital detail a context", paragraphs: ["The implemented sequence introduces what satellites do before asking a visitor to examine orbital structure. This provides a reason to explore the technical material", "That sequence is a design choice. Its effect on comprehension still needs to be evaluated with visitors"] }],
+      concept: [{ title: "Offer a reading path and a place to explore", paragraphs: ["Combine a scroll-led introduction with mission milestones and an orbit explorer. The narrative provides a sequence, while the explorer lets visitors follow a particular question"] }],
+      design: [{ title: "Move from satellite roles to the orbital system", paragraphs: ["Rendered scenes, satellite roles and mission milestones organise the experience. The orbit explorer offers a more direct way to inspect the subject", "The source contains satellite data and propagation logic alongside the presentation. The live experience provides the implemented interaction beyond the opening shown here"] }],
+      outcome: [{ title: "A working interactive website", paragraphs: ["The live site establishes an implemented information experience with a narrative and explorer", "The next review should test whether visitors can answer a useful satellite question, alongside mobile performance and accessible alternatives to 3D. Data freshness and illustrative scenes need to remain distinguishable"] }],
+    },
+    note: "Design and development credited to Anuj Rai, with guidance from Dr Anupam Rana. Preserve asset, source and assistance credits in the original project. No measured learning outcome is claimed",
   },
-  {
-    slug: "medtimer",
-    title: "Meditimer / physical concept",
-    type: "Medicine-management concept / Group project",
-    summary: "A physical medicine-management concept. This is separate from my independently developed medicine app.",
-    sections: [
-      { title: "My contribution", paragraphs: ["In this group project, my contribution was the problem framing and concept rationale. Teammates contributed mockups and documentation.", "The independent medicine app is a separate project, with its own interface, implementation, and case study."] },
-      { title: "The question", paragraphs: ["How might a physical medicine-management product fit into a person’s existing routine? The concept explores the relationship between reminders, the object, and the surrounding activity."] },
-      { title: "Current status", paragraphs: ["This page is a concept brief. The original project material is needed to present the design, research, and iteration in detail. No participant counts, quotes, or measured outcomes are claimed here."] },
-    ],
-    note: "Group concept, not a validated medicine-management product. Original project artifacts and the independent app will be documented separately.",
-  },
-  ...researchProjects,
 ];
+
+export const projects: Project[] = [...mainProjects, ...researchProjects];

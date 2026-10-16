@@ -1,5 +1,14 @@
 # Portfolio continuation
 
+## Current case-study system
+
+Use [the case-study system](case-study-system.md) for all case-study work
+The five main cases match `portfolioSerene`: Meditimer app, Himalayan 450, physical Meditimer, Toki and India in Orbit
+The current branch remains `concept/diagonal-intro`
+The user confirmed three-week projects and individual ownership except physical Meditimer
+Its contribution includes the concept, functions, interactions, human factors, ergonomics and field research
+Use the shared overview and Research, Insights, Concept, Design, Outcome sequence
+
 ## Current user correction
 
 The hero is text-only and separate from Selected work

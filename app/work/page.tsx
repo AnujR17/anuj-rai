@@ -1,14 +1,15 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Lab } from "@/components/portfolio/Lab";
 import { ResearchSpotlight } from "@/components/portfolio/ResearchSpotlight";
 import { ResearchList } from "@/components/portfolio/ResearchList";
+import { ProjectVisual } from "@/components/case-study/ProjectVisual";
+import { mainProjects } from "@/data/projects";
+import styles from "@/components/case-study/work-index.module.css";
 
 export default function Work() {
   return (
     <div className="portfolio-shell work-index">
       <header className="work-heading">
-
         <h1>Selected work</h1>
         <nav className="work-sections" aria-label="Work sections">
           <a href="#design">Design &amp; build</a>
@@ -17,18 +18,17 @@ export default function Work() {
           <a href="#lab">Experiments</a>
         </nav>
       </header>
-      <section id="design" className="work-project work-project-dashboard">
-        <Link href="/work/two-wheeler-dashboard" className="work-visual dashboard-visual" aria-label="Explore Himalayan 450"><Image src="/portfolio/himalayan-dashboard.png" alt="Circular Himalayan 450 dashboard design showing speed, gear, and RPM." width={385} height={385} preload sizes="(max-width: 600px) 70vw, 385px" /></Link>
-        <div className="work-project-copy"><h2>Himalayan 450</h2><p>A browser simulation of a circular motorcycle display with speed, gears and riding modes</p><Link href="/work/two-wheeler-dashboard" className="portfolio-link">View dashboard project</Link></div>
-      </section>
-      <section className="work-project work-project-orbit">
-        <Link href="/work/india-in-orbit" className="work-visual orbit-visual" aria-label="Explore India in Orbit"><Image src="/portfolio/india-in-orbit.png" alt="Live India in Orbit website with a star field and rendered Earth." width={1280} height={850} sizes="(max-width: 900px) 90vw, 750px" /></Link>
-        <div className="work-project-copy"><h2>India in Orbit</h2><p>An interactive website about satellites, missions and orbits</p><Link href="/work/india-in-orbit" className="portfolio-link">View satellite project</Link></div>
+      <section id="design" className={styles.mainGrid} aria-label="Main case studies">
+        {mainProjects.map(project => <article key={project.slug} className={styles.project}>
+          <div className={styles.cardVisual}><ProjectVisual project={project} linkedToCase /></div>
+          <h2><Link href={`/work/${project.slug}`}>{project.title}</Link></h2>
+          <p>{project.summary}</p>
+          <Link href={`/work/${project.slug}`} className="portfolio-link">View case study</Link>
+        </article>)}
       </section>
       <ResearchSpotlight />
       <ResearchList />
       <Lab />
-      <aside className="work-in-development"><h2>Medicine, routines, and reminders</h2><p>The physical Meditimer concept is a separate project from my independent medicine app.</p><Link href="/work/medtimer" className="portfolio-link">View medicine concept</Link></aside>
     </div>
   );
 }

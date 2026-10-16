@@ -18,6 +18,8 @@ npm run dev
 Open [localhost:3000](http://localhost:3000)
 Change introductory text, project images and question copy in `data/home.ts`
 Case studies remain under `/work`
+Read [the case-study system](docs/case-study-system.md) before editing project content
+The five main cases use a shared overview and Research, Insights, Concept, Design, Outcome structure
 
 ## Checks
 
