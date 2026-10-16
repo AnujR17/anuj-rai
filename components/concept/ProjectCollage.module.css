@@ -1,8 +1,8 @@
-.collage { display: grid; min-height: 100svh; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: clamp(32px, 4vw, 64px); padding: var(--section-bottom) var(--section-inset); border-top: 1px solid #d8d8d1; }
-.heading { align-self: end; font-size: var(--section-title-size); font-weight: 450; line-height: 1.05; letter-spacing: -.055em; max-width: 380px; }
-.gallery { width: 100%; align-self: center; justify-self: end; min-width: 0; }
+.collage { display: grid; min-height: 100svh; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: clamp(32px, 4vw, 64px); padding: var(--section-bottom) var(--section-inset); border-top: 1px solid #d8d8d1; align-content: end; align-items: last baseline; }
+.heading { font-size: var(--section-title-size); font-weight: 450; line-height: 1.05; letter-spacing: -.055em; max-width: 380px; }
+.gallery { width: 100%; justify-self: end; min-width: 0; }
 .embedded { padding-inline: 0; border-top: 0; }
-.frames { display: grid; gap: 20px; align-items: start; }
+.frames { display: grid; gap: 20px; align-items: last baseline; }
 .project { min-width: 0; padding-top: var(--offset); }
 .project[data-selected="true"] { padding-top: 0; }
 .visual { width: 100%; aspect-ratio: 1; position: relative; border-radius: 24px; container-type: inline-size; }

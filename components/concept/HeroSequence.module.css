@@ -1,4 +1,4 @@
-.sequence { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr); gap: clamp(32px, 4vw, 72px); align-items: end; width: 100%; }
+.sequence { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr); gap: clamp(32px, 4vw, 72px); align-items: last baseline; width: 100%; }
 .title { font-size: clamp(56px, 6.3vw, 96px); letter-spacing: -.055em; line-height: 1.13; font-weight: 600; margin-left: -.035em; }
 .stage { display: grid; position: relative; }
 .greeting, .headline { grid-area: 1 / 1; position: relative; }

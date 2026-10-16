@@ -61,4 +61,6 @@ Read `large-layout-update.md` for the latest corrections: full browser folds, la
 
 Read `case-study-editorial-update.md` for the latest title reduction, removal of shapes, personal case-study writing and vertical navigation
 
-Read `tool-inventory.md` for categories, confirmed experience and Currently exploring; do not infer equal proficiency or add unconfirmed tools to fill the grid
+Read `tool-inventory.md` for the full user-requested list and Currently exploring; do not infer equal proficiency
+
+Read `section-alignment-update.md` for shared bottom baselines and the shorter About and Contact sections

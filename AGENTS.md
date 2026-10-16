@@ -14,7 +14,8 @@ The supplied copy has explicit exceptions for its project descriptors and contac
 Read `docs/case-study-editorial-update.md` for the latest smaller title scale, removal of shapes, personal case-study narratives and vertical navigation
 Read `docs/large-layout-update.md` for the remaining full-height section, bottom-left title, question, collage, tool-logo and cursor direction
 It supersedes the compact scale in `docs/compact-layout-update.md`
-Read `docs/tool-inventory.md` for the grouped monochrome inventory and its confirmed tool list
+Read `docs/tool-inventory.md` for the grouped monochrome inventory and the full user-requested tool list
+Read `docs/section-alignment-update.md` for bottom-baseline alignment and shorter About and Contact sections
 Current section order: text-only hero, full-fold Selected work with a collage in the right two-thirds, earlier staggered personal questions, separate Tools I use, short About me, dark Contact me including footer links
 The current user-requested concept branch is `concept/diagonal-intro`; the earlier branch instruction below describes preceding work
 
