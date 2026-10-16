@@ -1,13 +1,6 @@
 .hero, .about { padding-inline: clamp(24px, 4.3vw, 80px); }
 .hero { min-height: max(680px, calc(100svh - 84px)); display: flex; align-items: end; padding-block: 90px 64px; }
 .introduction { max-width: 1060px; }
-.hello { font-size: clamp(27px, 2.6vw, 38px); letter-spacing: -.035em; margin-bottom: 30px; color: var(--concept-accent); }
-.introduction h1 { font-size: clamp(48px, 5.45vw, 82px); letter-spacing: -.055em; line-height: 1.13; font-weight: 450; margin-left: -.035em; }
-.line { display: block; }
-.little { font-size: .56em; letter-spacing: -.035em; }
-.heroNote { max-width: 590px; margin-top: 34px; }
-.heroNote p { font-size: clamp(19px, 1.65vw, 24px); letter-spacing: -.025em; line-height: 1.5; }
-.heroNote p + p { margin-top: 4px; }
 .textLink { display: inline-flex; align-items: center; min-height: 44px; width: fit-content; font-size: 18px; text-decoration: underline; text-underline-offset: 6px; }
 .textLink:hover { color: var(--concept-accent); }
 .about { padding-block: 80px 60px; display: grid; grid-template-columns: 1fr 1.3fr; grid-template-rows: auto 1fr auto; column-gap: 70px; row-gap: 65px; min-height: 590px; border-top: 1px solid #d8d8d1; }
@@ -21,19 +14,12 @@
 
 @media (max-width: 700px) {
   .hero { min-height: max(680px, calc(100svh - 76px)); padding-block: 60px 45px; }
-  .hello { font-size: 28px; margin-bottom: 24px; }
-  .introduction h1 { font-size: clamp(38px, 7.7vw, 54px); }
-  .little { font-size: .59em; }
-  .heroNote { margin-top: 30px; max-width: 440px; }
-  .heroNote p { font-size: 19px; }
-  .heroNote p + p { margin-top: 8px; }
   .about { grid-template-columns: 1fr; grid-template-rows: auto 1fr auto; padding-block: 55px 45px; min-height: 560px; gap: 45px; }
-  .aboutCopy { grid-column: 1; grid-row: 1; }
-  .aboutEducation { grid-column: 1; grid-row: 2; max-width: 270px; justify-self: end; padding: 0; }
+  .aboutCopy { grid-column: 1; grid-row: 2; }
+  .aboutEducation { grid-column: 1; grid-row: 1; max-width: 300px; justify-self: start; padding: 0; }
   .aboutEnding { grid-row: 3; align-items: end; gap: 20px; }
   .aboutEnding .textLink { font-size: 16px; }
   .about h2 { font-size: 43px; }
   .aboutCopy > p { font-size: 25px; }
   .aboutCopy > p + p { font-size: 19px; }
 }
-@media (max-width: 360px) { .introduction h1 { font-size: 35px; } .heroNote p { font-size: 18px; } }

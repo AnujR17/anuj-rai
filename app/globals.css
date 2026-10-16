@@ -183,3 +183,6 @@ a:focus-visible, button:focus-visible { outline: 3px solid #b84a26; outline-offs
 .site-nav-links a { font-size: 16px; color: var(--foreground); }
 .site-nav-links a:hover, .site-nav-links a[aria-current="page"] { color: var(--concept-accent); }
 @media (max-width: 700px) { .site-nav { min-height: 76px; } .site-nav-links { gap: 25px; } .site-nav-links a { font-size: 16px; } }
+
+.site-nav { justify-content: space-between; }
+.site-identity { font-size: 18px; font-weight: 500; }

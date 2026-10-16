@@ -1,5 +1,15 @@
 # Portfolio continuation
 
+## Current collage and copy iteration
+
+Read [the latest collage brief](collage-copy-update.md) first
+Use the user-supplied homepage copy and meta description
+The header includes Anuj at the upper left
+Orange Hello types first with a writing cursor, then is replaced by the final headline in the same space
+Project previews enlarge on hover, focus or click while neighboring previews shrink
+The work collage has no visible bottom-left Selected work heading
+The immediately preceding homepage description below is historical where it differs
+
 ## Current homepage iteration
 
 The hero now uses the user’s requested “Hello,” and “People, patterns, and the little things.”

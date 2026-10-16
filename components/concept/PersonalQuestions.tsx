@@ -12,7 +12,7 @@ export function PersonalQuestions() {
           <details key={question.lines.join(" ")} className={styles.question} name="about-anuj" open={index === 0} onPointerEnter={event => { if (event.pointerType === "mouse") event.currentTarget.open = true; }}>
             <summary>{question.lines.map(line => <span key={line}>{line}</span>)}</summary>
             <div className={styles.answer}>
-              <p>{question.answer}</p>
+              {question.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
               <Link href={question.href}>{question.label}</Link>
             </div>
           </details>

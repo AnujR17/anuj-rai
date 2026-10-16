@@ -1,10 +1,7 @@
-import Link from "next/link";
 import { Lab } from "@/components/portfolio/Lab";
 import { ResearchSpotlight } from "@/components/portfolio/ResearchSpotlight";
 import { ResearchList } from "@/components/portfolio/ResearchList";
-import { ProjectVisual } from "@/components/case-study/ProjectVisual";
-import { mainProjects } from "@/data/projects";
-import styles from "@/components/case-study/work-index.module.css";
+import { SelectedWork } from "@/components/concept/SelectedWork";
 
 export default function Work() {
   return (
@@ -18,14 +15,7 @@ export default function Work() {
           <a href="#lab">Experiments</a>
         </nav>
       </header>
-      <section id="design" className={styles.mainGrid} aria-label="Main case studies">
-        {mainProjects.map(project => <article key={project.slug} className={styles.project}>
-          <div className={styles.cardVisual}><ProjectVisual project={project} linkedToCase /></div>
-          <h2><Link href={`/work/${project.slug}`}>{project.title}</Link></h2>
-          <p>{project.summary}</p>
-          <Link href={`/work/${project.slug}`} className="portfolio-link">View case study</Link>
-        </article>)}
-      </section>
+      <SelectedWork allProjects id="design" />
       <ResearchSpotlight />
       <ResearchList />
       <Lab />

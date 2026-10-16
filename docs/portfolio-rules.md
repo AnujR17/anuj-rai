@@ -27,8 +27,8 @@ The user explicitly requested that they be saved for future work
 - The exact requested headline may retain its final period
 - Type the hero and section headings once on entry; ease supporting content into view selectively
 - Keep all content readable without JavaScript and immediately visible with reduced motion
-- Place homepage section titles at the bottom left, with context above
-- Keep only Work, About and Resume at the upper right of the header
+- Place homepage section titles at the bottom left, with context above; the work collage has no visible bottom-left Selected work heading
+- Show Anuj at the upper left and Work, About and Resume at the upper right
 - Replace the blue accent with the current vermilion accent
 - Show Meditimer app, Himalayan 450 and Toki in homepage Selected work; do not show India in Orbit or roundabouts there
 - Follow the questions with a short About me section
@@ -50,3 +50,6 @@ Retain provenance in project source records or normal case-study content without
 The earlier interpretation permitting work in the hero was an assistant mistake
 The user reaffirmed the existing no-work-in-the-hero rule
 The current request explicitly authorizes social icons in the contact section
+
+Read `collage-copy-update.md` for the latest supplied copy, Hello-to-headline cursor sequence and expanding project collages
+The user’s supplied descriptors and contact arrow are explicit exceptions for those exact strings

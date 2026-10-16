@@ -15,6 +15,7 @@ export function Navbar() {
     <header className="site-header">
       <a href="#main-content" className="skip-link">Skip to content</a>
       <nav aria-label="Main navigation" className="site-nav">
+        <Link href="/" className="site-identity" aria-label="Anuj home">Anuj</Link>
         <div className="site-nav-links">
           {navItems.map(item => {
             const active = pathname === item.path || pathname.startsWith(`${item.path}/`);

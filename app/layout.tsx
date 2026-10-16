@@ -11,7 +11,7 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: "Anuj Rai | Interaction Design",
-  description: "Interaction design across screens and physical objects. Explore Anuj Rai’s interface concepts, interactive web projects, and working prototypes.",
+  description: "Anuj Rai is an interaction designer exploring digital interfaces, connected objects, and working prototypes. Explore selected projects, experiments, and case studies.",
 };
 
 export default function RootLayout({

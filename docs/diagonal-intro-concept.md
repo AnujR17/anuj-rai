@@ -1,5 +1,8 @@
 # Portfolio template
 
+Read [the latest supplied copy and collage brief](collage-copy-update.md) first
+The earlier iteration below is historical where it differs
+
 Branch: `concept/diagonal-intro`
 
 Read [the standing rules](portfolio-rules.md) before editing

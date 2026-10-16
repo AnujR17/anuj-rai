@@ -15,7 +15,7 @@ export function ContactSection() {
       </div>
       <div className={styles.ending}>
         <h2 id="contact-title"><a href={`mailto:${contact.email}`}><TypeText text="Contact me" pace={48} /></a></h2>
-        <EaseIn className={styles.copy}><p>Hiring an interaction designer?<br />Send me the role and what you’re building</p></EaseIn>
+        <EaseIn className={styles.copy}><p>Hiring an interaction designer?</p><p>Tell me about the role and what you&apos;re building. I&apos;d love to hear about it.</p><a className={styles.cta} href={`mailto:${contact.email}`}>Get in touch →</a></EaseIn>
       </div>
     </section>
   );
