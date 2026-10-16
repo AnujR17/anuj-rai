@@ -17,7 +17,7 @@ The user explicitly requested that they be saved for future work
 - Preserve the existing palette unless a change is requested
 - Keep footer links inside the dark Contact me section; the user requested removal of the white footer
 - Remove the eye illustration, which the user rejected
-- Keep the hero headline at bottom left, introduction at bottom right and the requested interactive geometry in the space above
+- Keep the hero headline at bottom left and introduction at bottom right; remove the hero shapes
 - Never put work, project images, project cards or prototypes in the hero
 - Keep Selected work as a separate section below the hero
 - Use Todor Dimov’s work section as the reference for an image-led grid with rounded image edges
@@ -31,7 +31,7 @@ The user explicitly requested that they be saved for future work
 - Show Anuj at the upper left and Work, About and Resume at the upper right
 - Replace the blue accent with the current vermilion accent
 - Show Meditimer app, Himalayan 450 and Toki in homepage Selected work; do not show India in Orbit or roundabouts there
-- Restore the earlier large staggered questions, followed by Tools I use with recognizable logos and then the short About me section
+- Restore the earlier large staggered questions, followed by Tools I use with compact monochrome logos grouped by category and then the short About me section
 - Finish with a dark Contact me section, social icons at the side and creative copy at the bottom right
 - Write direct, concrete copy with recognisable section and action names
 - Name the portfolio project section "Selected work"
@@ -55,6 +55,10 @@ Read `collage-copy-update.md` for the latest supplied copy, Hello-to-headline cu
 The user’s supplied descriptors and contact arrow are explicit exceptions for those exact strings
 
 Read `compact-layout-update.md` for the latest geometry, compact work, questions, skills, cursor and footer requirements
-The requested point and circular geometry are specific exceptions to the decorative-dot rule within that experiment
+The user subsequently removed the point and polygon experiment; do not reintroduce it
 
 Read `large-layout-update.md` for the latest corrections: full browser folds, larger bottom-left titles, the earlier questions, tool logos, slower typing and a visible small hero geometry control
+
+Read `case-study-editorial-update.md` for the latest title reduction, removal of shapes, personal case-study writing and vertical navigation
+
+Read `tool-inventory.md` for categories, confirmed experience and Currently exploring; do not infer equal proficiency or add unconfirmed tools to fill the grid

@@ -2,7 +2,7 @@
 .overview { padding-bottom: 70px; }
 .textLink { display: inline-flex; min-height: 44px; align-items: center; text-decoration: underline; text-underline-offset: 6px; font-size: 17px; }
 .projectTitle { font-size: 24px; margin-top: 60px; letter-spacing: -.035em; }
-.overview h1 { max-width: 1120px; font-size: clamp(43px, 5.5vw, 80px); letter-spacing: -.055em; font-weight: 500; line-height: 1.08; margin-top: 22px; text-wrap: balance; }
+.overview h1 { max-width: 1120px; font-size: clamp(40px, 5.1vw, 74px); letter-spacing: -.055em; font-weight: 500; line-height: 1.08; margin-top: 22px; text-wrap: balance; }
 .introduction { max-width: 850px; font-size: clamp(22px, 2.1vw, 29px); line-height: 1.45; letter-spacing: -.025em; margin-top: 32px; }
 .framing { display: grid; grid-template-columns: 1fr 1fr; gap: 7vw; margin-top: 65px; }
 .framing h2, .details dt { font-size: 22px; font-weight: 500; letter-spacing: -.025em; margin-bottom: 16px; }
@@ -10,16 +10,18 @@
 .details { display: flex; gap: 7vw; margin-top: 50px; }
 .details > div:first-child { flex: 0 0 22%; }
 .details > div:last-child { flex: 1; }
-.stageNav { position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; gap: 8px clamp(22px, 4vw, 60px); padding-block: 15px; border-block: 1px solid #d8d8d1; background: var(--background); }
-.stageNav a { display: inline-flex; align-items: center; min-height: 44px; font-size: 19px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 6px; transition: color 180ms ease, text-decoration-color 180ms ease; }
-.stageNav a:hover, .stageNav a:focus-visible { color: var(--concept-accent); text-decoration-color: currentColor; }
-.stage { display: grid; grid-template-columns: minmax(180px, .62fr) minmax(0, 2fr); gap: 55px; padding-block: 80px; border-bottom: 1px solid #d8d8d1; scroll-margin-top: 100px; }
-.stage > h2 { font-size: clamp(30px, 3vw, 44px); font-weight: 400; line-height: 1.1; letter-spacing: -.05em; }
+.readingLayout { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: clamp(40px, 5vw, 80px); align-items: start; }
+.story { min-width: 0; }
+.stageNav { position: sticky; top: 32px; display: flex; flex-direction: column; align-items: start; gap: 6px; padding-block: 18px; }
+.stageNav a { display: inline-flex; align-items: center; min-height: 44px; font-size: 18px; color: #6a675f; text-underline-offset: 6px; transition: color 180ms ease; }
+.stageNav a:hover, .stageNav a:focus-visible, .stageNav a[aria-current="location"] { color: var(--concept-accent); text-decoration: underline; }
+.stage { padding-block: 24px 80px; scroll-margin-top: 40px; }
+.stage > h2 { font-size: clamp(30px, 2.8vw, 40px); margin-bottom: 36px; font-weight: 400; line-height: 1.1; letter-spacing: -.05em; }
 .stage:target > h2 { color: var(--concept-accent); }
 .stageContent { min-width: 0; }
 .block + .block { margin-top: 45px; }
-.block h3, .sources h3 { font-size: clamp(24px, 2.25vw, 31px); font-weight: 500; letter-spacing: -.035em; line-height: 1.2; margin-bottom: 22px; }
-.block p, .sources p { font-size: 20px; line-height: 1.7; max-width: 760px; }
+.block h3, .sources h3 { font-size: clamp(23px, 2vw, 28px); font-weight: 500; letter-spacing: -.035em; line-height: 1.2; margin-bottom: 22px; }
+.block p, .sources p { font-size: 19px; line-height: 1.75; max-width: 760px; }
 .block p + p { margin-top: 20px; }
 .figures { display: grid; gap: 24px; margin-top: 35px; }
 .pair { grid-template-columns: 1fr 1fr; align-items: start; }
@@ -35,7 +37,7 @@
 .phoneUi { width: 402px; height: 898px; transform-origin: top left; transform: scale(.6766); }
 .phoneUi * { font-family: var(--font-dm-sans), sans-serif !important; }
 .phoneUi [data-node-id="797:3859"], .phoneUi [data-node-id="797:3902"], .phoneUi [data-node-id="921:4508"] { white-space: nowrap; letter-spacing: -.025em; }
-.sources { margin-top: 50px; padding-top: 35px; border-top: 1px solid #d8d8d1; }
+.sources { margin-top: 48px; padding-top: 24px; }
 .sources p { font-size: 18px; }
 .sourceLinks { display: flex; flex-direction: column; align-items: start; gap: 8px; margin-top: 24px; }
 .sourceLinks a { display: inline-flex; align-items: center; min-height: 44px; font-size: 18px; text-decoration: underline; text-underline-offset: 6px; overflow-wrap: anywhere; }
@@ -43,23 +45,24 @@
 .caseEnd { display: flex; justify-content: space-between; align-items: start; gap: 35px; padding-top: 60px; }
 .nextCase { font-size: 18px; }
 .nextCase span { display: block; font-size: clamp(28px, 3vw, 43px); letter-spacing: -.04em; margin-top: 10px; }
-@media (max-width: 1000px) { .stage { grid-template-columns: 1fr; gap: 35px; } .stageContent { max-width: 850px; } }
+@media (max-width: 1000px) and (min-width: 701px) { .readingLayout { grid-template-columns: 130px minmax(0, 1fr); gap: 32px; } .stageNav a { font-size: 16px; } }
 @media (max-width: 700px) {
   .caseStudy { padding-top: 20px; padding-bottom: 55px; }
   .projectTitle { margin-top: 35px; font-size: 22px; }
-  .overview h1 { font-size: clamp(37px, 8.8vw, 58px); }
+  .overview h1 { font-size: clamp(35px, 8.2vw, 54px); }
   .introduction { font-size: 22px; margin-top: 25px; }
   .framing { grid-template-columns: 1fr; gap: 35px; margin-top: 45px; }
   .framing h2, .details dt { font-size: 21px; margin-bottom: 12px; }
   .framing p, .details dd { font-size: 18px; }
   .details { flex-direction: column; gap: 30px; margin-top: 35px; }
   .overview { padding-bottom: 45px; }
-  .stageNav { gap: 0 24px; padding-block: 10px; }
+  .readingLayout { grid-template-columns: 1fr; gap: 40px; }
+  .stageNav { position: static; gap: 4px; padding: 0; }
   .stageNav a { font-size: 17px; }
-  .stage { padding-block: 50px; gap: 30px; scroll-margin-top: 125px; }
-  .stage > h2 { font-size: 34px; }
+  .stage { padding-block: 12px 60px; scroll-margin-top: 24px; }
+  .stage > h2 { font-size: 32px; margin-bottom: 28px; }
   .block p { font-size: 18px; }
-  .block h3, .sources h3 { font-size: 27px; }
+  .block h3, .sources h3 { font-size: 25px; }
   .dashboard { padding: 35px; }
   .physical { padding: 20px; }
   .phones { padding: 25px 10px; }

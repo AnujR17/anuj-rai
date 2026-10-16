@@ -2,7 +2,6 @@ import Link from "next/link";
 import { SelectedWork } from "@/components/concept/SelectedWork";
 import { PersonalQuestions } from "@/components/concept/PersonalQuestions";
 import { SkillsTools } from "@/components/concept/SkillsTools";
-import { HeroGeometry } from "@/components/concept/HeroGeometry";
 import { TypeText, EaseIn } from "@/components/motion/Entrance";
 import { home } from "@/data/home";
 import { HeroSequence } from "@/components/concept/HeroSequence";
@@ -12,7 +11,6 @@ export default function Home() {
   return (
     <>
       <section id="intro" className={styles.hero} aria-labelledby="intro-title">
-        <HeroGeometry />
         <div className={styles.introduction}>
           <HeroSequence>
             <p>{home.introduction}</p>

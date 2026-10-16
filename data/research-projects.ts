@@ -4,7 +4,7 @@ export const researchProjects: Project[] = [
   {
     "slug": "gandhinagar-roundabouts",
     "title": "Gandhinagar roundabout study",
-    "summary": "A field study of Gandhinagar roundabouts, exploring how service-road entries, unclear signals, and everyday decisions interact.",
+    "summary": "I studied how vehicles enter and move through Gandhinagar’s roundabouts, then explored road-communication concepts. The fieldwork and feedback pushed the project beyond treating congestion as an awareness problem alone.",
     "image": {
       "src": "/portfolio/research/gandhinagar-field.jpg",
       "alt": "Mixed traffic at Reliance Circle, with a truck, cars, two-wheelers, and a service-road entry.",
@@ -12,28 +12,28 @@ export const researchProjects: Project[] = [
       "height": 460,
       "caption": "Field photograph reproduced from the research report, page 6."
     },
-    "note": "Source: Anuj Rai’s supplied 29-page research report. Findings describe the observed sites and reported feedback; no causal reduction in congestion or accidents is claimed.",
+    "note": "Fieldwork, analysis and communication concepts by Anuj Rai. Original photographs, map and poster concepts come from the 29-page research report. Poster feedback was qualitative; no campaign was deployed as part of the documented study.",
     "headline": "How vehicles enter and move through Gandhinagar’s roundabouts",
-    "brief": "Investigate traffic movement at selected Gandhinagar roundabouts and explore communication concepts informed by field observations",
-    "problem": "Service-road entries, overlapping approaches and unclear signals require drivers, pedestrians and traffic police to negotiate movement at busy junctions",
+    "brief": "Investigate movement at selected Gandhinagar roundabouts, use field and traffic-record material to understand the situation, and develop communication concepts that can be discussed with road users and traffic police.",
+    "problem": "Service-road entries, overlapping approaches and unclear signals leave drivers, pedestrians and traffic police negotiating movement at busy junctions. A useful intervention needs to address the decisions people actually face at those points.",
     "contribution": "Conducted the field study, analysed traffic records and developed communication concepts",
     "stages": {
       "research": [
         {
-          "title": "Looking at the whole interaction",
+          "title": "Look beyond the vehicles waiting in the circle",
           "paragraphs": [
-            "The report combines visits during peak and non-peak periods, contextual interviews with traffic police, short interactions with road users and local guards, and secondary accident and planning material.",
-            "Observation covered service-road merges, wrong-side entries, responses to police hand signals, heavy vehicles, and pedestrians navigating occupied footpaths. This widened the question beyond parked vehicles alone.",
-            "The supplied accident-record files contain 98 Sector-21 rows, 87 Sector-7 rows, and 113 Infocity rows after excluding its header: 298 record rows in total. These are recorded cases, not a measure of traffic exposure or a complete count of all crashes."
+            "I visited during peak and non-peak periods, spoke with traffic police, and had short interactions with road users and local guards. I considered those accounts alongside accident records and planning material.",
+            "The observation covered service-road merges, wrong-side entries, responses to police hand signals, heavy vehicles and pedestrians navigating occupied footpaths. The question became how those movements interact, rather than how much space parked vehicles occupy.",
+            "The available station files contain 98 Sector-21 records, 87 Sector-7 records and 113 Infocity records after excluding its header. The total is 298 record rows. Those records provide context, but they do not measure traffic exposure or capture every crash."
           ]
         }
       ],
       "insights": [
         {
-          "title": "The decision at the edge",
+          "title": "The entry changes what happens inside",
           "paragraphs": [
-            "The field account describes vehicles bypassing queues along service roads and merging sharply into the circle. One entry could invite others to follow, while manual regulation required drivers and officers to keep negotiating movement.",
-            "The annotated map made those overlapping approaches visible. It shifted the design focus toward guidance at merge points, alongside the operation of signals and enforcement, rather than assuming that a poster or extra road width could solve the system."
+            "The field account describes vehicles bypassing queues along service roads and merging sharply into the circle. One entry could encourage others to follow. Meanwhile, drivers and officers continued negotiating movement through manual regulation.",
+            "The annotated map helped make those overlapping approaches visible. It brought the point of entry into the design discussion, alongside signals and enforcement. A message placed somewhere around the junction would need to relate to a real decision, not simply repeat that people should follow rules."
           ],
           "figures": [
             {
@@ -48,18 +48,19 @@ export const researchProjects: Project[] = [
       ],
       "concept": [
         {
-          "title": "Compare two approaches to road communication",
+          "title": "Examine what a message asks someone to do",
           "paragraphs": [
-            "The concepts explored emotional accountability and informational guidance. The direction had to consider how a message relates to decisions at a junction, alongside signals and enforcement"
+            "I explored emotional accountability and informational guidance as different approaches to road communication. One draws attention to consequences; the other tries to support a decision at the junction.",
+            "The comparison also raised a question of credibility. A message that implies surveillance asks people to believe a system exists. Its wording and imagery need to be considered alongside the actual conditions of the road."
           ]
         }
       ],
       "design": [
         {
-          "title": "Exploring the tone of a message",
+          "title": "Use the concepts to discuss tone and credibility",
           "paragraphs": [
-            "The communication concepts explored emotional accountability and informational guidance. The report describes a two-day pilot in which digital poster mockups were shown on mobile devices to students, commuters, and traffic police.",
-            "The examples below show two emotional approaches: reflection on consequences and public accountability. They are campaign mockups, not evidence that a campaign or surveillance system was deployed."
+            "The report describes a two-day pilot in which digital poster mockups were shown on phones to students, commuters and traffic police. This provided qualitative reactions to the concepts before any suggestion of a roadside deployment.",
+            "The examples below explore regret and public accountability. The fallen motorcycle places attention on consequences, while the simulated roadside screen makes accountability public. The screen belongs to the campaign concept; it was not an installed surveillance system."
           ],
           "figures": [
             {
@@ -81,17 +82,17 @@ export const researchProjects: Project[] = [
       ],
       "outcome": [
         {
-          "title": "What the feedback challenged",
+          "title": "The feedback changed the role of communication",
           "paragraphs": [
-            "The reported feedback made tone a tradeoff. Reflective messages were viewed more favourably by some respondents and officers, while shame-based concepts prompted concerns about discomfort, hostility, and credibility if no camera actually existed.",
-            "A delivery rider’s feedback also challenged the assumption that awareness was enough: livelihood pressure could outweigh a message. Across the feedback, functional signals and consistent enforcement remained important. Communication became a supporting intervention rather than a standalone answer."
+            "Reflective messages received more favourable reactions from some respondents and officers. Shame-based concepts raised concerns about discomfort, hostility and credibility if no camera actually existed.",
+            "A delivery rider’s feedback also challenged the idea that awareness alone was enough: livelihood pressure could outweigh the message. Reliable signals and consistent enforcement remained important across the feedback. Communication became a supporting intervention rather than the proposed answer to the whole junction."
           ]
         },
         {
-          "title": "What can be concluded",
+          "title": "What I would examine next",
           "paragraphs": [
-            "The study documents an observational account, communication concepts, and qualitative reactions. Although the report calls the pilot A/B testing, it does not document a randomized allocation, participant counts, or measured changes in driving or congestion.",
-            "The next question is whether clear guidance at the point of entry, supported by reliable traffic management, changes decisions in practice. That would require an appropriately designed field evaluation."
+            "The project produced a field account, an annotated map and communication concepts informed by qualitative reactions. The report calls the pilot A/B testing, but does not document randomized allocation, participant counts or measured changes in driving.",
+            "The next question is whether clear guidance at the point of entry, supported by reliable traffic management, changes decisions in practice. That needs a field evaluation designed around actual movement, not just reactions to a poster."
           ]
         }
       ]
@@ -100,7 +101,7 @@ export const researchProjects: Project[] = [
   {
     "slug": "medicine-storage-research",
     "title": "Medicine, storage, and reminders",
-    "summary": "Exploring how medicine routines, existing storage, and reminder preferences can inform a practical product direction.",
+    "summary": "I analysed medicine-routine survey responses to compare how people currently manage storage and reminders with the support they would prefer. The most useful result was a set of product questions grounded in those differences.",
     "image": {
       "src": "/portfolio/research/medicine-reminder-fit.png",
       "alt": "Survey chart comparing existing reminder habits with preferred styles, including fixed routines, caregiver reminders, voice reminders, alarms, and notifications.",
@@ -111,52 +112,55 @@ export const researchProjects: Project[] = [
     "live": "https://medicine-storage-and-reminder.vercel.app",
     "liveLabel": "Read the research presentation",
     "source": "https://github.com/AnujR17/Medicine-Storage-and-Reminder",
-    "note": "Exploratory survey analysis. Caregiver proxy answers and direct senior answers provide different kinds of evidence; no health outcome or product efficacy is claimed.",
+    "note": "Exploratory Google Forms survey analysis. The report, notebook and charts belong to this research project, which is separate from the Meditimer app and physical Meditimer concept.",
     "headline": "Comparing medicine routines with reminder preferences",
-    "brief": "Analyse survey responses about medicine storage, timing and reminders to identify questions for a practical product direction",
-    "problem": "A reminder or storage product needs to fit existing routines, device familiarity and preferred forms of support. Caregiver accounts and direct senior accounts offer different perspectives",
+    "brief": "Analyse responses about medicine storage, timing and reminders, then identify practical directions for further product exploration.",
+    "problem": "A storage or reminder product needs to fit existing routines and device familiarity. Caregiver accounts can help describe those routines, but they are different from a person describing their own medicine use.",
     "contribution": "Analysed the medicine-routine survey responses and presented findings about storage and reminder preferences",
     "stages": {
       "research": [
         {
-          "title": "Two perspectives on a routine",
+          "title": "Keep the two response paths distinct",
           "paragraphs": [
-            "The supplied CSV contains 52 responses. There are 48 caregiver-path responses and 7 self-managed senior-path responses, with 3 people using both paths. These perspectives should not be added together as independent participants.",
-            "The survey was conducted using Google Forms. The analysis covers current medicine storage, timing difficulties, device familiarity, reminder preferences, product formats, and price expectations."
+            "The CSV contains 52 responses across 43 columns. There are 48 caregiver-path responses and 7 self-managed senior-path responses, with 3 people using both paths. I treated them as two perspectives within the same sample, not 55 independent participants.",
+            "The questions cover current storage, timing difficulties, device familiarity, reminder preferences, product formats and price expectations. Together, they let me compare what people already do with the support they say they would choose.",
+            "That distinction matters when reading caregiver answers. A caregiver’s account can describe support and concerns around a routine, while a direct senior response speaks from a different position."
           ]
         }
       ],
       "insights": [
         {
-          "title": "Reminder preferences suggest options to explore",
+          "title": "A preference is more useful when compared with a habit",
           "paragraphs": [
-            "Among the 46 nonblank caregiver-path answers to the preferred-reminder question, 21 selected voice reminders. That supports exploring voice as an option while keeping control and other reminder styles available."
+            "Among 46 nonblank caregiver-path answers about preferred reminders, 21 selected voice. For current reminder habits, 25 of 46 selected a fixed routine. These responses suggest exploring how a new reminder might fit around a routine that already exists.",
+            "The counts also need their denominators. Not everyone answered every question, so comparing percentages without the number of answers can make two findings appear more directly comparable than they are."
           ]
         }
       ],
       "concept": [
         {
-          "title": "Fit support to an existing routine",
+          "title": "Explore support without replacing the whole routine",
           "paragraphs": [
-            "Comparing current habits with preferred reminders raises a useful design question: how could support fit an existing routine without requiring a person to adopt a complicated new system?",
-            "The report’s direction favours familiar storage and flexible reminder behaviour. Voice is one option to explore, alongside control over when and how a reminder appears. A stated preference is a starting point for a prototype, not proof that a particular product will work."
+            "The direction favours familiar storage and flexible reminder behaviour. Voice is one option to prototype, alongside control over when and how a reminder appears.",
+            "The question I would carry into product work is how someone could adjust that support without learning a complicated new system. Choosing voice in a survey identifies an option worth trying; it does not tell us how a voice reminder should sound or behave in a household."
           ]
         }
       ],
       "design": [
         {
-          "title": "Prepare comparisons for the research presentation",
+          "title": "Make current and preferred support visible together",
           "paragraphs": [
-            "City names and multi-select responses are standardized in the notebook. City tiers are analyst-defined comparison groups, not official classifications; the direct senior-response subset is small.",
-            "The research presentation compares existing reminder habits with preferred styles. Its chart keeps those two questions visible together"
+            "The notebook standardizes city names and multi-select responses for comparison. The city-tier groups are analyst-defined, and the small direct senior-response subset needs to remain visible when interpreting a comparison.",
+            "The research presentation brings existing habits and preferred reminder styles together in the same chart. That gives the reader a way to examine a possible fit, rather than reading a preferred feature as a complete product brief."
           ]
         }
       ],
       "outcome": [
         {
-          "title": "An exploratory analysis for further product work",
+          "title": "A research direction to prototype",
           "paragraphs": [
-            "The report is exploratory. Correlations do not establish causes, and purchase intention does not demonstrate adoption. This survey-analysis project is separate from the physical Meditimer concept and the independent medicine app."
+            "The analysis produced a research presentation and a set of questions about storage familiarity, reminder choice and control. It gives further design work a more specific starting point than simply adding an alarm.",
+            "The next step is to try a reminder within an actual medicine routine and examine recognition, timing and response. The survey does not establish adoption, medical benefit or a causal relationship between preferences and behaviour. Those require different evidence."
           ]
         }
       ]
@@ -165,7 +169,7 @@ export const researchProjects: Project[] = [
   {
     "slug": "consumer-experience",
     "title": "Consumer experience in retail",
-    "summary": "Examining store attributes and visual merchandising through survey responses, descriptive analysis, and exploratory segmentation.",
+    "summary": "I analysed a supplied retail-research dataset to examine what respondents value in a store. The descriptive ranking brought practical facilities into focus alongside the visual experience.",
     "image": {
       "src": "/portfolio/research/consumer-attribute-ranking.png",
       "alt": "Repository chart ranking store attributes, with cleanliness, parking, and digital payment above promotional attributes in this sample.",
@@ -176,57 +180,54 @@ export const researchProjects: Project[] = [
     "live": "https://consumer-experience.vercel.app",
     "liveLabel": "Read the analysis site",
     "source": "https://github.com/AnujR17/Consumer-Experience",
-    "note": "Exploratory survey study. Descriptive findings are presented as sample-specific; disputed model metrics and broad validation claims are not used as portfolio outcomes.",
+    "note": "Analysis of a supplied retail-research dataset. I contributed the analysis and presentation, not recruitment. The linked report and notebooks retain the detailed methods and outputs.",
     "headline": "What shoppers value in a store",
-    "brief": "Analyse a supplied retail-research dataset and examine store attributes, visual merchandising and exploratory segments",
-    "problem": "Store experience combines practical facilities and visual presentation. The analysis asks which attributes respondents rate as important and what the sample can establish about those priorities",
+    "brief": "Analyse a supplied dataset covering store attributes and visual merchandising, and examine descriptive patterns alongside exploratory statistical models.",
+    "problem": "A store experience includes facilities, payment, checkout and visual presentation. The analysis asks which attributes matter to this sample and how far the available responses can support a design decision.",
     "contribution": "Analysed a supplied research dataset using descriptive rankings and exploratory statistical methods",
     "stages": {
       "research": [
         {
-          "title": "Working with a supplied dataset",
+          "title": "Understand what the dataset can answer",
           "paragraphs": [
-            "What do respondents value in a store, and how do those preferences relate to the visual experience? The notebook and presentation report a sample of 154 responses, with store-attribute and visual-merchandising questions."
+            "The notebook and presentation report 154 responses, with questions about store attributes and visual merchandising. I worked with this supplied dataset as an analysis task; collecting the responses was outside my contribution.",
+            "I looked at descriptive ratings alongside reliability checks, factor analysis, association tests and clustering. These methods ask different questions, so their results need to be interpreted separately rather than combined into one claim about customer experience."
           ]
         }
       ],
       "insights": [
         {
-          "title": "Practical basics lead the descriptive ranking",
+          "title": "Practical facilities deserve attention",
           "paragraphs": [
-            "In the repository’s descriptive ranking, cleanliness, parking and digital payment appear above several promotional attributes. This describes the sample’s importance ratings"
+            "The descriptive ranking places cleanliness, parking and digital payment above several promotional attributes in this sample. That gives the analysis a concrete design question: are the practical parts of a visit getting enough attention alongside its visual presentation?",
+            "An importance rating does not explain an entire shopping journey. It can direct attention to a part of the experience, but it does not establish where a shopper encountered difficulty or what caused a purchase."
           ]
         }
       ],
       "concept": [
         {
-          "title": "A hypothesis to examine in a store journey",
+          "title": "Turn the ranking into a question for a store visit",
           "paragraphs": [
-            "The ranking suggests making facilities, payment and checkout support easy to understand before relying on a more elaborate visual experience",
-            "This is a hypothesis for a future store or service study. It is not an implemented retail redesign"
+            "The direction I would examine is making facilities, payment and checkout support easy to understand before adding a more elaborate visual experience. The ranking gives a reason to investigate those basics.",
+            "That is a hypothesis for further research, not an implemented retail redesign. A useful next study would connect the rated attributes to what people actually notice, look for and do during a visit."
           ]
         }
       ],
       "design": [
         {
-          "title": "Present rankings alongside exploratory models",
+          "title": "Lead with the descriptive comparison",
           "paragraphs": [
-            "The work includes descriptive rankings, reliability checks, factor analysis, association tests, and clustering. The chart provides an entry into the descriptive findings rather than a claim about all retail shoppers."
+            "The ranking chart provides a direct entry into the analysis. It lets someone compare the attributes before encountering the more technical factor and cluster models.",
+            "The notebooks contain the deeper analysis, including reliability checks and association tests. Keeping the descriptive view understandable matters because a reader should be able to see the original question without first having to interpret every statistical output."
           ]
         }
       ],
       "outcome": [
         {
-          "title": "An exploratory result",
+          "title": "Separate a useful finding from a stronger claim",
           "paragraphs": [
-            "The factor and cluster models are exploratory. The project summary and notebook contain differences that need reconciliation before stronger claims about validated factors, representative segments, or causal effects are made.",
-            "The study is useful as an analysis exercise and a source of design questions. It does not establish that the same segments will recur in another population or that visual merchandising caused a measured sales change."
-          ]
-        },
-        {
-          "title": "Evaluate the hypothesis in context",
-          "paragraphs": [
-            "Testing that hypothesis would require examining an actual store or service journey. Survey importance ratings do not establish what causes a purchase or how much a redesign would improve it."
+            "The descriptive ranking is the clearest result in this version. Model-fit figures differ between the summary and notebook, so stronger factor and segmentation claims remain unresolved.",
+            "The work demonstrates analysis and a way to identify questions for a store or service study. It does not establish universal shopper segments or a causal effect on sales. I would strengthen it by reconciling the model outputs and examining the practical priorities in an actual store journey."
           ]
         }
       ]
@@ -235,7 +236,7 @@ export const researchProjects: Project[] = [
   {
     "slug": "skidge",
     "title": "Skidge / graduate outcomes",
-    "summary": "An exploration of graduate profiles, starting salaries, skills, and job-demand data, with a focus on how the definition of a measure shapes its interpretation.",
+    "summary": "Skidge explores graduate profiles, skills, starting salaries and job-demand material. Working through the analysis brought a basic question into focus: what does a readiness score actually measure?",
     "image": {
       "src": "/portfolio/research/skidge-gpa-salary.png",
       "alt": "Repository scatter plot showing a broad range of starting salaries across college GPA values, with a small number of high-salary outliers.",
@@ -246,53 +247,54 @@ export const researchProjects: Project[] = [
     "live": "https://skidge.vercel.app",
     "liveLabel": "Open the project report",
     "source": "https://github.com/AnujR17/Skidge",
-    "note": "Exploratory analysis, not an employment assessment product. Constructed scores and sample relationships should not be interpreted as individual hiring recommendations.",
+    "note": "Exploratory graduate-data analysis and web report. Constructed scores describe the analysis approach; they are not individual hiring recommendations or a validated employment assessment.",
     "headline": "Examining graduate profiles, skills and starting salaries",
-    "brief": "Explore graduate and job-demand data, comparing descriptive relationships and different definitions of readiness",
-    "problem": "A salary-derived label and a weighted skills score measure different things. Treating either as a validated measure of employability can produce claims the data does not support",
+    "brief": "Explore graduate and job-demand data, compare descriptive relationships, and examine how different definitions of readiness change the interpretation.",
+    "problem": "Salary-derived labels and weighted skills scores measure different things. If either is treated as a validated measure of employability, the conclusion can go further than the data supports.",
     "contribution": "Explored graduate and job-demand data through notebooks, charts and a web report",
     "stages": {
       "research": [
         {
-          "title": "A question about assessment",
+          "title": "Look at the spread before reducing it to a score",
           "paragraphs": [
-            "The project explores relationships among academic scores, skills, graduate salaries, and job-demand material. The scatter plot makes variation visible rather than reducing every graduate to a single academic score.",
-            "That is an invitation to examine the dataset and its measures. It is not evidence that GPA is irrelevant or that a new score can determine an individual’s suitability for a job."
+            "The project examines academic scores, skills, graduate salaries and job-demand material through notebooks, charts and a web report. The GPA and salary plot provides a starting point because it shows variation across the sample.",
+            "A broad salary spread raises further questions about the variables and their definitions. It does not, on its own, show that GPA is irrelevant or that another single score can explain a graduate’s suitability for work."
           ]
         }
       ],
       "insights": [
         {
-          "title": "What does readiness mean?",
+          "title": "Two definitions can produce two different answers",
           "paragraphs": [
-            "The notebook uses both a salary-derived label and an analyst-weighted skills score in different analyses. These are constructed proxies, not independent measures of performance at work.",
-            "Predicting a score from the same inputs used to construct it can show that a model reproduces the formula. It does not independently validate employability. The proxy, benchmark, and evaluation need to be kept separate."
+            "The notebook uses a salary-derived label and an analyst-weighted skills score in different analyses. One is based on a recorded outcome; the other is a constructed combination of inputs. They should not be treated as interchangeable measures of readiness.",
+            "There is a further problem when a model predicts a score from the same inputs used to construct it. A close match may show that the model reproduces the formula. It does not independently establish that the score measures performance at work."
           ]
         }
       ],
       "concept": [
         {
-          "title": "Keep the measure separate from the claim",
+          "title": "Keep the measure attached to the claim",
           "paragraphs": [
-            "The analysis uses salary-derived and analyst-weighted measures. Their definitions need to remain visible when interpreting the resulting relationships"
+            "The useful direction is to make the definition of a target explicit before interpreting a model result. What went into the score, what was used to predict it and what would count as independent evidence need separate answers.",
+            "This changes the design question too. A score intended to inform a personal decision needs a much stronger explanation than a chart used to explore a dataset. The report remains an exploration of the latter."
           ]
         }
       ],
       "design": [
         {
-          "title": "Make variation visible in the plot",
+          "title": "Show variation without assigning a verdict",
           "paragraphs": [
-            "The GPA and salary plot shows the spread of starting salaries across academic scores, including a small number of high-salary outliers",
-            "The chart is a descriptive view of the dataset. It is not an individual employment assessment"
+            "The GPA and starting-salary plot shows the spread of salaries across academic scores, including a small number of high-salary outliers. It gives the reader a view of the distribution before any score is introduced.",
+            "The notebooks and web report provide further ways to examine the analysis. The chart is a descriptive view of the data; it is not an assessment of the person represented by an individual point."
           ]
         }
       ],
       "outcome": [
         {
-          "title": "What I would strengthen next",
+          "title": "A clearer standard for the next analysis",
           "paragraphs": [
-            "The next iteration should make dataset provenance and the definition of every target explicit, preserve unaltered statistical outputs, and distinguish descriptive relationships from predictive claims.",
-            "This is presented as a learning project. Model-accuracy figures and assertions about hiring validity are not used as proof of a successful employment assessment system."
+            "The most useful lesson from this project is to examine the target as carefully as the model. A result can look convincing while answering a narrower question than the one the project started with.",
+            "I would strengthen the next version by making dataset provenance and target definitions explicit, preserving unaltered statistical outputs and using an independent basis for any predictive claim. This version remains a learning project rather than a validated employment assessment system."
           ]
         }
       ]

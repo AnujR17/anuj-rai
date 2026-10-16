@@ -87,3 +87,8 @@ The checks cover the five stage links and headings, overview fields, confirmed m
 Essential case content and stage navigation work without JavaScript, including keyboard activation
 Unknown project routes return 404
 The homepage, global palette, DM Sans setup and footer are unchanged
+
+## Latest reading and editorial update
+
+Read `case-study-editorial-update.md` for moderate-length personal narratives and a vertical reading navigator
+The five-stage system and evidence rules above still apply

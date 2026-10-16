@@ -7,13 +7,15 @@ No annotations, captions, footnotes, subscripts, superscripts, decorative arrows
 Create visual interest through layout, typography, imagery, form, and interaction
 Preserve existing colour choices and the footer unless changes are requested
 The user rejected the eyes; do not reintroduce them
-The hero is separate from Selected work and includes the user-requested point-to-polygon experiment
+The hero is text-only and separate from Selected work; the user has removed the geometry experiment
 Never put project images, project cards, work, prototypes or eye illustrations in the hero
 Read the latest copy, hero and collage interaction direction in `docs/collage-copy-update.md`
 The supplied copy has explicit exceptions for its project descriptors and contact arrow
-Read `docs/large-layout-update.md` for the latest full-height section, bottom-left title, question, collage, tool-logo and cursor direction
+Read `docs/case-study-editorial-update.md` for the latest smaller title scale, removal of shapes, personal case-study narratives and vertical navigation
+Read `docs/large-layout-update.md` for the remaining full-height section, bottom-left title, question, collage, tool-logo and cursor direction
 It supersedes the compact scale in `docs/compact-layout-update.md`
-Current section order: hero with geometry, full-fold Selected work with a collage in the right two-thirds, earlier staggered personal questions, separate Tools I use, short About me, dark Contact me including footer links
+Read `docs/tool-inventory.md` for the grouped monochrome inventory and its confirmed tool list
+Current section order: text-only hero, full-fold Selected work with a collage in the right two-thirds, earlier staggered personal questions, separate Tools I use, short About me, dark Contact me including footer links
 The current user-requested concept branch is `concept/diagonal-intro`; the earlier branch instruction below describes preceding work
 
 Use `code/portfolio` for this portfolio work. Verify the active branch before edits, commits, or pushes. Never merge without the user's explicit approval; permission to push this branch is not permission to merge it.
