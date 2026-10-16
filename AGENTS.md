@@ -11,8 +11,9 @@ The hero is separate from Selected work and includes the user-requested point-to
 Never put project images, project cards, work, prototypes or eye illustrations in the hero
 Read the latest copy, hero and collage interaction direction in `docs/collage-copy-update.md`
 The supplied copy has explicit exceptions for its project descriptors and contact arrow
-Read `docs/compact-layout-update.md` for the latest direction, which supersedes older layout and footer rules
-Current section order: hero with geometry, compact Selected work row, personal questions, separate Skills and tools, short About me, dark Contact me including footer links
+Read `docs/large-layout-update.md` for the latest full-height section, bottom-left title, question, collage, tool-logo and cursor direction
+It supersedes the compact scale in `docs/compact-layout-update.md`
+Current section order: hero with geometry, full-fold Selected work with a collage in the right two-thirds, earlier staggered personal questions, separate Tools I use, short About me, dark Contact me including footer links
 The current user-requested concept branch is `concept/diagonal-intro`; the earlier branch instruction below describes preceding work
 
 Use `code/portfolio` for this portfolio work. Verify the active branch before edits, commits, or pushes. Never merge without the user's explicit approval; permission to push this branch is not permission to merge it.

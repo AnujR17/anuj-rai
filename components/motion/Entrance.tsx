@@ -30,7 +30,7 @@ function useEntrance<T extends HTMLElement>() {
   return ref;
 }
 
-export function TypeText({ text, className = "", delay = 0, pace = 30 }: { text: string; className?: string; delay?: number; pace?: number }) {
+export function TypeText({ text, className = "", delay = 0, pace = 45 }: { text: string; className?: string; delay?: number; pace?: number }) {
   const ref = useEntrance<HTMLSpanElement>();
   let index = 0;
   return (

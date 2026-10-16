@@ -17,17 +17,17 @@ export function HeroSequence({ children }: { children: ReactNode }) {
     const later = (callback: () => void, delay: number) => { timer = setTimeout(() => { if (!stopped) callback(); }, delay); };
     const writeHeadline = (count: number) => {
       setState({ phase: count === headline.length ? "done" : "headline", count });
-      if (count < headline.length) later(() => writeHeadline(count + 1), headline[count - 1] === "," ? 90 : 28);
+      if (count < headline.length) later(() => writeHeadline(count + 1), headline[count - 1] === "," ? 180 : 55);
     };
     const erase = (count: number) => {
       setState({ phase: "erase", count });
-      if (count > 0) later(() => erase(count - 1), 35);
-      else later(() => writeHeadline(0), 100);
+      if (count > 0) later(() => erase(count - 1), 65);
+      else later(() => writeHeadline(0), 240);
     };
     const writeHello = (count: number) => {
       setState({ phase: "hello", count });
-      if (count < greeting.length) later(() => writeHello(count + 1), 65);
-      else later(() => erase(greeting.length), 420);
+      if (count < greeting.length) later(() => writeHello(count + 1), 120);
+      else later(() => erase(greeting.length), 950);
     };
     writeHello(0);
     const reduce = () => {

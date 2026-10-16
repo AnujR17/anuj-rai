@@ -12,6 +12,13 @@ export function ProjectCollage({ items, id = "work", embedded = false }: { items
   const [active, setActive] = useState(0);
   const reducedMotion = useReducedMotion();
   const buttons = useRef<(HTMLButtonElement | null)[]>([]);
+  const copy = (item: CollageItem, index: number) => (
+    <motion.div layout={!reducedMotion ? "position" : false} id={`${id}-${item.slug}-copy`} data-selected={index === active} className={styles.projectCopy} data-project-copy>
+      {item.descriptor && <p className={styles.descriptor}>{item.descriptor}</p>}
+      <p className={styles.description}>{item.description}</p>
+      {embedded && <Link href={`/work/${item.slug}`} className={styles.caseLink}>View case study</Link>}
+    </motion.div>
+  );
   const keyboard = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
     let next = index;
     if (event.key === "ArrowRight") next = (index + 1) % items.length;
@@ -36,16 +43,13 @@ export function ProjectCollage({ items, id = "work", embedded = false }: { items
                 <button ref={element => { buttons.current[index] = element; }} className={styles.preview} aria-label={`Preview ${item.title}`} aria-pressed={selected} aria-controls={`${id}-${item.slug}-copy`} onFocus={() => setActive(index)} onClick={() => setActive(index)} onKeyDown={event => keyboard(event, index)} />
               </motion.div>
               <motion.h3 layout={!reducedMotion ? "position" : false}><Link href={`/work/${item.slug}`}>{item.title}</Link></motion.h3>
+              {!embedded && copy(item, index)}
             </motion.article>;
           })}
         </div>
-        <div className={styles.context} aria-live="polite" aria-atomic="true">
-          {items.map((item, index) => <div key={item.slug} id={`${id}-${item.slug}-copy`} data-selected={index === active} className={styles.projectCopy} data-project-copy>
-            {item.descriptor && <p className={styles.descriptor}>{item.descriptor}</p>}
-            <p className={styles.description}>{item.description}</p>
-            <Link href={`/work/${item.slug}`} className={styles.caseLink}>View case study</Link>
-          </div>)}
-        </div>
+        {embedded && <div className={styles.context} aria-live="polite" aria-atomic="true">
+          {items.map((item, index) => <div key={item.slug}>{copy(item, index)}</div>)}
+        </div>}
       </div>
       <noscript><style>{`[data-collage] button { display: none } [data-project-copy] { display: block !important; margin-top: 28px }`}</style></noscript>
     </section>

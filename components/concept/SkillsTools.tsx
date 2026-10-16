@@ -1,15 +1,23 @@
 import { TypeText, EaseIn } from "@/components/motion/Entrance";
+import Image from "next/image";
 import styles from "./SkillsTools.module.css";
 
-const skills = ["Interaction design", "Interface design", "Research and synthesis", "Interactive prototyping", "Frontend development", "Physical prototyping"];
-const tools = ["Figma", "React", "TypeScript", "Arduino", "ESP32"];
+const tools = [
+  { name: "Figma", icon: "figma" },
+  { name: "React", icon: "react" },
+  { name: "TypeScript", icon: "typescript" },
+  { name: "Arduino", icon: "arduino" },
+  { name: "ESP32", icon: "espressif" },
+];
 
 export function SkillsTools() {
   return (
-    <section id="skills" className={styles.section} aria-labelledby="skills-title">
-      <h2 id="skills-title"><TypeText text="Skills and tools" /></h2>
-      <EaseIn className={styles.skills}><h3>Skills</h3><ul>{skills.map(skill => <li key={skill}>{skill}</li>)}</ul></EaseIn>
-      <EaseIn className={styles.tools} delay={100}><h3>Tools I use</h3><ul>{tools.map(tool => <li key={tool}>{tool}</li>)}</ul></EaseIn>
+    <section id="tools" className={styles.section} aria-labelledby="tools-title">
+      <h2 id="tools-title"><TypeText text="Tools I use" /></h2>
+      <EaseIn className={styles.tools}><ul>{tools.map(tool => <li key={tool.name}>
+        <Image src={`/icons/tools/${tool.icon}.svg`} alt="" width={52} height={52} />
+        <span>{tool.name}</span>
+      </li>)}</ul></EaseIn>
     </section>
   );
 }

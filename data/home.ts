@@ -8,15 +8,15 @@ export const home = {
   ],
   questions: [
     {
-      lines: ["What", "do I", "design?"],
+      lines: ["What do", "I design?"],
       paragraphs: ["I design the controls, information and feedback that help someone use a product, from recording a dose on a phone to checking a motorcycle display."],
     },
     {
-      lines: ["How", "do I", "build?"],
+      lines: ["How do", "I build?"],
       paragraphs: ["I use Figma, code and hardware to try an interaction. A working prototype lets me repeat an action, change a state and find what needs adjusting."],
     },
     {
-      lines: ["What am I", "learning", "next?"],
+      lines: ["What am I", "learning next?"],
       paragraphs: ["I'm exploring AR and VR, starting with how people find and use controls when they aren't on a screen, and how those controls respond."],
     },
   ],

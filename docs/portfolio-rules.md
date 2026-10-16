@@ -27,11 +27,11 @@ The user explicitly requested that they be saved for future work
 - The exact requested headline may retain its final period
 - Type the hero and section headings once on entry; ease supporting content into view selectively
 - Keep all content readable without JavaScript and immediately visible with reduced motion
-- Show Selected work explicitly in a separate left column, with its compact gallery and description to the right; keep the whole section within one viewport at standard desktop and phone sizes
+- Use full desktop browser folds with large titles anchored at bottom left; Selected work reserves the right two-thirds for one large and two smaller project previews with text beneath
 - Show Anuj at the upper left and Work, About and Resume at the upper right
 - Replace the blue accent with the current vermilion accent
 - Show Meditimer app, Himalayan 450 and Toki in homepage Selected work; do not show India in Orbit or roundabouts there
-- Follow the questions with a separate Skills and tools section, then the short About me section
+- Restore the earlier large staggered questions, followed by Tools I use with recognizable logos and then the short About me section
 - Finish with a dark Contact me section, social icons at the side and creative copy at the bottom right
 - Write direct, concrete copy with recognisable section and action names
 - Name the portfolio project section "Selected work"
@@ -56,3 +56,5 @@ The user’s supplied descriptors and contact arrow are explicit exceptions for 
 
 Read `compact-layout-update.md` for the latest geometry, compact work, questions, skills, cursor and footer requirements
 The requested point and circular geometry are specific exceptions to the decorative-dot rule within that experiment
+
+Read `large-layout-update.md` for the latest corrections: full browser folds, larger bottom-left titles, the earlier questions, tool logos, slower typing and a visible small hero geometry control

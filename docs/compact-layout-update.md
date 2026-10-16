@@ -1,6 +1,7 @@
 # Compact homepage layout
 
-Latest user direction on 16 October 2026
+Earlier direction on 16 October 2026
+Superseded by `large-layout-update.md` after the user rejected the compact scale and requested larger titles, full folds and the earlier question layout
 Branch: `concept/diagonal-intro`
 This direction takes precedence over earlier layout details in collage-copy-update.md
 

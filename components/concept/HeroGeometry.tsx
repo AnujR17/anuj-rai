@@ -43,8 +43,8 @@ export function HeroGeometry() {
         <circle className={styles.guide} cx="250" cy="150" r="67" />
         <motion.path initial={false} animate={{ d: shapePath(sides), opacity: sides === 1 ? 0 : 1 }}
           transition={{ duration: reduced ? 0 : .45, ease: [.22, 1, .36, 1] }}
-          stroke="currentColor" strokeWidth="5" strokeLinejoin="round" strokeLinecap="round" />
-        <motion.circle cx="250" cy="150" initial={false} animate={{ r: sides === 1 ? 5 : 0 }} transition={{ duration: reduced ? 0 : .2 }} fill="currentColor" />
+          stroke="currentColor" strokeWidth="1.6" vectorEffect="non-scaling-stroke" strokeLinejoin="round" strokeLinecap="round" />
+        <motion.circle cx="250" cy="150" initial={false} animate={{ r: sides === 1 ? 14 : 0 }} transition={{ duration: reduced ? 0 : .2 }} fill="currentColor" />
       </svg>
       <span className={styles.status} role="status">{names[sides - 1]}</span>
     </button>

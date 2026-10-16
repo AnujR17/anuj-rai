@@ -1,5 +1,5 @@
-.sequence { display: grid; grid-template-columns: 1.35fr 1fr; gap: clamp(32px, 6vw, 100px); align-items: end; width: 100%; }
-.title { font-size: clamp(38px, 4.5vw, 66px); letter-spacing: -.055em; line-height: 1.13; font-weight: 600; margin-left: -.035em; }
+.sequence { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr); gap: clamp(32px, 4vw, 72px); align-items: end; width: 100%; }
+.title { font-size: clamp(60px, 6.8vw, 104px); letter-spacing: -.055em; line-height: 1.13; font-weight: 600; margin-left: -.035em; }
 .stage { display: grid; position: relative; }
 .greeting, .headline { grid-area: 1 / 1; position: relative; }
 .greeting { color: var(--concept-accent); align-self: start; }
@@ -20,6 +20,6 @@
 .copy p { font-size: clamp(16px, 1.3vw, 18px); letter-spacing: -.025em; line-height: 1.5; }
 .copy p + p { margin-top: 14px; }
 .accessible { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-@media (max-width: 700px) { .sequence { grid-template-columns: 1fr; gap: 24px; } .title { font-size: clamp(34px, 7.7vw, 48px); } .little { font-size: .59em; } .copy { max-width: 310px; width: 90%; } .copy p { font-size: 16px; } }
-@media (max-width: 360px) { .title { font-size: 32px; } .copy { width: 94%; } .copy p { font-size: 15px; } }
+@media (max-width: 700px) { .sequence { grid-template-columns: 1fr; gap: 24px; } .title { font-size: clamp(42px, 9.8vw, 64px); } .little { font-size: .59em; } .copy { max-width: 310px; width: 90%; } .copy p { font-size: 16px; } }
+@media (max-width: 360px) { .title { font-size: 38px; } .copy { width: 94%; } .copy p { font-size: 15px; } }
 @media (prefers-reduced-motion: reduce) { .copy { transition: none; } .glyph::after { animation: none !important; } }
