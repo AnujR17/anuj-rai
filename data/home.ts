@@ -1,5 +1,5 @@
 export const home = {
-  role: "Interaction designer",
+  introduction: "I design interfaces and build web and physical prototypes",
   work: [
     {
       slug: "two-wheeler-dashboard",
@@ -26,26 +26,25 @@ export const home = {
       alt: "Traffic approaching Reliance Circle in Gandhinagar",
       width: 825,
       height: 460,
-      detail: "/portfolio/research/gandhinagar-flow-map.jpg",
       surface: "fieldwork",
     },
   ],
   questions: [
     {
       lines: ["What do", "I design?"],
-      answer: "Motorcycle displays, information-rich websites and interfaces for physical products",
+      answer: "I design digital interfaces, from a motorcycle display to a website about satellites",
       label: "Design projects",
       href: "/work",
     },
     {
       lines: ["How do", "I build?"],
-      answer: "I use React, browser simulations and microcontrollers to turn ideas into prototypes",
+      answer: "I turn sketches into browser simulations and physical prototypes to try out the interaction",
       label: "Prototypes",
       href: "/work#lab",
     },
     {
-      lines: ["What am I", "exploring?"],
-      answer: "AR and VR, connected objects and interaction beyond a flat screen",
+      lines: ["What am I", "learning next?"],
+      answer: "I’m exploring how people navigate AR and VR, and understand what they can interact with",
       label: "About me",
       href: "/about",
     },

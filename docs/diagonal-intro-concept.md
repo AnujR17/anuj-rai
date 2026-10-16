@@ -1,67 +1,72 @@
-# Visual walkthrough
+# Portfolio template
 
-Current branch: `concept/diagonal-intro`
+Branch: `concept/diagonal-intro`
 
-Read [the confirmed portfolio rules](portfolio-rules.md) before editing
-The latest user request replaces the eye illustration and the static project grid with a wide visual walkthrough
-The user explicitly did not request removing colour or redesigning the footer
-Those earlier assumptions have been corrected in the repository and Design Practice plugin version 0.1.2
+Read [the standing rules](portfolio-rules.md) before editing
+The hero must be text-only and separate from the work
+The earlier interpretation allowing project images in the hero was an assistant mistake
+That interpretation has been removed from the repository and the private Design Practice plugin
 
-## Composition
+## Page order
 
-The opening places Anuj Rai at the lower left with his role in normal body text
-Original project imagery occupies the right-hand side and extends beyond the viewport
-Scrolling moves the imagery horizontally while the identity gives way to the title Selected work at the lower left
-Three pieces are curated into this sequence: Himalayan 450, India in Orbit, and the Gandhinagar roundabout study
-Their unequal widths and vertical positions create a two- or three-column reading across the screen
+1. The earlier bottom-left introduction and right-hand text, with no eyes or project imagery
+2. Selected work in a separate rounded-image grid
+3. Personal questions with hover, tap and keyboard responses
+4. A short About me section
+5. A dark Contact me section with side icons and copy at the bottom right
 
-The gallery is followed by three differently positioned questions about design, prototyping and current interests
-Hovering opens an answer and changes the question's typography and colour
-The same answers open with a tap or keyboard activation
-The footer's prior spacing, text size and link layout are retained
+The original global footer remains separate
 
-## Interaction
+## Selected work
 
-Desktop uses a sticky viewport with normal page scrolling mapped to horizontal gallery travel
-A spring smooths project movement
-Native Previous, Next project and All work controls remain available
-Keyboard focus brings the focused project into view
-The gallery region also supports Left, Right, Home and End keys
+[Todor Dimov](https://www.todordimov.com/) is the reference for the work presentation
+The layout uses a larger leading image beside two smaller images on desktop
+Tablet and mobile layouts reorganize the same content into fewer columns
+Images have rounded edges and a small hover scale
+There is no pinned horizontal scrolling scene, custom cursor, numbered badge or extra annotation
+Only the project title accompanies each image
 
-Touch, smaller viewports, reduced-motion mode and JavaScript-disabled browsing use a native horizontally scrollable gallery
-Reduced-motion mode removes the sticky scroll sequence and animated hover movement
-The personal questions use native details and summary elements so they remain operable without JavaScript
-No custom cursor, eye illustration, annotations, caption labels, numbered badges, decorative arrows or dot markers are added
+The current project images are temporary content from Anuj's existing portfolio
+Replace the images and project entries in `data/home.ts`
+No reference-site imagery is shipped
 
-## Editing
+## Personal sections
+
+The questions retain their offset typography and native details interaction
+Their answers use concrete examples from the existing projects and interests
+A short bio follows them, with verified education and design interests
+
+Contact me is the main action in the dark closing section
+The heading and email open the verified email address
+The side icons use the existing GitHub profile and email destination
+No unprovided social profiles have been invented
+The GitHub mark is the brand SVG from the Simple Icons repository
+The contact copy is placed at the bottom right
+
+## Files
 
 | File | Purpose |
 | --- | --- |
-| `data/home.ts` | Curated project images, titles and personal question content |
-| `components/concept/VisualWalkthrough.tsx` | Scrolling, spring motion and gallery controls |
-| `components/concept/Walkthrough.module.css` | Wide composition, image surfaces and responsive gallery |
-| `components/concept/PersonalQuestions.tsx` | Native question interactions |
-| `components/concept/PersonalQuestions.module.css` | Offset typography and hover treatment |
-| `app/globals.css` | Existing palette, shared navigation and footer |
-| `app/layout.tsx` | DM Sans loading |
+| `app/page.tsx` | Page order, text-only hero and short bio |
+| `app/page.module.css` | Hero and bio layout |
+| `data/home.ts` | Introductory copy, project content and question answers |
+| `components/concept/SelectedWork.tsx` | Separate work grid |
+| `components/concept/SelectedWork.module.css` | Image sizes, rounded edges and responsive columns |
+| `components/concept/PersonalQuestions.tsx` | Hover, tap and keyboard questions |
+| `components/concept/ContactSection.tsx` | Dark contact section and verified destinations |
+| `components/concept/ContactSection.module.css` | Contact emphasis, side icons and lower-right copy |
 
-## Reference principles
-
-[Tacto](https://tacto-inc.com/index.html) informed the lower-left identity, wide spacing and typographic question navigation
-Its page and question hover treatment were captured and inspected
-[Sogeking](https://dribbble.com/shots/27782025-Sogeking-Creative-Agency-Portfolio-Landing-Page) informed the strong typographic scale and concentrated colour
-Horizontal photography portfolios informed the partial next-image reveal and unequal project widths
-The Pinterest search itself was unavailable, so no particular Pinterest composition is claimed as a source
-Only Anuj's existing project images are shipped
-
+DM Sans and the existing palette are retained
+The eye components and the merged hero/work walkthrough have been removed
 Do not merge without explicit user approval
 
-## Verification
+## Validation
 
-Production build, TypeScript, lint and whitespace checks pass
-Chromium checks cover 1920, 1440, 1024, 768, 390 and 320px layouts
-The identity-to-work transition, spring movement, all three project reveals, gallery controls, keyboard navigation, mobile scrolling, question hover and tap behaviour, reduced-motion fallback and native no-JavaScript questions were checked
-Hovering questions does not move the footer
-The eye illustration is absent and the previous footer text size is restored
-Representative work, about, contact and project routes return successfully
-These are implementation checks, not portfolio usability research
+Production build, full lint, TypeScript and Git whitespace checks pass
+Chromium checked the homepage at 1440, 1024, 768, 390 and 320 pixels
+The hero has no project media and Selected work begins after the first screen at these sizes
+All three project images load, their rounded edges remain visible, and the page has no horizontal overflow
+Question interactions work with mouse hover, touch and keyboard
+The content and native question controls also work without JavaScript
+The Work, About, Contact and three linked project routes return successfully and fit a narrow phone viewport
+The global footer source and styles were not changed in this revision

@@ -2,15 +2,17 @@
 
 ## Current user correction
 
-Read [the standing portfolio rules](portfolio-rules.md) first
-The user did not ask to remove colour or change the footer
-The monochrome rule and footer revisions were assistant assumptions and are superseded
-The user rejected the eye illustration and requested a wide two- or three-column walkthrough
-Keep the introduction and Selected work title at the bottom left, with project imagery extending right and smooth scrolling revealing the other projects
-Present personal information through differently positioned questions with hover and tap behaviour
-Keep DM Sans and the direct-copy and presentation rules
-The current concept is on `concept/diagonal-intro`
-Design Practice version 0.1.2 stores this correction
+The hero is text-only and separate from Selected work
+The user reaffirmed this existing rule; the earlier interpretation allowing project imagery in the hero was an assistant mistake
+Restore the earlier hero layout without the eyes
+Selected work uses a separate Todor Dimov-inspired image grid with rounded edges
+The user plans to replace project content and images later
+Refine the existing questions, then add a short About me section
+Finish with a dark Contact me section, social icons at the side and copy at the bottom right
+Preserve DM Sans, existing colours, and the copy and presentation rules
+Do not redesign the global footer incidentally
+The current concept branch is `concept/diagonal-intro`
+Design Practice version 0.1.3 stores the corrected hero constraint
 
 ## Current concept branch — 16 October 2026
 

@@ -6,7 +6,7 @@ import styles from "./PersonalQuestions.module.css";
 
 export function PersonalQuestions() {
   return (
-    <section id="about" className={styles.about} aria-label="About Anuj">
+    <section id="questions" className={styles.about} aria-label="About Anuj">
       <div className={styles.questions}>
         {home.questions.map((question, index) => (
           <details key={question.lines.join(" ")} className={styles.question} name="about-anuj" open={index === 0} onPointerEnter={event => { if (event.pointerType === "mouse") event.currentTarget.open = true; }}>
