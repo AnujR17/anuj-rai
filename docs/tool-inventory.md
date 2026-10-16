@@ -33,11 +33,14 @@ Do not infer equal proficiency or specific project usage
 
 Edit categories and exploration flags in data/tools.ts
 Tools I use stays at the bottom-left corner
-The inventory is a compact column at the far right, with a maximum width of 480px
-Category labels sit above the icons and align right
-Each icon row aligns to the same right edge, including wrapped final rows
+The inventory remains a compact column at the far right, 212px wide
+Within that right-side column, category labels and icons align left
+Each category uses four 44px icon columns with a 12px horizontal gap
+AI assistance and Development use two rows; smaller categories retain their actual tool counts
+Incomplete second rows start at the same left edge
+Do not add tools or placeholders merely to fill a row
 Keep the large gap between the title and the right-side inventory
-On phones preserve right-aligned icon groups with the title below at the left
+On phones keep the inventory on the right, with its labels and four-column icon rows aligned left and the title below at the left
 Marks are local SVGs with provenance in public/icons/tools/README.md
 React Native uses React's mark; ESP32 uses Espressif and XR Interaction Toolkit shares Unity's mark
 Icon buttons have complete accessible names
