@@ -24,6 +24,8 @@ export function VisualWalkthrough() {
   const guided = useSyncExternalStore(subscribe, getGuided, getServerGuided);
   const [travel, setTravel] = useState(0);
   const [active, setActive] = useState(0);
+  const [atStart, setAtStart] = useState(true);
+  const [atEnd, setAtEnd] = useState(false);
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end end"] });
   const targetX = useTransform(scrollYProgress, [0, projectStart, 1], [0, 0, -travel]);
   const x = useSpring(targetX, { stiffness: 130, damping: 32, mass: 0.45 });
@@ -45,7 +47,11 @@ export function VisualWalkthrough() {
   }, [guided]);
 
   useMotionValueEvent(scrollYProgress, "change", value => {
-    if (guided) setActive(Math.round(Math.max(0, value - projectStart) / (1 - projectStart) * (home.work.length - 1)));
+    if (guided) {
+      setActive(Math.round(Math.max(0, value - projectStart) / (1 - projectStart) * (home.work.length - 1)));
+      setAtStart(value <= projectStart + 0.002);
+      setAtEnd(value >= 0.998);
+    }
   });
 
   function showProject(index: number) {
@@ -73,8 +79,8 @@ export function VisualWalkthrough() {
             <h2>Selected<br />work</h2>
           </motion.div>
           <nav className={styles.controls} aria-label="Project gallery controls">
-            <button type="button" disabled={active === 0} onClick={() => showProject(active - 1)}>Previous</button>
-            <button type="button" disabled={active === home.work.length - 1} onClick={() => showProject(active + 1)}>Next project</button>
+            <button type="button" disabled={atStart} onClick={() => showProject(active - 1)}>Previous</button>
+            <button type="button" disabled={atEnd} onClick={() => showProject(active + 1)}>Next project</button>
             <Link href="/work">All work</Link>
           </nav>
         </div>
@@ -84,6 +90,8 @@ export function VisualWalkthrough() {
         }} onScroll={() => {
           if (guided || !viewportRef.current || !trackRef.current) return;
           const left = viewportRef.current.scrollLeft;
+          setAtStart(left <= 2);
+          setAtEnd(left >= viewportRef.current.scrollWidth - viewportRef.current.clientWidth - 2);
           const offsets = Array.from(trackRef.current.children).map(child => (child as HTMLElement).offsetLeft);
           setActive(offsets.reduce((closest, offset, index) => Math.abs(offset - left) < Math.abs(offsets[closest] - left) ? index : closest, 0));
         }}>
