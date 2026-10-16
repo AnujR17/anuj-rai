@@ -43,3 +43,15 @@ Lens Studio: product SVG from the official site's Lens Studio navigation link, r
 https://ar.snap.com/lens-studio
 Its CSS-variable fill is replaced with a single ink colour for standalone SVG use
 Meshy and Lens Studio marks remain the property of their respective owners
+
+## Tool hover update
+
+Supabase, Claude and Cursor: Simple Icons 16.0.0
+https://cdn.jsdelivr.net/npm/simple-icons@16.0.0/icons/supabase.svg
+https://cdn.jsdelivr.net/npm/simple-icons@16.0.0/icons/claude.svg
+https://cdn.jsdelivr.net/npm/simple-icons@16.0.0/icons/cursor.svg
+Simple Icons is CC0-1.0; brand marks retain their owners' rights
+
+Codex: SVGL, pinned commit f9b726cee1d1f3c697a18c880185e89d9a55bb70
+https://github.com/pheralb/svgl/blob/f9b726cee1d1f3c697a18c880185e89d9a55bb70/static/library/codex_light.svg
+SVGL's repository is MIT; the Codex mark remains its owner's property

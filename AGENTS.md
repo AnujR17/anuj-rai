@@ -11,7 +11,8 @@ The hero is text-only and separate from Selected work; the user has removed the 
 Never put project images, project cards, work, prototypes or eye illustrations in the hero
 Read the latest copy, hero and collage interaction direction in `docs/collage-copy-update.md`
 Project cards show only the linked image and project title, with no descriptors, dot separators or explanation text
-Tool entries show icons only with accessible names; category headings remain
+Tool entries show icons only at rest; hover, keyboard focus and tap reveal name, category and applicable Currently exploring status
+Keep tool categories, with exploration status inside the hover details rather than a duplicate icon row
 The supplied contact arrow remains an explicit exception
 Read `docs/case-study-editorial-update.md` for the latest smaller title scale, removal of shapes, personal case-study narratives and vertical navigation
 Read `docs/large-layout-update.md` for the remaining full-height section, bottom-left title, question, collage, tool-logo and cursor direction

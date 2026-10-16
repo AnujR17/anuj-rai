@@ -28,3 +28,20 @@ All project titles share the bottom baseline on desktop
 Remove project descriptors, dot separators and short explanation paragraphs from these cards
 Show only the image and project title, including on the Work index
 Keep the actual case-study narrative intact
+
+## Question spacing and About adjustment
+
+Latest user correction on 16 October 2026
+
+Keep the staggered questions and their full desktop fold
+Reduce the gap from the visible answer to its question title to 24px
+Anchor the answer above the title using grid alignment rather than leaving it at the top of a tall column
+Maintain the two-line question titles and derive reserved space from their actual font size
+On phones the open question has a 320px minimum height rather than 400px
+If a question contains multiple paragraphs, use a 12px paragraph gap
+
+Give About a little more space without restoring its former viewport height
+Use an 80px desktop top inset and 56px content-to-title gap
+Use a 56px mobile top inset and 40px gap
+Retain More about me and the bottom baseline alignment
+The dark Contact section is unchanged
