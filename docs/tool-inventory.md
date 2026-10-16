@@ -32,12 +32,18 @@ Do not infer equal proficiency or specific project usage
 ## Implementation
 
 Edit categories and exploration flags in data/tools.ts
-Each category has a consistent heading column and an adaptive icon grid on desktop
-Smaller screens put the category heading above its icons
+Tools I use stays at the bottom-left corner
+The inventory is a compact column at the far right, with a maximum width of 480px
+Category labels sit above the icons and align right
+Each icon row aligns to the same right edge, including wrapped final rows
+Keep the large gap between the title and the right-side inventory
+On phones preserve right-aligned icon groups with the title below at the left
 Marks are local SVGs with provenance in public/icons/tools/README.md
 React Native uses React's mark; ESP32 uses Espressif and XR Interaction Toolkit shares Unity's mark
 Icon buttons have complete accessible names
-A shared tooltip provides tool name, category and applicable exploration status
+A small shared hover label provides tool name, category and applicable exploration status
+Use content-sized width capped at 176px, 7px by 9px padding, a 12px name and 11px supporting text
+Keep it close to the icon without an arrow or a large card treatment
 Position it within the viewport, allow moving the pointer into it, and dismiss it with Escape or an outside click
 Tap toggles it on touch screens
 The icon buttons retain visible keyboard focus and a minimum 44px target

@@ -36,7 +36,7 @@ export function ToolInventory() {
       const anchor = active.anchor.getBoundingClientRect();
       const { width, height } = panel.getBoundingClientRect();
       const left = Math.max(16, Math.min(anchor.left + anchor.width / 2 - width / 2, window.innerWidth - width - 16));
-      const top = anchor.top >= height + 28 ? anchor.top - height - 12 : anchor.bottom + 12;
+      const top = anchor.top >= height + 22 ? anchor.top - height - 6 : anchor.bottom + 6;
       panel.style.left = `${left}px`;
       panel.style.top = `${Math.max(16, Math.min(top, window.innerHeight - height - 16))}px`;
     };

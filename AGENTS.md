@@ -12,7 +12,8 @@ Never put project images, project cards, work, prototypes or eye illustrations i
 Read the latest copy, hero and collage interaction direction in `docs/collage-copy-update.md`
 Project cards show only the linked image and project title, with no descriptors, dot separators or explanation text
 Tool entries show icons only at rest; hover, keyboard focus and tap reveal name, category and applicable Currently exploring status
-Keep tool categories, with exploration status inside the hover details rather than a duplicate icon row
+Keep tool categories, with exploration status inside a very small hover label rather than a duplicate icon row
+In Tools I use, place the title at bottom left and compact right-aligned category and icon groups at the far right
 The supplied contact arrow remains an explicit exception
 Read `docs/case-study-editorial-update.md` for the latest smaller title scale, removal of shapes, personal case-study narratives and vertical navigation
 Read `docs/large-layout-update.md` for the remaining full-height section, bottom-left title, question, collage, tool-logo and cursor direction
