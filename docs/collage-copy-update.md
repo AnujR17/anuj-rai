@@ -1,6 +1,7 @@
 # Homepage copy and project collage
 
 User direction confirmed 16 October 2026
+Read `compact-layout-update.md` for the later user-requested changes to geometry, visible work heading, scale, question copy, skills, cursor and footer
 Branch: `concept/diagonal-intro`
 
 ## Copy

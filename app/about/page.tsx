@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { about } from "@/data/about";
 import { TypeText, EaseIn } from "@/components/motion/Entrance";
-import { ContactSection } from "@/components/concept/ContactSection";
 import styles from "./page.module.css";
 
 export default function About() {
@@ -33,7 +32,6 @@ export default function About() {
           <Link href="/work" className={styles.link}>Selected work</Link>
         </div>
       </article>
-      <ContactSection />
     </>
   );
 }

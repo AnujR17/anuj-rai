@@ -7,11 +7,12 @@ No annotations, captions, footnotes, subscripts, superscripts, decorative arrows
 Create visual interest through layout, typography, imagery, form, and interaction
 Preserve existing colour choices and the footer unless changes are requested
 The user rejected the eyes; do not reintroduce them
-The hero is text-only and separate from Selected work
+The hero is separate from Selected work and includes the user-requested point-to-polygon experiment
 Never put project images, project cards, work, prototypes or eye illustrations in the hero
 Read the latest copy, hero and collage interaction direction in `docs/collage-copy-update.md`
 The supplied copy has explicit exceptions for its project descriptors and contact arrow
-Current section order: text-only hero, separate expanding project collage, personal questions, short About me, dark Contact me with side social icons and bottom-right copy
+Read `docs/compact-layout-update.md` for the latest direction, which supersedes older layout and footer rules
+Current section order: hero with geometry, compact Selected work row, personal questions, separate Skills and tools, short About me, dark Contact me including footer links
 The current user-requested concept branch is `concept/diagonal-intro`; the earlier branch instruction below describes preceding work
 
 Use `code/portfolio` for this portfolio work. Verify the active branch before edits, commits, or pushes. Never merge without the user's explicit approval; permission to push this branch is not permission to merge it.

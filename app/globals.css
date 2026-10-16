@@ -33,10 +33,6 @@ html { scroll-behavior: smooth; }
 .site-nav-links a:hover, .site-nav-links a[aria-current="page"] { color: #cf3518; }
 .site-contact { display: inline-flex; align-items: center; justify-content: center; gap: 23px; min-height: 40px; padding: 8px 17px; border: 1px solid #20211e; border-radius: 30px; font-size: 12px; transition: background 150ms ease, color 150ms ease; }
 .site-contact:hover { background: #20211e; color: #f7f7f2; }
-.site-footer { padding: 24px clamp(24px, 4.3vw, 80px); border-top: 1px solid #d8d8d1; display: flex; align-items: center; justify-content: space-between; gap: 20px; font-size: 12px; color: #62625c; }
-.site-footer-links { display: flex; align-items: center; gap: 28px; }
-.site-footer a { display: inline-flex; min-height: 44px; align-items: center; }
-.site-footer a:hover { color: #cf3518; }
 .skip-link { position: absolute; top: 8px; left: 24px; z-index: 100; padding: 12px 18px; background: #cf3518; color: white; transform: translateY(-160%); }
 .skip-link:focus { transform: translateY(0); }
 @media (max-width: 700px) {
@@ -45,8 +41,6 @@ html { scroll-behavior: smooth; }
   .site-contact { grid-column: 2; grid-row: 1; min-height: 44px; }
   .site-nav-links { grid-column: 1 / -1; grid-row: 2; gap: 28px; }
   .site-nav-links a { min-height: 44px; }
-  .site-footer { flex-wrap: wrap; gap: 4px 20px; padding-block: 20px; }
-  .site-footer-links { gap: 24px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .site-header * { transition: none !important; } }
 
@@ -186,3 +180,10 @@ a:focus-visible, button:focus-visible { outline: 3px solid #b84a26; outline-offs
 
 .site-nav { justify-content: space-between; }
 .site-identity { font-size: 18px; font-weight: 500; }
+
+/* The native cursor keeps its position and text-selection behavior. */
+@media (hover: hover) and (pointer: fine) {
+  body { cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M10 4H4V10M18 4H24V10M4 18V24H10M24 18V24H18M11 14H17M14 11V17' fill='none' stroke='%23cf3518' stroke-width='1.5'/%3E%3C/svg%3E") 14 14, crosshair; }
+  a, button, summary { cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M16 3L29 16L16 29L3 16Z' fill='%23f7f7f2' fill-opacity='.9' stroke='%23cf3518' stroke-width='1.5'/%3E%3Cpath d='M12 16H20M16 12V20' stroke='%23cf3518' stroke-width='1.5'/%3E%3C/svg%3E") 16 16, pointer; }
+  p, input, textarea, [contenteditable='true'] { cursor: text; }
+}

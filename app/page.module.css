@@ -1,25 +1,25 @@
 .hero, .about { padding-inline: clamp(24px, 4.3vw, 80px); }
-.hero { min-height: max(680px, calc(100svh - 84px)); display: flex; align-items: end; padding-block: 90px 64px; }
-.introduction { max-width: 1060px; }
-.textLink { display: inline-flex; align-items: center; min-height: 44px; width: fit-content; font-size: 18px; text-decoration: underline; text-underline-offset: 6px; }
+.hero { min-height: calc(100svh - 84px); display: grid; grid-template-rows: 1fr auto; gap: 28px; padding-block: 30px 48px; }
+.introduction { width: 100%; }
+.textLink { display: inline-flex; align-items: center; min-height: 44px; width: fit-content; font-size: 16px; text-decoration: underline; text-underline-offset: 6px; }
 .textLink:hover { color: var(--concept-accent); }
-.about { padding-block: 80px 60px; display: grid; grid-template-columns: 1fr 1.3fr; grid-template-rows: auto 1fr auto; column-gap: 70px; row-gap: 65px; min-height: 590px; border-top: 1px solid #d8d8d1; }
-.about h2 { font-size: clamp(38px, 4.6vw, 68px); line-height: 1.05; letter-spacing: -.055em; font-weight: 400; }
+.about { padding-block: 80px 60px; display: grid; grid-template-columns: 1fr 1.3fr; grid-template-rows: auto 1fr auto; column-gap: 70px; row-gap: 65px; min-height: 470px; border-top: 1px solid #d8d8d1; }
+.about h2 { font-size: clamp(32px, 3.4vw, 48px); line-height: 1.05; letter-spacing: -.055em; font-weight: 400; }
 .aboutEducation { grid-column: 1; grid-row: 1; max-width: 310px; align-self: end; padding-bottom: 18px; }
-.aboutEducation p { font-size: 20px; line-height: 1.6; letter-spacing: -.02em; }
+.aboutEducation p { font-size: 17px; line-height: 1.6; letter-spacing: -.02em; }
 .aboutEnding { grid-column: 1 / -1; grid-row: 3; display: flex; justify-content: space-between; align-items: end; gap: 30px; }
 .aboutCopy { grid-column: 2; grid-row: 1; max-width: 680px; }
-.aboutCopy > p { font-size: clamp(23px, 2.1vw, 31px); line-height: 1.45; letter-spacing: -.035em; }
-.aboutCopy > p + p { margin-top: 24px; font-size: 20px; line-height: 1.6; letter-spacing: -.015em; }
+.aboutCopy > p { font-size: clamp(19px, 1.7vw, 25px); line-height: 1.45; letter-spacing: -.035em; }
+.aboutCopy > p + p { margin-top: 24px; font-size: 17px; line-height: 1.6; letter-spacing: -.015em; }
 
 @media (max-width: 700px) {
-  .hero { min-height: max(680px, calc(100svh - 76px)); padding-block: 60px 45px; }
-  .about { grid-template-columns: 1fr; grid-template-rows: auto 1fr auto; padding-block: 55px 45px; min-height: 560px; gap: 45px; }
+  .hero { min-height: calc(100svh - 76px); padding-block: 12px 32px; gap: 20px; }
+  .about { grid-template-columns: 1fr; grid-template-rows: auto 1fr auto; padding-block: 55px 45px; min-height: 480px; gap: 45px; }
   .aboutCopy { grid-column: 1; grid-row: 2; }
   .aboutEducation { grid-column: 1; grid-row: 1; max-width: 300px; justify-self: start; padding: 0; }
   .aboutEnding { grid-row: 3; align-items: end; gap: 20px; }
   .aboutEnding .textLink { font-size: 16px; }
-  .about h2 { font-size: 43px; }
-  .aboutCopy > p { font-size: 25px; }
-  .aboutCopy > p + p { font-size: 19px; }
+  .about h2 { font-size: 36px; }
+  .aboutCopy > p { font-size: 21px; }
+  .aboutCopy > p + p { font-size: 17px; }
 }

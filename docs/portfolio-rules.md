@@ -15,23 +15,23 @@ The user explicitly requested that they be saved for future work
 - Do not use generic AI-styled colours or palettes
 - Do not interpret the rejection of AI-styled colours as a request to remove colour
 - Preserve the existing palette unless a change is requested
-- Preserve the footer during changes to other sections
+- Keep footer links inside the dark Contact me section; the user requested removal of the white footer
 - Remove the eye illustration, which the user rejected
-- The hero must be text-only, with the introduction at the bottom left
+- Keep the hero headline at bottom left, introduction at bottom right and the requested interactive geometry in the space above
 - Never put work, project images, project cards or prototypes in the hero
 - Keep Selected work as a separate section below the hero
 - Use Todor Dimov’s work section as the reference for an image-led grid with rounded image edges
 - Keep project data and images easy to replace
 - Use differently positioned personal questions with hover and tap responses
-- Use the requested “Hello,” and “People, patterns, and the little things.” hero, with smaller “little things” on the same baseline and a short personal introduction below
+- Use the requested “Hello,” and “People, patterns, and the little things.” hero, with smaller “little things” on the same baseline and a short personal introduction to its right
 - The exact requested headline may retain its final period
 - Type the hero and section headings once on entry; ease supporting content into view selectively
 - Keep all content readable without JavaScript and immediately visible with reduced motion
-- Place homepage section titles at the bottom left, with context above; the work collage has no visible bottom-left Selected work heading
+- Show Selected work explicitly in a separate left column, with its compact gallery and description to the right; keep the whole section within one viewport at standard desktop and phone sizes
 - Show Anuj at the upper left and Work, About and Resume at the upper right
 - Replace the blue accent with the current vermilion accent
 - Show Meditimer app, Himalayan 450 and Toki in homepage Selected work; do not show India in Orbit or roundabouts there
-- Follow the questions with a short About me section
+- Follow the questions with a separate Skills and tools section, then the short About me section
 - Finish with a dark Contact me section, social icons at the side and creative copy at the bottom right
 - Write direct, concrete copy with recognisable section and action names
 - Name the portfolio project section "Selected work"
@@ -53,3 +53,6 @@ The current request explicitly authorizes social icons in the contact section
 
 Read `collage-copy-update.md` for the latest supplied copy, Hello-to-headline cursor sequence and expanding project collages
 The user’s supplied descriptors and contact arrow are explicit exceptions for those exact strings
+
+Read `compact-layout-update.md` for the latest geometry, compact work, questions, skills, cursor and footer requirements
+The requested point and circular geometry are specific exceptions to the decorative-dot rule within that experiment

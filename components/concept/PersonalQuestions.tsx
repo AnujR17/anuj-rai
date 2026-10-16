@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { home } from "@/data/home";
 import styles from "./PersonalQuestions.module.css";
 
@@ -13,7 +12,6 @@ export function PersonalQuestions() {
             <summary>{question.lines.map(line => <span key={line}>{line}</span>)}</summary>
             <div className={styles.answer}>
               {question.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
-              <Link href={question.href}>{question.label}</Link>
             </div>
           </details>
         ))}

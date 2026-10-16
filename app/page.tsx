@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { SelectedWork } from "@/components/concept/SelectedWork";
 import { PersonalQuestions } from "@/components/concept/PersonalQuestions";
-import { ContactSection } from "@/components/concept/ContactSection";
+import { SkillsTools } from "@/components/concept/SkillsTools";
+import { HeroGeometry } from "@/components/concept/HeroGeometry";
 import { TypeText, EaseIn } from "@/components/motion/Entrance";
 import { home } from "@/data/home";
 import { HeroSequence } from "@/components/concept/HeroSequence";
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <>
       <section id="intro" className={styles.hero} aria-labelledby="intro-title">
+        <HeroGeometry />
         <div className={styles.introduction}>
           <HeroSequence>
             <p>{home.introduction}</p>
@@ -20,6 +22,7 @@ export default function Home() {
       </section>
       <SelectedWork />
       <PersonalQuestions />
+      <SkillsTools />
       <section id="about" className={styles.about} aria-labelledby="about-title">
         <EaseIn className={styles.aboutEducation}><p>{home.about[0]}</p></EaseIn>
         <EaseIn className={styles.aboutCopy} delay={100}>
@@ -30,7 +33,6 @@ export default function Home() {
           <Link href="/about" className={styles.textLink}>More about me</Link>
         </div>
       </section>
-      <ContactSection />
     </>
   );
 }
