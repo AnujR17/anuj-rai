@@ -1,14 +1,39 @@
 import Link from "next/link";
+import { about } from "@/data/about";
+import { TypeText, EaseIn } from "@/components/motion/Entrance";
+import { ContactSection } from "@/components/concept/ContactSection";
+import styles from "./page.module.css";
 
 export default function About() {
   return (
-    <article className="case-shell">
-      <header className="case-heading"><h1>About</h1><p>I study interaction and product design and build interfaces, websites and physical prototypes</p></header>
-      <section className="case-section"><h2>Design interests</h2><div><p>I’m interested in how people read information, use an object and understand its response</p><p>I use research to define the problem and prototypes to examine the design</p></div></section>
-      <section className="case-section"><h2>Projects</h2><div><p>My projects include a motorcycle display, a satellite website and experiments with connected objects</p><p>I want to work with designers and engineers on products that combine software and physical interaction</p></div></section>
-      <section className="case-section"><h2>AR and VR</h2><div><p>I want to explore navigation, controls and feedback in spatial interfaces</p></div></section>
-      <section className="case-section"><h2>Education</h2><div><p>I’m pursuing an M.Des in Intelligent User Experience Design at Dhirubhai Ambani University, following undergraduate study at ITM Vocational University</p><Link href="/resume" className="portfolio-link">View resume</Link></div></section>
-      <Link href="/work" className="portfolio-link">Selected work</Link>
-    </article>
+    <>
+      <article className={styles.about} aria-labelledby="about-page-title">
+        <EaseIn className={styles.introduction}>
+          <p className={styles.name}>I’m Anuj Rai</p>
+          <p className={styles.direction}>{about.direction}</p>
+        </EaseIn>
+        <EaseIn className={styles.education} delay={100}>
+          <p>{about.education}</p>
+          <p>{about.background}</p>
+          <Link href="/resume" className={styles.link}>View resume</Link>
+        </EaseIn>
+        <EaseIn className={styles.approach}>
+          <p>{about.approach}</p>
+        </EaseIn>
+        <EaseIn className={styles.making} delay={100}>
+          <p>{about.making}</p>
+          <p>{about.makingGoal}</p>
+        </EaseIn>
+        <EaseIn className={styles.sports}>
+          <p>{about.sports}</p>
+          <p className={styles.barca}>Visca Barça</p>
+        </EaseIn>
+        <div className={styles.ending}>
+          <h1 id="about-page-title"><TypeText text="About me" pace={48} /></h1>
+          <Link href="/work" className={styles.link}>Selected work</Link>
+        </div>
+      </article>
+      <ContactSection />
+    </>
   );
 }

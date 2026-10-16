@@ -28,3 +28,15 @@
   .answer p { font-size: 17px; }
 }
 @media (prefers-reduced-motion: reduce) { .question *, .answer { animation: none !important; transition: none !important; } .question[open] summary span:last-child { transform: none; } }
+
+/* Each answer provides the context above its lower-left question. */
+.question { position: relative; min-height: 400px; padding-top: 0; padding-bottom: 160px; }
+.question summary { position: absolute; bottom: 0; left: 0; width: 100%; }
+.answer { padding-top: 0; }
+.questions { min-height: 600px; }
+@media (max-width: 700px) {
+  .questions { min-height: 0; }
+  .question { min-height: 130px; padding-bottom: 130px; }
+  .question[open] { min-height: 335px; }
+  .answer { padding-top: 0; padding-bottom: 25px; }
+}

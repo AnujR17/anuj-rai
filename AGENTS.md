@@ -9,6 +9,7 @@ Preserve existing colour choices and the footer unless changes are requested
 The user rejected the eyes; do not reintroduce them
 The hero is text-only and separate from Selected work
 Never put project images, project cards, work, prototypes or eye illustrations in the hero
+Read the latest hero, navigation and motion direction in `docs/diagonal-intro-concept.md`
 Current section order: text-only hero, separate rounded-image Selected work grid, personal questions, short About me, dark Contact me with side social icons and bottom-right copy
 The current user-requested concept branch is `concept/diagonal-intro`; the earlier branch instruction below describes preceding work
 

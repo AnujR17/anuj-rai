@@ -1,26 +1,27 @@
-import Image from "next/image";
 import Link from "next/link";
 import { home } from "@/data/home";
+import { mainProjects } from "@/data/projects";
+import { ProjectVisual } from "@/components/case-study/ProjectVisual";
+import { TypeText, EaseIn } from "@/components/motion/Entrance";
 import styles from "./SelectedWork.module.css";
 
 export function SelectedWork() {
   return (
     <section id="work" className={styles.work} aria-labelledby="work-title">
-      <div className={styles.heading}>
-        <h2 id="work-title">Selected work</h2>
-        <Link href="/work">All work</Link>
-      </div>
       <div className={styles.grid}>
-        {home.work.map(project => (
-          <article key={project.slug} className={`${styles.project} ${styles[project.surface]}`}>
-            <Link href={`/work/${project.slug}`}>
-              <div className={styles.visual}>
-                <Image src={project.image} alt={project.alt} width={project.width} height={project.height} sizes="(max-width: 600px) 88vw, (max-width: 900px) 88vw, 46vw" />
-              </div>
-              <h3>{project.title}</h3>
-            </Link>
-          </article>
-        ))}
+        {home.work.map((item, index) => {
+          const project = mainProjects.find(project => project.slug === item.slug)!;
+          return <article key={item.slug} className={`${styles.project} ${styles[item.slug === "two-wheeler-dashboard" ? "dashboard" : ""]}`}>
+            <EaseIn delay={index * 100}>
+              <div className={styles.visual}><ProjectVisual project={project} linkedToCase /></div>
+              <h3><Link href={`/work/${item.slug}`}>{item.title}</Link></h3>
+            </EaseIn>
+          </article>;
+        })}
+      </div>
+      <div className={styles.heading}>
+        <h2 id="work-title"><TypeText text="Selected work" pace={45} /></h2>
+        <Link href="/work">All work</Link>
       </div>
     </section>
   );

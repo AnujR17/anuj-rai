@@ -23,7 +23,14 @@ The user explicitly requested that they be saved for future work
 - Use Todor Dimov’s work section as the reference for an image-led grid with rounded image edges
 - Keep project data and images easy to replace
 - Use differently positioned personal questions with hover and tap responses
-- Restore the earlier hero composition without eyes or replacement filler
+- Use the requested “Hello,” and “People, patterns, and the little things.” hero, with smaller “little things” on the same baseline and a short personal introduction below
+- The exact requested headline may retain its final period
+- Type the hero and section headings once on entry; ease supporting content into view selectively
+- Keep all content readable without JavaScript and immediately visible with reduced motion
+- Place homepage section titles at the bottom left, with context above
+- Keep only Work, About and Resume at the upper right of the header
+- Replace the blue accent with the current vermilion accent
+- Show Meditimer app, Himalayan 450 and Toki in homepage Selected work; do not show India in Orbit or roundabouts there
 - Follow the questions with a short About me section
 - Finish with a dark Contact me section, social icons at the side and creative copy at the bottom right
 - Write direct, concrete copy with recognisable section and action names

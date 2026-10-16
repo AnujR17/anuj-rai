@@ -10,7 +10,7 @@
 :root {
   --background: #f7f7f2;
   --foreground: #1c1917; /* stone-900 */
-  --concept-accent: #243ce9;
+  --concept-accent: #cf3518;
 }
 
 body {
@@ -20,7 +20,7 @@ body {
 }
 
 ::selection {
-  background-color: #243ce9;
+  background-color: #cf3518;
   color: #fff;
 }
 
@@ -30,14 +30,14 @@ html { scroll-behavior: smooth; }
 .site-identity { display: inline-flex; align-items: center; gap: 11px; font-size: 14px; font-weight: 500; letter-spacing: -.03em; }
 .site-nav-links { display: flex; align-items: center; gap: 32px; }
 .site-nav-links a { display: inline-flex; align-items: center; min-height: 44px; font-size: 12px; color: #62625c; transition: color 150ms ease; }
-.site-nav-links a:hover, .site-nav-links a[aria-current="page"] { color: #243ce9; }
+.site-nav-links a:hover, .site-nav-links a[aria-current="page"] { color: #cf3518; }
 .site-contact { display: inline-flex; align-items: center; justify-content: center; gap: 23px; min-height: 40px; padding: 8px 17px; border: 1px solid #20211e; border-radius: 30px; font-size: 12px; transition: background 150ms ease, color 150ms ease; }
 .site-contact:hover { background: #20211e; color: #f7f7f2; }
 .site-footer { padding: 24px clamp(24px, 4.3vw, 80px); border-top: 1px solid #d8d8d1; display: flex; align-items: center; justify-content: space-between; gap: 20px; font-size: 12px; color: #62625c; }
 .site-footer-links { display: flex; align-items: center; gap: 28px; }
 .site-footer a { display: inline-flex; min-height: 44px; align-items: center; }
-.site-footer a:hover { color: #243ce9; }
-.skip-link { position: absolute; top: 8px; left: 24px; z-index: 100; padding: 12px 18px; background: #243ce9; color: white; transform: translateY(-160%); }
+.site-footer a:hover { color: #cf3518; }
+.skip-link { position: absolute; top: 8px; left: 24px; z-index: 100; padding: 12px 18px; background: #cf3518; color: white; transform: translateY(-160%); }
 .skip-link:focus { transform: translateY(0); }
 @media (max-width: 700px) {
   .site-nav { min-height: 116px; display: grid; grid-template-columns: 1fr auto; gap: 0 16px; padding-top: 14px; padding-bottom: 6px; }
@@ -176,3 +176,10 @@ a:focus-visible, button:focus-visible { outline: 3px solid #b84a26; outline-offs
 .site-nav-links a { font-size: 14px; }
 .site-contact { font-size: 14px; border: 0; padding: 8px 0; border-radius: 0; text-decoration: underline; text-underline-offset: 5px; }
 .site-contact:hover { background: transparent; color: var(--concept-accent); }
+
+/* Three primary links share the same upper-right position at every width. */
+.site-nav { min-height: 84px; display: flex; align-items: center; justify-content: flex-end; padding-top: 0; padding-bottom: 0; }
+.site-nav-links { display: flex; gap: 32px; }
+.site-nav-links a { font-size: 16px; color: var(--foreground); }
+.site-nav-links a:hover, .site-nav-links a[aria-current="page"] { color: var(--concept-accent); }
+@media (max-width: 700px) { .site-nav { min-height: 76px; } .site-nav-links { gap: 25px; } .site-nav-links a { font-size: 16px; } }

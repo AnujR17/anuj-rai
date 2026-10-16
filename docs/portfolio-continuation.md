@@ -1,5 +1,18 @@
 # Portfolio continuation
 
+## Current homepage iteration
+
+The hero now uses the user’s requested “Hello,” and “People, patterns, and the little things.”
+The phrase “little things” is smaller on the normal baseline
+A short personal introduction follows
+Type the hero and section headings once when they enter view, with selective eased content reveals
+Homepage titles sit at the lower left of their sections, after the context
+The header contains only Work, About and Resume at the upper right
+The accent is vermilion instead of blue
+Homepage work previews are Meditimer app, Himalayan 450 and Toki
+India in Orbit and roundabouts stay off the homepage work previews
+The five main case studies and the five-stage system remain available under Work
+
 ## Current case-study system
 
 Use [the case-study system](case-study-system.md) for all case-study work
@@ -13,7 +26,7 @@ Use the shared overview and Research, Insights, Concept, Design, Outcome sequenc
 
 The hero is text-only and separate from Selected work
 The user reaffirmed this existing rule; the earlier interpretation allowing project imagery in the hero was an assistant mistake
-Restore the earlier hero layout without the eyes
+The no-eyes and no-work-in-the-hero rules remain in force; the current hero copy and layout above replace the earlier greeting
 Selected work uses a separate Todor Dimov-inspired image grid with rounded edges
 The user plans to replace project content and images later
 Refine the existing questions, then add a short About me section

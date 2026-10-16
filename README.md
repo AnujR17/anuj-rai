@@ -16,7 +16,9 @@ npm run dev
 ```
 
 Open [localhost:3000](http://localhost:3000)
-Change introductory text, project images and question copy in `data/home.ts`
+Change introductory text, homepage project selections and question copy in `data/home.ts`
+Personal About copy is in `data/about.ts`
+The text-only hero and section headings type once on entry, with reduced-motion and no-JavaScript fallbacks
 Case studies remain under `/work`
 Read [the case-study system](docs/case-study-system.md) before editing project content
 The five main cases use a shared overview and Research, Insights, Concept, Design, Outcome structure
