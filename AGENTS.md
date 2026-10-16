@@ -5,6 +5,9 @@ These are explicit standing user requirements confirmed on 16 October 2026
 Use DM Sans and direct labels such as "Selected work"
 No annotations, captions, footnotes, subscripts, superscripts, decorative arrows or dots, em dashes, generic AI palettes, or poetic and ambiguous copy
 Create visual interest through layout, typography, imagery, form, and interaction
+Preserve existing colour choices and the footer unless changes are requested
+The user rejected the eyes; do not reintroduce them
+The current direction is a wide scrollable project walkthrough with lower-left identity and Selected work text, right-hand project images, and offset personal questions
 The current user-requested concept branch is `concept/diagonal-intro`; the earlier branch instruction below describes preceding work
 
 Use `code/portfolio` for this portfolio work. Verify the active branch before edits, commits, or pushes. Never merge without the user's explicit approval; permission to push this branch is not permission to merge it.

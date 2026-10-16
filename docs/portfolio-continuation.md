@@ -3,11 +3,14 @@
 ## Current user correction
 
 Read [the standing portfolio rules](portfolio-rules.md) first
-The user rejected the cobalt treatment, captions, annotations, arrow icons, decorative punctuation, and ambiguous headings in the initial concept
-Use DM Sans, direct copy and the heading "Selected work"
-Apply these requirements to `concept/diagonal-intro`
-They are also saved in the private Design Practice plugin, version 0.1.1
-Earlier proposals below do not override this correction
+The user did not ask to remove colour or change the footer
+The monochrome rule and footer revisions were assistant assumptions and are superseded
+The user rejected the eye illustration and requested a wide two- or three-column walkthrough
+Keep the introduction and Selected work title at the bottom left, with project imagery extending right and smooth scrolling revealing the other projects
+Present personal information through differently positioned questions with hover and tap behaviour
+Keep DM Sans and the direct-copy and presentation rules
+The current concept is on `concept/diagonal-intro`
+Design Practice version 0.1.2 stores this correction
 
 ## Current concept branch — 16 October 2026
 

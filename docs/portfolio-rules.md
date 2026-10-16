@@ -13,8 +13,14 @@ The user explicitly requested that they be saved for future work
 - Do not add decorative dots, dot separators, dotted badges, or terminal dots on headings and labels
 - Do not use em dashes in copy
 - Do not use generic AI-styled colours or palettes
-- Do not introduce cobalt or purple accents, gradients, or pastel panels as a default
-- No replacement accent palette is approved; use neutral black, white, and grey until a direction is explicitly established
+- Do not interpret the rejection of AI-styled colours as a request to remove colour
+- Preserve the existing palette unless a change is requested
+- Preserve the footer during changes to other sections
+- Remove the eye illustration, which the user rejected
+- Build a wide two- or three-column walkthrough with project images extending right and smooth scrolling between projects
+- Keep the introduction and Selected work title at the bottom left
+- Use differently positioned personal questions with hover and tap responses
+- Use a direct personal identity rather than a greeting such as Hi, it is me
 - Write direct, concrete copy with recognisable section and action names
 - Name the portfolio project section "Selected work"
 - Do not substitute "A few things I've made" or other cute or ambiguous labels
@@ -28,3 +34,6 @@ The user's wording includes "no annotation and subscript and superscript or capt
 Keep necessary characters in email addresses, URLs, data, code, and original project source material intact
 Do not edit original research artifacts to make an interface style rule appear satisfied
 Retain provenance in project source records or normal case-study content without rendering image captions
+
+The current request permits project imagery beside the bottom-left introduction
+It supersedes older assumptions that the opening must exclude project imagery
