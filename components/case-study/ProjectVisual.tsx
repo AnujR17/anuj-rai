@@ -1,22 +1,13 @@
 import Image from "next/image";
 import type { Project } from "@/data/case-study";
-import MedicineScreen from "./MedicineScreen";
-import CaregiverScreen from "./CaregiverScreen";
+import { ProjectArtwork } from "./ProjectArtwork";
 import styles from "./case-study.module.css";
 
 export function ProjectVisual({ project, linkedToCase = false, presentation = false }: { project: Project; linkedToCase?: boolean; presentation?: boolean }) {
   if (project.visual === "medicine") {
-    const screens = (
-      <div className={styles.phones}>
-        <div className={styles.phone} role="img" aria-label="Original medicine-taker interface with the current dose, recording action and daily schedule">
-          <div className={styles.phoneUi} aria-hidden="true"><MedicineScreen /></div>
-        </div>
-        <div className={styles.phone} role="img" aria-label="Original caregiver interface with daily progress, dose records and a call action">
-          <div className={styles.phoneUi} aria-hidden="true"><CaregiverScreen /></div>
-        </div>
-      </div>
-    );
-    return linkedToCase && !presentation ? <a href={`/work/${project.slug}`} aria-label={`View ${project.title} case study`}>{screens}</a> : screens;
+    const screens = <ProjectArtwork project={project} />;
+    if (presentation) return screens;
+    return <a href={linkedToCase ? `/work/${project.slug}` : "/portfolio/banners/medicine-app.png"} aria-label={linkedToCase ? `View ${project.title} case study` : "View the original medicine interfaces in their mockups at full size"}>{screens}</a>;
   }
   if (!project.image) return null;
   const surface = project.slug === "two-wheeler-dashboard" ? styles.dashboard : project.slug === "medtimer" ? styles.physical : "";

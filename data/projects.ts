@@ -1,5 +1,6 @@
 import { researchProjects } from "@/data/research-projects";
 import type { Project } from "@/data/case-study";
+import { additionalProjects } from "@/data/work-projects";
 export type { Project, ProjectImage } from "@/data/case-study";
 
 export const mainProjects: Project[] = [
@@ -405,4 +406,4 @@ export const mainProjects: Project[] = [
   }
 ];
 
-export const projects: Project[] = [...mainProjects, ...researchProjects];
+export const projects: Project[] = [...mainProjects, ...researchProjects, ...additionalProjects];

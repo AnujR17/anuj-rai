@@ -1,5 +1,12 @@
 # Portfolio workflow
 
+Read `docs/final-work-and-case-studies.md` for the latest eight-project Work gallery and shared case template
+It supersedes the older Work category index and overview composition
+Keep all existing case URLs, but show only the eight selected projects on Work
+Always verify the authenticated GitHub account is `AnujR17` before pushing
+The standing no-merge-without-explicit-approval rule remains in force
+
+
 Read `docs/portfolio-rules.md` before design or copy changes
 These are explicit standing user requirements confirmed on 16 October 2026
 Use DM Sans and direct labels such as "Selected work"

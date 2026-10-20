@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { PortfolioCursor } from "@/components/motion/PortfolioCursor";
+import { NavigationProgress } from "@/components/motion/NavigationProgress";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -29,6 +30,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <PortfolioCursor />
+        <NavigationProgress />
       </body>
     </html>
   );

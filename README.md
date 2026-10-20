@@ -23,7 +23,9 @@ Project collages expand the selected preview with mouse, touch and keyboard cont
 Read [the current collage brief](docs/collage-copy-update.md) for supplied copy and fallback behaviour
 Case studies remain under `/work`
 Read [the case-study system](docs/case-study-system.md) before editing project content
-The five main cases use a shared overview and Research, Insights, Concept, Design, Outcome structure
+All eleven cases use the shared renderer and five-stage structure
+The Work gallery shows exactly the eight projects in `data/work-projects.ts`
+Read [the final Work and case-study brief](docs/final-work-and-case-studies.md) for interactions, source assets and deployment details
 
 ## Checks
 

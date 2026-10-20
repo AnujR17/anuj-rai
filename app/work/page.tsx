@@ -1,24 +1,14 @@
-import { Lab } from "@/components/portfolio/Lab";
-import { ResearchSpotlight } from "@/components/portfolio/ResearchSpotlight";
-import { ResearchList } from "@/components/portfolio/ResearchList";
-import { SelectedWork } from "@/components/concept/SelectedWork";
+import type { Metadata } from "next";
+import { WorkGallery } from "@/components/portfolio/WorkGallery";
+import { projects } from "@/data/projects";
+import { workProjectSlugs } from "@/data/work-projects";
+
+export const metadata: Metadata = { title: "Work | Anuj Rai", description: "Eight projects in interaction design, interfaces, connected objects and field research by Anuj Rai." };
 
 export default function Work() {
-  return (
-    <div className="portfolio-shell work-index">
-      <header className="work-heading">
-        <h1>Selected work</h1>
-        <nav className="work-sections" aria-label="Work sections">
-          <a href="#design">Design &amp; build</a>
-          <a href="#fieldwork">Fieldwork</a>
-          <a href="#analysis">Analysis</a>
-          <a href="#lab">Experiments</a>
-        </nav>
-      </header>
-      <SelectedWork allProjects id="design" />
-      <ResearchSpotlight />
-      <ResearchList />
-      <Lab />
-    </div>
-  );
+  const items = workProjectSlugs.map(slug => {
+    const project = projects.find(item => item.slug === slug)!;
+    return { slug, title: project.title };
+  });
+  return <WorkGallery items={items} />;
 }
