@@ -22,8 +22,19 @@ The three other research cases keep their direct URLs but do not appear on Work
 No Lab, category lists or additional project sections belong on this page
 
 Work stays at bottom left using the homepage title token
-Each project has a 1600 by 900 PNG cover and a smaller name immediately to its left
-Covers use the final smaller scale, about 65 percent of the preceding large study
+Each project has a 1600 by 900 PNG cover
+The desktop name follows the banner on its left; the phone name follows above the banner
+The current motion follows the uploaded `banners.html` exactly
+Covers grow towards the focal point and shrink away from it, with smaller previous and next previews
+The large cover is 65 percent of the available gallery width, height constrained as in the reference
+The small cover is 52 percent of that large size
+Smoothstep interpolates the cover sizes and title crossfades
+The focal line is 47 percent of the gallery height
+The sequence advances at 0.18 projects per second
+Wheel movement eases towards its target with the reference 180ms time constant
+Dragging and vertical touch movement follow the pointer directly
+Selecting a neighbouring cover brings it into focus; selecting the current cover or its title opens the case
+The Work header link returns to the first cover
 The first cover is fully positioned on entry
 Automatic continuous movement begins after three seconds of viewing time, once the first image and font are ready
 Hover pauses the hold and movement, and keyboard focus pauses movement
@@ -94,8 +105,24 @@ Page changes ease in with a reduced-motion fallback
 The loading indicator appears only while an internal navigation remains pending, without delaying the actual route
 Keep the root free of a loading boundary that leaves streamed content hidden when JavaScript is disabled
 
-Completed validation: production build, full lint, TypeScript and Git whitespace checks pass
+Initial integration validation: production build, full lint, TypeScript and Git whitespace checks pass
 Production Chromium passed 60 route/width combinations across Work and all eleven cases at 1440, 1024, 768, 390 and 320 pixels
 Targeted checks passed for global wheel and touch input, keyboard and off-screen focus, finite endpoints, initial hold, hover pause, reduced motion, route cleanup, native no-JavaScript links and disclosures, 404 responses, image loading and shared reading alignment
 No browser runtime exceptions were recorded
 Final screenshots and the JSON verification report are saved outside the repository in `/workspace/portfolio-review`
+
+
+## Uploaded motion reference
+
+The current user requested the movement in their uploaded `banners.html`
+Its SHA-256 is `45cd77c32b474cd8d332f4b7444b2c1ba366180f9be227c7a9f2be51e2d1961c`
+Only the motion, related geometry and interactions are adapted; project data, covers, palette and homepage are preserved
+The full standalone HTML is kept outside the repository
+`scripts/verify-work-motion.mjs` compares the running Work page with that original file across desktop, tablet and phone widths
+Provide the source path through `WORK_REFERENCE_FILE` and the running application through `PORTFOLIO_URL`
+It serves only the reference HTML on a temporary local server and removes that server after verification
+
+The uploaded-reference comparison passes 45 scenes and 360 tile comparisons at 1440, 1024, 820, 390 and 320 pixels
+The checks compare banner positions, sizes, visibility, selection, label spacing and crossfades against the original HTML
+Targeted checks also pass for inactive-cover selection, active-cover navigation, keyboard focus, finite endpoints, the Work-link reset, drag click suppression, global touch, route cleanup, the initial hold, hover pause, autoplay speed, manual easing and native links without JavaScript
+No browser runtime exceptions were recorded

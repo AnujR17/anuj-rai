@@ -43,6 +43,7 @@ fs.mkdirSync(out, {recursive:true});
     await page.keyboard.press('Home');
     await page.mouse.wheel(0,-5000);
     assert.equal(await page.locator('[data-work-enhanced]').getAttribute('data-project'),'0');
+    await page.keyboard.press('ArrowRight');await page.keyboard.press('ArrowRight');await page.keyboard.press('ArrowRight');
     await page.locator('[data-work-project="toki"]').focus();
     assert.equal(await page.locator('[data-work-enhanced]').getAttribute('data-project'),'3','Offscreen keyboard focus selects project');
     assert.ok((await page.locator('[data-work-project="toki"]').boundingBox()).y>76);

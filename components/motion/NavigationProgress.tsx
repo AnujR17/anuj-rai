@@ -17,8 +17,9 @@ function PendingNavigation() {
       start = window.setTimeout(() => setPending(true), 180);
       stop = window.setTimeout(() => setPending(false), 4500);
     };
-    document.addEventListener("click", click, true);
-    return () => { clearTimeout(start); clearTimeout(stop); document.removeEventListener("click", click, true); };
+    // A cover can consume a click to select a project without navigating.
+    document.addEventListener("click", click);
+    return () => { clearTimeout(start); clearTimeout(stop); document.removeEventListener("click", click); };
   }, []);
   return pending ? <div className="navigation-progress" role="status" aria-live="polite">Loading</div> : null;
 }
