@@ -1,0 +1,124 @@
+# Portfolio continuation
+
+## Current collage and copy iteration
+
+Read [the latest collage brief](collage-copy-update.md) first
+Use the user-supplied homepage copy and meta description
+The header includes Anuj at the upper left
+Orange Hello types first with a writing cursor, then is replaced by the final headline in the same space
+Project previews enlarge on hover, focus or click while neighboring previews shrink
+The work collage has no visible bottom-left Selected work heading
+The immediately preceding homepage description below is historical where it differs
+
+## Current homepage iteration
+
+The hero now uses the user’s requested “Hello,” and “People, patterns, and the little things.”
+The phrase “little things” is smaller on the normal baseline
+A short personal introduction follows
+Type the hero and section headings once when they enter view, with selective eased content reveals
+Homepage titles sit at the lower left of their sections, after the context
+The header contains only Work, About and Resume at the upper right
+The accent is vermilion instead of blue
+Homepage work previews are Meditimer app, Himalayan 450 and Toki
+India in Orbit and roundabouts stay off the homepage work previews
+The five main case studies and the five-stage system remain available under Work
+
+## Current case-study system
+
+Use [the case-study system](case-study-system.md) for all case-study work
+The five main cases match `portfolioSerene`: Meditimer app, Himalayan 450, physical Meditimer, Toki and India in Orbit
+The current branch remains `concept/diagonal-intro`
+The user confirmed three-week projects and individual ownership except physical Meditimer
+Its contribution includes the concept, functions, interactions, human factors, ergonomics and field research
+Use the shared overview and Research, Insights, Concept, Design, Outcome sequence
+
+## Current user correction
+
+The hero is text-only and separate from Selected work
+The user reaffirmed this existing rule; the earlier interpretation allowing project imagery in the hero was an assistant mistake
+The no-eyes and no-work-in-the-hero rules remain in force; the current hero copy and layout above replace the earlier greeting
+Selected work uses a separate Todor Dimov-inspired image grid with rounded edges
+The user plans to replace project content and images later
+Refine the existing questions, then add a short About me section
+Finish with a dark Contact me section, social icons at the side and copy at the bottom right
+Preserve DM Sans, existing colours, and the copy and presentation rules
+Do not redesign the global footer incidentally
+The current concept branch is `concept/diagonal-intro`
+Design Practice version 0.1.3 stores the corrected hero constraint
+
+## Current concept branch — 16 October 2026
+
+The user now explicitly requested another branch for a new template. Work for this concept is on `concept/diagonal-intro`, based on `code/portfolio` to retain corrected content and original assets. See [the concept notes](diagonal-intro-concept.md). The earlier branch restriction below describes the preceding work; the user’s current request supersedes that branch choice. Explicit approval is still required before merging. The current opening introduces Anuj before all project work.
+
+## Branch and review agreement
+
+Work only on `code/portfolio` in `AnujR17/anuj-rai`. The user explicitly requires approval before every merge. Pushing this branch does not authorize merging it. Keep the existing checkout; do not create another worktree without a request. Confirm the active branch and preserve existing changes before editing.
+
+## Context consulted
+
+- [Audit and improve portfolio](thread://01a10087-5517-7352-9d55-9e8ef80ce380?hostId=local)
+- [Expand portfolio with new projects](thread://01a0da18-9752-7ef2-b410-623e466efc7d?hostId=local)
+
+Both chats were read in this cloud task. The audit was reread when continuation was requested. Its latest turn was interrupted while checking updated Windows-local skills; the last completed design discussion established hiring requirements and proposed three comparable homepage directions. Previous assistant recommendations remain proposals, not confirmed project facts or permission to publish.
+
+## Skills available here
+
+The cloud skill catalog now includes `cloud-environment:cloud-environment-runtime`, `cloud-environment-onboarding:setup`, and `build-3d-game-rooms:build-3d-game-rooms`; the executor catalog was previously empty. The custom portfolio, critique, communication, rationale, resume, maintenance, and planning skills mentioned in the Windows task are not installed here. Their current contents and update timestamps cannot be verified from the cloud. Older skill text appearing in a chat is historical context, not an installed current skill. Do not claim to have used the updated custom skills.
+
+## Direction carried forward
+
+Explore early-career interaction/product design roles in multidisciplinary teams, with research as an input and code and physical prototyping as differentiators. The 6 October discussion supports this direction without fixing one employer list. Read [the evidence review](portfolio-assessment.md) for the current project assessment and next actions. Demonstrate interface craft, interaction judgment, product reasoning, evidence and iteration, execution, and individual ownership. These criteria came from the earlier role research; those postings have not been rechecked in this continuation.
+
+The user wants a personal, curious, expressive portfolio with clear navigation and purposeful motion. Work section by section. Avoid oversized opening statements, repeated tiny uppercase labels, invented technical annotations, generic designer slogans, decorative blobs, and presenting unfinished experiments as finished products. Use real artifacts and natural copy. The prior Field Notes design is a reference to critique, not an approved replacement.
+
+Use one coherent portfolio. Selected Work contains the strongest demonstrated projects; Lab contains smaller explorations and honest unfinished experiments. Keep resume and contact easy to find on mobile as well as desktop. The medicine app and physical medicine product are separate projects.
+
+## Project evidence before publication
+
+| Candidate | Proposed role | Evidence still needed here |
+| --- | --- | --- |
+| Himalayan 450 | Main project: interface hierarchy and interaction | Original screens, sketches, simulation link, contribution and research records. Distinguish simulated dashboard behavior from riding validation. |
+| Independent Meditimer app | Main project: digital product flow | App/prototype location, actual states, what the user designed and implemented. Do not substitute the physical medicine project. |
+| Toki or BINA | One main physical/digital project initially | Individual contribution, demonstrated hardware behavior, photographs/recordings, meaningful iteration. Repository code alone does not establish hardware or user outcomes. |
+| India in Orbit | Supporting information-design/build project | Inspect actual interactions, sources, ownership and the task it helps visitors complete. |
+| Research and AR/VR experiments | Supporting research or Lab | Original material, limitations, current status, and a specific learning. |
+
+Do not invent metrics, participant quotes, field observations, contact details, dates, or outcomes. The existing portfolio's precise research claims remain unverified. Earlier reports flagged conflicting statistical summaries; check the original analysis before reuse. The checkout now contains the genuine Himalayan dashboard export and a capture of the live India in Orbit opening. Original PDFs, photographs, videos, and the Windows redesign bundle remain unavailable here.
+
+## First continuation changes
+
+Remove the construction entrance from the shared layout so direct links open their content immediately. Make Work, Resume, and Contact reachable in the mobile header. The user supplied `anujrai1701@gmail.com`; the repository and authenticated account establish the GitHub profile `https://github.com/AnujR17`. Keep those destinations in `data/contact.ts` and omit unprovided LinkedIn/Behance URLs rather than guessing them. Keep the existing visual system while addressing these concrete navigation issues.
+
+## Earlier visual comparison proposal
+
+The earlier discussion proposed comparing three homepage readings using the same project content, genuine artifacts, and comparable fidelity:
+
+1. Project index: compact identity and visible project previews.
+2. Workspace: inspectable interfaces, objects, and sketches with direct project links.
+3. Decision first: one specific problem and a demonstrable design change.
+
+Ask for reactions to what catches the eye, makes the work understandable, feels oversized or empty, and should be kept. Do not require the user to choose a style label. Do not give one option polished photography while the others use empty boxes. Establish actual asset access before building that comparison.
+
+## Validation
+
+Use the lockfile and existing npm scripts. Read relevant Next.js guides in `node_modules/next/dist/docs/` before code changes, as required by AGENTS.md. Run TypeScript, lint with real exit status, the production build, and representative HTTP checks for changed routes. For navigation, inspect destinations and active states as well as status codes. Record unavailable browser/mobile checks honestly.
+
+Onboarding found pre-existing JSX escaping errors and unused-import warnings. Google Fonts also failed under the initial network policy; domains were saved in the environment draft, which does not prove live access. Do not suppress lint rules, mock font fetches, or disable TLS to obtain passing results. Recheck current access and diagnose failures separately from this branch's changes.
+
+The first continuation build succeeded on 7 October 2026 with the real Google Fonts downloads. TypeScript and lint on all changed application files passed. Full lint still reports five existing JSX escaping errors and four unused-import warnings in unchanged About and Work pages. Production Chromium checks passed for seven routes at 1280px and 320px: header destinations fit and are clickable, active states are correct, the entrance overlay is absent, and email/social placeholder destinations are absent. Project-media placeholders elsewhere are still present; this is a navigation/contact improvement, not the completed portfolio redesign.
+
+## Current creative iteration
+
+The user authorized a more dynamic, asymmetric redesign. The homepage and Work index now use original project media, with a visitor-controlled featured project switcher and explicit ongoing Lab work. Case routes use source-backed briefs; unsupported research metrics and participant quotes were removed. The independent medicine app still requires its own artifacts. No Library PDFs or Figma files are accessible here. Keep the old dashboard slug for link compatibility. Never merge without explicit user approval.
+
+The final creative iteration passes the production build, full repository lint, TypeScript, and Git whitespace checks. Updating About and Work also resolves the lint errors described in the earlier validation record. Chromium checked all eight pages at 1280, 768, 390, and 320px (32 route/width combinations), plus keyboard project switching, loaded images, overflow, unknown-project 404, reduced motion, and visible opening content without JavaScript. No runtime exceptions occurred. The first project image starts at 198px on desktop and 512px at 320px width. Hardware and original project research remain outside this validation.
+
+## New evidence and research cases
+
+Read [the current source inventory](project-evidence.md) before extending case studies. The user supplied a 29-page roundabout research PDF, three versions each of Sector-21, Sector-7, and Infocity records, and the medicine survey CSV. Raw sources stay outside the public repository. Correct traffic row total is 298 (98 + 87 + 113), because Infocity has a header; Sector-7/21 do not. Medicine has 52 respondents with overlapping response paths (48 caregiver, 7 senior, 3 both).
+
+The user clarified that Consumer Experience used a supplied research dataset and they were asked to analyse it. Publication status is unknown. The repository has reports/outputs but no raw workbook; do not invent recruitment, publication, or user outcomes. Skidge methods require review before model metrics are promoted. GT650 remains excluded.
+
+The portfolio now has a substantive roundabout case, three supporting analysis cases, linked bike-survey context, original figures, Work-section navigation, and an AR/VR interest on About. Figma links are recorded but unavailable (direct proxy HTTP 403; no connector). The Library folder cannot be listed. Community-template copies and the chatbot link are not verified original projects. AR/VR project details and the independent medicine app remain pending.
+
+The evidence expansion passes production build, full lint, TypeScript, whitespace checks, 48 route/width browser combinations, and eight targeted checks after the raw-data changes. Original datasets and the PDF remain outside the public repository. Only selected figures, aggregate counts, and documented interpretations were added.
