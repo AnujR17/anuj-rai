@@ -1,0 +1,57 @@
+[
+  {
+    "file": "capture.png",
+    "source": "Original Figma frame PNG",
+    "fileKey": "on1gbKHkUo4CLZ38uCiSza",
+    "nodeId": "28:508",
+    "width": 402,
+    "height": 874,
+    "sha256": "8c71efa39da51ae06f3fc752ab9249b119a18a14986dc017ef2804bde50af527",
+    "mockup": "capture-mockup.png",
+    "mockupDerivation": "Fixed 420px device shell rasterized at 2x; original image proportions preserved"
+  },
+  {
+    "file": "review.png",
+    "source": "Original Figma frame PNG",
+    "fileKey": "on1gbKHkUo4CLZ38uCiSza",
+    "nodeId": "31:958",
+    "width": 402,
+    "height": 874,
+    "sha256": "468c74a04ddfd9b22ca228153cecc736837b599c2d3d73a94b4a32cc4265f4fe",
+    "mockup": "review-mockup.png",
+    "mockupDerivation": "Fixed 420px device shell rasterized at 2x; original image proportions preserved"
+  },
+  {
+    "file": "routine.png",
+    "source": "Original Figma frame PNG",
+    "fileKey": "on1gbKHkUo4CLZ38uCiSza",
+    "nodeId": "31:1085",
+    "width": 402,
+    "height": 874,
+    "sha256": "6329d620dc48656682cbd8c3993c50a528b3ee237aa42c37e40fbaa7aca3d9a5",
+    "mockup": "routine-mockup.png",
+    "mockupDerivation": "Fixed 420px device shell rasterized at 2x; original image proportions preserved"
+  },
+  {
+    "file": "medicine.png",
+    "source": "Original Figma frame PNG",
+    "fileKey": "on1gbKHkUo4CLZ38uCiSza",
+    "nodeId": "797:3727",
+    "width": 410,
+    "height": 1071,
+    "sha256": "bc3689bad68de5c00b33a301cd6dec9fb6535862ee782349c1c5de0fe25554d1",
+    "mockup": "medicine-mockup.png",
+    "mockupDerivation": "Fixed 420px device shell rasterized at 2x; original image proportions preserved"
+  },
+  {
+    "file": "caregiver.png",
+    "source": "Original Figma frame PNG",
+    "fileKey": "on1gbKHkUo4CLZ38uCiSza",
+    "nodeId": "826:1236",
+    "width": 408,
+    "height": 904,
+    "sha256": "ebe26809b742e0d6cac99aa733574b696763cb427d8983dc4f73a5fea8a904a3",
+    "mockup": "caregiver-mockup.png",
+    "mockupDerivation": "Fixed 420px device shell rasterized at 2x; original image proportions preserved"
+  }
+]

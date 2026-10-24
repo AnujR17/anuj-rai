@@ -1,0 +1,80 @@
+.caseStudy { max-width: 1600px; margin-inline: auto; padding: 0 var(--section-inset) 80px; }
+.textLink { display: inline-flex; min-height: 44px; align-items: center; text-decoration: underline; text-underline-offset: 6px; font-size: 16px; width: fit-content; }
+.hero { min-height: calc(100svh - 84px); padding-block: 10px var(--section-bottom); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.75fr); grid-template-rows: auto 1fr auto; column-gap: 45px; }
+.hero > .textLink { grid-column: 1; grid-row: 1; }
+.hero h1 { grid-column: 1 / -1; grid-row: 3; font-size: var(--section-title-size); letter-spacing: -.055em; font-weight: 400; line-height: 1.05; overflow-wrap: normal; }
+.heroArtwork { grid-column: 2; grid-row: 2; width: 100%; align-self: center; min-width: 0; }
+.overview { padding-block: 80px 50px; margin-left: 26%; }
+.introduction { max-width: 900px; font-size: clamp(22px, 2.1vw, 29px); line-height: 1.5; letter-spacing: -.025em; }
+.framing { display: flex; flex-direction: column; gap: 40px; margin-top: 55px; }
+.framing h2, .details dt { font-size: 20px; font-weight: 500; letter-spacing: -.025em; margin-bottom: 14px; }
+.framing p, .details dd { font-size: 18px; line-height: 1.7; max-width: 800px; }
+.details { display: grid; grid-template-columns: minmax(110px, .5fr) 1.8fr; gap: 35px; margin-top: 50px; }
+.details > div:only-child { grid-column: 1 / -1; }
+.numbers { display: flex; gap: 60px; margin-top: 60px; min-height: 300px; }
+.number { flex: 1; min-width: 0; max-width: 350px; }
+.number summary { display: flex; flex-direction: column; gap: 16px; cursor: pointer; list-style: none; width: fit-content; }
+.number summary::-webkit-details-marker { display: none; }
+.number summary > span { font-size: var(--section-title-size); line-height: 1; font-weight: 400; letter-spacing: -.06em; }
+.number summary strong { font-weight: 400; font-size: 17px; line-height: 1.3; }
+.number summary:hover, .number summary:focus-visible, .number[open] summary > span { color: var(--concept-accent); }
+.number summary:focus-visible { outline: 2px solid var(--concept-accent); outline-offset: 8px; }
+.number p { font-size: 16px; line-height: 1.6; margin-top: 20px; animation: detail-in 200ms ease both; }
+.readingLayout { display: grid; grid-template-columns: minmax(120px, 20%) minmax(0, 1fr); gap: 6%; align-items: start; }
+.story { min-width: 0; }
+.stageNav { position: sticky; top: max(30px, calc(100svh - 320px)); display: flex; flex-direction: column; align-items: start; gap: 5px; padding-bottom: var(--section-bottom); }
+.stageNav a { display: inline-flex; align-items: center; min-height: 44px; font-size: 17px; color: #6a675f; text-underline-offset: 6px; transition: color 180ms ease; }
+.stageNav a:hover, .stageNav a:focus-visible, .stageNav a[aria-current="location"] { color: var(--concept-accent); text-decoration: underline; }
+.stage { padding-block: 35px 85px; scroll-margin-top: 45px; }
+.stage > h2 { font-size: clamp(32px, 3.2vw, 46px); margin-bottom: 35px; font-weight: 400; line-height: 1.12; letter-spacing: -.045em; }
+.stage:target > h2 { color: var(--concept-accent); }
+.stageContent { min-width: 0; }
+.block + .block { margin-top: 45px; }
+.block h3, .sources h3 { font-size: 25px; font-weight: 400; letter-spacing: -.035em; line-height: 1.2; margin-bottom: 22px; }
+.block p, .sources p { font-size: 18px; line-height: 1.75; max-width: 800px; }
+.block p + p { margin-top: 20px; }
+.figures { display: grid; gap: 24px; margin-top: 35px; }
+.pair { grid-template-columns: 1fr 1fr; align-items: start; }
+.figures img { width: 100%; height: auto; border-radius: 12px; }
+.visual { overflow: hidden; border-radius: 12px; margin-bottom: 40px; }
+.visual img { display: block; width: 100%; height: auto; }
+.stageContent > div:first-child:has(img) { margin-bottom: 35px; }
+.dashboard { background: #dbe3e6; padding: 65px; }
+.dashboard img { max-width: 385px; margin-inline: auto; }
+.physical { padding: 40px; background: #e9e3d8; }
+.physical img { max-height: 680px; width: auto; max-width: 100%; object-fit: contain; margin-inline: auto; }
+.sources { margin-top: 48px; padding-top: 24px; }
+.sources p { font-size: 17px; }
+.sourceLinks { display: flex; flex-direction: column; align-items: start; gap: 8px; margin-top: 24px; }
+.sourceLinks a { display: inline-flex; align-items: center; min-height: 44px; font-size: 17px; text-decoration: underline; text-underline-offset: 6px; overflow-wrap: anywhere; }
+.textLink:hover, .sourceLinks a:hover, .nextCase:hover { color: var(--concept-accent); }
+.caseEnd { display: flex; justify-content: space-between; align-items: start; gap: 35px; padding-top: 60px; }
+.nextCase { font-size: 17px; }
+.nextCase span { display: block; font-size: clamp(28px, 3vw, 43px); letter-spacing: -.04em; margin-top: 10px; }
+@keyframes detail-in { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: none; } }
+@media (max-width: 1000px) { .hero { column-gap: 25px; } .hero h1 { font-size: var(--section-title-size); } .overview { margin-left: 23%; } .readingLayout { grid-template-columns: minmax(110px, 18%) minmax(0, 1fr); gap: 5%; } .numbers { gap: 35px; } }
+@media (max-width: 700px) {
+  .caseStudy { padding-bottom: 55px; }
+  .hero { min-height: calc(100svh - 76px); grid-template-columns: 1fr; grid-template-rows: auto 1fr auto; padding-bottom: 40px; gap: 30px; }
+  .hero h1 { grid-column: 1; grid-row: 3; max-width: 90%; }
+  .heroArtwork { grid-column: 1; grid-row: 2; }
+  .overview { padding-block: 50px 35px; margin-left: 0; }
+  .introduction { font-size: 22px; }
+  .framing { gap: 30px; margin-top: 40px; }
+  .framing h2, .details dt { font-size: 19px; margin-bottom: 12px; }
+  .details { grid-template-columns: 1fr; gap: 28px; margin-top: 35px; }
+  .numbers { gap: 25px; margin-top: 45px; min-height: 360px; }
+  .number summary strong { font-size: 15px; }
+  .number p { font-size: 15px; }
+  .readingLayout { grid-template-columns: 1fr; gap: 40px; }
+  .stageNav { position: static; gap: 4px; padding: 0; }
+  .stageNav a { font-size: 17px; }
+  .stage { padding-block: 12px 60px; scroll-margin-top: 24px; }
+  .stage > h2 { font-size: 32px; margin-bottom: 28px; }
+  .block h3, .sources h3 { font-size: 25px; }
+  .dashboard { padding: 35px; }
+  .physical { padding: 20px; }
+  .pair { grid-template-columns: 1fr; }
+  .caseEnd { flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) { .stageNav a { transition: none; } .number p { animation: none; } }

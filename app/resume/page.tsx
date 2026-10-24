@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { Display, Body } from "@/components/ui/Typography";
-import { ConstructionLine, Measure } from "@/components/ui/Structure";
+import { ConstructionLine } from "@/components/ui/Structure";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 const experience = [
@@ -47,12 +47,12 @@ export default function Resume() {
           {experience.map((job, i) => (
             <StaggerItem key={i} className="grid md:grid-cols-12 gap-8">
               <div className="md:col-span-3">
-                <p className="text-sm font-medium text-stone-900 mb-1">{job.period}</p>
-                <p className="text-sm text-stone-400">{job.location}</p>
+                <p className="text-sm font-medium text-neutral-900 mb-1">{job.period}</p>
+                <p className="text-sm text-neutral-400">{job.location}</p>
               </div>
               <div className="md:col-span-6">
-                <h3 className="text-xl font-medium text-stone-900 mb-1">{job.role}</h3>
-                <p className="text-stone-400 mb-6 text-sm">{job.company}</p>
+                <h3 className="text-xl font-medium text-neutral-900 mb-1">{job.role}</h3>
+                <p className="text-neutral-400 mb-6 text-sm">{job.company}</p>
                 <Body className="text-sm">{job.description}</Body>
               </div>
             </StaggerItem>
@@ -64,25 +64,22 @@ export default function Resume() {
         <Reveal>
           <Display className="mb-24">Education</Display>
         </Reveal>
-        
+
         <Stagger className="flex flex-col gap-16">
           {education.map((edu, i) => (
             <StaggerItem key={i} className="grid md:grid-cols-12 gap-8">
               <div className="md:col-span-3">
-                <p className="text-sm font-medium text-stone-900 mb-1">{edu.period}</p>
-                <p className="text-sm text-stone-400">{edu.location}</p>
+                <p className="text-sm font-medium text-neutral-900 mb-1">{edu.period}</p>
+                <p className="text-sm text-neutral-400">{edu.location}</p>
               </div>
               <div className="md:col-span-6">
-                <h3 className="text-lg font-medium text-stone-900 mb-1">{edu.degree}</h3>
-                <p className="text-stone-400 text-sm">{edu.institution}</p>
+                <h3 className="text-lg font-medium text-neutral-900 mb-1">{edu.degree}</h3>
+                <p className="text-neutral-400 text-sm">{edu.institution}</p>
               </div>
             </StaggerItem>
           ))}
         </Stagger>
 
-        <Reveal delay={0.2}>
-          <Measure text="updated 2025" className="mt-32 opacity-50" />
-        </Reveal>
       </Container>
     </div>
   );
