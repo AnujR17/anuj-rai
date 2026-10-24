@@ -1,5 +1,8 @@
 # Portfolio workflow
 
+Read `docs/medicine-case-restoration.md` for the restored layered Meditimer case and fixed raster phone mockups
+Never redraw device borders or corners with responsive CSS around its screen PNGs
+
 Read `docs/final-work-and-case-studies.md` for the latest eight-project Work gallery and shared case template
 It supersedes the older Work category index and overview composition
 Keep all existing case URLs, but show only the eight selected projects on Work

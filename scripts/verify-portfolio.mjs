@@ -55,7 +55,8 @@ fs.mkdirSync(out, {recursive:true});
     assert.deepEqual(invalid,[],route+' images');
     assert.equal(await page.locator('body > footer').isVisible(),true);
     // All overview prose and story paragraphs share a left reading alignment.
-    const xs=await page.locator('article > div').first().locator('p').first().evaluate(el=>el.getBoundingClientRect().left);
+    const overview = route === '/work/medicine-app' ? page.locator('.lf-overview-summary') : page.locator('article > div').first().locator('p').first();
+    const xs=await overview.evaluate(el=>el.getBoundingClientRect().left);
     const storyX=await page.locator('#research p').first().evaluate(el=>el.getBoundingClientRect().left);
     assert.ok(Math.abs(xs-storyX)<3,route+' reading alignment');
    }
@@ -65,12 +66,14 @@ fs.mkdirSync(out, {recursive:true});
  }
  await page.setViewportSize({width:1440,height:1000});
  await page.goto(base+'/work/medicine-app',{waitUntil:'networkidle'});
- const disclosure=page.locator('[aria-label="Project numbers"] details').first();
+ const disclosure=page.locator('.lf-facts details').first();
  await disclosure.locator('summary').hover();assert.equal(await disclosure.getAttribute('open'),'');
  await page.mouse.move(5,120);
  await disclosure.locator('summary').focus();await page.keyboard.press('Enter');
  assert.equal(await disclosure.getAttribute('open'),'');
+ await page.locator('#research').scrollIntoViewIfNeeded();
  await page.locator('[aria-label="Case study stages"] a[href="#design"]').click();
+ await page.waitForFunction(()=>document.querySelector('[aria-label="Case study stages"] a[aria-current="location"]')?.getAttribute('href')==='#design');
  assert.equal(await page.locator('[aria-current="location"]').last().textContent(),'Design');
  assert.ok((await page.locator('#design').boundingBox()).y>=0);
  // Client navigation releases the Work-only scroll handling and returns it cleanly.
@@ -95,7 +98,7 @@ fs.mkdirSync(out, {recursive:true});
   dispatchEvent(new TouchEvent('touchmove',{touches:[end],bubbles:true,cancelable:true}));
   dispatchEvent(new TouchEvent('touchend',{touches:[],bubbles:true}));
  });
- assert.ok(Number(await page.locator('[data-work-enhanced]').getAttribute('data-project'))>0);
+ await page.waitForFunction(()=>Number(document.querySelector('[data-work-enhanced]').dataset.phase)>0);
  // Default motion has a real initial hold and hover pauses both hold and flow.
  const auto=await browser.newPage({viewport:{width:1440,height:1000}});
  auto.on('pageerror',e=>errors.push(e.message));

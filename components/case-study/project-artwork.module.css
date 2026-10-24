@@ -1,11 +1,7 @@
 .artwork { width: 100%; aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 12px; position: relative; }
 .artwork img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .frame { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
-.medicine { background: #e4eae4; gap: 9%; padding: 5% 10%; }
-.phone { height: 100%; aspect-ratio: 410 / 920; border: clamp(3px, .5vw, 7px) solid #242725; border-radius: clamp(12px, 2.2vw, 30px); background: #fafafa; overflow: hidden; box-shadow: 0 15px 25px #26372b25; }
-.phone:first-child { transform: translateY(-2%); }
-.phone:last-child { transform: translateY(2%); }
-.phone img { object-fit: cover; object-position: top; }
+.medicine { background: #e4eae4; }
 .dashboard { background: #dbe3e6; padding: 8%; }
 .dashboard .frame { width: auto; aspect-ratio: 1; filter: drop-shadow(0 16px 14px #15263030); }
 .physical { background: #e9e3d8; padding: 6%; }

@@ -12,6 +12,11 @@ const slugs = ['medicine-app','swiggy-agent-workflow','two-wheeler-dashboard','t
   const page = await browser.newPage({ viewport: { width: 1800, height: 1200 }, deviceScaleFactor: 1, reducedMotion: 'reduce' });
   fs.mkdirSync(path.join(scriptDirectory, '../public/portfolio/banners'), { recursive: true });
   for (const slug of slugs) {
+    if (slug === 'medicine-app') {
+      fs.copyFileSync(path.join(scriptDirectory, '../public/portfolio/screens/medicine-presentation.png'), path.join(scriptDirectory, '../public/portfolio/banners/medicine-app.png'));
+      console.log('Exported medicine-app: original static presentation');
+      continue;
+    }
     await page.goto(`${base}/work/${slug}`, { waitUntil: 'networkidle' });
     const art = page.locator('[data-project-artwork]');
     await page.addStyleTag({ content: '.site-header { display: none !important; } [data-project-artwork] { position: fixed !important; top: 0 !important; left: 0 !important; width: 1600px !important; height: 900px !important; z-index: 99999; } [data-project-artwork] > div { border-radius: 0; }' });

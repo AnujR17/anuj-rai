@@ -23,7 +23,9 @@ Project collages expand the selected preview with mouse, touch and keyboard cont
 Read [the current collage brief](docs/collage-copy-update.md) for supplied copy and fallback behaviour
 Case studies remain under `/work`
 Read [the case-study system](docs/case-study-system.md) before editing project content
-All eleven cases use the shared renderer and five-stage structure
+All eleven cases use the five-stage structure
+Meditimer restores the layered composition and original screens from the reviewed prototype; the other ten use the shared renderer
+Read [the Meditimer restoration notes](docs/medicine-case-restoration.md) before changing its fixed image assets
 The Work gallery shows exactly the eight projects in `data/work-projects.ts`
 Read [the final Work and case-study brief](docs/final-work-and-case-studies.md) for interactions, source assets and deployment details
 

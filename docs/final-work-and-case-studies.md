@@ -48,7 +48,8 @@ The footer composition is untouched on the remaining routes
 
 ## Shared template
 
-All eleven case routes use the same renderer, including the three supporting research cases
+Read `medicine-case-restoration.md` for the newer Meditimer restoration, which supersedes this shared layout for that case
+The ten other case routes use the shared renderer, including the three supporting research cases
 The opening has an original project visual on the right and the project name at bottom left, matching the homepage title size
 The introduction, metadata, brief, problem and story share a consistent left reading alignment
 There are no forced line breaks in the prose
@@ -61,9 +62,9 @@ Only supported numbers are shown, with sample and scope explained inside the dis
 ## Original assets and scope
 
 Medicine PNGs were exported from Figma file `on1gbKHkUo4CLZ38uCiSza`, nodes `797:3727` and `826:1236`
-They are in `public/portfolio/screens`, inside responsive device mockups
+They are in `public/portfolio/screens`, with fixed raster device mockups
 The original frame sizes are 410 by 1071 and 408 by 904
-The taller medicine frame includes content below the navigation; the phone mockup shows the viewport portion
+The taller medicine frame includes content below the navigation; the static mockup preserves the full artboard
 The original SVG source components remain available but are no longer used as the displayed medicine interface
 
 My Alumnus images and project evidence were recovered from `case-study/myalumnus` at `35f7fe7f3fcb2b8c122ed770ee45820c9753216d`
@@ -79,6 +80,7 @@ Do not invent agent research, implementation or performance results
 `components/case-study/ProjectArtwork.tsx` composes the original artifacts
 `scripts/export-work-banners.mjs` exports these compositions to the eight PNG banners
 Regenerate covers after changing their source imagery
+Meditimer copies its static medicine-presentation.png master so its restored case layout does not affect the Work cover
 
 ## Git identity and deployment
 
@@ -86,7 +88,7 @@ Use the existing GitHub connection as `AnujR17`
 Before pushing, verify `gh api user --jq .login` returns `AnujR17`
 Do not switch to another account to work around an access error
 The local repository author is `AnujR17`, using the confirmed contact email
-The repository remains on `concept/diagonal-intro`
+The publication was prepared on `concept/diagonal-intro`; the user explicitly authorized its merge into main on 24 October 2026
 Vercel automatically creates a public branch deployment after a push
 The production domain is `anuj-rai.vercel.app`, currently built from main
 The standing rule still requires explicit user approval before any merge
