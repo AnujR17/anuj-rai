@@ -105,3 +105,36 @@ reminders. It does not authorize merging or production promotion. Do not change
 the homepage, Work motion, other case stories or footer as side effects.
 Preserve the existing URLs. The Swiggy cover replaces the old composition-only
 placeholder with an actual prototype capture; the other seven covers stay as-is.
+
+
+## Visual storytelling revision, 8 November
+
+The user rejected the first PR draft as too textual and asked for growth from
+three newly attached wireframes, graphs, deeper design reasoning, dynamic
+text-guided close-up videos and a stronger thumbnail. This explicitly permits
+explanatory video text and meaningful diagram labels in this case, superseding
+the older no-caption preference for those requested explanatory artifacts.
+Decorative annotations and unrelated portfolio changes remain out of scope.
+
+The three HTML wireframes and separate policy draft are preserved verbatim in
+`source-records/`. A four-version viewer compares the first wireframe, 14 October
+second iteration, 15 October third iteration and 7 November v7.1. Sample data
+changes; this is not a matched before/after performance study.
+
+Structural evidence: the first file documents policy-row compaction from about
+430 to 200 pixels, with roughly 20-pixel fallback-font uncertainty. Both states
+are described in that first file; do not label them v1 versus v2. The v2 action
+row has five buttons, while v3 moves Hold to the timer and retains four outcome
+buttons. These are screen-structure facts, not a reduction in task time.
+
+The separate policy draft 0.1 contains 12 public findings, 10 proposed terms,
+24 operational proposals, 28 issue families, 16 open policy choices and 14
+unexecuted acceptance specifications. Do not call those implemented features or
+claim 80-percent coverage. It does not replace v7.1's current working rules.
+
+Three new 19–27 second films use continuous prototype captures, actual pointer
+movement, editorial camera pans/zooms and changing text. They are not another
+user study. Text equivalents, native playback controls and GIF downloads remain
+available; no film autoplays. The earlier complete five-ticket references stay
+inside a disclosure. The cover is a 1600 by 900 composition of original screen
+captures, using the existing ink/paper palette, not a redrawn interface.

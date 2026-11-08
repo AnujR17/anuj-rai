@@ -8,7 +8,7 @@ export const swiggyProject: Project = {
   brief: "Design a workspace for the human who receives a conversation from a support bot. Keep the live conversation available while they inspect a complaint, contact the other parties and explain their decision.",
   problem: "A refund decision affects the customer, restaurant and rider. The agent needs to connect a claim to its evidence and the applicable conditions, while keeping incomplete or conflicting records visible. The design question is how to reduce the work of finding information without replacing that judgement.",
   contribution: "The supplied handoff credits Sukhmanpreet Singh Saini as project owner and Akshat for research. Individual portfolio contribution is awaiting confirmation.",
-  image: { src: "/portfolio/swiggy/media/wrong-item.png", alt: "Agent Desk v7.1 wrong-item ticket with order information, customer conversation and decision controls", width: 1440, height: 900, caption: "Captured from the supplied 7 November 2026 prototype using scripts/capture-swiggy.mjs. Fictional ticket data; evidence photos generated with Figma AI." },
+  image: { src: "/portfolio/swiggy/cover.png", alt: "Agent Desk cover composed from the original workspace and a close-up of its evidence viewer", width: 1600, height: 900, caption: "Original interface captures composed with scripts/render-swiggy-assets.mjs. Fictional ticket data; evidence photos generated with Figma AI." },
   live: "/work/swiggy-agent-workflow/prototype",
   liveLabel: "Try the five-ticket prototype",
   source: "https://www.figma.com/design/GzgfjrlKX8fQURtcMgAYfN",

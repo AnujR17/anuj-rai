@@ -42,3 +42,25 @@ WORK_BANNER_SLUG=swiggy-agent-workflow node scripts/export-work-banners.mjs
 `CHROMIUM_PATH` can override the installed browser path. Playwright and FFmpeg
 are required. Original screenshot frames and detailed capture logs stay outside
 Git; reviewed media hashes and the compact verification record are retained.
+
+
+## Additional source-to-decision comparisons
+
+| Evidence | What the revised page shows | Boundary |
+| --- | --- | --- |
+| First supplied Agent Panel HTML, review notes | Approximate policy heights 430 → 200 pixels | Source fit estimate, not new measurement or time saved; font uncertainty about 20 pixels |
+| Second and Third Iteration HTML | Five actions → four outcomes; Hold moves beside the timer | Grouping benefit is a design argument, not observed faster use |
+| Third Iteration Star case drawer | Past outcome, similarity colours and fairness score | Feature absent in v7.1; ratings still exist elsewhere, so do not claim all judgement cues disappeared |
+| New facts/hypotheses HTML, draft 0.1 | Public findings separated from proposed terms, operating rules and acceptance specifications | Proposals and unexecuted specifications are not deployed coverage |
+| Original Stage 9 table | Five action counts and KLM estimates; 3/9/4 finding split | Same single Claude-led evaluation, no new support-agent evidence |
+
+`capture-swiggy-motion.mjs` records real UI events and a visible pointer.
+`swiggy-motion-studio.html` adds the camera and explanatory text outside the
+original UI. `render-swiggy-motion.mjs` exports MP4/GIF versions and text metadata.
+`render-swiggy-assets.mjs` composes the cover and crops original rendered screens.
+These tools require Chromium/Playwright, FFmpeg and the local capture scratch
+directory specified by SWIGGY_MOTION_DIR (default `/workspace/swiggy-motion-assets`).
+The studio HTML and a DM Sans font copy must be served there on port 8767; the
+font is downloaded from Google's original DM Sans family. Final assets are
+checked into public/portfolio/swiggy; the production page needs no local scripts,
+font service or media-rendering server.

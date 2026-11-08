@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Swiggy case-study motion renderer</title><style>
+@font-face{font-family:'DM Sans';src:url('dm-sans.ttf') format('truetype');font-weight:400}
+*{box-sizing:border-box}html,body{margin:0;width:1600px;height:900px;overflow:hidden;background:#f7f7f2;color:#1c1917;font-family:'DM Sans',sans-serif}
+.label{position:absolute;left:64px;top:24px;font-size:18px;color:#cf3518}.headline{position:absolute;left:64px;right:64px;top:60px;font-size:42px;line-height:1.12;letter-spacing:-.035em;margin:0;font-weight:400}
+.viewport{position:absolute;left:64px;right:64px;top:190px;bottom:70px;overflow:hidden;background:white;border-radius:12px;box-shadow:0 12px 42px #1c191714}
+video{position:absolute;left:0;top:0;width:1440px;height:900px;max-width:none;transform-origin:0 0;will-change:transform}.detail{position:absolute;left:64px;right:64px;bottom:18px;font-size:20px;line-height:1.3;margin:0;color:#514a43}
+</style><div class="label"></div><h1 class="headline"></h1><div class="viewport"><video muted playsinline preload="auto"></video></div><p class="detail"></p><script>
+const id=new URLSearchParams(location.search).get('id')||'evidence';
+const video=document.querySelector('video'),viewport=document.querySelector('.viewport'),title=document.querySelector('.headline'),detail=document.querySelector('.detail');
+document.querySelector('.label').textContent={evidence:'Evidence review',parties:'Party context and hold',decision:'Decision and explanation'}[id];
+const ease=x=>{x=Math.max(0,Math.min(1,x));return x*x*(3-2*x)};
+let spec,last=-1;
+function draw(t,deterministic=false){
+ let index=0;for(let i=0;i<spec.chapters.length;i++)if(spec.chapters[i].at<=t)index=i;
+ const chapter=spec.chapters[index],previous=spec.chapters[Math.max(0,index-1)];
+ const blend=index===0?1:ease((t-chapter.at)/1.15),camera=chapter.camera.map((v,i)=>previous.camera[i]+(v-previous.camera[i])*blend);
+ const [cx,cy,scale]=camera,w=viewport.clientWidth,h=viewport.clientHeight;
+ const tx=1440*scale<w?(w-1440*scale)/2:Math.min(0,Math.max(w-1440*scale,w/2-cx*scale));
+ const ty=900*scale<h?(h-900*scale)/2:Math.min(0,Math.max(h-900*scale,h/2-cy*scale));
+ video.style.transform=`translate3d(${tx}px,${ty}px,0) scale(${scale})`;
+ if(last!==index){title.textContent=chapter.title;detail.textContent=chapter.detail;if(!deterministic)for(const e of[title,detail])e.animate([{opacity:0,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:430,easing:'cubic-bezier(.22,1,.36,1)'});last=index}
+ if(deterministic){for(const a of document.getAnimations())a.cancel();const fade=index===0?1:ease((t-chapter.at)/.43);for(const e of[title,detail]){e.style.opacity=fade;e.style.transform=`translateY(${8*(1-fade)}px)`}}
+}
+window.directorReady=(async()=>{spec=await fetch(id+'.json').then(r=>r.json());const blob=await fetch(id+'-raw.mp4').then(r=>r.blob());video.src=URL.createObjectURL(blob);await Promise.all([document.fonts.ready,new Promise(r=>video.addEventListener('loadeddata',r,{once:true}))]);draw(0);return spec})();
+window.playDirector=async()=>{await window.directorReady;await video.play();return new Promise(resolve=>{function tick(){draw(video.currentTime);if(video.currentTime<spec.duration-.05&&!video.ended)requestAnimationFrame(tick);else{video.pause();resolve()}}requestAnimationFrame(tick)})};
+window.seekDirector=async t=>{await window.directorReady;video.pause();const target=Math.min(t,video.duration-.04);if(Math.abs(video.currentTime-target)>.005)await new Promise(resolve=>{video.addEventListener('seeked',resolve,{once:true});video.currentTime=target});if(Math.abs(video.currentTime-target)>.05)throw Error('Source video did not seek: '+video.currentTime+' versus '+target);draw(t,true);await new Promise(resolve=>requestAnimationFrame(resolve))};
+</script></html>

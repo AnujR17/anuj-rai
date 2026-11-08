@@ -27,9 +27,9 @@ const numbers: Record<string, NumberItem[]> = {
     { value: "48", label: "Caregiver responses", detail: "48 respondents followed the caregiver path; 7 followed the senior path, with 3 in both. The groups must not be added as separate participants" },
   ],
   "swiggy-agent-workflow": [
+    { value: "3", label: "Supplied wireframe iterations", detail: "The first functional wireframe, the 14 October second iteration and the 15 October third iteration are compared with the final 7 November Agent Desk v7.1 prototype" },
     { value: "5", label: "Playable tickets", detail: "Wrong item, missing item, not delivered, quality complaint and late delivery. These are fictional scripted cases, not five user-test participants" },
     { value: "16", label: "Recorded findings", detail: "The supplied Claude-led heuristic evaluation records 3 major, 9 minor and 4 cosmetic findings. They remain unresolved. One minor finding conflicts with later policy decisions" },
-    { value: "0", label: "Agent test sessions", detail: "No support agents or peers tested this concept. Estimated task effort is not evidence of improved speed or accuracy" },
   ],
   myalumnus: [
     { value: "4", label: "Interviews", detail: "Three alumni and one guard in the supplied research. This was a small qualitative study with leading-question limitations" },
