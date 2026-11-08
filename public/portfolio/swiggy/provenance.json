@@ -1,0 +1,116 @@
+{
+  "handoff": "Swiggy-Agent-Desk-Handoff-2026-11-08.zip",
+  "handoff_sha256": "e1dbc72830d1903d12f16c601a141da0e47d37d011c9e0d8f914881b67662a2f",
+  "version": "Agent Desk v7.1, 7 November 2026",
+  "source_sha256": {
+    "index.html": "ccf0404a56042dd245215e9c692bbdf63ab60169f8b483e1a49f2b8672df7884",
+    "icons.js": "fae2b18b9827f319051a632c65cf9a1140f1ddd360a28e53389cc0e27927437e",
+    "engine.js": "dfb5d2d3326c58fe7c3b739bb81b55d0ff57a06259d85bcc84e0b770e1e0f526",
+    "app.js": "214e08fb88f1368d985d31a897c633c32bad3b9e60693c7974ad17823eb27d1c",
+    "app.css": "c4f9da1b570c16eb388cc48674e6af8ce9be3d48aed2d7a19324451734d292c8",
+    "data.js": "0997e0566d8347d90887a80251efd37e69ac8f62d11d75c0829b09c11456115d",
+    "ui.js": "33d90f79dc6df244b1e310c884877f049a0cd8cec35eb876c9158bdf1a264ee9",
+    "photos/2041-1.jpg": "4215dd4f20d2a9557ea4ac7d5d0f0b7a0a764220d158d8a03603d36147550188",
+    "photos/2041-2.jpg": "58cb6a098f0a2e29e87160782471ef0a0c89a804504aa92cc7de2da6206177c6",
+    "photos/brand-mark.png": "92b3ffede76fec484beb68788e34302835361989cf0e1cce746abcc7e6fb9549",
+    "photos/2078-1.jpg": "58a79a62ed1e6bb38d686b55b84a1e3d145ef26e7863475779159cd30d6dc89c",
+    "photos/2091-1-thumb.jpg": "a91b6f403ab140cd5407a9f394fd275873f38d2d11399af4c1ec45de638f5395",
+    "photos/2070-1.jpg": "72694dd488e9202106c560735ad7146472fd6e9296985475fe21d2d4a3a7dc9b",
+    "photos/2070-1-thumb.jpg": "7774068f255f200503144f7f35aa68525cd2fcc1db9d04146e91906d538904ab",
+    "photos/2078-1-thumb.jpg": "21ed66af549af23901ffc7f44fe7a0170b61b2da88e9154d424d8ec88b0e3def",
+    "photos/2091-1.jpg": "de8050624586e4400540a7629fa5f45de7c31358831efb613fda2cc4c2c9db04",
+    "photos/2041-2-thumb.jpg": "d53c2e1c62048ff7f5b0c33fe5c4ff4d9e1436a69f10ecc359014d6727f4bac0",
+    "photos/2041-1-thumb.jpg": "b667f027ec58139b19e448d472667368a531c27e83c9779c9c6b205fdd7cff40"
+  },
+  "hosting_changes": [
+    "index.html gains UTF-8 charset, standards-mode doctype, document structure and local Inter link",
+    "Inter downloaded from fonts.googleapis.com for reliable rendering; original application CSS and JavaScript unchanged"
+  ],
+  "fonts": [
+    {
+      "weight": "400",
+      "file": "inter-400.ttf",
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+      "sha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba"
+    },
+    {
+      "weight": "500",
+      "file": "inter-500.ttf",
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+      "sha256": "8c883f63b2c4157d997319f2c8bc6995ed4357ef371940d31ca159004a4aae63"
+    },
+    {
+      "weight": "600",
+      "file": "inter-600.ttf",
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+      "sha256": "e7a1aaf7eda9f2fad4131725fa556265ec75ca7b2d756260173a040363e8d4f7"
+    }
+  ],
+  "process_images": {
+    "atlas": {
+      "source": "09_earlier-prototypes/design-system-comparison/atlas-1-mid-chat-wrong-item.jpg",
+      "sha256": "01b2f429ded2523bda32e12bb924d9d47178643ad22da8cad2905f67ab249e21"
+    },
+    "kirridesk": {
+      "source": "09_earlier-prototypes/design-system-comparison/kirridesk-1-mid-chat-wrong-item.jpg",
+      "sha256": "63314d933f0b76e2aed149bdc22d0b18db35dffb7092545aa62f3c21bb752e04"
+    }
+  },
+  "recordings": {
+    "method": "Visible UI click-through followed by edited screenshot sequence; no seeded state",
+    "paths": {
+      "S3": {
+        "ticket": "SW-2063",
+        "closed": true,
+        "missing_actions": [],
+        "runtime_errors": [],
+        "captured_actions": 24
+      },
+      "S5": {
+        "ticket": "SW-2091",
+        "closed": true,
+        "missing_actions": [],
+        "runtime_errors": [],
+        "captured_actions": 23
+      },
+      "S8": {
+        "ticket": "SW-2070",
+        "closed": true,
+        "missing_actions": [],
+        "runtime_errors": [],
+        "captured_actions": 27
+      },
+      "S9": {
+        "ticket": "SW-2078",
+        "closed": true,
+        "missing_actions": [],
+        "runtime_errors": [],
+        "captured_actions": 29
+      },
+      "S2": {
+        "ticket": "SW-2041",
+        "closed": true,
+        "missing_actions": [],
+        "runtime_errors": [],
+        "captured_actions": 28
+      }
+    },
+    "sha256": {
+      "not-delivered.gif": "eb794ddcabc04a1138817558748d56c9e4e8f172ffc02bfbf2946538b4024be5",
+      "late-delivery.gif": "7ca15902be56018d80614f62d5279e8231b89273b40eff1bbc491dada2a1067c",
+      "not-delivered.mp4": "d0d37f09925939f33e1bcbb6e2d4a1eb4e99fad81b8b7d844ace752a22a9f01f",
+      "quality-complaint.png": "90ead88194f2733f528947ea8c467d53126b8d05960be02bb6fe468a24504796",
+      "quality-complaint.mp4": "60436ff003dc175638c5202003811aaf9853eba032819afa0a4fc0c9cb8f85a4",
+      "missing-item.mp4": "2843844a65214089eaa20861fb63c9a96600b9be875b7b32ff224b9529deac92",
+      "wrong-item.gif": "fe5af9127eb46eb1f4f8913c171aa06bb8c9730b1596f1b5896b2f4dd540d829",
+      "wrong-item.png": "a0764e905288e1664e0176b13b66612b806e91a40bea6fdb11fd5d1c9f35bdd4",
+      "late-delivery.png": "87f21df84f07fe4d086fdafbf5e1cf61f2ef2d615c647d955d52796e75cad51d",
+      "missing-item.png": "43a4cf0e5378c6401f3466811e45d5dc34e2373e47dc8a7c7b9e0067cf7316fa",
+      "missing-item.gif": "466af626050286c6e12e83599ce4522b510ef75b268f2ac756d2548cbd623c76",
+      "late-delivery.mp4": "375ef4433ca3f674dbe879985ceb9f45012ac024d5f6d87909e5813948d79e05",
+      "wrong-item.mp4": "864350e202c2cf27978f5396c18b393974d0cbbdb331854d788f4da4a82fd803",
+      "quality-complaint.gif": "b7abc4abbea6979ad3e5d315c00620f9abf4661c812bf2606eef4bc586aaa405",
+      "not-delivered.png": "1ff3921a5e46743058016d3611b0fe8e698a51b9a950693bf688d118da6a6f35"
+    }
+  }
+}

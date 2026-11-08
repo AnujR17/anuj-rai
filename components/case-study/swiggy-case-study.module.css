@@ -1,0 +1,29 @@
+.actions { display:flex; flex-wrap:wrap; gap:12px 32px; margin-top:32px; }
+.principles { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px; margin-block:44px; }
+.principles h3 { font-size:23px; font-weight:400; letter-spacing:-.035em; line-height:1.2; margin-bottom:18px; }
+.principles p { font-size:17px; line-height:1.65; }
+.recording { display:block; width:100%; aspect-ratio:8/5; height:auto; background:#ebecea; border-radius:8px; margin-block:24px 12px; }
+.scenario { margin-block:24px; }
+.scenario summary,.report summary { list-style:none; cursor:pointer; font-size:24px; letter-spacing:-.035em; line-height:1.3; padding-block:16px; min-height:56px; }
+.scenario summary::-webkit-details-marker,.report summary::-webkit-details-marker { display:none; }
+.scenario summary { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:8px 20px; }
+.scenario summary span { font-size:16px; letter-spacing:0; color:#6a675f; }
+.scenario summary:hover,.report summary:hover,.scenario[open]>summary,.report[open]>summary { color:var(--concept-accent); }
+.scenario summary:focus-visible,.report summary:focus-visible { outline:2px solid var(--concept-accent); outline-offset:5px; }
+.scenario p,.report p { font-size:18px; line-height:1.75; max-width:800px; }
+.scenario:last-of-type { margin-bottom:48px; }
+.report { margin-block:32px 44px; }
+.report summary { font-size:21px; text-decoration:underline; text-underline-offset:6px; }
+.tableScroll { max-width:100%; overflow-x:auto; margin-block:24px; }
+.tableScroll table { border-collapse:collapse; width:100%; font-size:16px; line-height:1.65; text-align:left; }
+.tableScroll th,.tableScroll td { vertical-align:top; padding:0 22px 28px 0; font-weight:400; min-width:100px; }
+.tableScroll thead th { font-weight:500; }
+.tableScroll tbody th { width:18%; }
+.tableScroll th span { display:block; font-size:14px; color:#6a675f; margin-top:8px; }
+.tableScroll td { width:41%; }
+.demo { width:100%; max-width:1600px; padding:30px var(--section-inset) 80px; margin-inline:auto; }
+.demo h1 { font-size:clamp(32px,4vw,56px); letter-spacing:-.045em; line-height:1.1; font-weight:400; margin-top:30px; }
+.demo p { font-size:17px; line-height:1.65; max-width:850px; margin-block:24px; }
+.demo iframe { display:block; width:100%; aspect-ratio:8/5; border:0; background:white; border-radius:8px; }
+@media(max-width:1000px) { .principles { grid-template-columns:1fr; gap:28px; } }
+@media(max-width:700px) { .scenario summary { font-size:22px; } .recording { border-radius:4px; } .tableScroll th,.tableScroll td { padding-right:14px; font-size:15px; min-width:90px; } .demo { padding-bottom:40px; } }

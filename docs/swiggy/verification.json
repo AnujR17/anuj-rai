@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "layouts": 5,
+  "stagePositions": 25,
+  "runtimeErrors": [],
+  "checks": [
+    "five-stage responsive reading layout",
+    "all five recordings and GIF responses",
+    "optional media playback and pause",
+    "sixteen-findings disclosure and policy-version conflict",
+    "playable local prototype and original font weights",
+    "normal-motion shared and Meditimer indices",
+    "native no-JavaScript links and disclosures",
+    "Work-to-case navigation and scroll cleanup",
+    "original source SHA-256 hashes"
+  ],
+  "portfolio_regression": {
+    "passed": true,
+    "layoutChecks": 60,
+    "caseRoutes": [
+      "medicine-app",
+      "swiggy-agent-workflow",
+      "two-wheeler-dashboard",
+      "toki",
+      "india-in-orbit",
+      "gandhinagar-roundabouts",
+      "medtimer",
+      "myalumnus",
+      "medicine-storage-research",
+      "consumer-experience",
+      "skidge"
+    ],
+    "workProjects": [
+      "medicine-app",
+      "swiggy-agent-workflow",
+      "two-wheeler-dashboard",
+      "toki",
+      "india-in-orbit",
+      "gandhinagar-roundabouts",
+      "medtimer",
+      "myalumnus"
+    ],
+    "runtimeErrors": [],
+    "checks": [
+      "global wheel and touch",
+      "keyboard and offscreen focus",
+      "finite endpoints",
+      "initial hold",
+      "hover pause",
+      "reduced motion",
+      "client-navigation cleanup",
+      "native no-JavaScript links and disclosures",
+      "404",
+      "image loading",
+      "shared alignment"
+    ]
+  },
+  "static_checks": [
+    "npm run build",
+    "npm run lint",
+    "npx tsc --noEmit",
+    "git diff --check"
+  ]
+}

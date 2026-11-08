@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Original standalone prototype source, preserved from the supplied handoff.
+    "public/portfolio/swiggy/prototype/**",
   ]),
 ]);
 

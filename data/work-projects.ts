@@ -1,4 +1,5 @@
 import type { Project } from "./case-study";
+import { swiggyProject } from "./swiggy-case-study";
 
 // The eight projects in the final Work study. Supporting research keeps its URLs.
 export const workProjectSlugs = [
@@ -7,23 +8,7 @@ export const workProjectSlugs = [
 ] as const;
 
 export const additionalProjects: Project[] = [
-  {
-    slug: "swiggy-agent-workflow",
-    title: "Swiggy agent workflow",
-    headline: "Policy and evidence in a support decision",
-    summary: "I’m developing a proposed support workspace that brings ticket information, relevant policies and available evidence into an agent’s decision process.",
-    brief: "Explore a customer-support workspace through five or six support scenarios, including missing-item and wrong-item complaints.",
-    problem: "An agent needs to relate a complaint to the information and policy available for that ticket. Missing evidence and unclear next steps need to remain visible while the agent decides what to do.",
-    contribution: "Developing the scenarios, researching policy and preparing interface screens",
-    stages: {
-      research: [{ title: "Policy research", paragraphs: ["I’m examining support policies alongside the information an agent would need for different complaints. Missing-item and wrong-item tickets are two of the scenarios being developed.", "The work is still in development. The current material defines questions for the workspace; it does not represent observed agent behaviour or a completed research study."] }],
-      insights: [{ title: "Information for a decision", paragraphs: ["The proposed workspace needs to distinguish what the customer reports, what the available evidence supports and what a policy permits. Keeping those separate gives the design a clearer basis for handling incomplete information."] }],
-      concept: [{ title: "Ticket, evidence and policy", paragraphs: ["I’m bringing those three parts into one working view. The aim is to make the next action understandable without asking the agent to treat a suggestion as a confirmed answer."] }],
-      design: [{ title: "Support scenarios", paragraphs: ["Five or six scenarios are being prepared to examine the interface. Each should show the ticket, the relevant information, what remains uncertain and the action available to the agent.", "The workspace shown in this portfolio is a composition study. Final application screens and their interaction states are still being developed."] }],
-      outcome: [{ title: "Work in progress", paragraphs: ["The current output is a developing policy and scenario study. The next step is to complete the screens and walk through the support decisions with people familiar with the work.", "Faster decisions are a proposed benefit to evaluate. No reduction in handling time or improvement in support outcomes is claimed."] }],
-    },
-    note: "Independent design exploration, unaffiliated with Swiggy. Policy research and interface development are ongoing. The portfolio visual is a composition study, not a screenshot of a released support product.",
-  },
+  swiggyProject,
   {
     slug: "myalumnus",
     title: "My Alumnus",

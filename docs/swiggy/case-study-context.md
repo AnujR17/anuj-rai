@@ -1,0 +1,107 @@
+# Swiggy case study continuation
+
+Request dated 8 November 2026. Repository: AnujR17/anuj-rai. New branch:
+`case-study/swiggy-agent-desk`, based on production main at
+`b6448c95bf3e8a31d16b31512bec4b5161e86457`.
+
+## Context retained from this chat
+
+The portfolio targets interaction, digital product and UX roles. Its eight Work
+projects, order and finite scrolling interaction remain unchanged. Work uses
+16:9 banners, a bottom-left title, smaller names beside the images, a fully
+positioned first cover, a three-second autoplay hold and hover pause. Wheel,
+trackpad, keyboard and touch input work across the viewport; Work itself cannot
+scroll down to the footer. These preferences are already implemented in main.
+
+Preserve DM Sans, the warm paper background, vermilion accent, shared heading
+scale and dark Contact/footer. No decorative annotations, captions, arrows,
+subscripts, dots, em dashes or poetic copy. Original prototype imagery keeps
+its actual typography and source content. Do not redraw the prototype in the
+portfolio's visual language.
+
+The case uses the existing Research, Insights, Concept, Design and Outcome
+structure. The supplied 13-stage write-up is evidence, not a mandate to replace
+the selected portfolio layout. Its overview, brief and problem precede the
+five stages; definition/ideation inform Concept; testing, limitations and future
+scope belong in Outcome. The personal learning draft is not published as Anuj's
+own account.
+
+## Source of truth
+
+Both uploaded copies of `Swiggy-Agent-Desk-Handoff-2026-11-08.zip` have SHA-256:
+`e1dbc72830d1903d12f16c601a141da0e47d37d011c9e0d8f914881b67662a2f`.
+The second copy contains no changes. The complete archive is retained outside
+Git in the task workspace. Only the selected public prototype, rulebook, process
+images and new recordings belong in this branch.
+
+The final visual/interaction reference is `05_final-prototype/app`, Agent Desk
+v7.1, dated 7 November. Figma stops at 3 November. Original CSS, JavaScript and
+photos are copied unchanged into `public/portfolio/swiggy/prototype`. Hosting
+changes are limited to a standards-mode UTF-8 HTML wrapper and local copies of
+the original Inter 400/500/600 fonts. `provenance.json` stores hashes and sources.
+
+Public case: `/work/swiggy-agent-workflow`.
+Explained local demo: `/work/swiggy-agent-workflow/prototype`.
+Original standalone app: `/portfolio/swiggy/prototype/index.html`.
+
+## Evidence and authorship
+
+The archive credits **Sukhmanpreet Singh Saini as owner** and **Akshat for
+research**. The existing portfolio's vague first-person Swiggy text does not
+establish Anuj's actual contribution. A question was sent to the user asking for
+precise individual and collaborator credits. Until answered, the page retains
+the supplied team credits and does not claim Anuj designed or implemented every
+feature. Keep the PR a draft until this is resolved. No duration is inferred
+from the original one-week sprint plan; the documented iterations span October
+and November.
+
+One ten-minute call with an Amex expert is real but outside food delivery.
+The supplemental interview is simulated. Personas and the mental model are
+inferred. The customer audit included fabricated claims and contradictory
+accounts of genuine claims. Report the ethical and evidential limitations;
+do not generalise its small sample or repeat the method.
+
+All prototype data/replies are fictional. Photos were generated with Figma AI.
+Calls, refunds and reports are simulations. The concept is unaffiliated with
+Swiggy. Do not conflate the user's live portfolio deployment with a real Swiggy
+production integration.
+
+## Reconciled conflicts
+
+The 14–18 October decisions supersede frozen policy v1.3. P3 moves upstream;
+P7/P8, including the earlier ₹500 approval limit, were deliberately removed.
+The supplied evaluation's F4 asks to restore older rules and must remain
+identified as a version disagreement. Do not restore them or present them as
+actual Swiggy policy. Restaurant permission changes to tie-up refund terms.
+
+Frozen scenario numbering conflicts with the final ticket set. The case uses
+the real ticket IDs and issue types; it does not claim full frozen-scenario
+coverage. The quality-complaint recording follows the evaluated deny path;
+the separate report/flag action is not claimed to be in that recording.
+
+Sixteen findings are recorded, not fixed: three major, nine minor and four
+cosmetic. Claude performed the heuristic evaluation and also assisted in
+prototype construction. There were no agent or peer test sessions. KLM
+estimates exclude reading/waiting and do not prove improvement against a
+baseline. The final interface still has coloured ratings and hidden policy
+checks; do not claim every design principle is perfectly satisfied.
+
+## Section reminder repair
+
+The Meditimer section index sets `position:fixed`, but `.route-entry` previously
+retained `translate:0` through animation fill `both`. This creates a containing
+block: the index was marked visible while its actual rectangle was above the
+viewport (observed at y=-2046 after scrolling to Insights). The entry animation
+now uses backwards fill, returning to `translate:none` after entry and restoring
+the viewport coordinate system. The shared sticky index is aligned to the
+section-bottom inset and updates its active stage on scrolling, resizing,
+hash navigation and story-size changes. It remains a native link list without
+JavaScript; phone layouts use the existing compact or before-story navigation.
+
+## Review boundary
+
+This task authorizes a new branch, the Swiggy case/media and the missing stage
+reminders. It does not authorize merging or production promotion. Do not change
+the homepage, Work motion, other case stories or footer as side effects.
+Preserve the existing URLs. The Swiggy cover replaces the old composition-only
+placeholder with an actual prototype capture; the other seven covers stay as-is.

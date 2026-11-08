@@ -73,8 +73,9 @@ The three published screens contain fictional Sample University data
 Anuj's contribution remains decision-making, concept refinement, research and UI, collaborating with owner Sukhmanpreet Singh Saini
 The one-guard test findings are attributed to the supplied project report
 
-Swiggy is still a developing policy and scenario study
-Its cover is explicitly a composition study, not an original product screenshot
+The 8 November Swiggy handoff supersedes the earlier developing policy study
+Read `swiggy/case-study-context.md` for the final Agent Desk v7.1 prototype, accurate team credits, recordings and evaluation limits
+Its cover now uses an actual prototype capture with fictional data
 Do not invent agent research, implementation or performance results
 
 `components/case-study/ProjectArtwork.tsx` composes the original artifacts

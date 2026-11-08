@@ -10,6 +10,7 @@ import { CaseStudyNav } from "@/components/case-study/CaseStudyNav";
 import { ProjectArtwork } from "@/components/case-study/ProjectArtwork";
 import { CaseNumbers } from "@/components/case-study/CaseNumbers";
 import { MedicineCaseStudy } from "@/components/case-study/MedicineCaseStudy";
+import { SwiggyCaseStudy } from "@/components/case-study/SwiggyCaseStudy";
 import styles from "@/components/case-study/case-study.module.css";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -29,6 +30,7 @@ export default async function CaseStudy({ params }: Props) {
   const project = projects.find(item => item.slug === slug);
   if (!project) notFound();
   if (slug === "medicine-app") return <MedicineCaseStudy project={project} />;
+  if (slug === "swiggy-agent-workflow") return <SwiggyCaseStudy />;
   const mainIndex = workProjectSlugs.findIndex(item => item === slug);
   const nextSlug = workProjectSlugs[(mainIndex + 1) % workProjectSlugs.length];
   const next = mainIndex >= 0 ? projects.find(item => item.slug === nextSlug) : undefined;
