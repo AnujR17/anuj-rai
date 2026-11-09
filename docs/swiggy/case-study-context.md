@@ -1,5 +1,7 @@
 # Swiggy case study continuation
 
+Read `narrative-and-mockups.md` for the latest continuous-prose revision, clean motion captures, device compositions and animated mockup exports. The product purpose remains in `project-intent.md`.
+
 Latest author framing: read `project-intent.md`. The case is about a chat
 interface and dashboard supporting an agent's judgement, including fraud
 assessment. Five scenarios explore alternative directions. A recorded refund

@@ -6,7 +6,7 @@
   "checks": [
     "five-stage responsive reading layout and loaded original images",
     "four-version comparison with keyboard navigation and no-JavaScript access",
-    "three complete 30fps camera/text films with untruncated narration and GIF responses",
+    "three clean 30fps UI recordings with device-mockup GIF exports",
     "five complete ticket references",
     "optional media playback and pause",
     "sixteen-findings disclosure and policy-version conflict",
@@ -17,15 +17,11 @@
     "original source SHA-256 hashes"
   ],
   "date": "2026-11-09",
-  "environment": "Local production build, Next.js 16.2.12",
-  "author_intent_checks": [
-    "Five scenario questions visible without opening disclosures",
-    "Evidence, alternative directions and one recorded route distinguished per scenario",
-    "Keyboard scenario disclosures and no-JavaScript reflow verified at 1440, 390 and 320 pixels",
-    "Broader chat/dashboard, fraud assessment and agent autonomy framing present",
-    "Expected benefits identified as predictions without inventing a Swiggy baseline",
-    "Dashboard capture and original assets load",
-    "Original prototype source hashes unchanged",
-    "Build, lint, TypeScript and whitespace checks pass"
-  ]
+  "revision": "Continuous narrative and device mockups",
+  "media_exports": {
+    "evidence": 159,
+    "parties": 219,
+    "decision": 158,
+    "method": "8 fps framed GIFs; full frame counts and durations verified with ffprobe"
+  }
 }

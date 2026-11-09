@@ -28,6 +28,15 @@ async function capture(browser,id){
  const idle=()=>page.waitForFunction(()=>{const s=cur();return !s.playing&&!s.agTyping&&!s.stalk&&!(s.ann&&['wait','pwait'].includes(s.ann.stage))},{},{timeout:30000});
  await click('[data-act="go"][data-arg="S2"]','Open wrong-item ticket');
  if(id==='decision'){
+  // Establish the same photo-review branch described by the case study.
+  // These are visible UI actions, before the decision clip's pre-roll ends.
+  await click('[data-act="evopen"]','Review evidence before contacting restaurant');
+  const photos=await page.evaluate(()=>cur().photos.map(photo=>photo.id));
+  for(let i=0;i<photos.length;i++){
+   await click('[data-act="evgo"][data-arg="'+i+'"]','Inspect photo '+(i+1));
+   await click('[data-act="agree"][data-arg="'+photos[i]+'|agree"]','Agree photo '+(i+1));
+  }
+  await click('[data-act="close"]','Return from evidence review');
   // Replay the supplied conversation through actual UI controls before the clip.
   for(let n=0;n<24;n++){
    await idle();const s=await page.evaluate(()=>({gate:atGate(cur()),next:nextAg(cur())!=null}));
@@ -72,4 +81,6 @@ async function capture(browser,id){
  if(errors.length)throw Error(errors.join('\n'));console.log(id,duration+'s',chapters.length+' chapters');
 }
 const browser=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox']});
-try{await Promise.all(['evidence','parties','decision'].map(id=>capture(browser,id)))}finally{await browser.close()}
+const selected=process.argv.slice(2);const ids=selected.length?selected:['evidence','parties','decision'];
+if(ids.some(id=>!['evidence','parties','decision'].includes(id)))throw Error('Choose evidence, parties or decision');
+try{await Promise.all(ids.map(id=>capture(browser,id)))}finally{await browser.close()}

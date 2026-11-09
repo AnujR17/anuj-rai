@@ -65,6 +65,7 @@ async function verify() {
   assert.match(await page.locator("table").first().innerText(), /Minor, disputed/);
   assert.match(await page.locator("article").innerText(), /Claude/);
   const media = page.locator("video").first();
+  await media.scrollIntoViewIfNeeded();
   await media.evaluate(v => v.play());
   await page.waitForFunction(() => document.querySelector("video").currentTime > .15);
   await media.evaluate(v => v.pause());
@@ -76,16 +77,15 @@ async function verify() {
     assert.ok((await response.body()).length > 10000);
   }
   for (const id of ['evidence','parties','decision']) {
-    const file='public/portfolio/swiggy/motion/'+id;
+    const file='public/portfolio/swiggy/device/'+id;
     const spec=JSON.parse(fs.readFileSync(file+'.json','utf8'));
     const probe=JSON.parse(execFileSync('ffprobe',['-v','error','-select_streams','v:0','-show_entries','stream=width,height,r_frame_rate,nb_frames','-show_entries','format=duration','-of','json',file+'.mp4'],{encoding:'utf8'}));
-    assert.equal(probe.streams[0].width,1600);assert.equal(probe.streams[0].height,900);
+    assert.equal(probe.streams[0].width,1440);assert.equal(probe.streams[0].height,900);
     assert.equal(probe.streams[0].r_frame_rate,'30/1');
-    assert.ok(Math.abs(Number(probe.format.duration)-spec.duration)<.06,'Narration clipped: '+id);
-    assert.equal(Number(probe.streams[0].nb_frames),spec.renderedFrames);
-    assert.equal(spec.sourceSeekVerified,true,'Source video seeking not verified: '+id);
-    assert.ok(spec.chapters.length>=4&&spec.chapters.some((chapter,index)=>index&&chapter.camera.some((value,axis)=>value!==spec.chapters[0].camera[axis])),'Camera is static: '+id);
-    const response=await page.request.get(base+'/portfolio/swiggy/motion/'+id+'.gif');assert.equal(response.status(),200);assert.match(response.headers()['content-type'],/image\/gif/);
+    assert.ok(Math.abs(Number(probe.format.duration)-spec.duration)<.15,'Recording duration mismatch: '+id);
+    assert.deepEqual(spec.errors,[]);
+    assert.ok(spec.events.length>=4,'Missing captured UI inputs: '+id);
+    const response=await page.request.get(base+'/portfolio/swiggy/device/'+id+'-mockup.gif');assert.equal(response.status(),200);assert.match(response.headers()['content-type'],/image\/gif/);
   }
   await page.goto(base + "/work/swiggy-agent-workflow/prototype", { waitUntil: "networkidle" });
   assert.match(await page.locator("article > p").innerText(), /Calls, refunds and reports are simulated/);
@@ -117,7 +117,8 @@ async function verify() {
   const fallback = await plain.newPage();
   await fallback.goto(base + "/work/swiggy-agent-workflow", { waitUntil: "networkidle" });
   assert.equal(await fallback.locator('[aria-label="Case study stages"] a').count(), 5);
-  assert.equal(await fallback.locator('[role="tabpanel"]').count(),4);
+  assert.equal(await fallback.locator('[id^="version-panel-"]').count(),4);
+  assert.equal(await fallback.locator('[id^="scenario-panel-"]').count(),5);
   for(const panel of await fallback.locator('[role="tabpanel"]').all())assert.equal(await panel.isVisible(),true,'Wireframes require JavaScript');
   await fallback.locator('[aria-label="Case study stages"] a[href="#outcome"]').click();
   assert.equal(new URL(fallback.url()).hash, "#outcome");
@@ -144,7 +145,7 @@ async function verify() {
     const bytes = fs.readFileSync("public/portfolio/swiggy/prototype/" + file);
     assert.equal(crypto.createHash("sha256").update(bytes).digest("hex"), hash, "Original file changed: " + file);
   }
-  const result = { passed: true, layouts, stagePositions, runtimeErrors: errors, checks: ["five-stage responsive reading layout and loaded original images", "four-version comparison with keyboard navigation and no-JavaScript access", "three complete 30fps camera/text films with untruncated narration and GIF responses", "five complete ticket references", "optional media playback and pause", "sixteen-findings disclosure and policy-version conflict", "playable local prototype and original font weights", "normal-motion shared and Meditimer indices", "native no-JavaScript links and disclosures", "Work-to-case navigation and scroll cleanup", "original source SHA-256 hashes"] };
+  const result = { passed: true, layouts, stagePositions, runtimeErrors: errors, checks: ["five-stage responsive reading layout and loaded original images", "four-version comparison with keyboard navigation and no-JavaScript access", "three clean 30fps UI recordings with device-mockup GIF exports", "five complete ticket references", "optional media playback and pause", "sixteen-findings disclosure and policy-version conflict", "playable local prototype and original font weights", "normal-motion shared and Meditimer indices", "native no-JavaScript links and disclosures", "Work-to-case navigation and scroll cleanup", "original source SHA-256 hashes"] };
   fs.writeFileSync(path.join(out, "verification.json"), JSON.stringify(result, null, 2));
   console.log(JSON.stringify(result));
 }

@@ -9,7 +9,7 @@ The homepage's design language, project selection, About and Contact composition
 Show exactly these projects, in order:
 
 1. Meditimer app
-2. Swiggy agent workflow
+2. Swiggy Agent Desk
 3. Himalayan 450
 4. Toki
 5. India in Orbit

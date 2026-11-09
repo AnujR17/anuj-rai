@@ -45,6 +45,27 @@
 .predictions { margin-block:45px; }
 .predictions p + p { margin-top:20px; }
 .dashboardImage { display:block;width:100%;height:auto;border-radius:8px;margin-top:25px; }
+.heroDevice { padding:25px 28px 20px; }
+.case .narrative > p { max-width:710px;line-height:1.85;margin-bottom:25px; }
+.staticDevice { padding:clamp(25px,4.1vw,52px) clamp(22px,4.3vw,56px) 30px;background:#eeede6;border-radius:14px;margin-block:40px; }
+.staticDevice img { width:100%;height:auto;display:block; }
+.case .versionStory { max-width:730px;font-size:17px;line-height:1.8;margin-top:25px; }
+.scenarioShowcase { margin-block:40px 60px; }
+.scenarioTabs { display:none;flex-wrap:wrap;gap:8px 25px;margin-bottom:30px; }
+.scenarioTabs button { background:none;border:0;font:inherit;font-size:16px;min-height:44px;padding:8px 0;cursor:pointer;color:#6a675f;text-underline-offset:7px; }
+.scenarioTabs button[aria-selected="true"] { color:var(--concept-accent);text-decoration:underline; }
+.scenarioShowcase[data-enhanced="true"] .scenarioTabs { display:flex; }
+.scenarioShowcase[data-enhanced="true"] .scenarioPanel:not([data-active="true"]) { display:none; }
+.scenarioPanel { margin-block:30px; }
+.case .scenarioPanel h3 { display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px 24px; }
+.scenarioPanel h3 span { font-size:16px;letter-spacing:0;color:#6a675f; }
+.case .scenarioPanel > p { max-width:710px;line-height:1.8; }
+.scenarioPanel > p+p { margin-top:18px; }
+.motionSteps { margin-top:15px; }
+.motionSteps summary { font-size:16px;cursor:pointer;text-decoration:underline;text-underline-offset:6px;min-height:44px;align-content:center; }
+.motionSteps ol { padding-left:22px;max-width:710px;font-size:17px;line-height:1.75;margin-top:18px; }
+.motionSteps li { margin-bottom:12px; }
+.case .interactionSequence .explainer > p { max-width:710px;line-height:1.8; }
 .case .overview [aria-label="Project numbers"] { min-height:260px;margin-top:44px; }
 .case .context { font-size:16px;line-height:1.65;margin-top:26px;color:#5d5750; }
 .case .lead { font-size:21px;line-height:1.6;margin-bottom:40px;letter-spacing:-.02em; }
@@ -170,6 +191,7 @@
  .comparisonPair,.layoutAlternatives { grid-template-columns:1fr;gap:30px; }
 }
 @media(max-width:700px) {
+ .heroDevice { padding:15px 14px; }.staticDevice { padding:24px 15px;border-radius:9px; }.scenarioTabs { gap:2px 22px; }.scenarioTabs button { font-size:15px; }
  .case .overview { padding-bottom:40px; }.researchRows > div { grid-template-columns:1fr;gap:12px;padding-block:20px; }
  .taskFlow { padding:24px 20px;gap:28px; }.flowBranches { grid-template-columns:1fr;gap:16px; }.flowSources > div { display:block; }.case .flowSources h4 { margin-bottom:7px; }
  .flowOr { position:static;transform:none;text-align:center; }

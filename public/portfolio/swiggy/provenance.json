@@ -205,5 +205,73 @@
     "treatment": "Original screenshot; only the external demo control was hidden",
     "sha256": "5ce135078c0119148aa102c242187f0aac33c384386d9ac1be24b456e6d064f0",
     "data": "Fictional queue and sample metrics, not measured research results"
+  },
+  "device_motion_2026_11_09": {
+    "source": "Unchanged Agent Desk v7.1, captured through visible browser inputs with scripts/capture-swiggy-motion.mjs",
+    "presentation": "New CSS laptop/desktop mockups, clean UI clips and deterministic framed GIF exports; not physical deployment evidence",
+    "decision_branch": "Both customer photos agreed before restaurant contact; restaurant confirms swapped bags; confirmed in inspected source frame",
+    "party_clip_edit": "The actual final Held state is extended for reading",
+    "assets": {
+      "decision-mockup.gif": {
+        "sha256": "29e75f428610318e98f3506c368f22a42e2f835c4889b8677b668c937e1449fc",
+        "bytes": 891756
+      },
+      "decision-mockup.json": {
+        "sha256": "09419ea022fee416b8b96b25c7b2ab3ddd3833c77d06e7491eff4604f8657c06",
+        "bytes": 307
+      },
+      "decision.json": {
+        "sha256": "983bd374418f937db41ac8ea105069b856970c27a4c35b4556f2f8410d2ef8a2",
+        "bytes": 2039
+      },
+      "decision.mp4": {
+        "sha256": "89e173178a8f6d0a5f4f9dd4649e93bcd989d8814f2a05dfe44e265d3ad64700",
+        "bytes": 950603
+      },
+      "decision.png": {
+        "sha256": "fd597ad5e04d92224d2c0964be6a38c5b62ee5e7972c753210ea334376fd7d2f",
+        "bytes": 282373
+      },
+      "evidence-mockup.gif": {
+        "sha256": "48f38f43f567ebbf5713ad1bf95bc70d0a846c00d02d776ecba49726d1e2f430",
+        "bytes": 2983584
+      },
+      "evidence-mockup.json": {
+        "sha256": "bdd9dcb0788d8765b7e8f644bf75d385b54c9c87b215b1b4fb90eca241dee746",
+        "bytes": 307
+      },
+      "evidence.json": {
+        "sha256": "44edcd4170999c4e51987621579f7cec39277bd0f8a0baeff4f1b9b1e02f2043",
+        "bytes": 1680
+      },
+      "evidence.mp4": {
+        "sha256": "d0acd29f0a321c88b1420c5b65375521a429249c7dbcf958818ac150fa71294a",
+        "bytes": 1458293
+      },
+      "evidence.png": {
+        "sha256": "b33e13ab0fc8ba82633ada28c1eb84d0b98c960a70363422a08c8825566a3639",
+        "bytes": 701011
+      },
+      "parties-mockup.gif": {
+        "sha256": "1a39cb6b41850d02ba106da94f8df58842810c1227625819295c26d5870549e2",
+        "bytes": 1276292
+      },
+      "parties-mockup.json": {
+        "sha256": "14dad5ba66382674be7ff4ad5d603a762bf166b5a83fe8237ca08d06078dd1ac",
+        "bytes": 300
+      },
+      "parties.json": {
+        "sha256": "9d5abc7f18f465bb6423dcbb0714e75aac559036a62cad0496ab7532b2e30ab1",
+        "bytes": 2315
+      },
+      "parties.mp4": {
+        "sha256": "318355f0482f9bbd71199830da5b9b3d441bbe6ebc0cc04b07b24f651471bc6f",
+        "bytes": 1021115
+      },
+      "parties.png": {
+        "sha256": "43bd8ccaf7c1d90a70d8618e0290f374ea2e1e437c48621758830dd7789a5472",
+        "bytes": 144346
+      }
+    }
   }
 }

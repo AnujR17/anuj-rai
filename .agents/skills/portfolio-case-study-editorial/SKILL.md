@@ -101,6 +101,8 @@ Keep Anuj's existing overview and five stages. They are the navigation structure
 
 Use personal, direct language with accurate ownership. Use “I” for individual work and “we” only where it describes the team. Preserve useful original phrasing and specific detail rather than flattening every case into one assistant voice.
 
+Read a substantial draft as one continuous piece of prose, including the text actually visible in the rendered page. Check the movement between paragraphs, sentence rhythm and how often the same purpose is restated. A stack of accurate rubric fields can still read badly. Replace worksheet labels and repeated cautions with a connected account of the situation, choice and consequence. Literary quality here means precise, well-shaped writing; it does not justify decorative language or invented experiences.
+
 For each paragraph ask:
 
 1. What new fact, interpretation, decision, behavior, or result does this add?
@@ -140,6 +142,7 @@ Before choosing a layout, specify the claim the visual should help the reader as
 - Preserve DM Sans, current palette, footer, text-only homepage hero, and image/title-only project cards. Reference patterns do not supersede these rules. The no-work-in-homepage-hero rule does not prohibit the existing case-page opening visual.
 - Preserve the restored Meditimer layout and fixed raster device mockups. Never wrap its screen PNGs in responsive CSS device borders or distort/crop their source proportions.
 - Make optional demos supplementary to an understandable static story. Test keyboard, touch, reduced motion, narrow layouts, full-size viewing and no-JavaScript access when changing those features. Do not hide the conclusion behind hover or autoplay.
+- When the user asks for motion in mockups, compose the recording inside a suitable device or browser frame, preserving source proportions and a way to inspect the UI at full size. Use clean app footage inside a screen; do not put a film's baked-in editorial titles inside the supposed product interface. Check the complete composition, playback controls and static fallback. A frame alone is not evidence of visual craft.
 
 ## Deliver and check
 
