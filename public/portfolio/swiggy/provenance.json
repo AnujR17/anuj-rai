@@ -198,5 +198,12 @@
     "file": "components/case-study/SwiggyFlow.tsx",
     "source": "Final prototype and handoff design/decision sequence",
     "status": "New explanatory diagram, not an original research artifact or enforced policy gate"
+  },
+  "workspace_capture_2026_11_09": {
+    "file": "process/workspace.png",
+    "source": "Unchanged local Agent Desk v7.1, My Workspace default screen, captured at 1440x900",
+    "treatment": "Original screenshot; only the external demo control was hidden",
+    "sha256": "5ce135078c0119148aa102c242187f0aac33c384386d9ac1be24b456e6d064f0",
+    "data": "Fictional queue and sample metrics, not measured research results"
   }
 }

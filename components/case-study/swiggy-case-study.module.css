@@ -33,6 +33,18 @@
 .findingStories a { display:block; }
 .case .findingStories h3 { font-size:25px; }
 .case .findingStories p { font-size:17px;line-height:1.7; }
+.scenarioCases { margin-block:40px 65px; }
+.scenarioCase { padding-block:28px; }
+.case .scenarioCase h3 { display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px 24px;margin-bottom:18px; }
+.scenarioCase h3 span { font-size:16px;letter-spacing:0;color:#6a675f; }
+.scenarioCase .scenario { margin-block:10px 0; }
+.scenarioCase .scenario summary { font-size:17px;min-height:44px;text-decoration:underline;text-underline-offset:6px;letter-spacing:0; }
+.scenarioFacts { display:grid;gap:22px;margin-block:20px;max-width:800px; }
+.scenarioFacts dt { font-size:17px;font-weight:500;margin-bottom:8px; }
+.scenarioFacts dd { font-size:17px;line-height:1.65; }
+.predictions { margin-block:45px; }
+.predictions p + p { margin-top:20px; }
+.dashboardImage { display:block;width:100%;height:auto;border-radius:8px;margin-top:25px; }
 .case .overview [aria-label="Project numbers"] { min-height:260px;margin-top:44px; }
 .case .context { font-size:16px;line-height:1.65;margin-top:26px;color:#5d5750; }
 .case .lead { font-size:21px;line-height:1.6;margin-bottom:40px;letter-spacing:-.02em; }

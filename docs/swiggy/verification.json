@@ -18,12 +18,14 @@
   ],
   "date": "2026-11-09",
   "environment": "Local production build, Next.js 16.2.12",
-  "editorial_checks": [
-    "Confirmed personal contribution with four-person group acknowledgement",
-    "Final rendered SW-2041 dish names agree with script overrides",
-    "New investigation flow reflows at 320px with and without JavaScript",
-    "Three original finding crops load at native resolution without lossy optimization",
-    "Original prototype source hashes preserved",
+  "author_intent_checks": [
+    "Five scenario questions visible without opening disclosures",
+    "Evidence, alternative directions and one recorded route distinguished per scenario",
+    "Keyboard scenario disclosures and no-JavaScript reflow verified at 1440, 390 and 320 pixels",
+    "Broader chat/dashboard, fraud assessment and agent autonomy framing present",
+    "Expected benefits identified as predictions without inventing a Swiggy baseline",
+    "Dashboard capture and original assets load",
+    "Original prototype source hashes unchanged",
     "Build, lint, TypeScript and whitespace checks pass"
   ]
 }

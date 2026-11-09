@@ -1,5 +1,7 @@
 # Portfolio workflow
 
+Read `docs/swiggy/project-intent.md` before reframing Swiggy. It records the author's confirmed purpose: chat/dashboard decision support, fraud assessment, five open-ended scenarios and agent autonomy. Keep intended purpose, current scripted prototype and predicted benefits distinct.
+
 Read `docs/swiggy/case-study-context.md` for the 8 November Swiggy handoff, source and credit checks, recordings, and section-navigation repair
 
 For case-study content refinement, project explanations, evidence selection or visual storytelling, read `.agents/skills/portfolio-case-study-editorial/SKILL.md`. Its reference study and evidence rules supplement the current portfolio briefs; they do not override user instructions or authorize publishing.

@@ -111,3 +111,40 @@ JavaScript, current contribution copy, final dish names and all three finding
 crops at native pixel dimensions. Desktop and phone screenshots were visually
 inspected. The new flow and finding images are explanatory material, not new
 user-test evidence. `docs/swiggy/verification.json` records the check scope.
+
+
+## Follow-up: restore the broader author intent
+
+Anuj clarified that the base idea is a chat interface and dashboard for Swiggy
+customer-support agents, helping trained agents make better decisions and,
+where possible, quicker decisions when bot-led support needs human judgement.
+Fraud assessment, genuine complaints and the agent's autonomy are central.
+Five extensive scenarios were intended to remain open-ended as conversations
+and evidence progress. The system is the agent's companion.
+
+This clarification is recorded in `project-intent.md` and linked from AGENTS.md.
+The opening now states the broader purpose. Five scenario questions are visible
+in Design, with evidence, alternative directions and one recorded route inside
+each disclosure. The primary wrong-item walkthrough remains an example.
+The original dashboard is embedded in Concept, with its fictional metrics
+identified. The flow includes revisiting records and changing a check.
+
+Expected benefits are described through fewer lookups, connected context and
+earlier attention to contradictions. These are predictions. No actual Swiggy
+baseline is invented. A comparison against separately presented synthetic
+records is a proposed study condition, not a depiction of current practice.
+The future evaluation considers possible fraud, false suspicion of genuine
+claims, missed checks and rework alongside speed.
+
+The current prototype still has limited scripted conversation branches and
+agent-selected outcomes. No original application source or recordings were
+changed to make the intended product sound implemented more broadly.
+
+
+The follow-up production build, lint, TypeScript and whitespace checks pass.
+The five-width browser suite again passed, with no runtime errors. Additional
+keyboard/no-JavaScript checks at 1440, 390 and 320 pixels verified the visible
+five-case questions, alternative-direction disclosures, prediction framing and
+absence of horizontal overflow. Desktop and phone scenarios were visually
+inspected. This verification concerns the case presentation and prototype
+behaviour, not actual fraud-detection performance or agent efficiency.

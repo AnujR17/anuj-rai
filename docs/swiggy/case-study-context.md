@@ -1,5 +1,11 @@
 # Swiggy case study continuation
 
+Latest author framing: read `project-intent.md`. The case is about a chat
+interface and dashboard supporting an agent's judgement, including fraud
+assessment. Five scenarios explore alternative directions. A recorded refund
+path is an example, not the whole purpose or a prescribed outcome. Predicted
+quality/efficiency benefits remain distinct from demonstrated prototype states.
+
 Request dated 8 November 2026. Repository: AnujR17/anuj-rai. New branch:
 `case-study/swiggy-agent-desk`, based on production main at
 `b6448c95bf3e8a31d16b31512bec4b5161e86457`.

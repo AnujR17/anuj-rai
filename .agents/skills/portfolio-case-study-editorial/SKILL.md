@@ -11,6 +11,7 @@ Use for case-study content, project explanations, evidence selection, visual sto
 
 1. Read applicable AGENTS.md and the current task. In Anuj's repository, read `docs/portfolio-rules.md`, `docs/case-study-system.md`, `docs/case-study-editorial-update.md`, and the latest relevant restoration/update brief. Check the active branch and existing changes before editing. Historical branch names in notes are not instructions to switch the current checkout.
 2. Inspect the current case, its data, original artifacts, sources, and any author account. A public portfolio sentence is a claim to check, not independent proof of its own accuracy. Distinguish the deployed page from the local checkout when they differ.
+   Preserve the author's confirmed product purpose separately from the prototype's current coverage. A limited demonstration can narrow implementation claims without redefining the intended problem or reducing open-ended scenarios to the recorded outcomes. Describe expected benefits as predictions when evidence has not established them.
 3. Use [the evidence worksheet](templates/case-study-workbook.md) for substantial rewrites. Keep the working records outside visitor-facing copy. For a small correction, use only the relevant part of the worksheet.
 4. Consult the source material relevant to the task using the reading map below. Recheck dated project facts when they affect the edit. Do not browse every reference again for every paragraph.
 
