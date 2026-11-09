@@ -1,5 +1,8 @@
 # Swiggy case study continuation
 
+Read `layered-layout.md` for the latest first-fold hero, source-detail layers,
+alternating motion layouts and direct introduction/contribution copy.
+
 Read `narrative-and-mockups.md` for the latest continuous-prose revision, clean motion captures, device compositions and animated mockup exports. The product purpose remains in `project-intent.md`.
 
 Latest author framing: read `project-intent.md`. The case is about a chat

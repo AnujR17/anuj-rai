@@ -17,11 +17,12 @@
     "original source SHA-256 hashes"
   ],
   "date": "2026-11-09",
-  "revision": "Continuous narrative and device mockups",
+  "revision": "Layered source compositions, first-fold hero and direct contribution",
   "media_exports": {
     "evidence": 159,
     "parties": 219,
     "decision": 158,
     "method": "8 fps framed GIFs; full frame counts and durations verified with ffprobe"
-  }
+  },
+  "layout_report": "layers-verification.json"
 }

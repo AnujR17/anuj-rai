@@ -26,7 +26,11 @@ export function SwiggyEvolution() {
     </div>
     {versions.map((version, index) => <section id={`version-panel-${index}`} role="tabpanel" aria-labelledby={`version-tab-${index}`} className={styles.versionPanel} data-active={active === index} key={version.label}>
       <h3>{version.label}<span>{version.date}</span></h3>
-      <a href={version.src} aria-label={`Open ${version.label} at full size`}><Image src={version.src} width={1440} height={index < 3 ? 901 : 900} loading="eager" alt={`Original ${version.label} wrong-item workspace`} sizes="(max-width: 700px) 90vw, 1000px" /></a>
+      <div className={styles.versionStack} data-version-stack>
+        <div className={styles.versionBackOne} aria-hidden="true"><Image unoptimized src={versions[(index + 1) % versions.length].src} width={1440} height={900} alt="" sizes="(max-width: 700px) 80vw, 900px" /></div>
+        <div className={styles.versionBackTwo} aria-hidden="true"><Image unoptimized src={versions[(index + 2) % versions.length].src} width={1440} height={900} alt="" sizes="(max-width: 700px) 80vw, 900px" /></div>
+        <a className={styles.versionFront} href={version.src} aria-label={`Open ${version.label} at full size`}><Image unoptimized src={version.src} width={1440} height={index < 3 ? 901 : 900} loading="eager" alt={`Original ${version.label} wrong-item workspace`} sizes="(max-width: 700px) 90vw, 1000px" /></a>
+      </div>
       <p className={styles.versionStory}>{version.description}</p>
     </section>)}
   </div>;

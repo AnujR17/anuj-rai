@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "foldResults": [
+    {
+      "width": 1440,
+      "height": 900,
+      "titleBottom": 876,
+      "artworkBottom": 763.6041870117188
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "titleBottom": 744,
+      "artworkBottom": 638.435791015625
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "titleBottom": 696,
+      "artworkBottom": 596.5042724609375
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "titleBottom": 744,
+      "artworkBottom": 658.2999267578125
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "titleBottom": 820,
+      "artworkBottom": 611.0748291015625
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "titleBottom": 643,
+      "artworkBottom": 516.409423828125
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "titleBottom": 544,
+      "artworkBottom": 422.8329162597656
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "titleBottom": 366,
+      "artworkBottom": 292.9903564453125
+    }
+  ],
+  "layeredWidths": [
+    1440,
+    768,
+    390,
+    320
+  ],
+  "motionSupported": true,
+  "inkControlContrast": 13.129243692620303,
+  "runtimeErrors": [],
+  "checks": [
+    "title, complete laptop and source detail in one fold at eight viewports",
+    "hero overlap without obscuring the title",
+    "source-record overlap and keyboard access to full-size originals",
+    "all five layer compositions without horizontal overflow",
+    "scroll-linked depth with a static reduced-motion fallback",
+    "ink-scene control contrast",
+    "native source access and all versions without JavaScript"
+  ]
+}

@@ -273,5 +273,20 @@
         "bytes": 144346
       }
     }
+  },
+  "case_layout": {
+    "date": "2026-11-09",
+    "treatment": "CSS editorial composition of unchanged original captures: laptop and evidence detail in the hero, monitor and rider record in Insights, original-version stack, alternating interaction scenes and an ink decision section. Static and reduced-motion fallbacks; full-size original links retained.",
+    "sources": [
+      "media/wrong-item.png",
+      "evolution/evidence-detail.png",
+      "evolution/evidence-clean.png",
+      "evolution/rider-detail.png",
+      "evolution/wireframe-1.png",
+      "evolution/wireframe-2.png",
+      "evolution/wireframe-3.png"
+    ],
+    "crop": "Rider detail masks empty lower source area in the composition; native link opens the entire source.",
+    "media": "Device MP4 and GIF source files are unchanged by this layout revision."
   }
 }

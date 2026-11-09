@@ -17,10 +17,12 @@ const filmSteps = {
   decision: ["Choose Restaurant and Full refund for this recorded branch.", "Review and send the explanation, then select a reason.", "Confirm to add the decision to the case record."],
 };
 function Explainer({ id, title, children }: { id: keyof typeof filmSteps; title: string; children: React.ReactNode }) {
-  return <div className={swiggy.explainer}>
-    <h3>{title}</h3>{children}
+  return <div className={swiggy.explainer + (id === "decision" ? " " + swiggy.inkScene : "")} data-interaction-scene={id}>
+    <div className={swiggy.explainerCopy}><h3>{title}</h3>{children}</div>
+    <div className={swiggy.explainerMedia}>
     <DeviceMotion id={id} label={title} src={"/portfolio/swiggy/device/" + id + ".mp4"} poster={"/portfolio/swiggy/device/" + id + ".png"} gif={"/portfolio/swiggy/device/" + id + "-mockup.gif"} variant={id === "parties" ? "desktop" : "laptop"} tone={id === "decision" ? "ink" : "paper"} />
     <details className={swiggy.motionSteps}><summary>Read the interaction</summary><ol>{filmSteps[id].map(step => <li key={step}>{step}</li>)}</ol></details>
+    </div>
   </div>;
 }
 function Crop({ file, alt, width, height }: { file: string; alt: string; width: number; height: number }) {
@@ -29,18 +31,22 @@ function Crop({ file, alt, width, height }: { file: string; alt: string; width: 
 
 export function SwiggyCaseStudy() {
   return <article className={styles.caseStudy + " " + swiggy.case}>
-    <header className={styles.hero}>
+    <header className={styles.hero + " " + swiggy.caseHero}>
       <Link href="/work" className={styles.textLink}>All work</Link>
       <div className={styles.heroArtwork + " " + swiggy.heroDevice} data-project-artwork={project.slug}>
-        <DeviceFrame><Link href="/work/swiggy-agent-workflow/prototype" aria-label="Open the Agent Desk prototype"><Image unoptimized src="/portfolio/swiggy/media/wrong-item.png" width={1440} height={900} alt="Agent Desk’s wrong-item conversation, presented in a laptop mockup" preload sizes="(max-width: 700px) 90vw, 850px" /></Link></DeviceFrame>
+        <div className={swiggy.heroComposition} data-layered-hero>
+          <div className={swiggy.heroBackdrop} aria-hidden="true" />
+          <div className={swiggy.heroLaptop}><DeviceFrame><Link href="/work/swiggy-agent-workflow/prototype" aria-label="Open the Agent Desk prototype"><Image unoptimized src="/portfolio/swiggy/media/wrong-item.png" width={1440} height={900} alt="Agent Desk’s wrong-item conversation, presented in a laptop mockup" preload sizes="(max-width: 700px) 85vw, 850px" /></Link></DeviceFrame></div>
+          <a className={swiggy.heroEvidence} href="/portfolio/swiggy/evolution/evidence-detail.png" aria-label="Inspect the original evidence viewer"><Image unoptimized src="/portfolio/swiggy/evolution/evidence-detail.png" width={720} height={500} alt="A detail from the evidence viewer, layered in front of the workspace" preload sizes="(max-width: 700px) 40vw, 380px" /></a>
+        </div>
       </div>
       <h1>{project.title}</h1>
     </header>
     <div className={styles.overview + " " + swiggy.overview}>
       <p className={styles.introduction}>{project.summary}</p>
-      <dl className={styles.details}>
-        <div><dt>Project</dt><dd>Support-tool concept<br />Five fictional cases</dd></div>
-        <div><dt>My role</dt><dd>{project.contribution}</dd></div>
+      <dl className={styles.details + " " + swiggy.projectMeta}>
+        <div><dt>Scope</dt><dd>Chat and dashboard<br />Five scenario investigations</dd></div>
+        <div className={swiggy.rolePanel}><dt>My role</dt><dd>{project.contribution}</dd></div>
       </dl>
       <div className={styles.framing}><div><h2>Project brief</h2><p>{project.brief}</p></div><div><h2>The challenge</h2><p>{project.problem}</p></div></div>
       <div className={swiggy.actions}><Link href="/work/swiggy-agent-workflow/prototype" className={styles.textLink}>Try Agent Desk</Link><a href="/portfolio/swiggy/design-rulebook-v7.1.pdf" className={styles.textLink}>Design rulebook</a></div>
@@ -63,7 +69,11 @@ export function SwiggyCaseStudy() {
           <div className={styles.stageContent + " " + swiggy.narrative}>
             <p>The customer describes what arrived. The restaurant has a packing record. The rider has a trip record. I brought those accounts into a shared case, with the live conversation between the order details and the policy checks.</p>
             <p>The agent can move between the parties, inspect a source, change a check and choose how to proceed. That is the role I wanted for the system: a companion to the investigation, with the judgement still belonging to the person handling it.</p>
-            <div className={swiggy.staticDevice}><DeviceFrame variant="desktop"><a href="/portfolio/swiggy/evolution/evidence-clean.png" aria-label="Inspect the original workspace at full size"><Image unoptimized src="/portfolio/swiggy/evolution/evidence-clean.png" width={1440} height={900} alt="Original Agent Desk interface with order information, customer conversation and policy checks in three columns" sizes="(max-width: 700px) 90vw, 1000px" /></a></DeviceFrame></div>
+            <div className={swiggy.layeredWorkspace} data-layered-workspace>
+              <div className={swiggy.workspacePlane} aria-hidden="true" />
+              <div className={swiggy.workspaceMonitor} data-layer-depth="back"><DeviceFrame variant="desktop"><a href="/portfolio/swiggy/evolution/evidence-clean.png" aria-label="Inspect the original workspace at full size"><Image unoptimized src="/portfolio/swiggy/evolution/evidence-clean.png" width={1440} height={900} alt="Original Agent Desk interface with order information, customer conversation and policy checks in three columns" sizes="(max-width: 700px) 85vw, 900px" /></a></DeviceFrame></div>
+              <a className={swiggy.riderProof} data-layer-depth="front" href="/portfolio/swiggy/evolution/rider-detail.png" aria-label="Inspect the rider’s original trip record"><Image unoptimized src="/portfolio/swiggy/evolution/rider-detail.png" width={570} height={630} alt="Original rider trip log and checks, shown as a detail in front of the shared case" sizes="(max-width: 700px) 55vw, 340px" /></a>
+            </div>
             <details className={swiggy.report}><summary>The layout choice</summary><p>I chose three columns to give the conversation a stable place while the agent investigates. A condition-led alternative put evidence beside each policy condition. It would keep a condition and its evidence together, while making the separate information groups less distinct. The three-column choice still needs a comparative user review.</p><div className={swiggy.layoutAlternatives}><div><h3>Selected layout</h3><div className={swiggy.threeColumns}><span>Case</span><span>Conversation</span><span>Checks and decision</span></div></div><div><h3>Condition-led alternative</h3><div className={swiggy.twoColumns}><span>Conversation</span><span>Condition<br />Evidence<br />Action</span></div></div></div></details>
           </div>
         </section>
