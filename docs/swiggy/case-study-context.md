@@ -138,3 +138,34 @@ user study. Text equivalents, native playback controls and GIF downloads remain
 available; no film autoplays. The earlier complete five-ticket references stay
 inside a disclosure. The cover is a 1600 by 900 composition of original screen
 captures, using the existing ink/paper palette, not a redrawn interface.
+
+## Editorial refinement, 9 November
+
+The user authorized refining Meditimer app and Swiggy on this branch and pushing
+here. This does not authorize merging. The portfolio editorial skill is included
+and registered in AGENTS.md. Its initial Swiggy assessment predates this branch;
+the source records here supersede that developing-project description.
+
+Swiggy now follows SW-2041 through its original evidence, party-contact and
+decision films, with an original workspace capture and explicit known/unknown
+information. Public policy and actual research inputs precede optional draft
+counts. The missing transcript remains an unresolved finding. Prototype files,
+media, credits and findings are unchanged. Individual contribution still needs
+confirmation; PR #4 remains a draft.
+
+Meditimer now distinguishes the survey's overlapping response paths, original
+role examples and proposed dose-status comparison. The original caregiver
+screen's Missed wording is explicitly identified as a limitation. The paired
+screens use different sample people and are not presented as synchronized data.
+Setup explanations describe the actual fields and the existing device imagery
+and scene composition are preserved. The dose-status change is announced to
+assistive technology. No health or deployed synchronization outcome is claimed.
+
+Validation for this refinement: production build, ESLint, TypeScript and Git
+whitespace checks passed. Both existing browser suites passed across five
+viewport widths. Meditimer checked 50 image proportions plus controls, dialogs,
+navigation and native image access. Swiggy checked all media, prototype source
+hashes, keyboard iteration controls, stage navigation and no-JavaScript access.
+Neither suite recorded runtime errors. Screenshots and JSON reports are retained
+outside Git in `/workspace/editorial-medicine-review` and
+`/workspace/editorial-swiggy-review`.

@@ -4,7 +4,7 @@ export const swiggyProject: Project = {
   slug: "swiggy-agent-workflow",
   title: "Swiggy agent workflow",
   headline: "Help the agent investigate, then decide",
-  summary: "Agent Desk brings the conversation, order, evidence and working policy into one support workspace. It helps a human investigate a refund or dispute without recommending who is at fault or what the outcome should be.",
+  summary: "Agent Desk is a five-ticket support prototype. An agent can inspect a complaint, review evidence, contact the restaurant or rider, then choose and explain an outcome. The case follows how that workflow developed across three wireframes and Agent Desk v7.1.",
   brief: "Design a workspace for the human who receives a conversation from a support bot. Keep the live conversation available while they inspect a complaint, contact the other parties and explain their decision.",
   problem: "A refund decision affects the customer, restaurant and rider. The agent needs to connect a claim to its evidence and the applicable conditions, while keeping incomplete or conflicting records visible. The design question is how to reduce the work of finding information without replacing that judgement.",
   contribution: "The supplied handoff credits Sukhmanpreet Singh Saini as project owner and Akshat for research. Individual portfolio contribution is awaiting confirmation.",

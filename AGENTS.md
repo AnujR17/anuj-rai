@@ -2,6 +2,8 @@
 
 Read `docs/swiggy/case-study-context.md` for the 8 November Swiggy handoff, source and credit checks, recordings, and section-navigation repair
 
+For case-study content refinement, project explanations, evidence selection or visual storytelling, read `.agents/skills/portfolio-case-study-editorial/SKILL.md`. Its reference study and evidence rules supplement the current portfolio briefs; they do not override user instructions or authorize publishing.
+
 Read `docs/medicine-case-restoration.md` for the restored layered Meditimer case and fixed raster phone mockups
 Never redraw device borders or corners with responsive CSS around its screen PNGs
 
