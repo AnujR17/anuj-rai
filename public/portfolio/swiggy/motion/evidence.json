@@ -1,0 +1,84 @@
+{
+  "id": "evidence",
+  "duration": 20.09,
+  "chapters": [
+    {
+      "at": 0,
+      "title": "Start with what the customer sent",
+      "detail": "The complaint is a claim. The photo is a record to inspect.",
+      "camera": [
+        720,
+        450,
+        0.715
+      ]
+    },
+    {
+      "at": 4.21,
+      "title": "Open the evidence, with its origin and time",
+      "detail": "Source and submission time stay alongside the photo.",
+      "camera": [
+        720,
+        455,
+        1.12
+      ]
+    },
+    {
+      "at": 10.26,
+      "title": "Review each image before recording an observation",
+      "detail": "Agree is an agent action. It is not an authenticity score.",
+      "camera": [
+        720,
+        595,
+        1.45
+      ]
+    },
+    {
+      "at": 16.79,
+      "title": "An evidence status changes. The outcome stays open.",
+      "detail": "Fault and action are still unselected.",
+      "camera": [
+        1210,
+        795,
+        1.7
+      ]
+    }
+  ],
+  "events": [
+    {
+      "at": 3.758,
+      "label": "Open customer evidence",
+      "x": 241,
+      "y": 461.5
+    },
+    {
+      "at": 8.277999999999999,
+      "label": "Record first observation",
+      "x": 653,
+      "y": 664.5
+    },
+    {
+      "at": 9.809999999999999,
+      "label": "Inspect the second photo",
+      "x": 726,
+      "y": 571
+    },
+    {
+      "at": 13.744,
+      "label": "Record second observation",
+      "x": 653,
+      "y": 664.5
+    },
+    {
+      "at": 16.337,
+      "label": "Return to case",
+      "x": 1054,
+      "y": 231
+    }
+  ],
+  "errors": [],
+  "method": "Continuous browser capture with real UI actions; explanatory camera and text added in editing",
+  "editing": "Continuous source recording; editorial camera and text rendered at deterministic 30 fps. Final state held for reading. Not a user-test recording.",
+  "renderedFrames": 603,
+  "renderedFps": 30,
+  "sourceSeekVerified": true
+}

@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "layouts": 5,
+  "stagePositions": 25,
+  "runtimeErrors": [],
+  "checks": [
+    "five-stage responsive reading layout and loaded original images",
+    "four-version comparison with keyboard navigation and no-JavaScript access",
+    "three clean 30fps UI recordings with device-mockup GIF exports",
+    "five complete ticket references",
+    "optional media playback and pause",
+    "sixteen-findings disclosure and policy-version conflict",
+    "playable local prototype and original font weights",
+    "normal-motion shared and Meditimer indices",
+    "native no-JavaScript links and disclosures",
+    "Work-to-case navigation and scroll cleanup",
+    "original source SHA-256 hashes"
+  ],
+  "date": "2026-11-09",
+  "revision": "Layered source compositions, first-fold hero and direct contribution",
+  "media_exports": {
+    "evidence": 159,
+    "parties": 219,
+    "decision": 158,
+    "method": "8 fps framed GIFs; full frame counts and durations verified with ffprobe"
+  },
+  "layout_report": "layers-verification.json"
+}

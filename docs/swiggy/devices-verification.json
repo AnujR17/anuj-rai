@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "sizes": [
+    {
+      "width": 1440,
+      "id": "evidence"
+    },
+    {
+      "width": 1440,
+      "id": "parties"
+    },
+    {
+      "width": 1440,
+      "id": "decision"
+    },
+    {
+      "width": 768,
+      "id": "evidence"
+    },
+    {
+      "width": 768,
+      "id": "parties"
+    },
+    {
+      "width": 768,
+      "id": "decision"
+    },
+    {
+      "width": 390,
+      "id": "evidence"
+    },
+    {
+      "width": 390,
+      "id": "parties"
+    },
+    {
+      "width": 390,
+      "id": "decision"
+    },
+    {
+      "width": 320,
+      "id": "evidence"
+    },
+    {
+      "width": 320,
+      "id": "parties"
+    },
+    {
+      "width": 320,
+      "id": "decision"
+    }
+  ],
+  "runtimeErrors": [],
+  "checks": [
+    "eight media scenes in physical device mockups",
+    "scenario tabs: keyboard, selected content and no-JavaScript fallback",
+    "play, pause and restart",
+    "fullscreen with native controls, restored on exit",
+    "automatic pause when scrolled out of view",
+    "original 8:5 source proportions",
+    "four viewport widths without overflow",
+    "no autoplay, including reduced motion",
+    "native video controls without JavaScript"
+  ]
+}

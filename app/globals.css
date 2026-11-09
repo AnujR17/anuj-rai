@@ -189,7 +189,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid #b84a26; outline-offs
 @media (max-width: 700px) { :root { --section-title-size: clamp(42px, 11vw, 60px); --section-bottom: 40px; } }
 @media (hover: hover) and (pointer: fine) { html[data-custom-cursor="pointer"], html[data-custom-cursor="pointer"] * { cursor: none !important; } }
 
-.route-entry { flex: 1; animation: route-enter 550ms cubic-bezier(.22, 1, .36, 1) both; }
+.route-entry { flex: 1; animation: route-enter 550ms cubic-bezier(.22, 1, .36, 1) backwards; }
 .navigation-progress { position: fixed; z-index: 80; inset: 0; display: flex; align-items: end; background: var(--background); padding: var(--section-bottom) var(--section-inset); font-size: var(--section-title-size); letter-spacing: -.055em; pointer-events: none; }
 @keyframes route-enter { from { opacity: 0; translate: 0 12px; } to { opacity: 1; translate: 0 0; } }
 @media (prefers-reduced-motion: reduce) { .route-entry { animation: none; } }
