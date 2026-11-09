@@ -3,11 +3,11 @@ import type { Project } from "./case-study";
 export const swiggyProject: Project = {
   slug: "swiggy-agent-workflow",
   title: "Swiggy agent workflow",
-  headline: "Help the agent investigate, then decide",
-  summary: "Agent Desk is a five-ticket support prototype. An agent can inspect a complaint, review evidence, contact the restaurant or rider, then choose and explain an outcome. The case follows how that workflow developed across three wireframes and Agent Desk v7.1.",
-  brief: "Design a workspace for the human who receives a conversation from a support bot. Keep the live conversation available while they inspect a complaint, contact the other parties and explain their decision.",
-  problem: "A refund decision affects the customer, restaurant and rider. The agent needs to connect a claim to its evidence and the applicable conditions, while keeping incomplete or conflicting records visible. The design question is how to reduce the work of finding information without replacing that judgement.",
-  contribution: "The supplied handoff credits Sukhmanpreet Singh Saini as project owner and Akshat for research. Individual portfolio contribution is awaiting confirmation.",
+  headline: "Investigating a refund while the conversation stays live",
+  summary: "A customer says the wrong dish arrived. The support agent has to check the order, inspect the photos and hear from the restaurant while keeping the conversation going. Agent Desk brings that investigation into one workspace.",
+  brief: "Design the workspace an agent uses after a bot hands over an order complaint, from the first message through investigation, a decision and closure.",
+  problem: "A photo, a delivery record and a restaurant’s account can tell different stories. The agent needs to compare them, find the relevant policy and explain what happens next. The prototype explores that task across five fictional complaints.",
+  contribution: "Research, concept, interaction and visual design, design decisions and the underlying business logic. Developed with a four-person group.",
   image: { src: "/portfolio/swiggy/cover.png", alt: "Agent Desk cover composed from the original workspace and a close-up of its evidence viewer", width: 1600, height: 900, caption: "Original interface captures composed with scripts/render-swiggy-assets.mjs. Fictional ticket data; evidence photos generated with Figma AI." },
   live: "/work/swiggy-agent-workflow/prototype",
   liveLabel: "Try the five-ticket prototype",
@@ -20,7 +20,7 @@ export const swiggyProject: Project = {
     design: [{ title: "From handover to a recorded decision", paragraphs: ["Five scripted tickets support evidence review, party contact, policy checks, decision messages, confirmation and closure. The coded Agent Desk v7.1 prototype is the final visual reference; Figma stops before the 4–7 November review changes."] }],
     outcome: [{ title: "What the walkthrough established", paragraphs: ["A Claude-led heuristic evaluation recorded 16 findings, including three major problems. It was not a user test. Action counts and Keystroke-Level Model estimates do not establish faster decisions, and the findings remain unresolved."] }],
   },
-  note: "Independent concept, unaffiliated with Swiggy. All ticket data and replies are fictional; evidence photos were generated with Figma AI. Project owner: Sukhmanpreet Singh Saini. Research collaborator: Akshat. Claude assisted prototype construction and performed the supplied heuristic evaluation. Anuj Rai’s individual design contribution needs confirmation before publication.",
+  note: "Independent concept, unaffiliated with Swiggy. Anuj Rai: research, concept, design, decisions and business logic, developed with a four-person group including Sukhmanpreet Singh Saini and Akshat. Claude assisted prototype construction and performed the documented heuristic evaluation. Ticket data and replies are fictional; evidence photos were generated with Figma AI.",
 };
 
 export const swiggyScenarios = [

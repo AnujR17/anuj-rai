@@ -16,55 +16,14 @@
     "Work-to-case navigation and scroll cleanup",
     "original source SHA-256 hashes"
   ],
-  "static_checks": [
-    "npm run build",
-    "npm run lint",
-    "npx tsc --noEmit",
-    "git diff --check"
-  ],
-  "baseline_portfolio_regression": {
-    "passed": true,
-    "layoutChecks": 60,
-    "caseRoutes": [
-      "medicine-app",
-      "swiggy-agent-workflow",
-      "two-wheeler-dashboard",
-      "toki",
-      "india-in-orbit",
-      "gandhinagar-roundabouts",
-      "medtimer",
-      "myalumnus",
-      "medicine-storage-research",
-      "consumer-experience",
-      "skidge"
-    ],
-    "workProjects": [
-      "medicine-app",
-      "swiggy-agent-workflow",
-      "two-wheeler-dashboard",
-      "toki",
-      "india-in-orbit",
-      "gandhinagar-roundabouts",
-      "medtimer",
-      "myalumnus"
-    ],
-    "runtimeErrors": [],
-    "checks": [
-      "global wheel and touch",
-      "keyboard and offscreen focus",
-      "finite endpoints",
-      "initial hold",
-      "hover pause",
-      "reduced motion",
-      "client-navigation cleanup",
-      "native no-JavaScript links and disclosures",
-      "404",
-      "image loading",
-      "shared alignment"
-    ]
-  },
-  "visual_inspection": [
-    "Original loaded wireframes and cover at desktop and phone widths",
-    "Exported evidence, rider-log, held-state and chosen-action/draft frames match their explanatory text"
+  "date": "2026-11-09",
+  "environment": "Local production build, Next.js 16.2.12",
+  "editorial_checks": [
+    "Confirmed personal contribution with four-person group acknowledgement",
+    "Final rendered SW-2041 dish names agree with script overrides",
+    "New investigation flow reflows at 320px with and without JavaScript",
+    "Three original finding crops load at native resolution without lossy optimization",
+    "Original prototype source hashes preserved",
+    "Build, lint, TypeScript and whitespace checks pass"
   ]
 }

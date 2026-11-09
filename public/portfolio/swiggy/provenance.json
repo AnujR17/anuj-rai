@@ -114,15 +114,15 @@
     }
   },
   "new_sources": {
-    "S2 Wireframe \u00b7 Agent Panel1.html": {
+    "S2 Wireframe · Agent Panel1.html": {
       "sha256": "3e6a573e486433b922b112d55019599f5532fc0a59a4bcf8be56a5b46b0c0807",
       "role": "first supplied wireframe, v1.3"
     },
-    "S2 Wireframe \u00b7 Second Iteration.html": {
+    "S2 Wireframe · Second Iteration.html": {
       "sha256": "6de4be6bb2cbff65cd06f1cf095d8b880e34c636d616dceebabea679bfb3c538",
       "role": "14 October v2"
     },
-    "S2 Wireframe \u00b7 Third Iteration.html": {
+    "S2 Wireframe · Third Iteration.html": {
       "sha256": "25f10532bf0e7293e3e6d41293eb764949f4f7ab13bc4fe23ccfb9ad068816ce",
       "role": "15 October v3"
     },
@@ -176,5 +176,27 @@
     },
     "motion_export": "Deterministic 30 fps camera and text frames over continuous recorded input; final frames held for reading. GIF exports at 12 fps.",
     "source_video_seeking": "Each exported frame verifies the decoded source time. Blob-backed footage avoids HTTP-range limitations in the local renderer."
+  },
+  "finding_crops_2026_11_09": {
+    "partial.png": {
+      "source": "08_testing-heuristic-evaluation/screens/f1.png",
+      "sha256": "ecb9b54838d8e2ac9c61b89cdd4fb4505ac373d191d3a851af94808505bd3d52",
+      "treatment": "Unmodified original heuristic-review crop, rendered inline"
+    },
+    "draft.png": {
+      "source": "08_testing-heuristic-evaluation/screens/f2.png",
+      "sha256": "e87b67623360960c86798253c8b4f648b60841ca46466918222476e559ecbc80",
+      "treatment": "Unmodified original heuristic-review crop, rendered inline"
+    },
+    "checks.png": {
+      "source": "08_testing-heuristic-evaluation/screens/f3.png",
+      "sha256": "50135a6af370338a6369f35e93a1e6fdefc5bf6b2f5610ba964729f9c7f17af1",
+      "treatment": "Unmodified original heuristic-review crop, rendered inline"
+    }
+  },
+  "editorial_flow_2026_11_09": {
+    "file": "components/case-study/SwiggyFlow.tsx",
+    "source": "Final prototype and handoff design/decision sequence",
+    "status": "New explanatory diagram, not an original research artifact or enforced policy gate"
   }
 }

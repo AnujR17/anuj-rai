@@ -46,14 +46,14 @@ Original standalone app: `/portfolio/swiggy/prototype/index.html`.
 
 ## Evidence and authorship
 
-The archive credits **Sukhmanpreet Singh Saini as owner** and **Akshat for
-research**. The existing portfolio's vague first-person Swiggy text does not
-establish Anuj's actual contribution. A question was sent to the user asking for
-precise individual and collaborator credits. Until answered, the page retains
-the supplied team credits and does not claim Anuj designed or implemented every
-feature. Keep the PR a draft until this is resolved. No duration is inferred
-from the original one-week sprint plan; the documented iterations span October
-and November.
+On 9 November the user confirmed Anuj's ownership and contribution: research,
+originating the idea, design, decisions and base business logic within a
+four-person group. Sukhmanpreet's and Akshat's names in the archive derive from
+their Claude accounts and do not establish exclusive ownership. This author
+clarification supersedes the earlier unresolved-credit inference. Write the
+confirmed work in Anuj's voice, with a brief four-person group acknowledgement;
+do not invent a task split or call group work solo. This question is resolved.
+See `editorial-revision-2026-11-09.md` for the current case structure and checks.
 
 One ten-minute call with an Amex expert is real but outside food delivery.
 The supplemental interview is simulated. Personas and the mental model are

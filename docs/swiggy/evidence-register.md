@@ -64,3 +64,19 @@ The studio HTML and a DM Sans font copy must be served there on port 8767; the
 font is downloaded from Google's original DM Sans family. Final assets are
 checked into public/portfolio/swiggy; the production page needs no local scripts,
 font service or media-rendering server.
+
+
+## 9 November editorial revision
+
+The current author clarification and claim/visual records are in
+`editorial-revision-2026-11-09.md`. Anuj confirmed research, concept, design,
+decisions and business logic within a four-person group; account names in the
+handoff do not override this. The public case now follows final SW-2041 content:
+kadai paneer ordered, malai kofta reported. Later data/script overrides and the
+rendered interface supersede the earlier base dish names.
+
+Three unmodified heuristic-review crops (f1/f2/f3) illustrate the partial refund,
+truncated draft and collapsed checks. Their SHA-256 values and archive locations
+are in `public/portfolio/swiggy/provenance.json`. The new HTML task flow is an
+editorial explanation of the prototype, not a historical diagram, enforced
+policy gate, real review integration or payment execution.
