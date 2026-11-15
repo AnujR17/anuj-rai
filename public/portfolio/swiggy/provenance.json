@@ -288,5 +288,62 @@
     ],
     "crop": "Rider detail masks empty lower source area in the composition; native link opens the entire source.",
     "media": "Device MP4 and GIF source files are unchanged by this layout revision."
+  },
+  "editorial_vectors": {
+    "date": "2026-11-15",
+    "method": "New explanatory SVG diagrams generated with scripts/render-swiggy-vectors.mjs, in desktop and phone compositions. Embedded DM Sans subsets reused from the portfolio Next build. Not historical research artifacts.",
+    "sources": {
+      "architecture": "Final v7.1 My Workspace and case information groups; Agent Desk Handbook H-03/H-04",
+      "refund-cost": "SW-2070 case data; engine.js amt and costLine0; Handbook H-07 through H-09. Original UI verified after choosing Restaurant and Full refund.",
+      "findings": "Original single AI-led heuristic evaluation: 3 major, 9 minor, 4 cosmetic, all unresolved."
+    },
+    "files": {
+      "architecture-mobile.svg": {
+        "sha256": "4f9fa317961cee7fdd9cd1df50d3460ecd68b50e4c5b0466d6d92c0b08f9ccac",
+        "bytes": 76668,
+        "width": 360,
+        "height": 762
+      },
+      "architecture.svg": {
+        "sha256": "dff01d83b134ce48ca00d210a7703d5be712d3a4aba6cb778d45d24f79560753",
+        "bytes": 76555,
+        "width": 960,
+        "height": 560
+      },
+      "findings-mobile.svg": {
+        "sha256": "d8d76a607061eb2266430ff2b3345547061454d1fe4337a1cfe28c5d25b64751",
+        "bytes": 75558,
+        "width": 360,
+        "height": 330
+      },
+      "findings.svg": {
+        "sha256": "f23b1f2563344ba4006d3165df20cf533f0b8b5f762a2f20bf98168176eb9813",
+        "bytes": 75218,
+        "width": 960,
+        "height": 200
+      },
+      "refund-cost-mobile.svg": {
+        "sha256": "8361db4e948a24ea92afb53feb662c234ced2a79f03065a929967a073dc0e5b3",
+        "bytes": 76341,
+        "width": 360,
+        "height": 710
+      },
+      "refund-cost.svg": {
+        "sha256": "0de71b8645c9dc38169357ab4f8b6016526ee627e0385254f255f8ab3c86d120",
+        "bytes": 76347,
+        "width": 960,
+        "height": 430
+      }
+    }
+  },
+  "agent_desk_handbook": {
+    "file": "agent-desk-handbook-v1.0.pdf",
+    "edition": "1.0",
+    "policy_version": "2.1",
+    "pages": 38,
+    "source": "User upload, 15 November 2026; identical to the supplied reference site PDF",
+    "sha256": "a126e603fd8293cfcd823038fda274353bb7d5c436c4f90ed499faf92f593d4f",
+    "bytes": 254538,
+    "limit": "Project specification and assumptions, not Swiggy internal operating policy."
   }
 }

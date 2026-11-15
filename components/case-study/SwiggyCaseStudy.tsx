@@ -7,6 +7,7 @@ import { DeviceMotion } from "./DeviceMotion";
 import { SwiggyEvolution } from "./SwiggyEvolution";
 import { SwiggyScenarios } from "./SwiggyScenarios";
 import { SwiggyFlow } from "./SwiggyFlow";
+import { SwiggyVector } from "./SwiggyVector";
 import { EffortChart } from "./SwiggyGraphics";
 import styles from "./case-study.module.css";
 import swiggy from "./swiggy-case-study.module.css";
@@ -49,37 +50,42 @@ export function SwiggyCaseStudy() {
         <div className={swiggy.rolePanel}><dt>My role</dt><dd>{project.contribution}</dd></div>
       </dl>
       <div className={styles.framing}><div><h2>Project brief</h2><p>{project.brief}</p></div><div><h2>The challenge</h2><p>{project.problem}</p></div></div>
-      <div className={swiggy.actions}><Link href="/work/swiggy-agent-workflow/prototype" className={styles.textLink}>Try Agent Desk</Link><a href="/portfolio/swiggy/design-rulebook-v7.1.pdf" className={styles.textLink}>Design rulebook</a></div>
+      <div className={swiggy.actions}><Link href="/work/swiggy-agent-workflow/prototype" className={styles.textLink}>Try Agent Desk</Link><a href="/portfolio/swiggy/agent-desk-handbook-v1.0.pdf" className={styles.textLink}>Agent Desk Handbook</a><a href="/portfolio/swiggy/design-rulebook-v7.1.pdf" className={styles.textLink}>Design rulebook</a></div>
       <p className={swiggy.context}>An independent concept, unaffiliated with Swiggy.</p>
     </div>
     <div className={styles.readingLayout}>
       <CaseStudyNav />
       <div className={styles.story}>
         <section id="research" className={styles.stage} aria-labelledby="research-title">
-          <h2 id="research-title">What a refund decision depends on</h2>
+          <h2 id="research-title">Establishing what the agent can check</h2>
           <div className={styles.stageContent + " " + swiggy.narrative}>
-            <p>I began with the parts of support I could examine: public policies, other platforms’ refund guidance and our group’s research into decision support. A short call with an American Express customer-service expert added an operational perspective: the screen needs to make evidence easy to take in while the agent works.</p>
-            <p>Swiggy’s public refund terms require merchant permission, but leave the internal approval process unspecified. That gap affected the design. The early wireframes requested permission during the case; later versions used standing restaurant terms. I treated those terms as a project assumption and documented them separately from published policy.</p>
-            <p>Fraud assessment brought another difficulty. A refund history or a late photo might be worth investigating, yet neither explains what happened to this order. I wanted the agent to see where a record came from, compare it with other accounts and ask the next useful question.</p>
+            <p>I worked from public refund terms, other platforms’ published guidance and research on decision support. A short call with a customer-service expert at American Express added an operational perspective, although it could not tell me how Swiggy agents work. Internal screens, rules and real case data were unavailable.</p>
+            <p>A published condition could inform a check, but it could not fill every gap in the investigation. The photo requirement, restaurant terms and review thresholds needed explicit project assumptions. I documented their sources separately so those assumptions could be examined alongside the design.</p>
             <details className={swiggy.report}><summary>Research and source notes</summary><p>The research record includes public policy, cross-platform comparisons, literature, one ten-minute call with an American Express customer-service expert and a separately labelled simulated interview. Swiggy agents and internal operating data were unavailable to us. The simulated interview supplied secondary material, not participant evidence.</p><p>Akshat’s customer-side audit included fabricated complaints. The accounts disagree about later genuine claims, and whether the refunds were returned is unrecorded. That account remains in the source record; it is not used to estimate fraud prevalence.</p><div className={styles.sourceLinks}><a href="https://www.swiggy.com/refund-policy">Swiggy Cancellation and Refund Policy</a><a href="https://www.swiggy.com/terms-and-conditions">Swiggy Terms of Use</a><a href="https://partner.swiggy.com/food/tnc/sellertnc">Swiggy Seller Terms</a></div></details>
           </div>
         </section>
         <section id="insights" className={styles.stage} aria-labelledby="insights-title">
-          <h2 id="insights-title">One order, three accounts</h2>
+          <h2 id="insights-title">A record is not a verdict</h2>
           <div className={styles.stageContent + " " + swiggy.narrative}>
-            <p>The customer describes what arrived. The restaurant has a packing record. The rider has a trip record. I brought those accounts into a shared case, with the live conversation between the order details and the policy checks.</p>
-            <p>The agent can move between the parties, inspect a source, change a check and choose how to proceed. That is the role I wanted for the system: a companion to the investigation, with the judgement still belonging to the person handling it.</p>
+            <p>A delivery status records what was marked in the system. A photograph shows what the customer submitted. A restaurant’s reply gives another account. None settles the whole complaint on its own.</p>
+            <p>I used that distinction to separate records, comparisons and agent actions. The photo viewer includes the source and submission time; the agent records Agree or Disagree. An authenticity score was considered and rejected because it would replace an inspectable record with a judgement about whether to believe it.</p>
+            <p>History needed similar care. Counts appear alongside totals for each party. A late photo or a previous refund can prompt another question, but neither determines whether this complaint is genuine.</p>
             <div className={swiggy.layeredWorkspace} data-layered-workspace>
               <div className={swiggy.workspacePlane} aria-hidden="true" />
               <div className={swiggy.workspaceMonitor} data-layer-depth="back"><DeviceFrame variant="desktop"><a href="/portfolio/swiggy/evolution/evidence-clean.png" aria-label="Inspect the original workspace at full size"><Image unoptimized src="/portfolio/swiggy/evolution/evidence-clean.png" width={1440} height={900} alt="Original Agent Desk interface with order information, customer conversation and policy checks in three columns" sizes="(max-width: 700px) 85vw, 900px" /></a></DeviceFrame></div>
               <a className={swiggy.riderProof} data-layer-depth="front" href="/portfolio/swiggy/evolution/rider-detail.png" aria-label="Inspect the rider’s original trip record"><Image unoptimized src="/portfolio/swiggy/evolution/rider-detail.png" width={570} height={630} alt="Original rider trip log and checks, shown as a detail in front of the shared case" sizes="(max-width: 700px) 55vw, 340px" /></a>
             </div>
-            <details className={swiggy.report}><summary>The layout choice</summary><p>I chose three columns to give the conversation a stable place while the agent investigates. A condition-led alternative put evidence beside each policy condition. It would keep a condition and its evidence together, while making the separate information groups less distinct. The three-column choice still needs a comparative user review.</p><div className={swiggy.layoutAlternatives}><div><h3>Selected layout</h3><div className={swiggy.threeColumns}><span>Case</span><span>Conversation</span><span>Checks and decision</span></div></div><div><h3>Condition-led alternative</h3><div className={swiggy.twoColumns}><span>Conversation</span><span>Condition<br />Evidence<br />Action</span></div></div></div></details>
           </div>
         </section>
         <section id="concept" className={styles.stage} aria-labelledby="concept-title">
-          <h2 id="concept-title">Making room for the conversation</h2>
+          <h2 id="concept-title">Keeping the conversation inside the investigation</h2>
           <div className={styles.stageContent + " " + swiggy.narrative}>
+            <p>I arranged the case records on the left, the live conversation in the centre, and checks and decision controls on the right. The queue remains alongside them. The map below explains how the dashboard leads into that shared case.</p>
+            <div className={swiggy.architecturePanel}>
+              <div className={swiggy.vectorIntro}><h3>Information architecture</h3><p>Assigned, On hold, Shelved and Closed organise the workspace. Opening a ticket brings its records, conversation and decision tools together.</p></div>
+              <SwiggyVector id="architecture" />
+            </div>
+            <details className={swiggy.report}><summary>The layout alternative</summary><p>A second layout grouped evidence with each policy condition in one panel. That kept a condition and its supporting record together. The selected arrangement keeps the information groups distinct, with more cross-referencing between them. It has not been compared with the alternative in an agent study.</p><div className={swiggy.layoutAlternatives}><div><h3>Selected layout</h3><div className={swiggy.threeColumns}><span>Case</span><span>Conversation</span><span>Checks and decision</span></div></div><div><h3>Condition-led alternative</h3><div className={swiggy.twoColumns}><span>Conversation</span><span>Condition<br />Evidence<br />Action</span></div></div></div></details>
             <p>The early wireframes repeated permission and history in several places. Working through the screens meant deciding what needed to stay in view and what the agent could open when it became relevant.</p>
             <SwiggyEvolution />
             <div className={swiggy.decisionStudy}>
@@ -91,17 +97,25 @@ export function SwiggyCaseStudy() {
           </div>
         </section>
         <section id="design" className={styles.stage} aria-labelledby="design-title">
-          <h2 id="design-title">Five conversations to work through</h2>
+          <h2 id="design-title">From evidence to an explainable response</h2>
           <div className={styles.stageContent + " " + swiggy.narrative}>
-            <p>A wrong dish, a missing item and a delivery dispute ask different things of an agent. I built five scenarios around those differences, leaving room for the investigation to change as a party responds or the evidence is questioned.</p>
-            <SwiggyScenarios />
-            <p>The recordings follow one route through each case. The prototype uses scripted branches to explore alternative accounts; the agent chooses the final action. Ticket data and replies are fictional; evidence photos were generated with Figma AI. Calls and refunds are simulated.</p>
+            <p>In the wrong-item scenario, the customer ordered kadai paneer and reports a different dish. The agent can open both photos, inspect their context and contact the restaurant. One scripted branch has the restaurant acknowledge a bag swap; the recordings below follow that route.</p>
+            <p>The agent can revisit records, revise a check and choose a response. The decision controls remain available throughout, so the investigation can develop as new information arrives.</p>
             <details className={swiggy.report}><summary>See the investigation flow</summary><SwiggyFlow /></details>
             <div className={swiggy.interactionSequence}>
               <Explainer id="evidence" title="Review the photo in context"><p>I kept the image’s source and submission time inside the viewer, beside Agree and Disagree. The agent can inspect both photos and record an observation before returning to the customer.</p></Explainer>
               <Explainer id="parties" title="Keep the contact inside the case"><p>Restaurant and rider records open within the same complaint. The agent can inspect a trip, return to the customer and hold the conversation while waiting for someone else.</p></Explainer>
               <Explainer id="decision" title="Keep the reason with the decision"><p>In this wrong-item branch, the restaurant admits a bag swap. Selecting Restaurant and Full refund creates an editable explanation. The agent sends it, chooses a reason and confirms, leaving a record of the decision.</p></Explainer>
             </div>
+            <section className={swiggy.accentScene} aria-labelledby="remedy-cost-title" data-accent-scene="remedy-cost">
+              <h3 id="remedy-cost-title">A customer remedy and who pays</h3>
+              <p>The business logic separates the customer’s remedy from the cost allocation. In SW-2070, the missing-item case, the restaurant’s assumed terms allow no refunds. If the agent chooses Restaurant and Full refund, the project model places the ₹266 cost on Swiggy.</p>
+              <SwiggyVector id="refund-cost" />
+              <p>Standing terms replace a live permission request in this concept. They make the cost visible after the agent’s choice, but remain a project assumption that would need operational review.</p>
+            </section>
+            <div className={swiggy.scenarioIntroduction}><h3>Five investigations, different uncertainties</h3><p>A missing item, a disputed delivery and a quality complaint need different evidence. The five fictional cases use scripted branches and agent-selected actions. Each recording shows one route; the agent can question the account or choose another response.</p></div>
+            <SwiggyScenarios />
+            <p>Ticket data and replies are fictional; evidence photos were generated with Figma AI. Calls and refunds are simulated.</p>
             <details className={swiggy.report}><summary>Compare Atlas and Kirridesk</summary><p>I compared both visual systems on the same case and carried Atlas forward: Inter, neutral surfaces and near-black actions. Later reviews refined the spacing, dropdown order and icon states.</p><div className={swiggy.comparisonPair}>{["atlas", "kirridesk"].map(name => <div key={name}><h4>{name === "atlas" ? "Atlas" : "Kirridesk"}</h4><a href={"/portfolio/swiggy/process/" + name + ".jpg"}><Image unoptimized src={"/portfolio/swiggy/process/" + name + ".jpg"} width={1440} height={900} alt={"Original " + name + " candidate on the wrong-item case"} sizes="(max-width: 700px) 90vw, 500px" /></a></div>)}</div></details>
           </div>
         </section>
@@ -109,16 +123,17 @@ export function SwiggyCaseStudy() {
           <h2 id="outcome-title">What the working prototype made visible</h2>
           <div className={styles.stageContent + " " + swiggy.narrative}>
             <p>The prototype took the design through investigation, contact, a decision and closure. A heuristic review then found sixteen issues. Three exposed places where the controls fell short of the decisions the scenarios asked the agent to make.</p>
+            <SwiggyVector id="findings" />
             <div className={swiggy.findingStories}>
               <div><div><h3>Refunding part of a combo</h3><p>The agent can choose Partial, but the control still refunds the whole ₹220 combo. For missing vadas, it needs a separate amount field for the affected portion.</p></div><a href="/portfolio/swiggy/findings/partial.png" aria-label="Open the original partial-refund finding"><Image unoptimized src="/portfolio/swiggy/findings/partial.png" width={440} height={260} alt="Original review crop: Partial selected without a refund-amount field" sizes="(max-width: 700px) 85vw, 440px" /></a></div>
               <div><div><h3>Reading the message before sending it</h3><p>The decision draft outgrows its one-line input. I would let the box expand so the agent can review the full explanation before sending.</p></div><a href="/portfolio/swiggy/findings/draft.png" aria-label="Open the original message-draft finding"><Image unoptimized src="/portfolio/swiggy/findings/draft.png" width={572} height={65} alt="Original review crop: a decision draft truncated by the one-line reply box" sizes="(max-width: 700px) 85vw, 572px" /></a></div>
               <div><div><h3>Seeing the checks that need attention</h3><p>Collapsing the checks saves space, but conceals unmet and unknown conditions. Those rows need to stay visible during the decision.</p></div><a href="/portfolio/swiggy/findings/checks.png" aria-label="Open the original collapsed-checks finding"><Image unoptimized src="/portfolio/swiggy/findings/checks.png" width={440} height={220} alt="Original review crop: policy checks collapsed beneath history counts" sizes="(max-width: 700px) 85vw, 440px" /></a></div>
             </div>
             <p>These would be my first revisions before putting the prototype in front of trained agents. I want to see which records they consult, when they question a claim and whether the explanation reflects their own reasoning. Faster handling would matter only alongside complete checks and sound decisions on genuine and potentially misleading claims.</p>
-            <p>The findings are still open. Claude assisted prototype construction and performed the documented heuristic review; no agents tested this version. We also lack a baseline for Swiggy’s current tool, so any quality or efficiency gain remains a prediction to evaluate.</p>
+            <p>The findings are still open, including coloured party ratings that can suggest a judgement. Claude assisted prototype construction and performed the documented heuristic review; no agents tested this version. Without a baseline for Swiggy’s current tool, quality or efficiency gains remain predictions to evaluate.</p>
             <details className={swiggy.report}><summary>Read all 16 findings and proposed changes</summary><div className={swiggy.tableScroll}><table><thead><tr><th scope="col">Finding</th><th scope="col">Observed problem</th><th scope="col">Proposed next step</th></tr></thead><tbody>{swiggyFindings.map(([id, severity, finding, next]) => <tr key={id}><th scope="row">{id}<span>{severity}</span></th><td>{finding}</td><td>{next}</td></tr>)}</tbody></table></div><p>F4 refers to older policy conditions later moved upstream or removed. That version disagreement needs to be reconciled before a revision.</p></details>
             <details className={swiggy.report}><summary>Effort estimates and the next evaluation</summary><EffortChart /><p>The walkthrough’s 17–21 actions and KLM estimates exclude reading and waiting. A future comparison could present the same synthetic records separately and inside Agent Desk, testing the value of connected context. That study condition would not represent Swiggy’s current workflow.</p><p>I would consider time to decision alongside missed checks, unsupported fraud conclusions, reasons recorded and cases reopened. The current prototype also lacks a full reviewer workspace, a route for restaurants and riders to dispute decisions, and access to the bot transcript behind the handover summary.</p></details>
-            <div className={styles.sources}><h3>Sources and credits</h3><p>Developed within a four-person group including Sukhmanpreet Singh Saini and Akshat. My work covered research, the concept, design and business logic. Claude assisted implementation and the documented review. The original prototype is the final screen reference; Figma stops before its 4–7 November updates.</p><div className={styles.sourceLinks}><Link href="/work/swiggy-agent-workflow/prototype">Try Agent Desk</Link><a href="/portfolio/swiggy/design-rulebook-v7.1.pdf">Design Rulebook v7.1</a><a href="https://www.figma.com/design/GzgfjrlKX8fQURtcMgAYfN">Figma design</a><a href="https://claude.ai/artifact/KtfMHuEqRS3cjPEU9LJ8qV">Original Agent Desk v7.1</a></div></div>
+            <div className={styles.sources}><h3>Sources and credits</h3><p>Developed within a four-person group including Sukhmanpreet Singh Saini and Akshat. My work covered research, the concept, design and business logic. Claude assisted implementation and the documented review. The original prototype is the final screen reference; Figma stops before its 4–7 November updates.</p><div className={styles.sourceLinks}><Link href="/work/swiggy-agent-workflow/prototype">Try Agent Desk</Link><a href="/portfolio/swiggy/agent-desk-handbook-v1.0.pdf">Agent Desk Handbook v1.0</a><a href="/portfolio/swiggy/design-rulebook-v7.1.pdf">Design Rulebook v7.1</a><a href="https://www.figma.com/design/GzgfjrlKX8fQURtcMgAYfN">Figma design</a><a href="https://claude.ai/artifact/KtfMHuEqRS3cjPEU9LJ8qV">Original Agent Desk v7.1</a></div></div>
           </div>
         </section>
       </div>

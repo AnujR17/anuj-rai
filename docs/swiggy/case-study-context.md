@@ -1,5 +1,8 @@
 # Swiggy case study continuation
 
+Read `vector-story-update.md` for the 15 November source-based narrative,
+responsive SVG studies, accent cost example and supplied handbook.
+
 Read `layered-layout.md` for the latest first-fold hero, source-detail layers,
 alternating motion layouts and direct introduction/contribution copy.
 

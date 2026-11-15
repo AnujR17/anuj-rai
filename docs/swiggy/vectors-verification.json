@@ -1,0 +1,94 @@
+{
+  "passed": true,
+  "layouts": [
+    {
+      "width": 1440,
+      "id": "architecture",
+      "source": "architecture.svg"
+    },
+    {
+      "width": 1440,
+      "id": "refund-cost",
+      "source": "refund-cost.svg"
+    },
+    {
+      "width": 1440,
+      "id": "findings",
+      "source": "findings.svg"
+    },
+    {
+      "width": 1024,
+      "id": "architecture",
+      "source": "architecture-mobile.svg"
+    },
+    {
+      "width": 1024,
+      "id": "refund-cost",
+      "source": "refund-cost-mobile.svg"
+    },
+    {
+      "width": 1024,
+      "id": "findings",
+      "source": "findings-mobile.svg"
+    },
+    {
+      "width": 768,
+      "id": "architecture",
+      "source": "architecture-mobile.svg"
+    },
+    {
+      "width": 768,
+      "id": "refund-cost",
+      "source": "refund-cost-mobile.svg"
+    },
+    {
+      "width": 768,
+      "id": "findings",
+      "source": "findings-mobile.svg"
+    },
+    {
+      "width": 390,
+      "id": "architecture",
+      "source": "architecture-mobile.svg"
+    },
+    {
+      "width": 390,
+      "id": "refund-cost",
+      "source": "refund-cost-mobile.svg"
+    },
+    {
+      "width": 390,
+      "id": "findings",
+      "source": "findings-mobile.svg"
+    },
+    {
+      "width": 320,
+      "id": "architecture",
+      "source": "architecture-mobile.svg"
+    },
+    {
+      "width": 320,
+      "id": "refund-cost",
+      "source": "refund-cost-mobile.svg"
+    },
+    {
+      "width": 320,
+      "id": "findings",
+      "source": "findings-mobile.svg"
+    }
+  ],
+  "accentTextContrast": 4.745422250903343,
+  "runtimeErrors": [],
+  "checks": [
+    "three original SVG studies and responsive source selection at five widths",
+    "undistorted vector proportions and no overflow",
+    "native keyboard access and SVG downloads",
+    "all six standalone SVG artboards without clipped text",
+    "embedded DM Sans and no raster content",
+    "handbook matches uploaded source SHA-256",
+    "unchanged stage labels remain inside the desktop viewport",
+    "readable accent text contrast",
+    "static diagrams without JavaScript"
+  ],
+  "date": "2026-11-15"
+}

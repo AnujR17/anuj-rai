@@ -16,13 +16,14 @@
     "Work-to-case navigation and scroll cleanup",
     "original source SHA-256 hashes"
   ],
-  "date": "2026-11-09",
-  "revision": "Layered source compositions, first-fold hero and direct contribution",
+  "date": "2026-11-15",
+  "revision": "Source-based story, original reading layout and responsive vectors",
   "media_exports": {
     "evidence": 159,
     "parties": 219,
     "decision": 158,
     "method": "8 fps framed GIFs; full frame counts and durations verified with ffprobe"
   },
-  "layout_report": "layers-verification.json"
+  "layout_report": "layers-verification.json",
+  "vector_report": "vectors-verification.json"
 }

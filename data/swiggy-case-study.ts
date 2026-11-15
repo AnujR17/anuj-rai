@@ -4,7 +4,7 @@ export const swiggyProject: Project = {
   slug: "swiggy-agent-workflow",
   title: "Swiggy Agent Desk",
   headline: "A workspace for the decisions a bot hands over",
-  summary: "Agent Desk is a chat interface and dashboard for Swiggy’s customer-support agents. Across five order disputes, I explored how the workspace could help them assess evidence, investigate possible fraud and reach a decision they can explain to the customer.",
+  summary: "Agent Desk is a chat interface and dashboard for Swiggy’s customer-support agents. I designed it around the investigation that follows a bot handover: reviewing a complaint, checking evidence, contacting the parties and choosing a response. Five fictional scenarios explore how that investigation can change as new information appears.",
   brief: "Help a trained support agent investigate order complaints and possible fraud while keeping control of the final decision.",
   problem: "When a customer, restaurant and rider give different accounts of an order, the agent needs to investigate the disagreement before choosing a remedy. Bringing those records into the conversation could reduce searching and support a better-informed decision.",
   contribution: "I developed the concept and business logic, researched support policies, and designed the dashboard and chat interactions.",
@@ -12,7 +12,7 @@ export const swiggyProject: Project = {
   live: "/work/swiggy-agent-workflow/prototype",
   liveLabel: "Try the five-ticket prototype",
   source: "https://www.figma.com/design/GzgfjrlKX8fQURtcMgAYfN",
-  resources: [{ label: "Design Rulebook v7.1", href: "/portfolio/swiggy/design-rulebook-v7.1.pdf" }],
+  resources: [{ label: "Agent Desk Handbook v1.0", href: "/portfolio/swiggy/agent-desk-handbook-v1.0.pdf" }, { label: "Design Rulebook v7.1", href: "/portfolio/swiggy/design-rulebook-v7.1.pdf" }],
   stages: {
     research: [{ title: "Designing from public evidence", paragraphs: ["The research combines public policy, a single ten-minute call with a customer-service expert outside food delivery, and a separately labelled simulated interview. There was no access to Swiggy agents, internal policies or real case data."] }],
     insights: [{ title: "Make the evidence visible", paragraphs: ["Policy conditions, recorded facts and decision support need different roles. Party history supplies context, not a score. Missing evidence must remain visible rather than becoming an accusation."] }],

@@ -61,5 +61,6 @@
     "four viewport widths without overflow",
     "no autoplay, including reduced motion",
     "native video controls without JavaScript"
-  ]
+  ],
+  "date": "2026-11-15"
 }

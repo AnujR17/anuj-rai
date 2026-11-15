@@ -67,5 +67,6 @@
     "scroll-linked depth with a static reduced-motion fallback",
     "ink-scene control contrast",
     "native source access and all versions without JavaScript"
-  ]
+  ],
+  "date": "2026-11-15"
 }

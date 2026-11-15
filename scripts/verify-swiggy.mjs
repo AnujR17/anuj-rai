@@ -25,7 +25,7 @@ async function verify() {
     assert.equal(await page.locator('[aria-label="Case study stages"] a').count(), 5);
     assert.equal(await page.locator("video").count(), 8);
     assert.equal(await page.locator('video[autoplay]').count(), 0);
-    assert.equal(await page.locator('a[download]').count(), 8);
+    assert.equal(await page.locator('a[download][href$=".gif"]').count(), 8);
     await page.locator('article img').evaluateAll(async images => Promise.all(images.map(image => { image.loading = 'eager'; return image.decode().catch(() => {}); })));
     assert.deepEqual(await page.locator('article img').evaluateAll(images => images.filter(image => !image.naturalWidth).map(image => image.src)), []);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `Overflow at ${width}`);
