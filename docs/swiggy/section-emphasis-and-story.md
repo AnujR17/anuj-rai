@@ -47,24 +47,29 @@ screenshots remain outside Git under `/workspace/swiggy-accent-final`.
 
 The visual changes do not establish a new historical account. The opening and
 section sequence below are proposed editorial revisions for the author to
-discuss. The original trigger for the idea remains unrecorded; one focused
-question has been sent to the author. No origin anecdote is invented.
+discuss. In response to the opening question, the author confirmed that the
+idea began with supporting faster agent decisions after a bot handover,
+informed by secondary research on fake refund claims and ambiguous cases.
+The agent should have the information and means to identify causes and draw
+their own conclusions. No personal support incident is claimed.
 
 Suggested opening:
 
 > Agent Desk is a chat interface and dashboard for Swiggy's customer-support
-> agents. I designed it for complaints that need a person's judgement after
-> bot-led support: checking competing accounts, assessing possible refund fraud
-> and deciding how to respond. Five fictional scenarios explore how the
-> investigation can change as new information arrives.
+> agents. I designed it to help agents investigate complaints and reach informed
+> decisions faster when a bot cannot resolve the case. The workspace brings
+> together the conversation, order records and relevant checks, giving the
+> agent information to assess possible refund fraud, investigate conflicting
+> accounts and decide how to respond.
 
-This makes the task, object, judgement purpose and scope clear before process.
-Faster handling remains a hypothesis to discuss with the evaluation plan.
+This makes the task, object and judgement purpose clear before process. The
+scope statement establishes the five fictional scenarios. Faster handling is
+expressed as an aim, with an evaluation plan still needed.
 
 | Part | Question it should answer | Existing material to use |
 | --- | --- | --- |
 | Opening | What did I design, for whom and why? | Workspace, concise purpose, contribution and concept status |
-| Research | What could inform an investigation? | Public refund terms, cross-platform guidance, decision-support literature and the scoped expert call; separate assumed operating rules |
+| Research | What makes a complaint hard to judge? | Secondary reports of refund abuse and evidence-quality problems, public refund terms, cross-platform guidance and the scoped expert call; separate assumed operating rules |
 | Insights | What should an agent see before judging a claim? | Evidence source/time, party records, totals alongside history counts and the rejected authenticity score |
 | Concept | How did those implications shape the workspace? | Information architecture, three-column arrangement, real version changes and Hold relocation |
 | Design | How does a case develop as the agent investigates? | One wrong-item example across evidence, party contact and a reasoned response; other scenarios show different uncertainties |

@@ -43,3 +43,14 @@ agent's companion, with autonomy retained by the agent.
 
 Contribution and group acknowledgement remain as confirmed in
 `case-study-context.md`; no new attribution question is created by this note.
+
+## Author elaboration, 16 November 2026
+
+Anuj describes the starting point as designing a dashboard/screen for the
+customer-support agent: helping them take decisions faster, examine possible
+fraudulent refund claims and investigate queries the bot cannot resolve.
+Secondary research on fabricated refund claims and ambiguous cases informed
+that opportunity. The aim is to give agents the relevant information and means
+to identify the cause and reach their own conclusions. This is the author's
+account of the purpose and starting point, not a measured performance result
+or a personal support incident.
