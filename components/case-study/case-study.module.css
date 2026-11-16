@@ -22,7 +22,7 @@
 .number p { font-size: 16px; line-height: 1.6; margin-top: 20px; animation: detail-in 200ms ease both; }
 .readingLayout { display: grid; grid-template-columns: minmax(120px, 20%) minmax(0, 1fr); gap: 6%; align-items: start; }
 .story { min-width: 0; }
-.stageNav { position: sticky; top: max(30px, calc(100svh - 320px)); display: flex; flex-direction: column; align-items: start; gap: 5px; padding-bottom: var(--section-bottom); }
+.stageNav { position: sticky; top: max(24px, calc(100svh - var(--section-bottom) - 240px)); display: flex; flex-direction: column; align-items: start; gap: 5px; z-index: 2; }
 .stageNav a { display: inline-flex; align-items: center; min-height: 44px; font-size: 17px; color: #6a675f; text-underline-offset: 6px; transition: color 180ms ease; }
 .stageNav a:hover, .stageNav a:focus-visible, .stageNav a[aria-current="location"] { color: var(--concept-accent); text-decoration: underline; }
 .stage { padding-block: 35px 85px; scroll-margin-top: 45px; }

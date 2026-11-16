@@ -1,0 +1,96 @@
+{
+  "id": "decision",
+  "duration": 19.76,
+  "chapters": [
+    {
+      "at": 0,
+      "title": "The agent chooses fault and outcome",
+      "detail": "Nothing is selected on the agent’s behalf.",
+      "camera": [
+        1215,
+        800,
+        1.55
+      ]
+    },
+    {
+      "at": 3.9,
+      "title": "The choice creates a draft, not a recommendation",
+      "detail": "The agent can inspect the explanation before sending.",
+      "camera": [
+        715,
+        838,
+        1.2
+      ]
+    },
+    {
+      "at": 9.1,
+      "title": "Explain the decision in the conversation",
+      "detail": "The customer replies are scripted in this concept.",
+      "camera": [
+        710,
+        575,
+        1.02
+      ]
+    },
+    {
+      "at": 13.74,
+      "title": "Keep the reason with the decision",
+      "detail": "The chosen action and its reason form a reviewable record.",
+      "camera": [
+        1210,
+        744,
+        1.4
+      ]
+    },
+    {
+      "at": 16.76,
+      "title": "Confirmation records the chosen action",
+      "detail": "This prototype does not execute payments. The reply field still needs more room.",
+      "camera": [
+        1130,
+        760,
+        1.18
+      ]
+    }
+  ],
+  "events": [
+    {
+      "at": 2.263999999999996,
+      "label": "Choose fault",
+      "x": 1260.5859375,
+      "y": 823.5
+    },
+    {
+      "at": 3.452999999999996,
+      "label": "Choose full refund",
+      "x": 1063,
+      "y": 861.5
+    },
+    {
+      "at": 7.287999999999997,
+      "label": "Send decision explanation",
+      "x": 963.5,
+      "y": 867.5
+    },
+    {
+      "at": 11.994999999999997,
+      "label": "Choose a reason",
+      "x": 1220,
+      "y": 791.5
+    },
+    {
+      "at": 13.287999999999997,
+      "label": "Record reason",
+      "x": 1220,
+      "y": 562.5
+    },
+    {
+      "at": 16.308,
+      "label": "Confirm decision",
+      "x": 1078,
+      "y": 867.5
+    }
+  ],
+  "errors": [],
+  "method": "Continuous browser capture with real UI actions; explanatory camera and text added in editing"
+}

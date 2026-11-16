@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "folds": [
+    {
+      "width": 1440,
+      "height": 900,
+      "titleBottom": 740,
+      "artworkBottom": 624.0234375
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "titleBottom": 740,
+      "artworkBottom": 627.75
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "titleBottom": 696,
+      "artworkBottom": 591.2890625
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "titleBottom": 740,
+      "artworkBottom": 618.453125
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "titleBottom": 592,
+      "artworkBottom": 442.6328125
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "titleBottom": 592,
+      "artworkBottom": 439.1484375
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "titleBottom": 544,
+      "artworkBottom": 402.2421875
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "titleBottom": 366,
+      "artworkBottom": 305.7890625
+    }
+  ],
+  "contrasts": [
+    {
+      "width": 1440,
+      "edge": "top",
+      "minimum": 5.257298599751809
+    },
+    {
+      "width": 1440,
+      "edge": "bottom",
+      "minimum": 5.647927430674284
+    },
+    {
+      "width": 768,
+      "edge": "top",
+      "minimum": 5.257298599751809
+    },
+    {
+      "width": 768,
+      "edge": "bottom",
+      "minimum": 5.647927430674284
+    }
+  ],
+  "runtimeErrors": [],
+  "checks": [
+    "white case and header, including no-JavaScript",
+    "complete laptop and one-line title in eight first-fold sizes",
+    "one light orange emphasis with readable stage links",
+    "full-reading-width window mockups",
+    "six visible screen-selection criteria",
+    "keyboard/full-size source access",
+    "other case background preserved",
+    "native media and all versions without JavaScript"
+  ]
+}

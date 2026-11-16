@@ -72,7 +72,7 @@ export function MedicineStructure() {
 
 export function DoseRecordStudy() {
   const [recorded, setRecorded] = useState(false);
-  return <div className="lf-status-study"><div className="lf-status-card"><span>Afternoon medicine</span><strong>{recorded ? "Marked as taken" : "No update yet"}</strong><div className="lf-status-line" aria-hidden="true" /><span>{recorded ? "The dose has a reported update" : "The record does not establish what happened"}</span></div><button type="button" onClick={() => setRecorded(value => !value)}>{recorded ? "Show an empty record" : "Show a recorded dose"}</button></div>;
+  return <div className="lf-status-study" aria-label="Proposed dose-record wording comparison"><div className="lf-status-card" role="status" aria-live="polite" aria-atomic="true"><span>Afternoon medicine</span><strong>{recorded ? "Marked as taken" : "No update yet"}</strong><div className="lf-status-line" aria-hidden="true" /><span>{recorded ? "The dose has a reported update" : "The record does not establish what happened"}</span></div><button type="button" onClick={() => setRecorded(value => !value)}>{recorded ? "Show an empty record" : "Show a recorded dose"}</button></div>;
 }
 
 const facts = [

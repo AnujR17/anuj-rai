@@ -1,0 +1,101 @@
+{
+  "id": "parties",
+  "duration": 27.29,
+  "chapters": [
+    {
+      "at": 0,
+      "title": "Keep the conversation. Change the context.",
+      "detail": "Customer, rider and restaurant remain in the same case.",
+      "camera": [
+        720,
+        450,
+        0.715
+      ]
+    },
+    {
+      "at": 3.91,
+      "title": "Restaurant records have a place beside the chat",
+      "detail": "The record helps investigation. It does not choose fault.",
+      "camera": [
+        710,
+        340,
+        1.5
+      ]
+    },
+    {
+      "at": 9.66,
+      "title": "Inspect this delivery, not a predicted outcome",
+      "detail": "Trip events and rider checks remain available for review.",
+      "camera": [
+        710,
+        335,
+        1.75
+      ]
+    },
+    {
+      "at": 12.46,
+      "title": "Return to the customer without leaving the case",
+      "detail": "The party investigation remains part of the same conversation.",
+      "camera": [
+        710,
+        430,
+        1.02
+      ]
+    },
+    {
+      "at": 16.29,
+      "title": "Hold belongs beside the conversation timer",
+      "detail": "A pause in the conversation is separate from a refund outcome.",
+      "camera": [
+        875,
+        75,
+        1.7
+      ]
+    },
+    {
+      "at": 21.14,
+      "title": "Record the wait without changing party history",
+      "detail": "This is an agent-only wait record, not a blame label.",
+      "camera": [
+        875,
+        75,
+        1.7
+      ]
+    }
+  ],
+  "events": [
+    {
+      "at": 3.4590000000000005,
+      "label": "Inspect restaurant view",
+      "x": 620.7109375,
+      "y": 74.5
+    },
+    {
+      "at": 9.203,
+      "label": "Inspect rider view",
+      "x": 548.921875,
+      "y": 74.5
+    },
+    {
+      "at": 14.440999999999999,
+      "label": "Return to customer",
+      "x": 480.359375,
+      "y": 74.5
+    },
+    {
+      "at": 18.502,
+      "label": "Put on hold",
+      "x": 941,
+      "y": 74
+    },
+    {
+      "at": 20.682,
+      "label": "Record who the agent is waiting on",
+      "x": 572.9609375,
+      "y": 484.5
+    }
+  ],
+  "errors": [],
+  "method": "Continuous browser capture with real UI actions; explanatory camera and text added in editing",
+  "editing": "Original captured UI; final Held state extended for reading. No UI content or outcome changed."
+}

@@ -2,7 +2,7 @@ export const medicineScreens = [
   {
     "id": "capture",
     "title": "Capture",
-    "reason": "Photograph the prescription to begin adding the medicine details",
+    "reason": "The capture screen starts with a prescription image. It introduces the setup task; this screen alone does not establish accurate prescription recognition.",
     "src": "/portfolio/screens/capture.png",
     "mockup": "/portfolio/screens/capture-mockup.png",
     "width": 840,
@@ -13,7 +13,7 @@ export const medicineScreens = [
   {
     "id": "review",
     "title": "Review",
-    "reason": "Check the medicine details before saving them",
+    "reason": "Review exposes the medicine name, frequency, times, note and stock before Continue. This gives the person a place to check the details before they become part of a routine.",
     "src": "/portfolio/screens/review.png",
     "mockup": "/portfolio/screens/review-mockup.png",
     "width": 840,
@@ -24,7 +24,7 @@ export const medicineScreens = [
   {
     "id": "routine",
     "title": "Routine",
-    "reason": "View the saved medicine and its schedule",
+    "reason": "Routine brings the saved medicine and schedule together. The sequence ends with information the person can inspect before returning to daily recording.",
     "src": "/portfolio/screens/routine.png",
     "mockup": "/portfolio/screens/routine-mockup.png",
     "width": 840,

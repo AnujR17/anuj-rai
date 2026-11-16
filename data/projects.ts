@@ -8,7 +8,7 @@ export const mainProjects: Project[] = [
     "slug": "medicine-app",
     "title": "Meditimer app",
     "headline": "Recording a dose and knowing when to follow up",
-    "summary": "Meditimer gives the person taking medicine a daily record and gives their caregiver a separate view of the routine. I designed the two interfaces around the different decisions each person needs to make.",
+    "summary": "I designed and developed Meditimer as an individual app project. The medicine-taker view places a recording action beside each dose; the caregiver view combines daily progress, medicine details and follow-up controls.",
     "brief": "Design a medicine app that supports recording doses throughout the day and gives a caregiver enough context to decide when to check in.",
     "problem": "The person taking medicine needs to see what is due and record an update. The caregiver needs to understand that record without treating every missing update as a missed dose. The same routine needs to make sense from both sides.",
     "duration": "3 weeks",
@@ -29,9 +29,9 @@ export const mainProjects: Project[] = [
         {
           "title": "Understanding the two sides of a routine",
           "paragraphs": [
-            "The related medicine-routine survey looks at storage, timing and reminder preferences through caregiver and direct senior response paths. I used that wider context to think about how support fits into a day, rather than treating another notification as the whole product.",
-            "The useful distinction for this app is between doing something and following what someone else has recorded. A person taking medicine needs an immediate action. A caregiver needs context before deciding whether to call or send a reminder.",
-            "The survey is a separate research project, linked through the portfolio. It provides background for these questions; the interfaces shown here are the material for examining the app’s actual design."
+            "The related medicine-routine survey examines storage, timing and reminder preferences through caregiver and direct senior response paths. It provides context for how a reminder fits into an existing day.",
+            "The survey has 52 respondents. Its 48 caregiver responses and seven senior responses overlap: three people followed both paths. These perspectives need to remain distinct when interpreting preferences.",
+            "That research frames the questions around support. It did not test these app screens. The two original interfaces below show the recording and follow-up tasks explored in this separate app project."
           ]
         }
       ],
@@ -39,8 +39,8 @@ export const mainProjects: Project[] = [
         {
           "title": "A daily total needs a dose-level explanation",
           "paragraphs": [
-            "A progress count can give a quick sense of the day, but it cannot explain which medicine still needs attention. The caregiver view brings the overall record and individual doses together, so the summary has something concrete behind it.",
-            "The other distinction is what a record can mean. An update can show that someone marked a dose as taken. An empty record leaves a question open. That affects both the language of the interface and the follow-up it encourages."
+            "The caregiver view combines a daily total with individual dose records. The total gives an overview; the records show which medicine needs a closer look. A dose marked as taken records an update from the person using the app. An empty record leaves the caregiver without that update.",
+            "The original caregiver screen uses “Missed” and “Missed out”. That wording assumes more than an absent update can establish. This comparison proposes “No update yet” as a more precise starting point for follow-up; it is an explanation to test, not a revised app screen."
           ]
         }
       ],
@@ -48,8 +48,8 @@ export const mainProjects: Project[] = [
         {
           "title": "Give each person a different starting point",
           "paragraphs": [
-            "I kept the medicine-taker view focused on the current dose and the caregiver view focused on understanding the day. Both refer to a medicine routine, but they do not need to open with the same information.",
-            "This keeps the immediate recording action close to the person doing it, while giving the caregiver a way to move from a summary to a specific concern. Calling remains a direct option when a record alone cannot answer the question."
+            "I gave each person a different starting point. The medicine-taker sees the current dose and “Mark as taken”. The caregiver sees the day’s progress alongside a medicine that needs attention, with reminder and call controls.",
+            "The two original examples use different names, medicines and totals. They demonstrate the two roles, rather than a synchronized account. The proposed structure below connects setup, the routine and each person’s next action."
           ]
         }
       ],
@@ -57,15 +57,15 @@ export const mainProjects: Project[] = [
         {
           "title": "Keep the medicine and its action together",
           "paragraphs": [
-            "The medicine-taker screen places the current dose beside “Mark as taken”. Morning, afternoon and night organise the rest of the day. The recording action belongs to a specific medicine, rather than a detached confirmation at the top of the page.",
-            "That relationship is the part I want the interface to make clear: which dose am I looking at, and which record will this action change? The daily progress remains visible without replacing the individual dose information."
+            "The original medicine-taker screen shows an afternoon Metformin dose with “Mark as taken” inside the same card. Morning, afternoon and night organise the day, while a separate low-stock notice addresses replenishment.",
+            "Keeping the medicine name, time and action together makes the object of the action explicit. The design still needs a check of whether someone can identify the correct dose and understand the resulting record."
           ]
         },
         {
           "title": "Let a caregiver read before acting",
           "paragraphs": [
-            "The caregiver screen combines daily progress, medicine details and a call action. It supports moving from an overview to a dose and then to a conversation if a follow-up is needed.",
-            "Sample names and medicine details make the layouts readable as a daily routine. They let the recording action, day-level progress and follow-up controls be considered together."
+            "The caregiver example shows a 2/5 daily total and an afternoon Amlodipine card with “Send Reminder”. “Call” stays at the top, so following up is available alongside the record.",
+            "A reminder asks for attention; a call allows a conversation about what happened. Neither control establishes that the medicine was taken. The original screen remains available below, including the status wording that needs revision."
           ]
         }
       ],
@@ -73,8 +73,8 @@ export const mainProjects: Project[] = [
         {
           "title": "Two interfaces and a clearer question to test",
           "paragraphs": [
-            "I designed and developed this as an individual app project. The original interfaces establish the two perspectives and their main actions; they give me a concrete way to discuss how recording and follow-up should work together.",
-            "The next evaluation should follow one dose through an unrecorded state, a recorded state and an update awaiting confirmation. I want to know whether both people understand those differences and choose an appropriate next action. The screens alone do not establish a deployed synchronization service or a change in medicine-taking behaviour."
+            "The project produced the two role-specific interfaces and the Capture, Review and Routine setup screens. The next revision needs more precise status language, followed by a comprehension check with people taking medicine and caregivers.",
+            "That check should ask what an empty record and a reported update mean, then ask what the person would do next. Deployed account synchronization and changes in medicine-taking behaviour are not established by the screens or this portfolio demonstration."
           ]
         }
       ]

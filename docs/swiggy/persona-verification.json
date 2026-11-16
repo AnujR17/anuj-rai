@@ -1,0 +1,128 @@
+{
+  "passed": true,
+  "layouts": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "portraits": [
+        {
+          "alt": "Representative portrait for Ananya",
+          "loaded": true,
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Fananya.jpg&w=384&q=75",
+          "fit": "cover"
+        },
+        {
+          "alt": "Representative portrait for Rohit",
+          "loaded": true,
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Frohit.jpg&w=384&q=75",
+          "fit": "cover"
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "portraits": [
+        {
+          "alt": "Representative portrait for Ananya",
+          "loaded": true,
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Fananya.jpg&w=384&q=75",
+          "fit": "cover"
+        },
+        {
+          "alt": "Representative portrait for Rohit",
+          "loaded": true,
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Frohit.jpg&w=384&q=75",
+          "fit": "cover"
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "portraits": [
+        {
+          "alt": "Representative portrait for Ananya",
+          "loaded": true,
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Fananya.jpg&w=384&q=75",
+          "fit": "cover"
+        },
+        {
+          "alt": "Representative portrait for Rohit",
+          "loaded": true,
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Frohit.jpg&w=384&q=75",
+          "fit": "cover"
+        }
+      ]
+    },
+    {
+      "width": 700,
+      "overflow": false,
+      "portraits": [
+        {
+          "alt": "Representative portrait for Ananya",
+          "loaded": true,
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Fananya.jpg&w=384&q=75",
+          "fit": "cover"
+        },
+        {
+          "alt": "Representative portrait for Rohit",
+          "loaded": true,
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Frohit.jpg&w=384&q=75",
+          "fit": "cover"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "portraits": [
+        {
+          "alt": "Representative portrait for Ananya",
+          "loaded": true,
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Fananya.jpg&w=384&q=75",
+          "fit": "cover"
+        },
+        {
+          "alt": "Representative portrait for Rohit",
+          "loaded": true,
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Frohit.jpg&w=384&q=75",
+          "fit": "cover"
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "portraits": [
+        {
+          "alt": "Representative portrait for Ananya",
+          "loaded": true,
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Fananya.jpg&w=384&q=75",
+          "fit": "cover"
+        },
+        {
+          "alt": "Representative portrait for Rohit",
+          "loaded": true,
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Frohit.jpg&w=384&q=75",
+          "fit": "cover"
+        }
+      ]
+    }
+  ],
+  "noJavaScript": {
+    "passed": true,
+    "portraits": [
+      {
+        "alt": "Representative portrait for Ananya",
+        "loaded": true
+      },
+      {
+        "alt": "Representative portrait for Rohit",
+        "loaded": true
+      }
+    ]
+  },
+  "runtimeErrors": [],
+  "date": "2026-11-16"
+}

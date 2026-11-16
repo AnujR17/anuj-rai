@@ -1,0 +1,461 @@
+{
+  "handoff": "Swiggy-Agent-Desk-Handoff-2026-11-08.zip",
+  "handoff_sha256": "e1dbc72830d1903d12f16c601a141da0e47d37d011c9e0d8f914881b67662a2f",
+  "version": "Agent Desk v7.1, 7 November 2026",
+  "source_sha256": {
+    "index.html": "ccf0404a56042dd245215e9c692bbdf63ab60169f8b483e1a49f2b8672df7884",
+    "icons.js": "fae2b18b9827f319051a632c65cf9a1140f1ddd360a28e53389cc0e27927437e",
+    "engine.js": "dfb5d2d3326c58fe7c3b739bb81b55d0ff57a06259d85bcc84e0b770e1e0f526",
+    "app.js": "214e08fb88f1368d985d31a897c633c32bad3b9e60693c7974ad17823eb27d1c",
+    "app.css": "c4f9da1b570c16eb388cc48674e6af8ce9be3d48aed2d7a19324451734d292c8",
+    "data.js": "0997e0566d8347d90887a80251efd37e69ac8f62d11d75c0829b09c11456115d",
+    "ui.js": "33d90f79dc6df244b1e310c884877f049a0cd8cec35eb876c9158bdf1a264ee9",
+    "photos/2041-1.jpg": "4215dd4f20d2a9557ea4ac7d5d0f0b7a0a764220d158d8a03603d36147550188",
+    "photos/2041-2.jpg": "58cb6a098f0a2e29e87160782471ef0a0c89a804504aa92cc7de2da6206177c6",
+    "photos/brand-mark.png": "92b3ffede76fec484beb68788e34302835361989cf0e1cce746abcc7e6fb9549",
+    "photos/2078-1.jpg": "58a79a62ed1e6bb38d686b55b84a1e3d145ef26e7863475779159cd30d6dc89c",
+    "photos/2091-1-thumb.jpg": "a91b6f403ab140cd5407a9f394fd275873f38d2d11399af4c1ec45de638f5395",
+    "photos/2070-1.jpg": "72694dd488e9202106c560735ad7146472fd6e9296985475fe21d2d4a3a7dc9b",
+    "photos/2070-1-thumb.jpg": "7774068f255f200503144f7f35aa68525cd2fcc1db9d04146e91906d538904ab",
+    "photos/2078-1-thumb.jpg": "21ed66af549af23901ffc7f44fe7a0170b61b2da88e9154d424d8ec88b0e3def",
+    "photos/2091-1.jpg": "de8050624586e4400540a7629fa5f45de7c31358831efb613fda2cc4c2c9db04",
+    "photos/2041-2-thumb.jpg": "d53c2e1c62048ff7f5b0c33fe5c4ff4d9e1436a69f10ecc359014d6727f4bac0",
+    "photos/2041-1-thumb.jpg": "b667f027ec58139b19e448d472667368a531c27e83c9779c9c6b205fdd7cff40"
+  },
+  "hosting_changes": [
+    "index.html gains UTF-8 charset, standards-mode doctype, document structure and local Inter link",
+    "Inter downloaded from fonts.googleapis.com for reliable rendering; original application CSS and JavaScript unchanged"
+  ],
+  "fonts": [
+    {
+      "weight": "400",
+      "file": "inter-400.ttf",
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+      "sha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba"
+    },
+    {
+      "weight": "500",
+      "file": "inter-500.ttf",
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+      "sha256": "8c883f63b2c4157d997319f2c8bc6995ed4357ef371940d31ca159004a4aae63"
+    },
+    {
+      "weight": "600",
+      "file": "inter-600.ttf",
+      "source": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+      "sha256": "e7a1aaf7eda9f2fad4131725fa556265ec75ca7b2d756260173a040363e8d4f7"
+    }
+  ],
+  "process_images": {
+    "atlas": {
+      "source": "09_earlier-prototypes/design-system-comparison/atlas-1-mid-chat-wrong-item.jpg",
+      "sha256": "01b2f429ded2523bda32e12bb924d9d47178643ad22da8cad2905f67ab249e21"
+    },
+    "kirridesk": {
+      "source": "09_earlier-prototypes/design-system-comparison/kirridesk-1-mid-chat-wrong-item.jpg",
+      "sha256": "63314d933f0b76e2aed149bdc22d0b18db35dffb7092545aa62f3c21bb752e04"
+    }
+  },
+  "recordings": {
+    "method": "Visible UI click-through followed by edited screenshot sequence; no seeded state",
+    "paths": {
+      "S3": {
+        "ticket": "SW-2063",
+        "closed": true,
+        "missing_actions": [],
+        "runtime_errors": [],
+        "captured_actions": 24
+      },
+      "S5": {
+        "ticket": "SW-2091",
+        "closed": true,
+        "missing_actions": [],
+        "runtime_errors": [],
+        "captured_actions": 23
+      },
+      "S8": {
+        "ticket": "SW-2070",
+        "closed": true,
+        "missing_actions": [],
+        "runtime_errors": [],
+        "captured_actions": 27
+      },
+      "S9": {
+        "ticket": "SW-2078",
+        "closed": true,
+        "missing_actions": [],
+        "runtime_errors": [],
+        "captured_actions": 29
+      },
+      "S2": {
+        "ticket": "SW-2041",
+        "closed": true,
+        "missing_actions": [],
+        "runtime_errors": [],
+        "captured_actions": 28
+      }
+    },
+    "sha256": {
+      "not-delivered.gif": "e2af471fd10834b1fd5499d5a612e1d29ab274a0c707000dba55d3788b10ccff",
+      "late-delivery.gif": "404bca8be22d7863fb4ed2eb8fa3d0a877cdada9d0f811c7c53b5cf5bd4c3328",
+      "not-delivered.mp4": "d0d37f09925939f33e1bcbb6e2d4a1eb4e99fad81b8b7d844ace752a22a9f01f",
+      "quality-complaint.png": "90ead88194f2733f528947ea8c467d53126b8d05960be02bb6fe468a24504796",
+      "quality-complaint.mp4": "60436ff003dc175638c5202003811aaf9853eba032819afa0a4fc0c9cb8f85a4",
+      "missing-item.mp4": "2843844a65214089eaa20861fb63c9a96600b9be875b7b32ff224b9529deac92",
+      "wrong-item.gif": "1105da9f130fc16843ecd2b0a3d35710993d8b9fd4e648da496dffd208992c4c",
+      "wrong-item.png": "a0764e905288e1664e0176b13b66612b806e91a40bea6fdb11fd5d1c9f35bdd4",
+      "late-delivery.png": "87f21df84f07fe4d086fdafbf5e1cf61f2ef2d615c647d955d52796e75cad51d",
+      "missing-item.png": "43a4cf0e5378c6401f3466811e45d5dc34e2373e47dc8a7c7b9e0067cf7316fa",
+      "missing-item.gif": "0408d01305971070c1730e5fe32cd4726835206ecae75add385abc5eb7d567fb",
+      "late-delivery.mp4": "375ef4433ca3f674dbe879985ceb9f45012ac024d5f6d87909e5813948d79e05",
+      "wrong-item.mp4": "864350e202c2cf27978f5396c18b393974d0cbbdb331854d788f4da4a82fd803",
+      "quality-complaint.gif": "32ed7921a98ff56cdc37785cd0e63c9693cddd508b1c40d39e5c18ce5e3f9ac8",
+      "not-delivered.png": "1ff3921a5e46743058016d3611b0fe8e698a51b9a950693bf688d118da6a6f35",
+      "wrong-item-mockup.json": "81c3a26cea07afbcd870a11a7e21325e347c12deffc4d034990f3c195f4491f0",
+      "not-delivered-mockup.json": "80c38f70625b106d621963e45c00d5c0a87ba51380dcd9f2f408d08facae71bc",
+      "quality-complaint-mockup.json": "53d912d4af416f7c3ad395c9edaf6c86f03dd77e8facdb337507ffebfeb678b2",
+      "missing-item-mockup.json": "40be1d2ab9ac32dcb35991c2402ab87930f3cf07bb002dacc71725c52263d68d",
+      "late-delivery-mockup.json": "9f033a4ddbf71f446694c3e1d204a8b9a194f9100b9735fa6df9e281d9c5d308"
+    },
+    "gif_presentation": "16 November: all five existing recordings proportionately framed with neutral window chrome; source MP4s unchanged."
+  },
+  "new_sources": {
+    "S2 Wireframe · Agent Panel1.html": {
+      "sha256": "3e6a573e486433b922b112d55019599f5532fc0a59a4bcf8be56a5b46b0c0807",
+      "role": "first supplied wireframe, v1.3"
+    },
+    "S2 Wireframe · Second Iteration.html": {
+      "sha256": "6de4be6bb2cbff65cd06f1cf095d8b880e34c636d616dceebabea679bfb3c538",
+      "role": "14 October v2"
+    },
+    "S2 Wireframe · Third Iteration.html": {
+      "sha256": "25f10532bf0e7293e3e6d41293eb764949f4f7ab13bc4fe23ccfb9ad068816ce",
+      "role": "15 October v3"
+    },
+    "swiggy-facts-and-hypothetical-policies.html": {
+      "sha256": "7a4a8714637e82c4d36defc2c16df36be3bb1ba62bf1fe28ea05968c2b990c4b",
+      "role": "separate draft 0.1, not implemented v7.1 policy"
+    }
+  },
+  "visual_revision": {
+    "sources": "Four additional user uploads; exact originals retained in docs/swiggy/source-records",
+    "screens": "Original HTML rendering and source-frame crops, no interface redraw",
+    "motion": "Continuous browser capture with real pointer events, followed by camera editing and text explanations. Not agent tests.",
+    "labels": "Current user request explicitly asks for explanatory text, screen close-ups and graphics",
+    "structural_metrics": {
+      "policy_height_before_approx_px": 430,
+      "policy_height_after_approx_px": 200,
+      "source": "First wireframe fit-test notes; fallback font uncertainty approximately 20px",
+      "action_row_v2": 5,
+      "action_row_v3": 4
+    },
+    "assets": {
+      "evolution/decision-detail.png": "a6e86f7a83be5a497b49ffa73e2af17e63b7c41f266f4cf44776960ebdeb5f6b",
+      "evolution/wireframe-3.png": "76f48796a679483c59548ca62c68220c80d4f93f5352f68edb13975f14077d25",
+      "evolution/evidence-clean.png": "92b6f4fb206faa2633e875d4f1fb88c0cb9ab45415a3aa485bce670cbad5901a",
+      "evolution/wireframe-1.png": "a2d1ffde58fbce7542c498014ebead0571406e5b8bb4126b34b9ea37bbc53b2e",
+      "evolution/decision-v3.png": "beebf812b0b6e3dd87e3343d4fa46d0f6f7cf3c8fb8e8d26f98515479f39d987",
+      "evolution/evidence-review.png": "86877a19deb815872dd29f8359762e76f7a3b146356c6519f4b7e79c522cccb1",
+      "evolution/evidence-detail.png": "6b86cdab93b786ff6a023fd80b330923084985c7685680637aafa4c101e9e8ae",
+      "evolution/rider-records.png": "ac63ef5dfca3c2d80b4262f8f99a352eaf0889af9be23b6359e2f2af0ef3ed4c",
+      "evolution/wireframe-2.png": "483418e8d615e1dafa67c903653bfc5f9d6565d1f59392086152253fe2bc4be7",
+      "evolution/star-case.png": "643a994d8f391bca3e3ca41abb59b63bca2a18da66ccb6471dc8856e98484102",
+      "evolution/context-v3.png": "e34af98a96ae9ed01f743367e4301e3bef6502a46178218f48c8be490d5500b1",
+      "evolution/decision-record.png": "43484043613d360afbb188032c81a96764c0caebfef492eb39501acf424f5008",
+      "evolution/rider-detail.png": "8deb7e52d7b6be2557184d75f0b13b64b4c7cff8609b2534feb350ff720b4670",
+      "evolution/decision-v2.png": "8c551e3257e3a9df79684824f514ecd87e8267bbbe989b11227feadaf54dad52",
+      "evolution/policy-v1.png": "eefeec180741fb8489020daf8d63f29df162da09df84c95bc1265626bbafef91",
+      "evolution/star-detail.png": "34dcedfc72d66249f5c4ec213ca17f1c1c5f0680047a3359bc141199be9cafbd",
+      "motion/parties.png": "b64ad1d3477ac49db840a4f2fc0ae9328266662a962e423399508429b8117e99",
+      "motion/evidence.mp4": "7cb1a0a8e4526dd71008a8ec59bc8481ed694f4d6a0b4a971fd791ebbb46f493",
+      "motion/evidence.json": "c71fc6ab112a80c43d60918695eaa82c790828b1d20679784013a99208ded6d0",
+      "motion/parties.json": "ae934b1a0e6a9f0aed5efd7d894a33a1811aeaa5b0978ba5abe3751825c9808c",
+      "motion/evidence.gif": "efd9cb301ffe824ff792a8ad2fd197861fb59f709063d1306c3e340a5d2ead33",
+      "motion/parties.gif": "e3b6251de6c83d5efd94dbec8d294d2f535c6384aa0a7bf8a7b69873f8c0f1f4",
+      "motion/evidence.png": "b1d427c2ecd9da9c345958f432c0c95e3690bdb3de2b684b0b24f85058facea6",
+      "motion/decision.mp4": "2d4778e0767d9896010fb6cea1e7070b398b87c4b8c05a6810f95b10014bc339",
+      "motion/decision.json": "06a694c3855265ffa33276d3d388b35b392833da69c8678a5e11917044e9ea61",
+      "motion/decision.png": "1f201ea6defb1d6145101721f7068c21028ae1743fb9c4326a545669e589da77",
+      "motion/parties.mp4": "eb3715392b647841382543af7b7ea529c2a4d24e340940b1e4b2303f2cdadc7a",
+      "motion/decision.gif": "2126c7b2668ef3b52682808389556d49156176c26d679a0edb53f4597245da3a",
+      "cover.png": "7369f254be06ddd92cbbb5aea1895200f7a8c466b04f8e77bd8ee7c4b837a6a7"
+    },
+    "motion_export": "Deterministic 30 fps camera and text frames over continuous recorded input; final frames held for reading. GIF exports at 12 fps.",
+    "source_video_seeking": "Each exported frame verifies the decoded source time. Blob-backed footage avoids HTTP-range limitations in the local renderer."
+  },
+  "finding_crops_2026_11_09": {
+    "partial.png": {
+      "source": "08_testing-heuristic-evaluation/screens/f1.png",
+      "sha256": "ecb9b54838d8e2ac9c61b89cdd4fb4505ac373d191d3a851af94808505bd3d52",
+      "treatment": "Unmodified original heuristic-review crop, rendered inline"
+    },
+    "draft.png": {
+      "source": "08_testing-heuristic-evaluation/screens/f2.png",
+      "sha256": "e87b67623360960c86798253c8b4f648b60841ca46466918222476e559ecbc80",
+      "treatment": "Unmodified original heuristic-review crop, rendered inline"
+    },
+    "checks.png": {
+      "source": "08_testing-heuristic-evaluation/screens/f3.png",
+      "sha256": "50135a6af370338a6369f35e93a1e6fdefc5bf6b2f5610ba964729f9c7f17af1",
+      "treatment": "Unmodified original heuristic-review crop, rendered inline"
+    }
+  },
+  "editorial_flow_2026_11_09": {
+    "file": "components/case-study/SwiggyFlow.tsx",
+    "source": "Final prototype and handoff design/decision sequence",
+    "status": "New explanatory diagram, not an original research artifact or enforced policy gate"
+  },
+  "workspace_capture_2026_11_09": {
+    "file": "process/workspace.png",
+    "source": "Unchanged local Agent Desk v7.1, My Workspace default screen, captured at 1440x900",
+    "treatment": "Original screenshot; only the external demo control was hidden",
+    "sha256": "5ce135078c0119148aa102c242187f0aac33c384386d9ac1be24b456e6d064f0",
+    "data": "Fictional queue and sample metrics, not measured research results"
+  },
+  "device_motion_2026_11_09": {
+    "source": "Unchanged Agent Desk v7.1, captured through visible browser inputs with scripts/capture-swiggy-motion.mjs",
+    "presentation": "16 November: original UI clips in restrained application-window mockups and corresponding FFmpeg GIF exports; not physical deployment evidence.",
+    "decision_branch": "Both customer photos agreed before restaurant contact; restaurant confirms swapped bags; confirmed in inspected source frame",
+    "party_clip_edit": "The actual final Held state is extended for reading",
+    "assets": {
+      "decision-mockup.gif": {
+        "sha256": "6a3bb22707e6d0dbfc5c538a0c9c294c4629a3036a50e38155df484e6bb9bd70",
+        "bytes": 1024736
+      },
+      "decision-mockup.json": {
+        "sha256": "62db147f64996f845bbc2df8382e361e5d1504d0acecb4ae335cd48dc25108b9",
+        "bytes": 396
+      },
+      "decision.json": {
+        "sha256": "983bd374418f937db41ac8ea105069b856970c27a4c35b4556f2f8410d2ef8a2",
+        "bytes": 2039
+      },
+      "decision.mp4": {
+        "sha256": "89e173178a8f6d0a5f4f9dd4649e93bcd989d8814f2a05dfe44e265d3ad64700",
+        "bytes": 950603
+      },
+      "decision.png": {
+        "sha256": "fd597ad5e04d92224d2c0964be6a38c5b62ee5e7972c753210ea334376fd7d2f",
+        "bytes": 282373
+      },
+      "evidence-mockup.gif": {
+        "sha256": "160eee015a51a78622421a4e028f6e37471c076634348b774b9272bb709dca8a",
+        "bytes": 2814220
+      },
+      "evidence-mockup.json": {
+        "sha256": "c3c3bb1319333510e564158a4a84c01be06a6e965005c5d4c44c3fa1e4ab3b11",
+        "bytes": 396
+      },
+      "evidence.json": {
+        "sha256": "44edcd4170999c4e51987621579f7cec39277bd0f8a0baeff4f1b9b1e02f2043",
+        "bytes": 1680
+      },
+      "evidence.mp4": {
+        "sha256": "d0acd29f0a321c88b1420c5b65375521a429249c7dbcf958818ac150fa71294a",
+        "bytes": 1458293
+      },
+      "evidence.png": {
+        "sha256": "b33e13ab0fc8ba82633ada28c1eb84d0b98c960a70363422a08c8825566a3639",
+        "bytes": 701011
+      },
+      "parties-mockup.gif": {
+        "sha256": "37a1177d1efae8bc55389a401bcb1fb9c12410e3f55d7beec6b3f472f9dc2256",
+        "bytes": 1125826
+      },
+      "parties-mockup.json": {
+        "sha256": "a5c0cbf964ac247ae590e901ce3dcd1b4e00be1351eb4b0d5624f9051f6e6fa8",
+        "bytes": 389
+      },
+      "parties.json": {
+        "sha256": "9d5abc7f18f465bb6423dcbb0714e75aac559036a62cad0496ab7532b2e30ab1",
+        "bytes": 2315
+      },
+      "parties.mp4": {
+        "sha256": "318355f0482f9bbd71199830da5b9b3d441bbe6ebc0cc04b07b24f651471bc6f",
+        "bytes": 1021115
+      },
+      "parties.png": {
+        "sha256": "43bd8ccaf7c1d90a70d8618e0290f374ea2e1e437c48621758830dd7789a5472",
+        "bytes": 144346
+      }
+    }
+  },
+  "case_layout": {
+    "date": "2026-11-16",
+    "treatment": "White editorial surface and header, scoped to Swiggy. One pale neutral Insights band; original evidence and rider details beside their design reasoning. Single laptop hero, open contribution, consistent full-width application-window media and unstacked original iterations. Six supplied design criteria visible in the main story.",
+    "sources": [
+      "media/wrong-item.png",
+      "evolution/evidence-detail.png",
+      "evolution/rider-detail.png",
+      "evolution/wireframe-1.png",
+      "evolution/wireframe-2.png",
+      "evolution/wireframe-3.png"
+    ],
+    "crop": "Rider detail masks only the blank lower source area; its native link opens the entire unchanged record.",
+    "media": "MP4 sources unchanged; all eight GIF downloads re-exported with neutral application-window framing.",
+    "reference_review": "docs/swiggy/white-layout-and-reference-review.md"
+  },
+  "editorial_vectors": {
+    "date": "2026-11-15",
+    "method": "New explanatory SVG diagrams generated with scripts/render-swiggy-vectors.mjs, in desktop and phone compositions. Embedded DM Sans subsets reused from the portfolio Next build. Not historical research artifacts.",
+    "sources": {
+      "architecture": "Final v7.1 My Workspace and case information groups; Agent Desk Handbook H-03/H-04",
+      "refund-cost": "SW-2070 case data; engine.js amt and costLine0; Handbook H-07 through H-09. Original UI verified after choosing Restaurant and Full refund.",
+      "findings": "Original single AI-led heuristic evaluation: 3 major, 9 minor, 4 cosmetic, all unresolved."
+    },
+    "files": {
+      "architecture-mobile.svg": {
+        "sha256": "bb22b14f1d8b9925dcd748195e05ff6fce15f6df1aea6e585a0b94f5af8f3b89",
+        "bytes": 76697,
+        "width": 360,
+        "height": 762
+      },
+      "architecture.svg": {
+        "sha256": "bfb6834bdd5915f5276ebdcdc83d79f46be299b2561f4db32dd45e75ff0439d5",
+        "bytes": 76584,
+        "width": 960,
+        "height": 560
+      },
+      "findings-mobile.svg": {
+        "sha256": "9af5abccd72eb56654af7046e5a3fa1931a8128578d8bc6033d9d775a44601c2",
+        "bytes": 75582,
+        "width": 360,
+        "height": 330
+      },
+      "findings.svg": {
+        "sha256": "415e5d39b3043e7f6b4409d930eccc219a34599fe5cc2ebd8008991536917fea",
+        "bytes": 75242,
+        "width": 960,
+        "height": 200
+      },
+      "refund-cost-mobile.svg": {
+        "sha256": "4164a09b3e8de602114fb4a1a9f49018c6aca19c02328e87995a27b4775e13c5",
+        "bytes": 76283,
+        "width": 360,
+        "height": 710
+      },
+      "refund-cost.svg": {
+        "sha256": "f74217bb51407fdfc481bb839a91acf0b39a63e52126c052fe3bc53f812fdd4e",
+        "bytes": 76289,
+        "width": 960,
+        "height": 430
+      }
+    },
+    "presentation_revision": "16 November: Swiggy orange #ff5200 accents in architecture, refund totals and major findings; white fills, neutral lines and source content retained."
+  },
+  "agent_desk_handbook": {
+    "file": "agent-desk-handbook-v1.0.pdf",
+    "edition": "1.0",
+    "policy_version": "2.1",
+    "pages": 38,
+    "source": "User upload, 15 November 2026; identical to the supplied reference site PDF",
+    "sha256": "a126e603fd8293cfcd823038fda274353bb7d5c436c4f90ed499faf92f593d4f",
+    "bytes": 254538,
+    "limit": "Project specification and assumptions, not Swiggy internal operating policy."
+  },
+  "research_models_and_original_flows": {
+    "date": "2026-11-16",
+    "persona_source": "01_case-study/stages/06-define.md, hypothetical personas",
+    "records": [
+      {
+        "file": "research/flow-1-wrong-item.png",
+        "source": "10_user-flows/flow-1-wrong-item.png",
+        "sha256": "9927b13368c3c67ecccaa921cccba2c99b7006d7de2821e0d0104337b6bbfa91"
+      },
+      {
+        "file": "research/flow-2-missing-item.png",
+        "source": "10_user-flows/flow-2-missing-item.png",
+        "sha256": "c2325a270131a00d801bbc237a20afc1280d7346bfb5fba155f48eb2721adf8f"
+      },
+      {
+        "file": "research/flow-3-not-delivered.png",
+        "source": "10_user-flows/flow-3-not-delivered.png",
+        "sha256": "96f11314526973c8b2f0e8b84d54ea31a5bb971877209f64803578d433802245"
+      },
+      {
+        "file": "research/flow-4-late-delivery.png",
+        "source": "10_user-flows/flow-4-late-delivery.png",
+        "sha256": "7ab0b5719dd2141a96299669d4da6fb729552b1f7b3ad0269a3cedfb2e1d70dc"
+      },
+      {
+        "file": "research/flow-5-customer-misbehaviour-flag.png",
+        "source": "10_user-flows/flow-5-customer-misbehaviour-flag.png",
+        "sha256": "cc20dfa7cb423a5462b44857f39d01ff8479f533add7e7c770f7cb25fedae429"
+      },
+      {
+        "file": "research/original-board-overview.png",
+        "source": "Original FigJam board jdVOYesjFWTQOsQcxnVvV9, root 0:1; overview returned by get_figjam on 16 November 2026",
+        "sha256": "7935bed749a63df862dc4c770a29dca7f191bd1b52331d85b2d414ede82877aa"
+      },
+      {
+        "file": "diagrams/mental-model-mobile.svg",
+        "source": "New reading layout of original Stage 5 mental-model/stakeholder records, inspected against FigJam root 0:1; generated by scripts/render-swiggy-research-vectors.mjs",
+        "sha256": "c757c2331e5dad6a97e3cc35f452ba3c143b9a97e5d925ebc80e80739843f250"
+      },
+      {
+        "file": "diagrams/mental-model.svg",
+        "source": "New reading layout of original Stage 5 mental-model/stakeholder records, inspected against FigJam root 0:1; generated by scripts/render-swiggy-research-vectors.mjs",
+        "sha256": "1f039b7c5baf692e309646acbb3e17a44cba06ebe361d71d84daaeef22e304e2"
+      },
+      {
+        "file": "diagrams/stakeholders-mobile.svg",
+        "source": "New reading layout of original Stage 5 mental-model/stakeholder records, inspected against FigJam root 0:1; generated by scripts/render-swiggy-research-vectors.mjs",
+        "sha256": "8f891f1dbb6fb687a40d7d8aa0db848babb52cd2e51d780fa757ec55828247da"
+      },
+      {
+        "file": "diagrams/stakeholders.svg",
+        "source": "New reading layout of original Stage 5 mental-model/stakeholder records, inspected against FigJam root 0:1; generated by scripts/render-swiggy-research-vectors.mjs",
+        "sha256": "e6698332d4797e289bd2939b15003ba758bc2f3f105deb42447f225142ce85d6"
+      }
+    ]
+  },
+  "persona_photography": {
+    "date": "2026-11-16",
+    "source": "Representative stock photographs, not research-participant photographs",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "treatment": "Colour JPEGs downloaded from the photo-page image links without local pixel edits; portrait frames use CSS cover fitting",
+    "records": [
+      {
+        "file": "personas/ananya.jpg",
+        "photographer": "Pratik Mohapatra",
+        "photo_id": "8mk3fQmqWdo",
+        "source_page": "https://unsplash.com/photos/a-woman-smiling-for-the-camera-8mk3fQmqWdo",
+        "width": 3000,
+        "height": 4500,
+        "sha256": "ef28f613a36035a29cecfcdc011b1f95c11572f6fbe208466d8f72c9232babee"
+      },
+      {
+        "file": "personas/rohit.jpg",
+        "photographer": "Pratik Mohapatra",
+        "photo_id": "0OIdQOWiFww",
+        "source_page": "https://unsplash.com/photos/a-person-smiling-for-the-camera-0OIdQOWiFww",
+        "width": 3000,
+        "height": 4500,
+        "sha256": "e0fab2554896f4d8d3107b8066de41ed5f6a54997aef1107044b2b4e8669284d"
+      }
+    ]
+  },
+  "case_information_architecture": {
+    "date": "2026-11-16",
+    "chapters": [
+      "Researching the agent’s decision",
+      "Defining the agent’s needs",
+      "Designing the workspace",
+      "Investigating a complaint",
+      "Reviewing the prototype"
+    ],
+    "arrangement": "Research basis, source findings and working assumptions precede synthesis, the inferred mental model, stakeholder map and personas. Concept contains IA, selection criteria, evidence/history design examples, cost, original flows and iterations. Design demonstrates the investigation; Outcome retains the review.",
+    "hierarchy": "Chapter H2, artifact group H3, iteration/scenario/finding H4; front-matter facts are description-list terms. Group type 26–32px and individual state type 22px.",
+    "source_access": "All original artifacts retained. Five historical flowcharts start collapsed in native inline disclosures. Personas and research maps remain visible.",
+    "brief": "docs/swiggy/case-study-information-architecture.md",
+    "research_basis": "Supplied Stage 4 Research, Stage 5 Insights and public-policy summary P018/P021/P042; primary AWS Supr Daily passage checked 16 November 2026. Its grocery context is explicit. One outside-domain expert call is not Swiggy field observation."
+  },
+  "case_accent": {
+    "date": "2026-11-16",
+    "brand": "#ff5200",
+    "wash": "#fff5ee",
+    "application": "Orange link underlines, selected controls, focus outlines, one light Insights wash, action/agent diagram nodes, refund totals and major-finding bar. Ordinary text stays in ink.",
+    "scope": "Swiggy case and its header only; original interface captures and recordings retain their source colours."
+  }
+}

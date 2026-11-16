@@ -16,7 +16,7 @@ export function MedicineCaseStudy({ project }: { project: Project }) {
       <Link href="/work" className="lf-all-work">All work</Link>
       <MedicineOpening />
       <h1 id="lf-hero-title">Meditimer</h1>
-      <div className="lf-hero-copy"><p>A medicine routine you can record and share with someone who cares for you</p></div>
+      <div className="lf-hero-copy"><p>Recording a dose and knowing when to follow up</p></div>
     </header>
     <section className="lf-overview" id="overview" aria-labelledby="overview-title"><div className="lf-overview-layout">
       <div className="lf-overview-content"><h2 id="overview-title">Medicine reminders and dose records</h2><p className="lf-overview-summary">{project.summary}</p></div>
@@ -28,7 +28,7 @@ export function MedicineCaseStudy({ project }: { project: Project }) {
       <section className="lf-scene lf-research" id="research" data-tone="light" aria-labelledby="research-title">
         <div className="lf-scene-content"><div className="lf-research-opening"><div><h2 id="research-title">Users</h2><p>{research[0]}</p></div><div className="lf-role-study">
           <div className="lf-person"><h3>Taking medicine</h3><StaticMedicineScreen screen={medicineScreens[3]} /></div><div className="lf-person lf-person-second"><h3>Supporting someone</h3><StaticMedicineScreen screen={medicineScreens[4]} /></div>
-        </div></div><div className="lf-reading-pair lf-research-reading">{research.slice(1).map(text => <p key={text}>{text}</p>)}</div></div>
+        </div></div><div className="lf-reading-pair lf-research-reading">{research.slice(1).map(text => <p key={text}>{text}</p>)}</div><p><Link href="/work/medicine-storage-research">Read the medicine-routine survey</Link></p></div>
       </section>
       <section className="lf-scene lf-insights" id="insights" data-tone="dark" aria-labelledby="insights-title"><div className="lf-scene-content"><div className="lf-insight-composition"><h2 id="insights-title">Dose records</h2><DoseRecordStudy /><div className="lf-insight-copy">{insights.map(text => <p key={text}>{text}</p>)}</div></div></div></section>
       <section className="lf-scene lf-concept" id="concept" data-tone="light" aria-labelledby="concept-title"><div className="lf-scene-content">
@@ -37,7 +37,7 @@ export function MedicineCaseStudy({ project }: { project: Project }) {
         <div className="lf-concept-explanation">{concept.slice(1).map(text => <p key={text}>{text}</p>)}</div><MedicineStructure />
       </div></section>
       <section className="lf-scene lf-design" id="design" data-tone="light" aria-labelledby="design-title"><div className="lf-scene-content">
-        <div className="lf-design-heading"><h2 id="design-title">Screens</h2><p>Select a screen to view it larger</p></div><MedicineGallery />
+        <div className="lf-design-heading"><h2 id="design-title">Screens</h2><p>Capture begins with a prescription image. Review exposes medicine details for checking before the routine is saved. Select each original screen to inspect that sequence.</p></div><MedicineGallery />
         <div className="lf-reading-pair lf-design-reading">{design.map((block, index) => <div key={index}><h3>{index === 0 ? "Medicine-taker view" : "Caregiver view"}</h3>{block.paragraphs.map(text => <p key={text}>{text}</p>)}</div>)}</div><OriginalMedicineInterfaces />
       </div></section>
       <section className="lf-scene lf-outcome" id="outcome" data-tone="light" aria-labelledby="outcome-title"><div className="lf-scene-content"><div className="lf-outcome-composition"><h2 id="outcome-title">Project status</h2><div>{outcome.map(text => <p key={text}>{text}</p>)}<a href="#hero">Return to the opening</a></div></div>

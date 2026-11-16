@@ -1,0 +1,4 @@
+interface:
+  display_name: "Portfolio Case Study Editorial"
+  short_description: "Clear portfolio stories, evidence, and purposeful visuals"
+  default_prompt: "Use $portfolio-case-study-editorial to refine this case study using its original sources, explain the important decisions, and plan visuals that demonstrate them. Preserve Anuj's standing portfolio rules and flag unsupported claims."

@@ -1,0 +1,41 @@
+{
+  "all_paths_closed": true,
+  "timing": "Edited screenshot sequence, not measured task time",
+  "paths": {
+    "S3": {
+      "ticket": "SW-2063",
+      "closed": true,
+      "missing_actions": [],
+      "runtime_errors": [],
+      "captured_actions": 24
+    },
+    "S5": {
+      "ticket": "SW-2091",
+      "closed": true,
+      "missing_actions": [],
+      "runtime_errors": [],
+      "captured_actions": 23
+    },
+    "S8": {
+      "ticket": "SW-2070",
+      "closed": true,
+      "missing_actions": [],
+      "runtime_errors": [],
+      "captured_actions": 27
+    },
+    "S9": {
+      "ticket": "SW-2078",
+      "closed": true,
+      "missing_actions": [],
+      "runtime_errors": [],
+      "captured_actions": 29
+    },
+    "S2": {
+      "ticket": "SW-2041",
+      "closed": true,
+      "missing_actions": [],
+      "runtime_errors": [],
+      "captured_actions": 28
+    }
+  }
+}

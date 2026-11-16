@@ -1,0 +1,12 @@
+{
+  "id": "missing-item",
+  "source": "missing-item.mp4",
+  "method": "Original recorded UI scaled proportionately inside neutral window chrome matching DeviceFrame; exported with FFmpeg",
+  "fps": 8,
+  "frames": 229,
+  "duration": 28.6,
+  "width": 1082,
+  "height": 708,
+  "sourceUI": "Original fictional Agent Desk v7.1",
+  "device": "Editorial application-window mockup, not deployed hardware"
+}

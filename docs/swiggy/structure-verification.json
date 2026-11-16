@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "layouts": [
+    {
+      "width": 1440,
+      "chapterLinks": 5,
+      "skippedHeadingLevels": 0
+    },
+    {
+      "width": 768,
+      "chapterLinks": 5,
+      "skippedHeadingLevels": 0
+    },
+    {
+      "width": 390,
+      "chapterLinks": 5,
+      "skippedHeadingLevels": 0
+    },
+    {
+      "width": 320,
+      "chapterLinks": 5,
+      "skippedHeadingLevels": 0
+    }
+  ],
+  "runtimeErrors": [],
+  "checks": [
+    "five descriptive contents links land on matching chapters",
+    "subordinate versions, scenarios and findings have proper heading levels and smaller type",
+    "research evidence and assumptions precede synthesis, maps and personas; cost and flows stay with the concept",
+    "working-case chapter follows investigation actions and scenario variants",
+    "all supplied artifacts and native no-JavaScript contents retained"
+  ]
+}

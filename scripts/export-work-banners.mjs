@@ -12,6 +12,7 @@ const slugs = ['medicine-app','swiggy-agent-workflow','two-wheeler-dashboard','t
   const page = await browser.newPage({ viewport: { width: 1800, height: 1200 }, deviceScaleFactor: 1, reducedMotion: 'reduce' });
   fs.mkdirSync(path.join(scriptDirectory, '../public/portfolio/banners'), { recursive: true });
   for (const slug of slugs) {
+    if (process.env.WORK_BANNER_SLUG && slug !== process.env.WORK_BANNER_SLUG) continue;
     if (slug === 'medicine-app') {
       fs.copyFileSync(path.join(scriptDirectory, '../public/portfolio/screens/medicine-presentation.png'), path.join(scriptDirectory, '../public/portfolio/banners/medicine-app.png'));
       console.log('Exported medicine-app: original static presentation');
