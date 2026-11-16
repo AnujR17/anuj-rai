@@ -402,22 +402,30 @@
       }
     ]
   },
-  "persona_illustrations": {
+  "persona_photography": {
     "date": "2026-11-16",
-    "source": "Generated with image_gen for this portfolio presentation, not participant photographs",
-    "treatment": "Transparent graphite/charcoal portrait illustrations, warm grayscale and restrained vermilion clothing detail",
+    "source": "Representative stock photographs, not research-participant photographs",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "treatment": "Colour JPEGs downloaded from the photo-page image links without local pixel edits; portrait frames use CSS cover fitting",
     "records": [
       {
-        "file": "personas/ananya.png",
-        "width": 1122,
-        "height": 1402,
-        "sha256": "873b334f8ef5491cb7ca58d602d5b7b7c8dd6be6298cfeb804317c0b7cd2bed3"
+        "file": "personas/ananya.jpg",
+        "photographer": "Pratik Mohapatra",
+        "photo_id": "8mk3fQmqWdo",
+        "source_page": "https://unsplash.com/photos/a-woman-smiling-for-the-camera-8mk3fQmqWdo",
+        "width": 3000,
+        "height": 4500,
+        "sha256": "ef28f613a36035a29cecfcdc011b1f95c11572f6fbe208466d8f72c9232babee"
       },
       {
-        "file": "personas/rohit.png",
-        "width": 1122,
-        "height": 1402,
-        "sha256": "7082f60e58e91216f8b98d2398d79257395f61e1f85bf21a3c3f816f36ddf633"
+        "file": "personas/rohit.jpg",
+        "photographer": "Pratik Mohapatra",
+        "photo_id": "0OIdQOWiFww",
+        "source_page": "https://unsplash.com/photos/a-person-smiling-for-the-camera-0OIdQOWiFww",
+        "width": 3000,
+        "height": 4500,
+        "sha256": "e0fab2554896f4d8d3107b8066de41ed5f6a54997aef1107044b2b4e8669284d"
       }
     ]
   }

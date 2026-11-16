@@ -24,7 +24,7 @@ export function SwiggyPersonas() {
     <p>I used two agent personas to explore different information needs. Ananya represents an agent learning the review process; Rohit represents an experienced agent working quickly. I developed both profiles from the research and project&nbsp;assumptions.</p>
     <div className={styles.personaPair}>
       {research.personas.map(persona => <section className={styles.persona} key={persona.name} aria-label={`${persona.name}, ${persona.role.toLowerCase()}`}>
-        <div className={styles.personaPortrait} data-persona-portrait={persona.name}><Image src={persona.portrait} alt={`Illustrated portrait of ${persona.name}`} fill sizes="(max-width: 700px) 30vw, (max-width: 1100px) 24vw, 340px" /></div>
+        <div className={styles.personaPortrait} data-persona-portrait={persona.name}><Image src={persona.portrait} alt={`Representative portrait for ${persona.name}`} fill sizes="(max-width: 700px) 30vw, (max-width: 1100px) 24vw, 340px" /></div>
         <div className={styles.personaBody}>
           <div className={styles.personaHeading}><h4>{persona.name}</h4><p className={styles.personaRole}>{persona.role}</p><p className={styles.personaExperience}>{persona.experience}</p></div>
           <dl><div className={styles.personaGoal}><dt>Goal</dt><dd>{persona.goal}</dd></div><div><dt>Risk to design for</dt><dd>{persona.risk}</dd></div><div><dt>What the screen needs to show</dt><dd>{persona.need}</dd></div></dl>

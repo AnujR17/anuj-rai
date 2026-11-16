@@ -1,6 +1,6 @@
 # Swiggy case study continuation
 
-Read `persona-presentation.md` for the 16 November portrait illustrations,
+Read `persona-presentation.md` for the 16 November persona photographs,
 open profile layout, responsive treatment and direct persona anchor.
 
 Read `research-artifact-coverage.md` for the 16 November restoration of supplied

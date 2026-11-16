@@ -7,7 +7,7 @@
       "goal": "Reach a decision she can justify.",
       "risk": "Relying too heavily on the first signal the screen presents.",
       "need": "Relevant conditions beside their supporting evidence, with the source available.",
-      "portrait": "/portfolio/swiggy/personas/ananya.png"
+      "portrait": "/portfolio/swiggy/personas/ananya.jpg"
     },
     {
       "name": "Rohit",
@@ -16,7 +16,7 @@
       "goal": "Close cases quickly without reopening them.",
       "risk": "Working from habit and overlooking missing evidence or an unresolved dependency.",
       "need": "Gaps and pending checks that remain noticeable during a fast investigation.",
-      "portrait": "/portfolio/swiggy/personas/rohit.png"
+      "portrait": "/portfolio/swiggy/personas/rohit.jpg"
     }
   ],
   "assumptions": [

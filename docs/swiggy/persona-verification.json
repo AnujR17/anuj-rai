@@ -6,16 +6,16 @@
       "overflow": false,
       "portraits": [
         {
-          "name": "Ananya",
+          "alt": "Representative portrait for Ananya",
           "loaded": true,
-          "inside": true,
-          "fit": "contain"
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Fananya.jpg&w=384&q=75",
+          "fit": "cover"
         },
         {
-          "name": "Rohit",
+          "alt": "Representative portrait for Rohit",
           "loaded": true,
-          "inside": true,
-          "fit": "contain"
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Frohit.jpg&w=384&q=75",
+          "fit": "cover"
         }
       ]
     },
@@ -24,16 +24,16 @@
       "overflow": false,
       "portraits": [
         {
-          "name": "Ananya",
+          "alt": "Representative portrait for Ananya",
           "loaded": true,
-          "inside": true,
-          "fit": "contain"
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Fananya.jpg&w=384&q=75",
+          "fit": "cover"
         },
         {
-          "name": "Rohit",
+          "alt": "Representative portrait for Rohit",
           "loaded": true,
-          "inside": true,
-          "fit": "contain"
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Frohit.jpg&w=384&q=75",
+          "fit": "cover"
         }
       ]
     },
@@ -42,16 +42,16 @@
       "overflow": false,
       "portraits": [
         {
-          "name": "Ananya",
+          "alt": "Representative portrait for Ananya",
           "loaded": true,
-          "inside": true,
-          "fit": "contain"
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Fananya.jpg&w=384&q=75",
+          "fit": "cover"
         },
         {
-          "name": "Rohit",
+          "alt": "Representative portrait for Rohit",
           "loaded": true,
-          "inside": true,
-          "fit": "contain"
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Frohit.jpg&w=384&q=75",
+          "fit": "cover"
         }
       ]
     },
@@ -60,16 +60,16 @@
       "overflow": false,
       "portraits": [
         {
-          "name": "Ananya",
+          "alt": "Representative portrait for Ananya",
           "loaded": true,
-          "inside": true,
-          "fit": "contain"
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Fananya.jpg&w=384&q=75",
+          "fit": "cover"
         },
         {
-          "name": "Rohit",
+          "alt": "Representative portrait for Rohit",
           "loaded": true,
-          "inside": true,
-          "fit": "contain"
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Frohit.jpg&w=384&q=75",
+          "fit": "cover"
         }
       ]
     },
@@ -78,16 +78,16 @@
       "overflow": false,
       "portraits": [
         {
-          "name": "Ananya",
+          "alt": "Representative portrait for Ananya",
           "loaded": true,
-          "inside": true,
-          "fit": "contain"
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Fananya.jpg&w=384&q=75",
+          "fit": "cover"
         },
         {
-          "name": "Rohit",
+          "alt": "Representative portrait for Rohit",
           "loaded": true,
-          "inside": true,
-          "fit": "contain"
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Frohit.jpg&w=384&q=75",
+          "fit": "cover"
         }
       ]
     },
@@ -96,16 +96,16 @@
       "overflow": false,
       "portraits": [
         {
-          "name": "Ananya",
+          "alt": "Representative portrait for Ananya",
           "loaded": true,
-          "inside": true,
-          "fit": "contain"
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Fananya.jpg&w=384&q=75",
+          "fit": "cover"
         },
         {
-          "name": "Rohit",
+          "alt": "Representative portrait for Rohit",
           "loaded": true,
-          "inside": true,
-          "fit": "contain"
+          "src": "http://localhost:3013/_next/image?url=%2Fportfolio%2Fswiggy%2Fpersonas%2Frohit.jpg&w=384&q=75",
+          "fit": "cover"
         }
       ]
     }
@@ -114,11 +114,11 @@
     "passed": true,
     "portraits": [
       {
-        "alt": "Illustrated portrait of Ananya",
+        "alt": "Representative portrait for Ananya",
         "loaded": true
       },
       {
-        "alt": "Illustrated portrait of Rohit",
+        "alt": "Representative portrait for Rohit",
         "loaded": true
       }
     ]
