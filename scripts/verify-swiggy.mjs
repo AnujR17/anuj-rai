@@ -61,9 +61,24 @@ async function verify() {
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto(base + "/work/swiggy-agent-workflow", { waitUntil: "networkidle" });
   for (const detail of await page.locator("details").all()) await detail.evaluate(e => e.open = true);
-  assert.equal(await page.locator("table").first().locator("tbody tr").count(), 16);
-  assert.match(await page.locator("table").first().innerText(), /Minor, disputed/);
+  assert.equal(await page.getByRole("table", { name: "Heuristic findings", exact: true }).locator("tbody tr").count(), 16);
+  assert.match(await page.getByRole("table", { name: "Heuristic findings", exact: true }).innerText(), /Minor, disputed/);
   assert.match(await page.locator("article").innerText(), /Claude/);
+  for (const artifact of ['assumptions', 'personas', 'mental-model', 'stakeholder-map', 'design-criteria', 'original-flows']) {
+    assert.equal(await page.locator(`[data-research-artifact="${artifact}"]`).isVisible(), true, 'Missing research artifact: ' + artifact);
+  }
+  const personas = page.locator('[data-research-artifact="personas"]');
+  assert.match(await personas.innerText(), /hypothetical/);
+  assert.match(await personas.innerText(), /Ananya/);assert.match(await personas.innerText(), /Rohit/);
+  assert.equal(await page.getByRole('table', { name: 'Inferred agent mental model', exact: true }).locator('tbody tr').count(), 9);
+  assert.equal(await page.getByRole('table', { name: 'Early stakeholder value hypotheses', exact: true }).locator('tbody tr').count(), 6);
+  assert.equal(await page.getByRole('table', { name: 'Early creative matrix', exact: true }).locator('tbody tr').count(), 10);
+  const flows = page.locator('[data-research-artifact="original-flows"]');
+  assert.equal(await flows.locator('img').count(), 5);
+  for (const link of await flows.getByRole('link', { name: 'Open original flow at full size' }).all()) {
+    await link.focus();assert.equal(await link.evaluate(e => e === document.activeElement), true);
+    const response = await page.request.get(base + await link.getAttribute('href'));assert.equal(response.status(), 200);assert.match(response.headers()['content-type'], /image\/png/);
+  }
   const media = page.locator("video").first();
   await media.scrollIntoViewIfNeeded();
   await media.evaluate(v => v.play());
@@ -126,6 +141,13 @@ async function verify() {
   await findings.locator("summary").click();
   assert.equal(await findings.getAttribute("open"), "");
   assert.equal(await fallback.locator('video[autoplay]').count(), 0);
+  const model = fallback.locator('[data-research-artifact="mental-model"] details');
+  await model.locator('summary').click();
+  assert.equal(await model.getByRole('table', { name: 'Inferred agent mental model', exact: true }).isVisible(), true);
+  const lastFlow = fallback.locator('[data-research-artifact="original-flows"] details').last();
+  await lastFlow.locator('summary').click();
+  await lastFlow.locator('img').evaluate(image => image.decode());
+  assert.equal(await lastFlow.locator('img').isVisible(), true);
   await plain.close();
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto(base + "/work", { waitUntil: "networkidle" });
@@ -145,7 +167,10 @@ async function verify() {
     const bytes = fs.readFileSync("public/portfolio/swiggy/prototype/" + file);
     assert.equal(crypto.createHash("sha256").update(bytes).digest("hex"), hash, "Original file changed: " + file);
   }
-  const result = { passed: true, layouts, stagePositions, runtimeErrors: errors, checks: ["five-stage responsive reading layout and loaded original images", "four-version comparison with keyboard navigation and no-JavaScript access", "three clean 30fps UI recordings with device-mockup GIF exports", "five complete ticket references", "optional media playback and pause", "sixteen-findings disclosure and policy-version conflict", "playable local prototype and original font weights", "normal-motion shared and Meditimer indices", "native no-JavaScript links and disclosures", "Work-to-case navigation and scroll cleanup", "original source SHA-256 hashes"] };
+  for (const { file, sha256 } of provenance.research_models_and_original_flows.records) {
+    assert.equal(crypto.createHash('sha256').update(fs.readFileSync('public/portfolio/swiggy/' + file)).digest('hex'), sha256, 'Research source asset changed: ' + file);
+  }
+  const result = { passed: true, layouts, stagePositions, runtimeErrors: errors, checks: ["five-stage responsive reading layout and loaded original images", "four-version comparison with keyboard navigation and no-JavaScript access", "three clean 30fps UI recordings with device-mockup GIF exports", "five complete ticket references", "optional media playback and pause", "sixteen-findings disclosure and policy-version conflict", "playable local prototype and original font weights", "normal-motion shared and Meditimer indices", "native no-JavaScript links and disclosures", "Work-to-case navigation and scroll cleanup", "original source SHA-256 hashes", "assumptions, hypothetical personas, nine-question mental model, stakeholder analysis and complete early matrix", "five original inline flowcharts with keyboard/full-size and no-JavaScript access", "research asset SHA-256 hashes"] };
   fs.writeFileSync(path.join(out, "verification.json"), JSON.stringify(result, null, 2));
   console.log(JSON.stringify(result));
 }

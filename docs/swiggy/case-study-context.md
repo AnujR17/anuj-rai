@@ -1,5 +1,9 @@
 # Swiggy case study continuation
 
+Read `research-artifact-coverage.md` for the 16 November restoration of supplied
+assumptions, personas, mental model, stakeholder/value analysis, design criteria,
+creative matrix and original scenario flows, with their source/version limits.
+
 Read `section-emphasis-and-story.md` for the 16 November Meditimer typography
 comparison, single full-width accent trial and proposed section narrative.
 

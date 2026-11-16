@@ -17,6 +17,16 @@ const diagrams = {
     label: "Heuristic findings by severity",
     alt: "Sixteen unresolved heuristic findings: three major, nine minor and four cosmetic. These are review findings, not measured user outcomes.",
   },
+  "mental-model": {
+    width: 960, height: 560, mobileHeight: 1150,
+    label: "Inferred agent mental model",
+    alt: "Nine inferred agent questions, grouped as understanding, investigation and response. History is context rather than a published refund condition; the early restaurant-agreement step later became standing refund terms.",
+  },
+  stakeholders: {
+    width: 960, height: 570, mobileHeight: 970,
+    label: "Stakeholders around a refund decision",
+    alt: "The escalation agent chooses a response affecting the customer, restaurant and delivery partner. Swiggy carries refund and review implications; regulators and consumer courts provide external recourse beyond this workspace.",
+  },
 };
 
 export function SwiggyVector({ id }: { id: keyof typeof diagrams }) {
@@ -29,6 +39,6 @@ export function SwiggyVector({ id }: { id: keyof typeof diagrams }) {
         <Image unoptimized src={src} alt={diagram.alt} width={diagram.width} height={diagram.height} sizes="(max-width: 700px) 90vw, 980px" />
       </picture>
     </a>
-    <a className={styles.vectorDownload} href={src} download>Save {id === "architecture" ? "architecture" : id === "findings" ? "chart" : "example"} as SVG</a>
+    <a className={styles.vectorDownload} href={src} download>Save {id === "architecture" ? "architecture" : id === "findings" ? "chart" : id === "mental-model" ? "mental model" : id === "stakeholders" ? "stakeholder map" : "example"} as SVG</a>
   </div>;
 }

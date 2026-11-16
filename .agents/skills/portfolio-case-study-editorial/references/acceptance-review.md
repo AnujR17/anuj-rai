@@ -12,6 +12,7 @@ These are checks, not a numerical portfolio score. Use pass, needs revision, or 
 | Interpretation | Can the reader tell what was learned and what it changed? |
 | Judgment | Does at least the central design choice have a supported reason and an acknowledged constraint or trade-off? |
 | Artifact | Can the claimed interface, physical feature, state or interaction be inspected? |
+| Artifact coverage | Have supplied assumptions, personas, maps, models, matrices and flows been inventoried, explained and placed, with any material omissions stated instead of silently removed for brevity? |
 | Evaluation | Are actual findings separated from informal feedback, expert review, synthetic checks, targets and plans? |
 | Reflection | Is there a specific learning or next question tied to the work? |
 | Writing | Would the paragraphs still sound meaningful with the project name removed? If yes, are they too generic? |

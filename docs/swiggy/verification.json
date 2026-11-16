@@ -14,10 +14,13 @@
     "normal-motion shared and Meditimer indices",
     "native no-JavaScript links and disclosures",
     "Work-to-case navigation and scroll cleanup",
-    "original source SHA-256 hashes"
+    "original source SHA-256 hashes",
+    "assumptions, hypothetical personas, nine-question mental model, stakeholder analysis and complete early matrix",
+    "five original inline flowcharts with keyboard/full-size and no-JavaScript access",
+    "research asset SHA-256 hashes"
   ],
   "date": "2026-11-16",
-  "revision": "Single accent section, Meditimer type hierarchy and index contrast",
+  "revision": "Restored original research artifacts, assumptions, personas, maps and flows",
   "media_exports": {
     "evidence": 159,
     "parties": 219,
@@ -27,5 +30,6 @@
   "layout_report": "layers-verification.json",
   "vector_report": "vectors-verification.json",
   "typography_report": "typography-verification.json",
-  "story_proposal": "section-emphasis-and-story.md"
+  "story_proposal": "section-emphasis-and-story.md",
+  "research_coverage": "research-artifact-coverage.md"
 }

@@ -6,7 +6,7 @@ import crypto from 'node:crypto';
 const { chromium } = createRequire(import.meta.url)('playwright');
 const base = process.env.PORTFOLIO_URL || 'http://localhost:3000';
 const out = process.env.REVIEW_DIR || '/workspace/swiggy-vector-review';
-const ids = ['architecture', 'refund-cost', 'findings'];
+const ids = ['architecture', 'refund-cost', 'findings', 'mental-model', 'stakeholders'];
 const errors = [];
 const widths = [1440, 1024, 768, 390, 320];
 fs.mkdirSync(out, { recursive: true });
@@ -15,8 +15,8 @@ try {
   const page = await browser.newPage({ reducedMotion: 'reduce' });
   page.on('pageerror', e => errors.push(e.message));
   await page.goto(base + '/work/swiggy-agent-workflow', { waitUntil: 'networkidle' });
-  assert.equal(await page.locator('[data-vector-study]').count(), 3);
-  assert.equal(await page.locator('a[download][href$=".svg"]').count(), 3);
+  assert.equal(await page.locator('[data-vector-study]').count(), ids.length);
+  assert.equal(await page.locator('a[download][href$=".svg"]').count(), ids.length);
   const layouts = [];
   for (const width of widths) {
     await page.setViewportSize({ width, height: 1000 });
@@ -36,7 +36,7 @@ try {
       const link = root.getByRole('link', { name: /^Open / });
       await link.focus();
       assert.equal(await link.evaluate(e => e === document.activeElement), true);
-      await page.locator('#' + (id === 'architecture' ? 'concept' : id === 'findings' ? 'outcome' : 'design')).evaluate(e => scrollTo({ top: e.getBoundingClientRect().top + scrollY - 90, behavior: 'instant' }));
+      await page.locator('#' + (id === 'architecture' ? 'concept' : id === 'findings' ? 'outcome' : ['mental-model', 'stakeholders'].includes(id) ? 'research' : 'design')).evaluate(e => scrollTo({ top: e.getBoundingClientRect().top + scrollY - 90, behavior: 'instant' }));
       if (width > 700) {
         const nav = await page.locator('[aria-label="Case study stages"]').boundingBox();
         assert.ok(nav.y >= 0 && nav.y + nav.height < 1000, 'Bottom-left stage labels offscreen');
@@ -81,10 +81,10 @@ try {
     assert.equal(await image.isVisible(), true);
     assert.ok(await image.evaluate(e => e.currentSrc.endsWith('-mobile.svg')));
   }
-  assert.equal(await plain.locator('a[download][href$=".svg"]').count(), 3);
+  assert.equal(await plain.locator('a[download][href$=".svg"]').count(), ids.length);
   await plain.close();
   assert.deepEqual(errors, []);
-  const result = { passed: true, layouts, accentTextContrast: contrast, runtimeErrors: errors, checks: ['three original SVG studies and responsive source selection at five widths', 'undistorted vector proportions and no overflow', 'native keyboard access and SVG downloads', 'all six standalone SVG artboards without clipped text', 'embedded DM Sans and no raster content', 'handbook matches uploaded source SHA-256', 'unchanged stage labels remain inside the desktop viewport', 'readable accent text contrast', 'static diagrams without JavaScript'] };
+  const result = { passed: true, layouts, accentTextContrast: contrast, runtimeErrors: errors, checks: ['five explanatory SVG studies and responsive source selection at five widths', 'undistorted vector proportions and no overflow', 'native keyboard access and SVG downloads', 'all ten standalone SVG artboards without clipped text', 'embedded DM Sans and no raster content', 'handbook matches uploaded source SHA-256', 'unchanged stage labels remain inside the desktop viewport', 'readable accent text contrast', 'static diagrams without JavaScript'] };
   fs.writeFileSync(out + '/vectors-verification.json', JSON.stringify(result, null, 2) + '\n');
   console.log(JSON.stringify(result));
 } finally { await browser.close(); }

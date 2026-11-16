@@ -17,6 +17,16 @@
       "source": "findings.svg"
     },
     {
+      "width": 1440,
+      "id": "mental-model",
+      "source": "mental-model.svg"
+    },
+    {
+      "width": 1440,
+      "id": "stakeholders",
+      "source": "stakeholders.svg"
+    },
+    {
       "width": 1024,
       "id": "architecture",
       "source": "architecture-mobile.svg"
@@ -30,6 +40,16 @@
       "width": 1024,
       "id": "findings",
       "source": "findings-mobile.svg"
+    },
+    {
+      "width": 1024,
+      "id": "mental-model",
+      "source": "mental-model-mobile.svg"
+    },
+    {
+      "width": 1024,
+      "id": "stakeholders",
+      "source": "stakeholders-mobile.svg"
     },
     {
       "width": 768,
@@ -47,6 +67,16 @@
       "source": "findings-mobile.svg"
     },
     {
+      "width": 768,
+      "id": "mental-model",
+      "source": "mental-model-mobile.svg"
+    },
+    {
+      "width": 768,
+      "id": "stakeholders",
+      "source": "stakeholders-mobile.svg"
+    },
+    {
       "width": 390,
       "id": "architecture",
       "source": "architecture-mobile.svg"
@@ -62,6 +92,16 @@
       "source": "findings-mobile.svg"
     },
     {
+      "width": 390,
+      "id": "mental-model",
+      "source": "mental-model-mobile.svg"
+    },
+    {
+      "width": 390,
+      "id": "stakeholders",
+      "source": "stakeholders-mobile.svg"
+    },
+    {
       "width": 320,
       "id": "architecture",
       "source": "architecture-mobile.svg"
@@ -75,15 +115,25 @@
       "width": 320,
       "id": "findings",
       "source": "findings-mobile.svg"
+    },
+    {
+      "width": 320,
+      "id": "mental-model",
+      "source": "mental-model-mobile.svg"
+    },
+    {
+      "width": 320,
+      "id": "stakeholders",
+      "source": "stakeholders-mobile.svg"
     }
   ],
   "accentTextContrast": 4.745422250903343,
   "runtimeErrors": [],
   "checks": [
-    "three original SVG studies and responsive source selection at five widths",
+    "five explanatory SVG studies and responsive source selection at five widths",
     "undistorted vector proportions and no overflow",
     "native keyboard access and SVG downloads",
-    "all six standalone SVG artboards without clipped text",
+    "all ten standalone SVG artboards without clipped text",
     "embedded DM Sans and no raster content",
     "handbook matches uploaded source SHA-256",
     "unchanged stage labels remain inside the desktop viewport",

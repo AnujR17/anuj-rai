@@ -3,98 +3,98 @@
   "layouts": [
     {
       "width": 1600,
-      "paragraphs": 76,
+      "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
       "veryShortEndings": 0
     },
     {
       "width": 1440,
-      "paragraphs": 76,
+      "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
       "veryShortEndings": 0
     },
     {
       "width": 1366,
-      "paragraphs": 76,
+      "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
       "veryShortEndings": 0
     },
     {
       "width": 1280,
-      "paragraphs": 76,
+      "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
       "veryShortEndings": 0
     },
     {
       "width": 1100,
-      "paragraphs": 76,
+      "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
-      "veryShortEndings": 6
+      "veryShortEndings": 9
     },
     {
       "width": 1024,
-      "paragraphs": 76,
+      "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
-      "veryShortEndings": 5
+      "veryShortEndings": 11
     },
     {
       "width": 900,
-      "paragraphs": 76,
+      "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
-      "veryShortEndings": 8
+      "veryShortEndings": 11
     },
     {
       "width": 768,
-      "paragraphs": 76,
+      "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
       "veryShortEndings": 7
     },
     {
       "width": 700,
-      "paragraphs": 76,
+      "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
-      "veryShortEndings": 4
+      "veryShortEndings": 7
     },
     {
       "width": 430,
-      "paragraphs": 76,
+      "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
       "veryShortEndings": 3
     },
     {
       "width": 390,
-      "paragraphs": 76,
+      "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
       "veryShortEndings": 1
     },
     {
       "width": 375,
-      "paragraphs": 76,
+      "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
       "veryShortEndings": 1
     },
     {
       "width": 360,
-      "paragraphs": 76,
+      "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
       "veryShortEndings": 0
     },
     {
       "width": 320,
-      "paragraphs": 76,
+      "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
       "veryShortEndings": 0
@@ -103,12 +103,12 @@
   "noJavaScript": [
     {
       "width": 390,
-      "paragraphs": 76,
+      "paragraphs": 120,
       "orphanEndings": 0
     },
     {
       "width": 320,
-      "paragraphs": 76,
+      "paragraphs": 120,
       "orphanEndings": 0
     }
   ],

@@ -8,6 +8,7 @@ import { SwiggyEvolution } from "./SwiggyEvolution";
 import { SwiggyScenarios } from "./SwiggyScenarios";
 import { SwiggyFlow } from "./SwiggyFlow";
 import { SwiggyVector } from "./SwiggyVector";
+import { SwiggyAssumptions, SwiggyPersonas, SwiggyMentalModel, SwiggyStakeholders, SwiggyDesignCriteria, SwiggyOriginalFlows } from "./SwiggyResearch";
 import { EffortChart } from "./SwiggyGraphics";
 import styles from "./case-study.module.css";
 import swiggy from "./swiggy-case-study.module.css";
@@ -57,10 +58,14 @@ export function SwiggyCaseStudy() {
       <CaseStudyNav contrastSection="insights" />
       <div className={styles.story}>
         <section id="research" className={styles.stage} aria-labelledby="research-title">
-          <h2 id="research-title">Establishing what the agent can check</h2>
+          <h2 id="research-title">Understanding the work after a bot handover</h2>
           <div className={styles.stageContent + " " + swiggy.narrative}>
-            <p>I worked from public refund terms, other platforms’ published guidance and research on decision support. A short call with a customer-service expert at American Express added an operational perspective, although it could not tell me how Swiggy agents work. Internal screens, rules and real case data were&nbsp;unavailable.</p>
-            <p>A published condition could inform a check, but it could not fill every gap in the investigation. The photo requirement, restaurant terms and review thresholds needed explicit project assumptions. I documented their sources separately so those assumptions could be examined alongside the design.</p>
+            <p>Published accounts of refund abuse and evidence-quality problems framed the research. I worked from public refund terms, other platforms’ guidance and research on decision support to understand what an agent might need to check.</p>
+            <p>A ten-minute call with a customer-service expert at American Express added an operational perspective. With no access to Swiggy agents, internal screens or real case data, I used explicit assumptions, hypothetical personas and an inferred mental model to develop the concept.</p>
+            <SwiggyAssumptions />
+            <SwiggyPersonas />
+            <SwiggyMentalModel />
+            <SwiggyStakeholders />
             <details className={swiggy.report}><summary>Research and source notes</summary><p>The research record includes public policy, cross-platform comparisons, literature, one ten-minute call with an American Express customer-service expert and a separately labelled simulated interview. Swiggy agents and internal operating data were unavailable to us. The simulated interview supplied secondary material, not participant evidence.</p><p>Akshat’s customer-side audit included fabricated complaints. The accounts disagree about later genuine claims, and whether the refunds were returned is unrecorded. That account remains in the source record; it is not used to estimate fraud prevalence.</p><div className={styles.sourceLinks}><a href="https://www.swiggy.com/refund-policy">Swiggy Cancellation and Refund Policy</a><a href="https://www.swiggy.com/terms-and-conditions">Swiggy Terms of Use</a><a href="https://partner.swiggy.com/food/tnc/sellertnc">Swiggy Seller Terms</a></div></details>
           </div>
         </section>
@@ -80,6 +85,7 @@ export function SwiggyCaseStudy() {
         <section id="concept" className={styles.stage} aria-labelledby="concept-title">
           <h2 id="concept-title">Keeping the conversation inside the investigation</h2>
           <div className={styles.stageContent + " " + swiggy.narrative}>
+            <SwiggyDesignCriteria />
             <p>I arranged the case records on the left, the live conversation in the centre, and checks and decision controls on the right. The queue remains alongside them. The map below explains how the dashboard leads into that shared case.</p>
             <div className={swiggy.architecturePanel}>
               <div className={swiggy.vectorIntro}><h3>Information architecture</h3><p>Assigned, On hold, Shelved and Closed organise the workspace. Opening a ticket brings its records, conversation and decision tools together.</p></div>
@@ -102,6 +108,7 @@ export function SwiggyCaseStudy() {
             <p>In the wrong-item scenario, the customer ordered kadai paneer and reports a different dish. The agent can open both photos, inspect their context and contact the restaurant. One scripted branch has the restaurant acknowledge a bag swap; the recordings below follow that route.</p>
             <p>The agent can revisit records, revise a check and choose a response. The decision controls remain available throughout, so the investigation can develop as new information arrives.</p>
             <details className={swiggy.report}><summary>See the investigation flow</summary><SwiggyFlow /></details>
+            <SwiggyOriginalFlows />
             <div className={swiggy.interactionSequence}>
               <Explainer id="evidence" title="Review the photo in context"><p>I kept the image’s source and submission time inside the viewer, beside Agree and Disagree. The agent can inspect both photos and record an observation before returning to the customer.</p></Explainer>
               <Explainer id="parties" title="Keep the contact inside the case"><p>Restaurant and rider records open within the same complaint. The agent can inspect a trip, return to the customer and hold the conversation while waiting for someone else.</p></Explainer>
@@ -131,7 +138,7 @@ export function SwiggyCaseStudy() {
             </div>
             <p>These would be my first revisions before putting the prototype in front of trained agents. I want to see which records they consult, when they question a claim and whether the explanation reflects their own reasoning. Faster handling would matter only alongside complete checks and sound decisions on genuine and potentially misleading claims.</p>
             <p>The findings are still open, including coloured party ratings that can suggest a judgement. Claude assisted prototype construction and performed the documented heuristic review; no agents tested this version. Without a baseline for Swiggy’s current tool, quality or efficiency gains remain predictions to evaluate.</p>
-            <details className={swiggy.report}><summary>Read all 16 findings and proposed changes</summary><div className={swiggy.tableScroll}><table><thead><tr><th scope="col">Finding</th><th scope="col">Observed problem</th><th scope="col">Proposed next step</th></tr></thead><tbody>{swiggyFindings.map(([id, severity, finding, next]) => <tr key={id}><th scope="row">{id}<span>{severity}</span></th><td>{finding}</td><td>{next}</td></tr>)}</tbody></table></div><p>F4 refers to older policy conditions later moved upstream or removed. That version disagreement needs to be reconciled before a revision.</p></details>
+            <details className={swiggy.report}><summary>Read all 16 findings and proposed changes</summary><div className={swiggy.tableScroll}><table aria-label="Heuristic findings"><thead><tr><th scope="col">Finding</th><th scope="col">Observed problem</th><th scope="col">Proposed next step</th></tr></thead><tbody>{swiggyFindings.map(([id, severity, finding, next]) => <tr key={id}><th scope="row">{id}<span>{severity}</span></th><td>{finding}</td><td>{next}</td></tr>)}</tbody></table></div><p>F4 refers to older policy conditions later moved upstream or removed. That version disagreement needs to be reconciled before a revision.</p></details>
             <details className={swiggy.report}><summary>Effort estimates and the next evaluation</summary><EffortChart /><p>The walkthrough’s 17–21 actions and KLM estimates exclude reading and waiting. A future comparison could present the same synthetic records separately and inside Agent Desk, testing the value of connected context. That study condition would not represent Swiggy’s current workflow.</p><p>I would consider time to decision alongside missed checks, unsupported fraud conclusions, reasons recorded and cases reopened. The current prototype also lacks a full reviewer workspace, a route for restaurants and riders to dispute decisions, and access to the bot transcript behind the handover summary.</p></details>
             <div className={styles.sources}><h3>Sources and credits</h3><p>Developed within a four-person group including Sukhmanpreet Singh Saini and Akshat. My work covered research, the concept, design and business logic. Claude assisted implementation and the documented review. The original prototype is the final screen reference; Figma stops before its 4–7 November updates.</p><div className={styles.sourceLinks}><Link href="/work/swiggy-agent-workflow/prototype">Try Agent Desk</Link><a href="/portfolio/swiggy/agent-desk-handbook-v1.0.pdf">Agent Desk Handbook v1.0</a><a href="/portfolio/swiggy/design-rulebook-v7.1.pdf">Design Rulebook v7.1</a><a href="https://www.figma.com/design/GzgfjrlKX8fQURtcMgAYfN">Figma design</a><a href="https://claude.ai/artifact/KtfMHuEqRS3cjPEU9LJ8qV">Original Agent Desk v7.1</a></div></div>
           </div>

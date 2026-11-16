@@ -1,0 +1,257 @@
+{
+  "personas": [
+    {
+      "name": "Ananya",
+      "role": "Newer escalation agent",
+      "experience": "6 weeks, assumed",
+      "goal": "Reach a decision she can justify.",
+      "risk": "Relying too heavily on the first signal the screen presents.",
+      "need": "Relevant conditions beside their supporting evidence, with the source available."
+    },
+    {
+      "name": "Rohit",
+      "role": "Experienced escalation agent",
+      "experience": "2 years, assumed",
+      "goal": "Close cases quickly without reopening them.",
+      "risk": "Working from habit and overlooking missing evidence or an unresolved dependency.",
+      "need": "Gaps and pending checks that remain noticeable during a fast investigation."
+    }
+  ],
+  "assumptions": [
+    {
+      "title": "The agent can reach the relevant records",
+      "choice": "Order events, customer photos and party histories are available in the same case. Restaurant and rider contact can happen within the workspace.",
+      "consequence": "The prototype demonstrates that access with fictional data and simulated contact; the integrations are assumed."
+    },
+    {
+      "title": "Photo evidence is required for selected issues",
+      "choice": "The project retains a photo condition for applicable complaints, although no general food-order photo requirement was established in the public rules.",
+      "consequence": "The agent can inspect the image and request evidence. This is a working project rule."
+    },
+    {
+      "title": "Standing terms determine the cost split",
+      "choice": "The model gives restaurants Full, Partial-cap or No-refund terms. Swiggy covers a refund above those terms.",
+      "consequence": "This replaces a live permission request in the design. The public permission clause does not establish that model."
+    },
+    {
+      "title": "The case reaches this desk after upstream checks",
+      "choice": "The hypothetical 24-hour claim window moves upstream. Review triggers are working rules; their thresholds are not verified Swiggy limits.",
+      "consequence": "Later versions remove the earlier P7 amount and P8 approval-limit conditions. The remaining high-value review trigger is a separate assumption."
+    }
+  ],
+  "policyChoices": [
+    [
+      "Refund above restaurant terms",
+      "The model makes Swiggy cover a refund above the terms, despite the public requirement for merchant permission."
+    ],
+    [
+      "Customer call",
+      "An in-case call stays as a simulated feature. Public guidance directs customers to in-app help and warns that there is no official customer-care phone line."
+    ],
+    [
+      "Combined decision record",
+      "The policy analysis separates customer remedy, authorisation, refund movement, restaurant recovery and rider earnings. The prototype keeps one combined confirmation."
+    ],
+    [
+      "Photo condition",
+      "A photo check stays for selected issue types despite the gap in published food-order evidence rules."
+    ]
+  ],
+  "mentalModel": [
+    [
+      "Read the bot handover",
+      "No matching policy condition",
+      "What did the bot already offer?"
+    ],
+    [
+      "Identify what went wrong",
+      "Issue type",
+      "Translate the customer's account into a category."
+    ],
+    [
+      "Check when it happened",
+      "Order stage and timing",
+      "Bring the relevant timestamps together."
+    ],
+    [
+      "Look for proof",
+      "No general food-photo rule established",
+      "Make evidence and missing information visible."
+    ],
+    [
+      "Check past refunds",
+      "History is not a published refund condition",
+      "Show history as context, with dates and totals."
+    ],
+    [
+      "Consider who is at fault",
+      "Fault attribution",
+      "Bring the other parties' records into the case."
+    ],
+    [
+      "Choose an amount",
+      "Case-by-case refund discretion",
+      "Support an explicit remedy and cost calculation."
+    ],
+    [
+      "Seek restaurant agreement",
+      "Early interpretation of permission clause",
+      "Make the dependency visible; later changed to standing terms."
+    ],
+    [
+      "Explain the outcome",
+      "No matching policy condition",
+      "Keep an editable explanation with the decision."
+    ]
+  ],
+  "valueHypotheses": [
+    [
+      "Agent",
+      "Low",
+      "High",
+      "Less work finding conditions and evidence."
+    ],
+    [
+      "Customer with a genuine claim",
+      "Medium",
+      "High",
+      "A response grounded in the case evidence."
+    ],
+    [
+      "Restaurant",
+      "Low",
+      "Medium",
+      "Visible cost allocation and its side of the case."
+    ],
+    [
+      "Delivery partner",
+      "Low",
+      "Medium",
+      "Trip evidence and party records available to the agent."
+    ],
+    [
+      "Swiggy",
+      "Medium",
+      "High",
+      "Fewer evidence-related errors and a reasoned case log."
+    ],
+    [
+      "Regulator / consumer courts",
+      "Not rated",
+      "Medium",
+      "A record that can support review of the decision."
+    ]
+  ],
+  "criteria": [
+    "Show an objective observation.",
+    "Make its source traceable.",
+    "Describe recorded information without predicting an outcome.",
+    "Leave the choice with the agent.",
+    "Apply comparable treatment to each party.",
+    "Remove a lookup, screen switch or calculation."
+  ],
+  "ideaMatrix": [
+    [
+      "What went wrong?",
+      "Customer's words and the bot's issue",
+      "Policy category and default liability, an early idea",
+      "Agent confirms or corrects the category"
+    ],
+    [
+      "When did it happen?",
+      "Order-event timestamps",
+      "Timing compared with the early working claim window",
+      "Timeline with relevant cutoffs"
+    ],
+    [
+      "Is there proof?",
+      "Evidence type, supplier and times",
+      "Evidence gaps and submission timing",
+      "Request evidence or connect it to a condition"
+    ],
+    [
+      "Who is at fault?",
+      "Rider events and customer account",
+      "Conflicting records side by side",
+      "Agent chooses fault; the model calculates cost"
+    ],
+    [
+      "Has the restaurant agreed?",
+      "Permission status and time",
+      "No reply after the hypothetical waiting period",
+      "Request, remind or escalate, before standing terms replaced this"
+    ],
+    [
+      "What is each party's record?",
+      "Dated history for all three parties",
+      "Counts with totals; no-history state",
+      "Open older records when needed"
+    ],
+    [
+      "How much, and can I approve it?",
+      "Items and prices",
+      "Selected-item total and the early approval-limit check",
+      "Agent chooses the items; system adds the amount"
+    ],
+    [
+      "Does it need review?",
+      "Facts behind the working triggers",
+      "Review trigger with its source",
+      "Send the case and its log for review"
+    ],
+    [
+      "How do I explain it?",
+      "Bot offer and recorded facts",
+      "Relevant conditions for the reply",
+      "Editable wording after the agent chooses"
+    ],
+    [
+      "Across the investigation",
+      "Not specified",
+      "Not specified",
+      "Case log and agent-opened reference cases, an earlier idea"
+    ]
+  ],
+  "flows": [
+    {
+      "id": "wrong-item",
+      "file": "flow-1-wrong-item.png",
+      "label": "Wrong item",
+      "width": 824,
+      "height": 3200,
+      "summary": "Photo review, party contact, fault and remedy, with denial, partial refund and review branches."
+    },
+    {
+      "id": "missing-item",
+      "file": "flow-2-missing-item.png",
+      "label": "Missing item",
+      "width": 820,
+      "height": 3200,
+      "summary": "A missing part of an order, restaurant terms, cost allocation and the requested refund destination."
+    },
+    {
+      "id": "not-delivered",
+      "file": "flow-3-not-delivered.png",
+      "label": "Not delivered",
+      "width": 941,
+      "height": 3200,
+      "summary": "Rider contact and conflicting delivery accounts, including a route to review."
+    },
+    {
+      "id": "late-delivery",
+      "file": "flow-4-late-delivery.png",
+      "label": "Late delivery",
+      "width": 783,
+      "height": 3200,
+      "summary": "An offline customer, Hold and a later complaint about the delivered food."
+    },
+    {
+      "id": "customer-conduct",
+      "file": "flow-5-customer-misbehaviour-flag.png",
+      "label": "Customer conduct and review",
+      "width": 855,
+      "height": 3200,
+      "summary": "The earlier quality-complaint branch: a boundary message, Flag with a reason and note, then review."
+    }
+  ]
+}
