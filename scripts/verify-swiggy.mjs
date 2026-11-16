@@ -68,7 +68,9 @@ async function verify() {
     assert.equal(await page.locator(`[data-research-artifact="${artifact}"]`).isVisible(), true, 'Missing research artifact: ' + artifact);
   }
   const personas = page.locator('[data-research-artifact="personas"]');
-  assert.match(await personas.innerText(), /hypothetical/);
+  assert.match(await personas.innerText(), /Agent personas/);
+  assert.match(await personas.innerText(), /project\s+assumptions/);
+  assert.doesNotMatch(await page.locator('article').innerText(), /\bhypothetical\b/i);
   assert.match(await personas.innerText(), /Ananya/);assert.match(await personas.innerText(), /Rohit/);
   assert.equal(await page.getByRole('table', { name: 'Inferred agent mental model', exact: true }).locator('tbody tr').count(), 9);
   assert.equal(await page.getByRole('table', { name: 'Early stakeholder value hypotheses', exact: true }).locator('tbody tr').count(), 6);
@@ -170,7 +172,7 @@ async function verify() {
   for (const { file, sha256 } of provenance.research_models_and_original_flows.records) {
     assert.equal(crypto.createHash('sha256').update(fs.readFileSync('public/portfolio/swiggy/' + file)).digest('hex'), sha256, 'Research source asset changed: ' + file);
   }
-  const result = { passed: true, layouts, stagePositions, runtimeErrors: errors, checks: ["five-stage responsive reading layout and loaded original images", "four-version comparison with keyboard navigation and no-JavaScript access", "three clean 30fps UI recordings with device-mockup GIF exports", "five complete ticket references", "optional media playback and pause", "sixteen-findings disclosure and policy-version conflict", "playable local prototype and original font weights", "normal-motion shared and Meditimer indices", "native no-JavaScript links and disclosures", "Work-to-case navigation and scroll cleanup", "original source SHA-256 hashes", "assumptions, hypothetical personas, nine-question mental model, stakeholder analysis and complete early matrix", "five original inline flowcharts with keyboard/full-size and no-JavaScript access", "research asset SHA-256 hashes"] };
+  const result = { passed: true, layouts, stagePositions, runtimeErrors: errors, checks: ["five-stage responsive reading layout and loaded original images", "four-version comparison with keyboard navigation and no-JavaScript access", "three clean 30fps UI recordings with device-mockup GIF exports", "five complete ticket references", "optional media playback and pause", "sixteen-findings disclosure and policy-version conflict", "playable local prototype and original font weights", "normal-motion shared and Meditimer indices", "native no-JavaScript links and disclosures", "Work-to-case navigation and scroll cleanup", "original source SHA-256 hashes", "assumptions, agent personas with their basis explained, nine-question mental model, stakeholder analysis and complete early matrix", "five original inline flowcharts with keyboard/full-size and no-JavaScript access", "research asset SHA-256 hashes"] };
   fs.writeFileSync(path.join(out, "verification.json"), JSON.stringify(result, null, 2));
   console.log(JSON.stringify(result));
 }

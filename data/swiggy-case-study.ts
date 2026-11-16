@@ -44,7 +44,7 @@ export const swiggyFindings = [
   ["F10", "Minor", "The cost split appears only after an action is chosen.", "Make the working liability basis visible during investigation."],
   ["F11", "Minor", "Conflicting records remain in different tabs.", "Bring both records into a single comparison without suggesting fault."],
   ["F12", "Minor", "The total delivery delay must be assembled from trip steps.", "State the difference between promised and actual delivery time."],
-  ["F13", "Cosmetic", "Delay colours use hypothetical planned times that are not shown.", "Expose the reference time and use neutral presentation."],
+  ["F13", "Cosmetic", "Delay colours use planned times from the project model that are not shown.", "Expose the reference time and use neutral presentation."],
   ["F14", "Cosmetic", "The cost line contains internal policy-version wording.", "Replace it with plain wording that still identifies a working assumption."],
   ["F15", "Cosmetic", "History counts repeat in two columns.", "Keep one source of the summary."],
   ["F16", "Cosmetic", "The absence of photo evidence is explained only in a tooltip.", "Write ‘No photo’ directly in the evidence area."],

@@ -15,12 +15,13 @@
     "native no-JavaScript links and disclosures",
     "Work-to-case navigation and scroll cleanup",
     "original source SHA-256 hashes",
-    "assumptions, hypothetical personas, nine-question mental model, stakeholder analysis and complete early matrix",
+    "assumptions, agent personas with their basis explained, nine-question mental model, stakeholder analysis and complete early matrix",
     "five original inline flowcharts with keyboard/full-size and no-JavaScript access",
-    "research asset SHA-256 hashes"
+    "research asset SHA-256 hashes",
+    "public case wording uses Agent personas and omits repeated hypothetical qualifiers"
   ],
   "date": "2026-11-16",
-  "revision": "Restored original research artifacts, assumptions, personas, maps and flows",
+  "revision": "Direct persona labels and concise research wording",
   "media_exports": {
     "evidence": 159,
     "parties": 219,

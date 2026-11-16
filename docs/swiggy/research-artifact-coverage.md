@@ -1,5 +1,12 @@
 # Research artifact coverage
 
+Latest presentation correction, 16 November: the section is titled “Agent
+personas”. Its introduction explains once that the profiles were developed from
+research and project assumptions. Tenure appears as profile context, and
+repeated “hypothetical” wording is removed from the public case, including
+accessible names and rule descriptions. Working rules remain identifiable as
+project choices. The source extracts below preserve their original wording.
+
 16 November 2026. The author corrected the omission of assumptions, personas
 and maps from the case-study outline. The previous edit condensed away actual
 project work. The guidance against generic process filler did not justify that

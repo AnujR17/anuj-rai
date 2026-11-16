@@ -20,10 +20,10 @@ export function SwiggyAssumptions() {
 
 export function SwiggyPersonas() {
   return <div className={styles.researchStudy} data-research-artifact="personas">
-    <h3>Two hypothetical agent personas</h3>
-    <p>I used a newer and an experienced escalation agent to consider different ways the screen could fail. Ananya and Rohit are placeholders; their experience and behaviour are assumptions informed by the research, rather than profiles of interviewed Swiggy agents.</p>
+    <h3>Agent personas</h3>
+    <p>I used two agent personas to explore different information needs. Ananya represents an agent learning the review process; Rohit represents an experienced agent working quickly. I developed both profiles from the research and project&nbsp;assumptions.</p>
     <div className={styles.personaPair}>
-      {research.personas.map(persona => <section className={styles.persona} key={persona.name} aria-label={`${persona.name}, hypothetical ${persona.role.toLowerCase()}`}>
+      {research.personas.map(persona => <section className={styles.persona} key={persona.name} aria-label={`${persona.name}, ${persona.role.toLowerCase()}`}>
         <h4>{persona.name}</h4><p className={styles.personaRole}>{persona.role}</p><p className={styles.personaExperience}>{persona.experience}</p>
         <dl><div><dt>Goal</dt><dd>{persona.goal}</dd></div><div><dt>Risk to design for</dt><dd>{persona.risk}</dd></div><div><dt>What the screen needs to show</dt><dd>{persona.need}</dd></div></dl>
       </section>)}

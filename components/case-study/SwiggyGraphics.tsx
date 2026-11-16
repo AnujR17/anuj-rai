@@ -2,7 +2,7 @@ import { swiggyScenarios } from "@/data/swiggy-case-study";
 import styles from "./swiggy-case-study.module.css";
 
 export function PolicyBoundary() {
-  return <div className={styles.policyBoundary} aria-label="Public evidence and hypothetical policy draft">
+  return <div className={styles.policyBoundary} aria-label="Public evidence and proposed policy draft">
     <div><strong>12</strong><h3>Documented Swiggy findings</h3><p>Public wording and source boundaries, not access to the internal support system.</p></div>
     <div><strong>10 + 24</strong><h3>Proposed terms and operating rules</h3><p>Project hypotheses. Sixteen policy choices remain open in this separate draft.</p></div>
     <div><strong>28 / 14</strong><h3>Issue families / acceptance specifications</h3><p>Proposed scope and unexecuted checks. These do not establish complaint-volume coverage.</p></div>

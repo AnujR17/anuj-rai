@@ -34,7 +34,7 @@
       "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
-      "veryShortEndings": 9
+      "veryShortEndings": 8
     },
     {
       "width": 1024,
@@ -55,7 +55,7 @@
       "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
-      "veryShortEndings": 7
+      "veryShortEndings": 8
     },
     {
       "width": 700,

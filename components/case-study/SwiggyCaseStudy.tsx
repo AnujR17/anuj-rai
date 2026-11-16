@@ -61,7 +61,7 @@ export function SwiggyCaseStudy() {
           <h2 id="research-title">Understanding the work after a bot handover</h2>
           <div className={styles.stageContent + " " + swiggy.narrative}>
             <p>Published accounts of refund abuse and evidence-quality problems framed the research. I worked from public refund terms, other platforms’ guidance and research on decision support to understand what an agent might need to check.</p>
-            <p>A ten-minute call with a customer-service expert at American Express added an operational perspective. With no access to Swiggy agents, internal screens or real case data, I used explicit assumptions, hypothetical personas and an inferred mental model to develop the concept.</p>
+            <p>A ten-minute call with a customer-service expert at American Express added an operational perspective. With no access to Swiggy agents, internal screens or real case data, I used explicit assumptions, personas and an inferred mental model to develop the concept.</p>
             <SwiggyAssumptions />
             <SwiggyPersonas />
             <SwiggyMentalModel />
