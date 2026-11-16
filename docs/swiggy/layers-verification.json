@@ -65,8 +65,83 @@
     "source-record overlap and keyboard access to full-size originals",
     "all five layer compositions without horizontal overflow",
     "scroll-linked depth with a static reduced-motion fallback",
+    "one accent section with readable index rows across twelve boundary positions",
     "ink-scene control contrast",
     "native source access and all versions without JavaScript"
   ],
-  "date": "2026-11-16"
+  "date": "2026-11-16",
+  "featuredNavigation": [
+    {
+      "width": 1440,
+      "edge": "top",
+      "split": 0,
+      "minimumContrast": 4.679978330614811
+    },
+    {
+      "width": 1440,
+      "edge": "top",
+      "split": 2,
+      "minimumContrast": 4.679978330614811
+    },
+    {
+      "width": 1440,
+      "edge": "top",
+      "split": 3,
+      "minimumContrast": 4.679978330614811
+    },
+    {
+      "width": 1440,
+      "edge": "bottom",
+      "split": 0,
+      "minimumContrast": 4.679978330614811
+    },
+    {
+      "width": 1440,
+      "edge": "bottom",
+      "split": 2,
+      "minimumContrast": 4.745422250903343
+    },
+    {
+      "width": 1440,
+      "edge": "bottom",
+      "split": 3,
+      "minimumContrast": 4.745422250903343
+    },
+    {
+      "width": 768,
+      "edge": "top",
+      "split": 0,
+      "minimumContrast": 4.679978330614811
+    },
+    {
+      "width": 768,
+      "edge": "top",
+      "split": 2,
+      "minimumContrast": 4.679978330614811
+    },
+    {
+      "width": 768,
+      "edge": "top",
+      "split": 3,
+      "minimumContrast": 4.679978330614811
+    },
+    {
+      "width": 768,
+      "edge": "bottom",
+      "split": 0,
+      "minimumContrast": 4.679978330614811
+    },
+    {
+      "width": 768,
+      "edge": "bottom",
+      "split": 2,
+      "minimumContrast": 4.745422250903343
+    },
+    {
+      "width": 768,
+      "edge": "bottom",
+      "split": 3,
+      "minimumContrast": 4.745422250903343
+    }
+  ]
 }

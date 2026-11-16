@@ -1,6 +1,6 @@
 .actions { display:flex; flex-wrap:wrap; gap:12px 32px; margin-top:32px; }
-.case p { font-size:18px;line-height:1.75;max-width:800px; }
-.case h3 { font-size:27px;line-height:1.2;font-weight:400;letter-spacing:-.035em;margin-bottom:22px; }
+.case p { font-size:17px;line-height:1.7;max-width:800px; }
+.case h3 { font-size:25px;line-height:1.2;font-weight:450;letter-spacing:-.035em;margin-bottom:22px; }
 .case h4 { font-size:17px;line-height:1.4;font-weight:500;margin-bottom:18px; }
 .case .overview { padding-block:64px 30px; }
 .case .overview > p:first-child { font-size:clamp(22px,2.1vw,29px);line-height:1.5;letter-spacing:-.025em;max-width:900px; }
@@ -46,7 +46,7 @@
 .predictions p + p { margin-top:20px; }
 .dashboardImage { display:block;width:100%;height:auto;border-radius:8px;margin-top:25px; }
 .heroDevice { padding:25px 28px 20px; }
-.case .narrative > p { max-width:710px;line-height:1.85;margin-bottom:25px; }
+.case .narrative > p { max-width:710px;line-height:1.7;margin-bottom:25px; }
 .staticDevice { padding:clamp(25px,4.1vw,52px) clamp(22px,4.3vw,56px) 30px;background:#eeede6;border-radius:14px;margin-block:40px; }
 .staticDevice img { width:100%;height:auto;display:block; }
 .case .versionStory { max-width:730px;font-size:17px;line-height:1.8;margin-top:25px; }
@@ -317,12 +317,12 @@
 .vectorImage:focus-visible { outline:3px solid var(--concept-accent);outline-offset:6px;border-radius:4px; }
 .vectorDownload { display:inline-flex;align-items:center;min-height:44px;margin-top:14px;font-size:16px;text-decoration:underline;text-underline-offset:6px; }
 .architecturePanel .vectorStudy { margin-bottom:0; }
-.accentScene { background:var(--concept-accent);color:#fff7f0;border-radius:12px;padding:38px 32px 24px;margin:55px -32px 70px; }
-.case .accentScene h3 { color:#fff7f0;margin-top:0;font-size:clamp(28px,3vw,38px); }
-.case .accentScene p { max-width:740px;color:#fff7f0;font-size:18px;line-height:1.8; }
-.accentScene .vectorStudy { margin-bottom:25px; }
-.accentScene a,.accentScene a:hover { color:#fff7f0; }
-.accentScene :focus-visible { outline:3px solid #fff7f0;outline-offset:6px; }
+.costStudy { background:#eeece4;border-radius:12px;padding:38px 32px 24px;margin:55px -32px 70px; }
+.case .costStudy h3 {margin-top:0;font-size:clamp(28px,3vw,38px); }
+.case .costStudy p { max-width:740px;font-size:17px;line-height:1.7; }
+.costStudy .vectorStudy { margin-bottom:25px; }
+.costStudy a:hover { color:var(--concept-accent); }
+.costStudy :focus-visible { outline:3px solid var(--concept-accent);outline-offset:6px; }
 .scenarioIntroduction { margin-top:65px; }
 .case .scenarioIntroduction p { max-width:710px;line-height:1.8; }
 @media(max-width:1100px) {
@@ -336,10 +336,10 @@
  .vectorIntro { padding-inline:18px; }
  .case .vectorIntro p { font-size:17px; }
  .architecturePanel .vectorDownload { margin-left:18px; }
- .accentScene { margin:42px -12px 55px;padding:28px 20px 24px;border-radius:8px; }
- .accentScene .vectorStudy { margin-inline:-8px; }
- .case .accentScene p { font-size:17px; }
- .accentScene .vectorDownload { margin-left:8px; }
+ .costStudy { margin:42px -12px 55px;padding:28px 20px 24px;border-radius:8px; }
+ .costStudy .vectorStudy { margin-inline:-8px; }
+ .case .costStudy p { font-size:17px; }
+ .costStudy .vectorDownload { margin-left:8px; }
  .scenarioIntroduction { margin-top:45px; }
 }
 
@@ -353,4 +353,20 @@
  .case .narrative > p,.case .versionStory,.case .report > p,
  .case .scenarioPanel > p,.case .findingStories p,
  .case .inkScene .explainerCopy p { text-wrap:balance; }
+}
+
+/* One full-width emphasis, using the same hierarchy as the Meditimer story. */
+.case section[id] > h2 { font-size:clamp(32px,3.5vw,54px);font-weight:450;line-height:1.14; }
+.case .projectMeta dd,.case .overview > div p { font-size:17px;line-height:1.7; }
+.case .projectMeta dt,.case .overview > div h2 { font-size:16px;font-weight:500; }
+.case .featuredStage { position:relative;isolation:isolate;background:var(--concept-accent);color:#fff7f0;padding-block:88px 64px;margin-block:24px 48px; }
+.featuredStage::before { content:"";position:absolute;inset:0;background:var(--concept-accent);box-shadow:0 0 0 100vmax var(--concept-accent);clip-path:inset(0 -100vmax);z-index:-1;pointer-events:none; }
+.case .featuredStage:target > h2 { color:inherit; }
+.featuredStage .workspacePlane { background:#ffffff1a; }
+.featuredStage a:focus-visible { outline:3px solid #fff7f0;outline-offset:6px; }
+.case nav[aria-label="Case study stages"] a[data-on-accent="true"] { color:#fff7f0; }
+.case nav[aria-label="Case study stages"] a[data-on-accent="true"][aria-current="location"] { color:#fff;font-weight:550; }
+.case nav[aria-label="Case study stages"] a[data-on-accent="true"]:focus-visible { outline:2px solid #fff7f0;outline-offset:4px; }
+@media(max-width:700px) {
+ .case .featuredStage { padding-block:52px 38px;margin-block:8px 32px; }
 }

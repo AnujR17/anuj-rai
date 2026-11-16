@@ -73,6 +73,37 @@ try {
     assert.equal(await workspace.locator('[data-layer-depth="front"]').evaluate(e => getComputedStyle(e).animationName), 'none');
   }
 
+  // Check text against the surface under each index row as the accent enters/exits.
+  const featuredNavigation = [];
+  for (const width of [1440, 768]) {
+    await page.setViewportSize({ width, height: 900 });
+    const feature = page.locator('[data-accent-scene="evidence"]');
+    assert.equal(await page.locator('[data-accent-scene]').count(), 1);
+    await feature.scrollIntoViewIfNeeded();
+    for (const edge of ['top', 'bottom']) for (const split of [0, 2, 3]) {
+      await page.evaluate(({ edge, split }) => {
+        const feature = document.querySelector('[data-accent-scene="evidence"]').getBoundingClientRect();
+        const links = document.querySelectorAll('nav[aria-label="Case study stages"] a');
+        const boundary = (links[split].getBoundingClientRect().bottom + links[split + 1].getBoundingClientRect().top) / 2;
+        scrollTo({ top: scrollY + feature[edge] - boundary, behavior: 'instant' });
+      }, { edge, split });
+      await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+      const checks = await page.evaluate(() => {
+        const feature = document.querySelector('[data-accent-scene="evidence"]');
+        const bounds = feature.getBoundingClientRect();
+        const luminance = value => value.match(/[\d.]+/g).slice(0, 3).map(Number).map(v => v / 255).map(v => v <= .04045 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4).reduce((sum, v, i) => sum + v * [.2126, .7152, .0722][i], 0);
+        return [...document.querySelectorAll('nav[aria-label="Case study stages"] a')].map(link => {
+          const row = link.getBoundingClientRect(), middle = row.top + row.height / 2;
+          const background = middle >= bounds.top && middle < bounds.bottom ? getComputedStyle(feature).backgroundColor : getComputedStyle(document.body).backgroundColor;
+          const front = luminance(getComputedStyle(link).color), back = luminance(background);
+          return { label: link.textContent, contrast: (Math.max(front, back) + .05) / (Math.min(front, back) + .05) };
+        });
+      });
+      assert.ok(checks.every(row => row.contrast >= 4.5), 'Index loses contrast at an accent boundary');
+      featuredNavigation.push({ width, edge, split, minimumContrast: Math.min(...checks.map(row => row.contrast)) });
+    }
+  }
+
   const contrast = await page.locator('[data-interaction-scene="decision"] button').first().evaluate(e => {
     const rgb = value => value.match(/[\d.]+/g).slice(0, 3).map(Number);
     const luminance = channels => channels.map(v => v / 255).map(v => v <= .04045 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4).reduce((sum, v, i) => sum + v * [.2126, .7152, .0722][i], 0);
@@ -92,7 +123,7 @@ try {
   assert.equal(await plain.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
   await plain.close();
   assert.deepEqual(errors, []);
-  const result = { passed: true, foldResults, layeredWidths: [1440, 768, 390, 320], motionSupported, inkControlContrast: contrast, runtimeErrors: errors, checks: ['title, complete laptop and source detail in one fold at eight viewports', 'hero overlap without obscuring the title', 'source-record overlap and keyboard access to full-size originals', 'all five layer compositions without horizontal overflow', 'scroll-linked depth with a static reduced-motion fallback', 'ink-scene control contrast', 'native source access and all versions without JavaScript'] };
+  const result = { passed: true, foldResults, layeredWidths: [1440, 768, 390, 320], motionSupported, featuredNavigation, inkControlContrast: contrast, runtimeErrors: errors, checks: ['title, complete laptop and source detail in one fold at eight viewports', 'hero overlap without obscuring the title', 'source-record overlap and keyboard access to full-size originals', 'all five layer compositions without horizontal overflow', 'scroll-linked depth with a static reduced-motion fallback', 'one accent section with readable index rows across twelve boundary positions', 'ink-scene control contrast', 'native source access and all versions without JavaScript'] };
   fs.writeFileSync(out + '/layers-verification.json', JSON.stringify(result, null, 2) + '\n');
   console.log(JSON.stringify(result));
 } finally {

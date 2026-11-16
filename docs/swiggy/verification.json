@@ -17,7 +17,7 @@
     "original source SHA-256 hashes"
   ],
   "date": "2026-11-16",
-  "revision": "Compact hero and natural paragraph composition",
+  "revision": "Single accent section, Meditimer type hierarchy and index contrast",
   "media_exports": {
     "evidence": 159,
     "parties": 219,
@@ -26,5 +26,6 @@
   },
   "layout_report": "layers-verification.json",
   "vector_report": "vectors-verification.json",
-  "typography_report": "typography-verification.json"
+  "typography_report": "typography-verification.json",
+  "story_proposal": "section-emphasis-and-story.md"
 }

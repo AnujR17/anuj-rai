@@ -54,17 +54,17 @@ export function SwiggyCaseStudy() {
       <p className={swiggy.context}>An independent concept, unaffiliated with Swiggy.</p>
     </div>
     <div className={styles.readingLayout}>
-      <CaseStudyNav />
+      <CaseStudyNav contrastSection="insights" />
       <div className={styles.story}>
         <section id="research" className={styles.stage} aria-labelledby="research-title">
           <h2 id="research-title">Establishing what the agent can check</h2>
           <div className={styles.stageContent + " " + swiggy.narrative}>
-            <p>I worked from public refund terms, other platforms’ published guidance and research on decision support. A short call with a customer-service expert at American Express added an operational perspective, although it could not tell me how Swiggy agents work. Internal screens, rules and real case data were unavailable.</p>
+            <p>I worked from public refund terms, other platforms’ published guidance and research on decision support. A short call with a customer-service expert at American Express added an operational perspective, although it could not tell me how Swiggy agents work. Internal screens, rules and real case data were&nbsp;unavailable.</p>
             <p>A published condition could inform a check, but it could not fill every gap in the investigation. The photo requirement, restaurant terms and review thresholds needed explicit project assumptions. I documented their sources separately so those assumptions could be examined alongside the design.</p>
             <details className={swiggy.report}><summary>Research and source notes</summary><p>The research record includes public policy, cross-platform comparisons, literature, one ten-minute call with an American Express customer-service expert and a separately labelled simulated interview. Swiggy agents and internal operating data were unavailable to us. The simulated interview supplied secondary material, not participant evidence.</p><p>Akshat’s customer-side audit included fabricated complaints. The accounts disagree about later genuine claims, and whether the refunds were returned is unrecorded. That account remains in the source record; it is not used to estimate fraud prevalence.</p><div className={styles.sourceLinks}><a href="https://www.swiggy.com/refund-policy">Swiggy Cancellation and Refund Policy</a><a href="https://www.swiggy.com/terms-and-conditions">Swiggy Terms of Use</a><a href="https://partner.swiggy.com/food/tnc/sellertnc">Swiggy Seller Terms</a></div></details>
           </div>
         </section>
-        <section id="insights" className={styles.stage} aria-labelledby="insights-title">
+        <section id="insights" className={styles.stage + " " + swiggy.featuredStage} aria-labelledby="insights-title" data-accent-scene="evidence">
           <h2 id="insights-title">A record is not a verdict</h2>
           <div className={styles.stageContent + " " + swiggy.narrative}>
             <p>A delivery status records what was marked in the system. A photograph shows what the customer submitted. A restaurant’s reply gives another account. None settles the whole complaint on&nbsp;its&nbsp;own.</p>
@@ -107,7 +107,7 @@ export function SwiggyCaseStudy() {
               <Explainer id="parties" title="Keep the contact inside the case"><p>Restaurant and rider records open within the same complaint. The agent can inspect a trip, return to the customer and hold the conversation while waiting for someone else.</p></Explainer>
               <Explainer id="decision" title="Keep the reason with the decision"><p>In this wrong-item branch, the restaurant admits a bag swap. Selecting Restaurant and Full refund creates an editable explanation. The agent sends it, chooses a reason and confirms, leaving a record of the decision.</p></Explainer>
             </div>
-            <section className={swiggy.accentScene} aria-labelledby="remedy-cost-title" data-accent-scene="remedy-cost">
+            <section className={swiggy.costStudy} aria-labelledby="remedy-cost-title">
               <h3 id="remedy-cost-title">A customer remedy and who pays</h3>
               <p>The business logic separates the customer’s remedy from the cost allocation. In SW-2070, the missing-item case, the restaurant’s assumed terms allow no refunds. If the agent chooses Restaurant and Full refund, the project model places the ₹266 cost on Swiggy.</p>
               <SwiggyVector id="refund-cost" />

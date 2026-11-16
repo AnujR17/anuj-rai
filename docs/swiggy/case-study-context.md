@@ -1,5 +1,8 @@
 # Swiggy case study continuation
 
+Read `section-emphasis-and-story.md` for the 16 November Meditimer typography
+comparison, single full-width accent trial and proposed section narrative.
+
 Read `compact-hero-and-typography.md` for the 16 November smaller hero,
 one-line title, paragraph measures and rendered line-ending checks.
 
