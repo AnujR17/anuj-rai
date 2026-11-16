@@ -46,7 +46,7 @@ export function SwiggyCaseStudy() {
     <div className={styles.overview + " " + swiggy.overview}>
       <p className={styles.introduction}>{project.summary}</p>
       <dl className={styles.details + " " + swiggy.projectMeta}>
-        <div><dt>Scope</dt><dd>Chat and dashboard<br />Five scenario investigations</dd></div>
+        <div><dt>Scope</dt><dd>Chat and dashboard<br />Five&nbsp;scenarios</dd></div>
         <div className={swiggy.rolePanel}><dt>My role</dt><dd>{project.contribution}</dd></div>
       </dl>
       <div className={styles.framing}><div><h2>Project brief</h2><p>{project.brief}</p></div><div><h2>The challenge</h2><p>{project.problem}</p></div></div>
@@ -67,7 +67,7 @@ export function SwiggyCaseStudy() {
         <section id="insights" className={styles.stage} aria-labelledby="insights-title">
           <h2 id="insights-title">A record is not a verdict</h2>
           <div className={styles.stageContent + " " + swiggy.narrative}>
-            <p>A delivery status records what was marked in the system. A photograph shows what the customer submitted. A restaurant’s reply gives another account. None settles the whole complaint on its own.</p>
+            <p>A delivery status records what was marked in the system. A photograph shows what the customer submitted. A restaurant’s reply gives another account. None settles the whole complaint on&nbsp;its&nbsp;own.</p>
             <p>I used that distinction to separate records, comparisons and agent actions. The photo viewer includes the source and submission time; the agent records Agree or Disagree. An authenticity score was considered and rejected because it would replace an inspectable record with a judgement about whether to believe it.</p>
             <p>History needed similar care. Counts appear alongside totals for each party. A late photo or a previous refund can prompt another question, but neither determines whether this complaint is genuine.</p>
             <div className={swiggy.layeredWorkspace} data-layered-workspace>

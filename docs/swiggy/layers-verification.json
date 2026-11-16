@@ -4,50 +4,50 @@
     {
       "width": 1440,
       "height": 900,
-      "titleBottom": 876,
-      "artworkBottom": 763.6041870117188
+      "titleBottom": 800,
+      "artworkBottom": 662.8151245117188
     },
     {
       "width": 1366,
       "height": 768,
       "titleBottom": 744,
-      "artworkBottom": 638.435791015625
+      "artworkBottom": 615.1485595703125
     },
     {
       "width": 1280,
       "height": 720,
       "titleBottom": 696,
-      "artworkBottom": 596.5042724609375
+      "artworkBottom": 575.4415283203125
     },
     {
       "width": 1024,
       "height": 768,
       "titleBottom": 744,
-      "artworkBottom": 658.2999267578125
+      "artworkBottom": 631.0001220703125
     },
     {
       "width": 390,
       "height": 844,
-      "titleBottom": 820,
-      "artworkBottom": 611.0748291015625
+      "titleBottom": 692,
+      "artworkBottom": 534.4985961914062
     },
     {
       "width": 375,
       "height": 667,
       "titleBottom": 643,
-      "artworkBottom": 516.409423828125
+      "artworkBottom": 504.3966064453125
     },
     {
       "width": 320,
       "height": 568,
       "titleBottom": 544,
-      "artworkBottom": 422.8329162597656
+      "artworkBottom": 434.201171875
     },
     {
       "width": 844,
       "height": 390,
       "titleBottom": 366,
-      "artworkBottom": 292.9903564453125
+      "artworkBottom": 294.56170654296875
     }
   ],
   "layeredWidths": [
@@ -68,5 +68,5 @@
     "ink-scene control contrast",
     "native source access and all versions without JavaScript"
   ],
-  "date": "2026-11-15"
+  "date": "2026-11-16"
 }

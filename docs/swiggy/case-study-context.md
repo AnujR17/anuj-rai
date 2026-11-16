@@ -1,5 +1,8 @@
 # Swiggy case study continuation
 
+Read `compact-hero-and-typography.md` for the 16 November smaller hero,
+one-line title, paragraph measures and rendered line-ending checks.
+
 Read `vector-story-update.md` for the 15 November source-based narrative,
 responsive SVG studies, accent cost example and supplied handbook.
 

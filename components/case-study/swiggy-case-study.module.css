@@ -211,13 +211,13 @@
 
 /* The opening is a bounded composition, including short laptop viewports. */
 .case .caseHero {
- height:calc(100svh - 84px);min-height:0;padding-block:8px 24px;
+ height:min(740px,calc(100svh - 84px));min-height:0;padding-block:8px 24px;
  grid-template-columns:minmax(0,.72fr) minmax(0,1.6fr);
  grid-template-rows:44px minmax(0,1fr) auto;gap:12px 36px;
 }
-.case .caseHero h1 { max-width:none;font-size:var(--section-title-size); }
+.case .caseHero h1 { max-width:none;font-size:clamp(44px,5.2vw,78px); }
 .case .caseHero .heroDevice { height:100%;min-height:0;align-self:stretch;padding:0;container-type:size;display:flex;justify-content:flex-end; }
-.heroComposition { position:relative;width:min(100cqw,150cqh);height:100%;container-type:size;isolation:isolate; }
+.heroComposition { position:relative;width:min(100cqw,150cqh);height:100%;container-type:size;isolation:isolate;transform:scale(.86);transform-origin:center right; }
 .heroBackdrop { position:absolute;inset:11% 5% 14% 18%;background:#242522;border-radius:12px;z-index:0; }
 .heroLaptop { position:absolute;right:2%;top:50%;width:min(86cqw,124cqh);transform:translateY(-50%);z-index:1; }
 .heroEvidence { position:absolute;left:0;bottom:3%;width:min(40cqw,58cqh);display:block;overflow:hidden;border-radius:9px;transform:rotate(-3deg);z-index:2;box-shadow:0 24px 46px -16px #25231c66,0 0 0 1px #e0dcd1; }
@@ -287,10 +287,10 @@
  .inkScene .explainerCopy { display:block; }.case .inkScene .explainerCopy h3 { margin-bottom:20px; }
 }
 @media(max-width:700px) {
- .case .caseHero { height:calc(100svh - 76px);grid-template-columns:1fr;padding-block:6px 24px;gap:10px; }
+ .case .caseHero { height:min(640px,calc(100svh - 76px));grid-template-columns:1fr;padding-block:6px 24px;gap:10px; }
  .case .caseHero .heroDevice { grid-column:1;grid-row:2;align-items:center; }
- .case .caseHero h1 { font-size:clamp(38px,11vw,58px); }
- .heroComposition { height:min(100cqh,125cqw); }
+ .case .caseHero h1 { font-size:clamp(30px,9.3vw,46px); }
+ .heroComposition { height:min(100cqh,125cqw);transform:scale(.9);transform-origin:center; }
  .heroBackdrop { inset:16% 4% 18% 14%;border-radius:8px; }
  .heroLaptop { right:2%;width:min(87cqw,124cqh); }
  .heroEvidence { top:calc(50% + min(16cqw,23cqh));bottom:auto;width:min(43cqw,58cqh);border-radius:5px; }
@@ -341,4 +341,16 @@
  .case .accentScene p { font-size:17px; }
  .accentScene .vectorDownload { margin-left:8px; }
  .scenarioIntroduction { margin-top:45px; }
+}
+
+/* Native line composition avoids stretched spacing and stranded final words. */
+.case :is(p,dd) { text-wrap:pretty;word-spacing:normal;hyphens:none; }
+.case :is(h1,h2,h3,h4) { text-wrap:balance; }
+.case .narrative p { max-width:64ch; }
+.case .narrative .flowCheck { max-width:none;text-wrap:balance; }
+.case .overview > p:first-child { max-width:44ch; }
+@media(min-width:1101px) {
+ .case .narrative > p,.case .versionStory,.case .report > p,
+ .case .scenarioPanel > p,.case .findingStories p,
+ .case .inkScene .explainerCopy p { text-wrap:balance; }
 }

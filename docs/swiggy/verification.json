@@ -16,8 +16,8 @@
     "Work-to-case navigation and scroll cleanup",
     "original source SHA-256 hashes"
   ],
-  "date": "2026-11-15",
-  "revision": "Source-based story, original reading layout and responsive vectors",
+  "date": "2026-11-16",
+  "revision": "Compact hero and natural paragraph composition",
   "media_exports": {
     "evidence": 159,
     "parties": 219,
@@ -25,5 +25,6 @@
     "method": "8 fps framed GIFs; full frame counts and durations verified with ffprobe"
   },
   "layout_report": "layers-verification.json",
-  "vector_report": "vectors-verification.json"
+  "vector_report": "vectors-verification.json",
+  "typography_report": "typography-verification.json"
 }
