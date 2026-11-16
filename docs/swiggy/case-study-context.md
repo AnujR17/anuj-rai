@@ -1,5 +1,8 @@
 # Swiggy case study continuation
 
+Read `swiggy-orange-accent.md` for the latest #ff5200 brand accent and light
+Insights tint. It supersedes the neutral accent and earlier vermilion treatment.
+
 Read `case-study-information-architecture.md` first. The latest author correction
 requires research evidence, working assumptions and synthesis before personas.
 Personas belong in Insights after the mental and stakeholder models, not directly

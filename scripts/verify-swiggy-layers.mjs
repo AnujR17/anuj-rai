@@ -29,7 +29,7 @@ try {
     await page.setViewportSize({ width, height:1000 });
     const feature = page.locator('[data-accent-scene]');
     assert.equal(await feature.count(), 1);
-    assert.equal(await feature.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(242, 244, 244)');
+    assert.equal(await feature.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(255, 245, 238)');
     for (const image of await feature.locator('img:visible').all()) { await image.evaluate(e => { e.loading = 'eager'; }); await image.evaluate(e => e.decode()); }
     for (const link of await page.locator('[data-layered-workspace] a').all()) {
       await link.focus(); assert.equal(await link.evaluate(e => e === document.activeElement), true);
@@ -54,7 +54,7 @@ try {
         const lum = v => v.match(/[\d.]+/g).slice(0,3).map(Number).map(v => v/255).map(v => v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((s,v,i)=>s+v*[.2126,.7152,.0722][i],0);
         return [...document.querySelectorAll('nav[aria-label="Case study stages"] a')].map(e => {
           const r=e.getBoundingClientRect(), middle=r.y+r.height/2;
-          const bg=middle>=bounds.top&&middle<bounds.bottom?'rgb(242,244,244)':'rgb(255,255,255)';
+          const bg=middle>=bounds.top&&middle<bounds.bottom?getComputedStyle(document.querySelector('[data-accent-scene]')).backgroundColor:'rgb(255,255,255)';
           const a=lum(getComputedStyle(e).color), b=lum(bg);
           return (Math.max(a,b)+.05)/(Math.min(a,b)+.05);
         });
@@ -77,6 +77,6 @@ try {
   for (const panel of await plain.locator('[id^="version-panel-"]').all()) assert.equal(await panel.isVisible(),true);
   assert.equal(await plain.locator('[data-device-motion] video[controls]').count(),8);
   await plain.close(); assert.deepEqual(errors,[]);
-  const report={passed:true,folds,contrasts,runtimeErrors:errors,checks:['white case and header, including no-JavaScript','complete laptop and one-line title in eight first-fold sizes','one pale neutral emphasis with readable stage links','full-reading-width window mockups','six visible screen-selection criteria','keyboard/full-size source access','other case background preserved','native media and all versions without JavaScript']};
+  const report={passed:true,folds,contrasts,runtimeErrors:errors,checks:['white case and header, including no-JavaScript','complete laptop and one-line title in eight first-fold sizes','one light orange emphasis with readable stage links','full-reading-width window mockups','six visible screen-selection criteria','keyboard/full-size source access','other case background preserved','native media and all versions without JavaScript']};
   fs.writeFileSync(out+'/layers-verification.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
 } finally { await browser.close(); }

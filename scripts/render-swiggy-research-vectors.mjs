@@ -6,7 +6,7 @@ const chunks = '.next/static/chunks';
 const faces = fs.readdirSync(chunks).filter(file => file.endsWith('.css')).flatMap(file => fs.readFileSync(path.join(chunks, file), 'utf8').match(/@font-face\{font-family:DM Sans;[^}]+\}/g) || []);
 if (!faces.length) throw Error('Build the site first to make DM Sans available.');
 const fonts = [...new Set(faces)].map(face => face.replace(/url\(([^)]+)\)/, (_, url) => 'url(data:font/woff2;base64,' + fs.readFileSync(path.resolve(chunks, url)).toString('base64') + ')')).join('');
-const ink = '#242522', paper = '#ffffff', pale = '#f2f4f4', line = '#d5dadd';
+const ink = '#242522', paper = '#ffffff', pale = '#fff5ee', accent = '#ff5200', line = '#d5dadd';
 const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 const text = (x, y, value, size = 20, extra = '') => `<text x="${x}" y="${y}" font-size="${size}" ${extra}>${escape(value)}</text>`;
 const lines = (x, y, values, size = 20, extra = '') => values.map((value, i) => text(x, y + i * (size + 7), value, size, extra)).join('');
@@ -44,12 +44,12 @@ const parties = [
   ['Delivery partner', ['Trip events and their account', 'Potential responsibility']],
 ];
 save('stakeholders', 960, 570, 'Stakeholders around a refund decision', stakeholderDescription,
-  box(330, 12, 300, 74, pale) + text(480, 57, 'Escalation agent', 26, 'text-anchor="middle" class="strong"') + connector('M480 86V112') + box(330, 112, 300, 64) + text(480, 152, 'Chooses a response', 25, 'text-anchor="middle"') + connector('M480 176V210M160 242V210H800V242M480 210V242') +
+  box(330, 12, 300, 74, accent) + text(480, 57, 'Escalation agent', 26, 'text-anchor="middle" class="strong"') + connector('M480 86V112') + box(330, 112, 300, 64) + text(480, 152, 'Chooses a response', 25, 'text-anchor="middle"') + connector('M480 176V210M160 242V210H800V242M480 210V242') +
   parties.map(([title, detail], i) => { const x = 20 + i * 320;return box(x, 242, 280, 134) + text(x + 18, 279, title, 25, 'class="strong"') + lines(x + 18, 319, detail, 18); }).join('') +
   text(20, 417, 'Wider service, beyond this workspace', 22, 'class="strong"') + box(20, 438, 440, 112, pale) + text(40, 476, 'Swiggy', 25, 'class="strong"') + text(40, 515, 'Bot handover, refund cost and review', 20) + box(500, 438, 440, 112, pale) + text(520, 476, 'External recourse', 25, 'class="strong"') + text(520, 515, 'Regulators and consumer courts', 20)
 );
 save('stakeholders-mobile', 360, 970, 'Stakeholders around a refund decision', stakeholderDescription,
-  box(28, 12, 304, 74, pale) + text(180, 57, 'Escalation agent', 26, 'text-anchor="middle" class="strong"') + connector('M180 86V116') + box(28, 116, 304, 64) + text(180, 157, 'Chooses a response', 25, 'text-anchor="middle"') + connector('M180 180V208H14V550M14 285H28M14 415H28M14 545H28') +
+  box(28, 12, 304, 74, accent) + text(180, 57, 'Escalation agent', 26, 'text-anchor="middle" class="strong"') + connector('M180 86V116') + box(28, 116, 304, 64) + text(180, 157, 'Chooses a response', 25, 'text-anchor="middle"') + connector('M180 180V208H14V550M14 285H28M14 415H28M14 545H28') +
   parties.map(([title, detail], i) => { const y = 230 + i * 130;return box(28, y, 320, 110) + text(46, y + 34, title, 25, 'class="strong"') + lines(46, y + 67, detail, 19); }).join('') +
   lines(12, 650, ['Wider service, beyond', 'this workspace'], 22, 'class="strong"') + box(12, 704, 336, 110, pale) + text(30, 739, 'Swiggy', 25, 'class="strong"') + lines(30, 774, ['Bot handover, refund cost', 'and review'], 20) +
   box(12, 836, 336, 110, pale) + text(30, 873, 'External recourse', 25, 'class="strong"') + lines(30, 909, ['Regulators and consumer courts'], 19)

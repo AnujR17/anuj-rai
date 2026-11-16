@@ -195,5 +195,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid #b84a26; outline-offs
 @media (prefers-reduced-motion: reduce) { .route-entry { animation: none; } }
 
 /* Swiggy's white editorial surface is scoped to this case, including its header. */
-body:has([data-swiggy-case]) { --background:#fff;--concept-accent:#242522;background:#fff; }
-body:has([data-swiggy-case]) ::selection { background:#dce4e7;color:#20211e; }
+body:has([data-swiggy-case]) { --background:#fff;--concept-accent:#242522;--swiggy-orange:#ff5200;--swiggy-wash:#fff5ee;background:#fff; }
+body:has([data-swiggy-case]) ::selection { background:#ffe2d2;color:#242522; }
+
+body:has([data-swiggy-case]) .site-nav-links a:is(:hover,[aria-current="page"]) { color:#242522;text-decoration:underline;text-decoration-color:var(--swiggy-orange);text-decoration-thickness:2px;text-underline-offset:6px; }
+body:has([data-swiggy-case]) .skip-link { background:var(--swiggy-orange);color:#242522; }

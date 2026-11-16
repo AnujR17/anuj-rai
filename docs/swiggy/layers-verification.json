@@ -54,7 +54,7 @@
     {
       "width": 1440,
       "edge": "top",
-      "minimum": 5.115960783814849
+      "minimum": 5.257298599751809
     },
     {
       "width": 1440,
@@ -64,7 +64,7 @@
     {
       "width": 768,
       "edge": "top",
-      "minimum": 5.115960783814849
+      "minimum": 5.257298599751809
     },
     {
       "width": 768,
@@ -76,7 +76,7 @@
   "checks": [
     "white case and header, including no-JavaScript",
     "complete laptop and one-line title in eight first-fold sizes",
-    "one pale neutral emphasis with readable stage links",
+    "one light orange emphasis with readable stage links",
     "full-reading-width window mockups",
     "six visible screen-selection criteria",
     "keyboard/full-size source access",

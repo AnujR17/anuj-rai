@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "width": 1440,
+      "orangeSelectedStates": true,
+      "orangeFocus": true,
+      "whiteBase": true
+    },
+    {
+      "width": 390,
+      "orangeSelectedStates": true,
+      "orangeFocus": true,
+      "whiteBase": true
+    },
+    {
+      "width": 320,
+      "orangeSelectedStates": true,
+      "orangeFocus": true,
+      "whiteBase": true
+    }
+  ],
+  "brand": "#ff5200",
+  "tint": "#fff5ee"
+}

@@ -320,8 +320,8 @@
 .case section[id] > h2 { font-size:clamp(32px,3.5vw,54px);font-weight:450;line-height:1.14; }
 .case .projectMeta dd,.case .overview > div p { font-size:17px;line-height:1.7; }
 .case .projectMeta dt,.case .overview > div h2 { font-size:16px;font-weight:500; }
-.case .featuredStage { position:relative;isolation:isolate;background:#f2f4f4;padding-block:72px 48px;margin-block:16px 48px; }
-.featuredStage::before { content:"";position:absolute;inset:0;background:#f2f4f4;box-shadow:0 0 0 100vmax #f2f4f4;clip-path:inset(0 -100vmax);z-index:-1;pointer-events:none; }
+.case .featuredStage { position:relative;isolation:isolate;background:var(--swiggy-wash);padding-block:72px 48px;margin-block:16px 48px; }
+.featuredStage::before { content:"";position:absolute;inset:0;background:var(--swiggy-wash);box-shadow:0 0 0 100vmax var(--swiggy-wash);clip-path:inset(0 -100vmax);z-index:-1;pointer-events:none; }
 @media(max-width:700px) {
  .case .featuredStage { padding-block:44px 24px;margin-block:8px 32px; }
 }
@@ -432,3 +432,15 @@
 .synthesisList dt { text-wrap:balance;font-size:22px;line-height:1.25;font-weight:450;letter-spacing:-.025em; }
 .synthesisList dd { font-size:17px;line-height:1.7; }
 @media(max-width:700px) { .synthesisList > div { grid-template-columns:1fr;gap:14px; } }
+
+/* Swiggy orange identifies actions and selections while copy stays in ink. */
+.case :is(a,button,summary),
+.case :is(a:hover,a:focus-visible,summary:hover,summary:focus-visible),
+.case :is(.versionTabs,.scenarioTabs) button[aria-selected="true"],
+.case nav[aria-label="Case study stages"] a:is(:hover,:focus-visible,[aria-current="location"]),
+.case [data-device-motion] :is(a,button) {
+ text-decoration-color:var(--swiggy-orange);text-decoration-thickness:2px;
+}
+.case :is(a,button,summary,[tabindex]):focus-visible { outline:2px solid var(--swiggy-orange);outline-offset:5px; }
+.assumptionList { border-top-color:var(--swiggy-orange); }
+.flowHold { border-left-color:var(--swiggy-orange); }
