@@ -439,15 +439,16 @@
   "case_information_architecture": {
     "date": "2026-11-16",
     "chapters": [
-      "The agent and the task",
-      "The priorities for the screen",
+      "Researching the agent’s decision",
+      "Defining the agent’s needs",
       "Designing the workspace",
       "Investigating a complaint",
       "Reviewing the prototype"
     ],
-    "arrangement": "Contents and chapter headings share one definition. User/task models precede priorities; architecture, criteria, rules, cost model, original flows and iterations form the concept chapter; the working investigation has three actions and five case variants; review findings and next evaluation close the story.",
+    "arrangement": "Research basis, source findings and working assumptions precede synthesis, the inferred mental model, stakeholder map and personas. Concept contains IA, selection criteria, evidence/history design examples, cost, original flows and iterations. Design demonstrates the investigation; Outcome retains the review.",
     "hierarchy": "Chapter H2, artifact group H3, iteration/scenario/finding H4; front-matter facts are description-list terms. Group type 26–32px and individual state type 22px.",
     "source_access": "All original artifacts retained. Five historical flowcharts start collapsed in native inline disclosures. Personas and research maps remain visible.",
-    "brief": "docs/swiggy/case-study-information-architecture.md"
+    "brief": "docs/swiggy/case-study-information-architecture.md",
+    "research_basis": "Supplied Stage 4 Research, Stage 5 Insights and public-policy summary P018/P021/P042; primary AWS Supr Daily passage checked 16 November 2026. Its grocery context is explicit. One outside-domain expert call is not Swiggy field observation."
   }
 }

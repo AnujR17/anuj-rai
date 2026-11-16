@@ -3,9 +3,32 @@ import research from "@/data/swiggy-research.json";
 import { SwiggyVector } from "./SwiggyVector";
 import styles from "./swiggy-case-study.module.css";
 
+export function SwiggyResearchEvidence() {
+  return <section className={styles.researchStudy} data-research-evidence aria-labelledby="research-evidence-title">
+    <h3 id="research-evidence-title">What the sources established</h3>
+    <div className={styles.researchFindings}>
+      <div><h4>Public rules and operating gaps</h4><p>The refund and merchant terms I reviewed describe complaint types, responsibilities and merchant permission for a refund. They did not establish a general food-order photo standard, an individual agent’s approval limit or the internal review screen.</p></div>
+      <div><h4>Photo quality and refund errors</h4><p>In an AWS case study, Supr Daily, a grocery service in the Swiggy group, linked incorrect refunds to poor or missing delivery photos. This made evidence quality and origin relevant to the design.</p></div>
+      <div><h4>An expert perspective on decision effort</h4><p>A ten-minute call with a customer-service expert at American Express focused on how screen information helps an agent reach a decision in less time. I used that perspective to focus on finding and connecting information during the&nbsp;investigation.</p></div>
+    </div>
+    <div className={styles.researchSourceLinks}><a href="https://www.swiggy.com/refund-policy">Swiggy refund policy</a><a href="https://partner.swiggy.com/food/tnc/sellertnc">Swiggy merchant terms</a><a href="https://aws.amazon.com/solutions/case-studies/suprdaily-case-study/">AWS: Supr Daily</a></div>
+  </section>;
+}
+
+export function SwiggyResearchPriorities() {
+  return <section className={styles.researchStudy} data-research-synthesis aria-labelledby="research-priorities-title">
+    <h3 id="research-priorities-title">Priorities carried into the design</h3>
+    <dl className={styles.synthesisList}>
+      <div><dt>Evidence with its origin and timing</dt><dd>The agent needs to inspect what was submitted and what is missing. A photo score would obscure the record they need to judge.</dd></div>
+      <div><dt>History kept separate from the current claim</dt><dd>Past refunds can provide context, but they are not a published refund condition. The agent needs comparable records and still has to assess the current complaint.</dd></div>
+      <div><dt>Responsibility alongside the customer’s remedy</dt><dd>A refund affects the customer, restaurant, rider and platform. The design needs their records and a visible cost allocation, while the agent chooses the response.</dd></div>
+    </dl>
+  </section>;
+}
+
 export function SwiggyAssumptions() {
   return <div className={styles.researchStudy} data-research-artifact="assumptions">
-    <h3>The rules behind the scenarios</h3>
+    <h3>Working assumptions</h3>
     <p>Public terms could inform the design, but they could not supply an internal agent handbook. I made the operating assumptions explicit so the scenarios had a consistent basis.</p>
     <dl className={styles.assumptionList}>
       {research.assumptions.map(item => <div key={item.title}><dt>{item.title}</dt><dd>{item.choice}</dd><dd>{item.consequence}</dd></div>)}

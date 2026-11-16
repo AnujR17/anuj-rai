@@ -30,8 +30,8 @@ try {
     const feature = page.locator('[data-accent-scene]');
     assert.equal(await feature.count(), 1);
     assert.equal(await feature.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(242, 244, 244)');
-    for (const image of await feature.locator('img').all()) { await image.scrollIntoViewIfNeeded(); await image.evaluate(e => e.decode()); }
-    for (const link of await feature.locator('a').all()) {
+    for (const image of await feature.locator('img:visible').all()) { await image.evaluate(e => { e.loading = 'eager'; }); await image.evaluate(e => e.decode()); }
+    for (const link of await page.locator('[data-layered-workspace] a').all()) {
       await link.focus(); assert.equal(await link.evaluate(e => e === document.activeElement), true);
       assert.equal((await page.request.get(new URL(await link.getAttribute('href'), base).href)).status(), 200);
     }

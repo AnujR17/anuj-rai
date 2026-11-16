@@ -1,7 +1,9 @@
 # Swiggy case study continuation
 
-Read `case-study-information-architecture.md` for the latest chapter order,
-contents navigation, artifact grouping and heading hierarchy.
+Read `case-study-information-architecture.md` first. The latest author correction
+requires research evidence, working assumptions and synthesis before personas.
+Personas belong in Insights after the mental and stakeholder models, not directly
+after the Research introduction. It also records the current contents and heading hierarchy.
 
 Read `white-layout-and-reference-review.md` first for the latest white surface,
 quiet section emphasis, reference comparison and larger window mockups. This

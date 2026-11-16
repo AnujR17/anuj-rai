@@ -20,10 +20,10 @@ The original extracts are retained in `source-records/research-models-2026-10.md
 
 | Artifact | Source and status | Public placement and purpose |
 | --- | --- | --- |
-| Operating assumptions | Frozen v1.3, later v2/v2.1 policy decisions, final engine; project choices | Concept: records/contact access, photo condition, standing terms/cost and upstream checks. Explain what the prototype assumes |
-| Four conscious policy choices | 17–18 October handover and decision log | Concept disclosure: refunds above terms, customer call, combined record and photo condition. Keep the project model distinct from public policy |
-| Ananya and Rohit | Stage 6 Define; two hypothetical personas; names/tenures are placeholders | Research: goals, risks and information requirements for newer/experienced agents. Representative photographs accompany the profiles; no invented quotation or observed-behaviour claim |
-| Nine-step mental model | Stage 5 Insights and FigJam `jdVOYesjFWTQOsQcxnVvV9`, root `0:1`; inferred | Research: readable responsive SVG, full nine-row table and original board overview/link. Explain history-as-context and the early agreement dependency |
+| Operating assumptions | Frozen v1.3, later v2/v2.1 policy decisions, final engine; project choices | Research: records/contact access, photo condition, standing terms/cost and upstream checks. Explain what the prototype assumes |
+| Four conscious policy choices | 17–18 October handover and decision log | Research disclosure: refunds above terms, customer call, combined record and photo condition. Keep the project model distinct from public policy |
+| Ananya and Rohit | Stage 6 Define; two hypothetical personas; names/tenures are placeholders | Insights/Define, after research and synthesis: goals, risks and information requirements for newer/experienced agents. Representative photographs accompany the profiles; no invented quotation or observed-behaviour claim |
+| Nine-step mental model | Stage 5 Insights and FigJam `jdVOYesjFWTQOsQcxnVvV9`, root `0:1`; inferred | Insights: readable responsive SVG, full nine-row table and original board overview/link. Explain history-as-context and the early agreement dependency |
 | Stakeholder map | Same Stage 5/board; research synthesis with reported/inferred relationships | Insights: readable responsive SVG showing agent, customer, restaurant, rider, platform and external recourse. Explain comparable records and remedy/cost separation |
 | Value Opportunity Analysis | Stage 6; subjective Low/Medium/High ratings | Insights disclosure: all six stakeholder rows, explicitly early judgements and expected value rather than a measured before/after |
 | Three-layer model | Stage 6; data, derived insight, decision support | Concept: connect photo provenance, history counts and agent choices to the information model |

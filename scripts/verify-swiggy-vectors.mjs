@@ -36,7 +36,7 @@ try {
       const link = root.getByRole('link', { name: /^Open / });
       await link.focus();
       assert.equal(await link.evaluate(e => e === document.activeElement), true);
-      await page.locator('#' + (['architecture', 'refund-cost'].includes(id) ? 'concept' : id === 'findings' ? 'outcome' : id === 'mental-model' ? 'research' : 'insights')).evaluate(e => scrollTo({ top: e.getBoundingClientRect().top + scrollY - 90, behavior: 'instant' }));
+      await page.locator('#' + (['architecture', 'refund-cost'].includes(id) ? 'concept' : id === 'findings' ? 'outcome' : 'insights')).evaluate(e => scrollTo({ top: e.getBoundingClientRect().top + scrollY - 90, behavior: 'instant' }));
       if (width > 700) {
         const nav = await page.locator('[aria-label="Case study stages"]').boundingBox();
         assert.ok(nav.y >= 0 && nav.y + nav.height < 1000, 'Bottom-left stage labels offscreen');

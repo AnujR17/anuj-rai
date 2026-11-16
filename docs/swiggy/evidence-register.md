@@ -80,3 +80,14 @@ truncated draft and collapsed checks. Their SHA-256 values and archive locations
 are in `public/portfolio/swiggy/provenance.json`. The new HTML task flow is an
 editorial explanation of the prototype, not a historical diagram, enforced
 policy gate, real review integration or payment execution.
+
+## 16 November: research before personas
+
+The source basis shown before the personas comes from Stage 4 Research,
+Stage 5 Insights, the supplied customer-care policy summary (P018, P021, P042)
+and the recorded expert call. The AWS Supr Daily page was fetched with normally
+verified TLS on 16 November: its reported company estimate links incorrect
+refunds to poor or missing delivery photos. The case identifies the grocery
+context and does not turn that estimate into a Swiggy restaurant-order baseline.
+The three visible priorities are a synthesis of Stage 5, not new findings.
+Personas follow the inferred mental model and stakeholder map in Insights.

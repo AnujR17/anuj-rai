@@ -29,6 +29,16 @@ try {
    let previous=0;return items.flatMap(e=>{const rank=Number(e.tagName.slice(1));const result=rank>previous+1?[e.textContent.trim()]:[];previous=rank;return result;});
   });
   assert.deepEqual(skipped,[],'Skipped heading levels');
+  // Establish research and synthesis before presenting the persona models.
+  assert.equal(await page.locator('#research [data-research-artifact="personas"]').count(),0);
+  assert.equal(await page.locator('#research [data-research-evidence] h4').count(),3);
+  assert.equal(await page.locator('#research [data-research-artifact="assumptions"]').count(),1);
+  assert.equal(await page.locator('#insights [data-research-artifact="personas"]').count(),1);
+  const researchOrder=await page.evaluate(()=>{
+   const selectors=['[data-research-evidence]','[data-research-artifact="assumptions"]','[data-research-synthesis]','[data-research-artifact="mental-model"]','[data-research-artifact="stakeholder-map"]','[data-research-artifact="personas"]'];
+   return selectors.map(s=>{const e=document.querySelector(s),r=e.getBoundingClientRect();return {top:r.top+scrollY,bottom:r.bottom+scrollY};});
+  });
+  for(let i=1;i<researchOrder.length;i++)assert.ok(researchOrder[i].top>=researchOrder[i-1].bottom,'Personas precede their evidence or synthesis');
   assert.equal(await page.locator('#design [data-research-artifact="assumptions"]').count(),0);
   assert.equal(await page.locator('#design [data-research-artifact="original-flows"]').count(),0);
   assert.equal(await page.locator('#concept [data-research-artifact="original-flows"] img').count(),5);
@@ -49,6 +59,6 @@ try {
  assert.equal(await plain.getByRole('navigation',{name:'Case study contents'}).getByRole('link').count(),5);
  for(const panel of await plain.locator('[id^="version-panel-"]').all())assert.equal(await panel.isVisible(),true);
  await plain.close();assert.deepEqual(errors,[]);
- const report={passed:true,layouts,runtimeErrors:errors,checks:['five descriptive contents links land on matching chapters','subordinate versions, scenarios and findings have proper heading levels and smaller type','rules, cost model and historical flows grouped with design rationale','working-case chapter follows investigation actions and scenario variants','all supplied artifacts and native no-JavaScript contents retained']};
+ const report={passed:true,layouts,runtimeErrors:errors,checks:['five descriptive contents links land on matching chapters','subordinate versions, scenarios and findings have proper heading levels and smaller type','research evidence and assumptions precede synthesis, maps and personas; cost and flows stay with the concept','working-case chapter follows investigation actions and scenario variants','all supplied artifacts and native no-JavaScript contents retained']};
  fs.writeFileSync(out+'/structure-verification.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
 }finally{await browser.close();}

@@ -8,14 +8,14 @@ import { SwiggyEvolution } from "./SwiggyEvolution";
 import { SwiggyScenarios } from "./SwiggyScenarios";
 import { SwiggyFlow } from "./SwiggyFlow";
 import { SwiggyVector } from "./SwiggyVector";
-import { SwiggyAssumptions, SwiggyPersonas, SwiggyMentalModel, SwiggyStakeholders, SwiggyDesignCriteria, SwiggyOriginalFlows } from "./SwiggyResearch";
+import { SwiggyResearchEvidence, SwiggyResearchPriorities, SwiggyAssumptions, SwiggyPersonas, SwiggyMentalModel, SwiggyStakeholders, SwiggyDesignCriteria, SwiggyOriginalFlows } from "./SwiggyResearch";
 import { EffortChart } from "./SwiggyGraphics";
 import styles from "./case-study.module.css";
 import swiggy from "./swiggy-case-study.module.css";
 
 const chapters = [
-  ["research", "Research", "The agent and the task"],
-  ["insights", "Insights", "The priorities for the screen"],
+  ["research", "Research", "Researching the agent’s decision"],
+  ["insights", "Insights", "Defining the agent’s needs"],
   ["concept", "Concept", "Designing the workspace"],
   ["design", "Design", "Investigating a complaint"],
   ["outcome", "Outcome", "Reviewing the prototype"],
@@ -70,28 +70,21 @@ export function SwiggyCaseStudy() {
         <section id="research" className={styles.stage} aria-labelledby="research-title">
           <h2 id="research-title">{chapters[0][2]}</h2>
           <div className={styles.stageContent + " " + swiggy.narrative}>
-            <p>I used public refund terms, reports of refund abuse and research on decision support to frame the agent’s task: establish what happened, examine the evidence and explain a response.</p>
-            <p>A ten-minute call with a customer-service expert at American Express added an operational perspective. With no access to Swiggy agents, internal screens or real case data, I used explicit assumptions, personas and an inferred mental model to develop the concept.</p>
-            <SwiggyPersonas />
-            <SwiggyMentalModel />
+            <p>I worked from public refund terms, reports of refund abuse and research on decision support to understand what an agent would need to establish after a bot handover.</p>
+            <p>Swiggy agents, internal screens and real case data were unavailable. The research below separates what the sources established from the operating assumptions used to build the prototype.</p>
+            <SwiggyResearchEvidence />
+            <SwiggyAssumptions />
             <details className={swiggy.report}><summary>Research and source notes</summary><p>The research record includes public policy, cross-platform comparisons, literature, one ten-minute call with an American Express customer-service expert and a separately labelled simulated interview. Swiggy agents and internal operating data were unavailable to us. The simulated interview supplied secondary material, not participant evidence.</p><p>Akshat’s customer-side audit included fabricated complaints. The accounts disagree about later genuine claims, and whether the refunds were returned is unrecorded. That account remains in the source record; it is not used to estimate fraud prevalence.</p><div className={styles.sourceLinks}><a href="https://www.swiggy.com/refund-policy">Swiggy Cancellation and Refund Policy</a><a href="https://www.swiggy.com/terms-and-conditions">Swiggy Terms of Use</a><a href="https://partner.swiggy.com/food/tnc/sellertnc">Swiggy Seller Terms</a></div></details>
           </div>
         </section>
         <section id="insights" className={styles.stage + " " + swiggy.featuredStage} aria-labelledby="insights-title" data-accent-scene="evidence">
           <h2 id="insights-title">{chapters[1][2]}</h2>
           <div className={styles.stageContent + " " + swiggy.narrative}>
-            <p>A delivery status records what was marked in the system. A photograph shows what the customer submitted. A restaurant’s reply gives another account. None settles the whole complaint on&nbsp;its&nbsp;own.</p>
-            <div className={swiggy.layeredWorkspace} data-layered-workspace>
-              <div className={swiggy.evidenceReading}>
-                <div><h3>Evidence before a score</h3><p>The photo viewer keeps the source and submission time beside Agree and Disagree. I rejected an authenticity score because it would replace a record the agent can inspect with a judgement about whether to believe it.</p></div>
-                <Crop file="evidence-detail" width={720} height={500} alt="Original photo viewer with the image source, submission time and agent observation controls" />
-              </div>
-              <div className={swiggy.evidenceReading}>
-                <div><h3>History as context</h3><p>Counts appear alongside totals for each party, with the rider’s trip events available to inspect. A late photo or previous refund can prompt another question; neither determines whether this complaint is genuine.</p></div>
-                <a className={swiggy.riderProof} href="/portfolio/swiggy/evolution/rider-detail.png" aria-label="Inspect the rider’s original trip record"><Image unoptimized src="/portfolio/swiggy/evolution/rider-detail.png" width={570} height={630} alt="Original rider record with trip events, contact attempts and checks" sizes="(max-width: 700px) 90vw, 460px" /></a>
-              </div>
-            </div>
+            <p>I used the research to define what the agent needs to investigate a complaint. The priorities informed an inferred mental model, a stakeholder map and two agent personas.</p>
+            <SwiggyResearchPriorities />
+            <SwiggyMentalModel />
             <SwiggyStakeholders />
+            <SwiggyPersonas />
           </div>
         </section>
         <section id="concept" className={styles.stage} aria-labelledby="concept-title">
@@ -104,7 +97,17 @@ export function SwiggyCaseStudy() {
             </div>
             <details className={swiggy.report}><summary>The layout alternative</summary><p>A second layout grouped evidence with each policy condition in one panel. That kept a condition and its supporting record together. The selected arrangement keeps the information groups distinct, with more cross-referencing between them. It has not been compared with the alternative in an agent study.</p><div className={swiggy.layoutAlternatives}><div><h4>Selected layout</h4><div className={swiggy.threeColumns}><span>Case</span><span>Conversation</span><span>Checks and decision</span></div></div><div><h4>Condition-led alternative</h4><div className={swiggy.twoColumns}><span>Conversation</span><span>Condition<br />Evidence<br />Action</span></div></div></div></details>
             <SwiggyDesignCriteria />
-            <SwiggyAssumptions />
+            <p>A delivery status records what was marked in the system. A photograph shows what the customer submitted. A restaurant’s reply gives another account. None settles the whole complaint on&nbsp;its&nbsp;own.</p>
+            <div className={swiggy.layeredWorkspace} data-layered-workspace>
+              <div className={swiggy.evidenceReading}>
+                <div><h3>Evidence before a score</h3><p>The photo viewer keeps the source and submission time beside Agree and Disagree. I rejected an authenticity score because it would replace a record the agent can inspect with a judgement about whether to believe it.</p></div>
+                <Crop file="evidence-detail" width={720} height={500} alt="Original photo viewer with the image source, submission time and agent observation controls" />
+              </div>
+              <div className={swiggy.evidenceReading}>
+                <div><h3>History as context</h3><p>Counts appear alongside totals for each party, with the rider’s trip events available to inspect. A late photo or previous refund can prompt another question; neither determines whether this complaint is genuine.</p></div>
+                <a className={swiggy.riderProof} href="/portfolio/swiggy/evolution/rider-detail.png" aria-label="Inspect the rider’s original trip record"><Image unoptimized src="/portfolio/swiggy/evolution/rider-detail.png" width={570} height={630} alt="Original rider record with trip events, contact attempts and checks" sizes="(max-width: 700px) 90vw, 460px" /></a>
+              </div>
+            </div>
             <section className={swiggy.costStudy} aria-labelledby="remedy-cost-title">
               <h3 id="remedy-cost-title">A customer remedy and who pays</h3>
               <p>The business logic separates the customer’s remedy from the cost allocation. In SW-2070, the missing-item case, the restaurant’s assumed terms allow no refunds. If the agent chooses Restaurant and Full refund, the project model places the ₹266 cost on Swiggy.</p>
