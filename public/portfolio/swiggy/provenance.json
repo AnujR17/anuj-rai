@@ -401,5 +401,24 @@
         "sha256": "9a15017151c474681b95d4745e9347ed792e62b69696830cf7920c36d1558097"
       }
     ]
+  },
+  "persona_illustrations": {
+    "date": "2026-11-16",
+    "source": "Generated with image_gen for this portfolio presentation, not participant photographs",
+    "treatment": "Transparent graphite/charcoal portrait illustrations, warm grayscale and restrained vermilion clothing detail",
+    "records": [
+      {
+        "file": "personas/ananya.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "873b334f8ef5491cb7ca58d602d5b7b7c8dd6be6298cfeb804317c0b7cd2bed3"
+      },
+      {
+        "file": "personas/rohit.png",
+        "width": 1122,
+        "height": 1402,
+        "sha256": "7082f60e58e91216f8b98d2398d79257395f61e1f85bf21a3c3f816f36ddf633"
+      }
+    ]
   }
 }

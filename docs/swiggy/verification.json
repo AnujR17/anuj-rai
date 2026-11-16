@@ -17,11 +17,10 @@
     "original source SHA-256 hashes",
     "assumptions, agent personas with their basis explained, nine-question mental model, stakeholder analysis and complete early matrix",
     "five original inline flowcharts with keyboard/full-size and no-JavaScript access",
-    "research asset SHA-256 hashes",
-    "public case wording uses Agent personas and omits repeated hypothetical qualifiers"
+    "research asset SHA-256 hashes"
   ],
   "date": "2026-11-16",
-  "revision": "Direct persona labels and concise research wording",
+  "revision": "Illustrated persona portraits and open responsive profiles",
   "media_exports": {
     "evidence": 159,
     "parties": 219,
@@ -32,5 +31,6 @@
   "vector_report": "vectors-verification.json",
   "typography_report": "typography-verification.json",
   "story_proposal": "section-emphasis-and-story.md",
-  "research_coverage": "research-artifact-coverage.md"
+  "research_coverage": "research-artifact-coverage.md",
+  "persona_report": "persona-verification.json"
 }

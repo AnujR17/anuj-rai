@@ -1,0 +1,128 @@
+{
+  "passed": true,
+  "layouts": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "portraits": [
+        {
+          "name": "Ananya",
+          "loaded": true,
+          "inside": true,
+          "fit": "contain"
+        },
+        {
+          "name": "Rohit",
+          "loaded": true,
+          "inside": true,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "portraits": [
+        {
+          "name": "Ananya",
+          "loaded": true,
+          "inside": true,
+          "fit": "contain"
+        },
+        {
+          "name": "Rohit",
+          "loaded": true,
+          "inside": true,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "portraits": [
+        {
+          "name": "Ananya",
+          "loaded": true,
+          "inside": true,
+          "fit": "contain"
+        },
+        {
+          "name": "Rohit",
+          "loaded": true,
+          "inside": true,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "width": 700,
+      "overflow": false,
+      "portraits": [
+        {
+          "name": "Ananya",
+          "loaded": true,
+          "inside": true,
+          "fit": "contain"
+        },
+        {
+          "name": "Rohit",
+          "loaded": true,
+          "inside": true,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "portraits": [
+        {
+          "name": "Ananya",
+          "loaded": true,
+          "inside": true,
+          "fit": "contain"
+        },
+        {
+          "name": "Rohit",
+          "loaded": true,
+          "inside": true,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "portraits": [
+        {
+          "name": "Ananya",
+          "loaded": true,
+          "inside": true,
+          "fit": "contain"
+        },
+        {
+          "name": "Rohit",
+          "loaded": true,
+          "inside": true,
+          "fit": "contain"
+        }
+      ]
+    }
+  ],
+  "noJavaScript": {
+    "passed": true,
+    "portraits": [
+      {
+        "alt": "Illustrated portrait of Ananya",
+        "loaded": true
+      },
+      {
+        "alt": "Illustrated portrait of Rohit",
+        "loaded": true
+      }
+    ]
+  },
+  "runtimeErrors": [],
+  "date": "2026-11-16"
+}
