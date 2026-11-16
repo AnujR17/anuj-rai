@@ -71,9 +71,10 @@ export function SwiggyDesignCriteria() {
     <p>I separated recorded data, traceable comparisons and tools for the agent’s actions. A photo’s source belongs to the first layer; a history count with its total belongs to the second; choosing fault and editing a response belong to the third.</p>
     <dl className={styles.layerModel}><div><dt>Data</dt><dd>What was recorded, with its source and time.</dd></div><div><dt>Derived insight</dt><dd>What can be grouped, counted or compared against a rule.</dd></div><div><dt>Decision support</dt><dd>What helps the agent act and record a reason.</dd></div></dl>
     <p>The idea matrix applied those layers to the agent’s questions. It helped distinguish useful context from a score or suggested outcome that could steer the decision.</p>
+    <h4 className={styles.criteriaHeading}>What earned a place on the screen</h4>
+    <ol className={styles.selectionChecks}>{research.criteria.map(criterion => <li key={criterion}>{criterion}</li>)}</ol>
     <details className={styles.researchDisclosure}>
-      <summary>The six selection checks and idea matrix</summary>
-      <ol className={styles.selectionChecks}>{research.criteria.map(criterion => <li key={criterion}>{criterion}</li>)}</ol>
+      <summary>The early idea matrix</summary>
       <p>The early creative matrix covers nine questions and shared tools. It includes a claim clock, live restaurant permission and an approval-limit check that later changed or were removed. The wireframes and final prototype show how the ideas developed.</p>
       <div className={styles.researchTable} role="region" aria-label="Early creative matrix, horizontally scrollable" tabIndex={0}><table aria-label="Early creative matrix"><thead><tr><th>Question</th><th>Data</th><th>Comparison</th><th>Support idea</th></tr></thead><tbody>{research.ideaMatrix.map(row => <tr key={row[0]}>{row.map((value, i) => i === 0 ? <th scope="row" key={i}>{value}</th> : <td key={i}>{value}</td>)}</tr>)}</tbody></table></div>
     </details>

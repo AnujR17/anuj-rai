@@ -127,7 +127,7 @@
       "source": "stakeholders-mobile.svg"
     }
   ],
-  "accentTextContrast": 4.745422250903343,
+  "accentTextContrast": 15.841151183950581,
   "runtimeErrors": [],
   "checks": [
     "five explanatory SVG studies and responsive source selection at five widths",
@@ -139,6 +139,5 @@
     "unchanged stage labels remain inside the desktop viewport",
     "readable accent text contrast",
     "static diagrams without JavaScript"
-  ],
-  "date": "2026-11-16"
+  ]
 }

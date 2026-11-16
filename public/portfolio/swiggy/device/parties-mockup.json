@@ -1,10 +1,12 @@
 {
   "id": "parties",
   "source": "parties.mp4",
-  "method": "Deterministic video seeks inside the rendered CSS device mockup",
+  "method": "Original recorded UI scaled proportionately inside neutral window chrome matching DeviceFrame; exported with FFmpeg",
   "fps": 8,
-  "frames": 219,
+  "frames": 218,
   "duration": 27.3,
+  "width": 1082,
+  "height": 708,
   "sourceUI": "Original fictional Agent Desk v7.1",
-  "device": "Editorial mockup, not a photograph of deployed hardware"
+  "device": "Editorial application-window mockup, not deployed hardware"
 }

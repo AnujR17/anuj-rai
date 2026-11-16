@@ -52,7 +52,7 @@
   ],
   "runtimeErrors": [],
   "checks": [
-    "eight media scenes in physical device mockups",
+    "eight media scenes in consistent application-window mockups",
     "scenario tabs: keyboard, selected content and no-JavaScript fallback",
     "play, pause and restart",
     "fullscreen with native controls, restored on exit",
@@ -61,6 +61,5 @@
     "four viewport widths without overflow",
     "no autoplay, including reduced motion",
     "native video controls without JavaScript"
-  ],
-  "date": "2026-11-15"
+  ]
 }

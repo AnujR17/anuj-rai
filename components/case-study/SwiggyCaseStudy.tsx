@@ -19,10 +19,10 @@ const filmSteps = {
   decision: ["Choose Restaurant and Full refund for this recorded branch.", "Review and send the explanation, then select a reason.", "Confirm to add the decision to the case record."],
 };
 function Explainer({ id, title, children }: { id: keyof typeof filmSteps; title: string; children: React.ReactNode }) {
-  return <div className={swiggy.explainer + (id === "decision" ? " " + swiggy.inkScene : "")} data-interaction-scene={id}>
+  return <div className={swiggy.explainer} data-interaction-scene={id}>
     <div className={swiggy.explainerCopy}><h3>{title}</h3>{children}</div>
     <div className={swiggy.explainerMedia}>
-    <DeviceMotion id={id} label={title} src={"/portfolio/swiggy/device/" + id + ".mp4"} poster={"/portfolio/swiggy/device/" + id + ".png"} gif={"/portfolio/swiggy/device/" + id + "-mockup.gif"} variant={id === "parties" ? "desktop" : "laptop"} tone={id === "decision" ? "ink" : "paper"} />
+    <DeviceMotion id={id} label={title} src={"/portfolio/swiggy/device/" + id + ".mp4"} poster={"/portfolio/swiggy/device/" + id + ".png"} gif={"/portfolio/swiggy/device/" + id + "-mockup.gif"} />
     <details className={swiggy.motionSteps}><summary>Read the interaction</summary><ol>{filmSteps[id].map(step => <li key={step}>{step}</li>)}</ol></details>
     </div>
   </div>;
@@ -32,14 +32,12 @@ function Crop({ file, alt, width, height }: { file: string; alt: string; width: 
 }
 
 export function SwiggyCaseStudy() {
-  return <article className={styles.caseStudy + " " + swiggy.case}>
+  return <article className={styles.caseStudy + " " + swiggy.case} data-swiggy-case>
     <header className={styles.hero + " " + swiggy.caseHero}>
       <Link href="/work" className={styles.textLink}>All work</Link>
       <div className={styles.heroArtwork + " " + swiggy.heroDevice} data-project-artwork={project.slug}>
         <div className={swiggy.heroComposition} data-layered-hero>
-          <div className={swiggy.heroBackdrop} aria-hidden="true" />
           <div className={swiggy.heroLaptop}><DeviceFrame><Link href="/work/swiggy-agent-workflow/prototype" aria-label="Open the Agent Desk prototype"><Image unoptimized src="/portfolio/swiggy/media/wrong-item.png" width={1440} height={900} alt="Agent Desk’s wrong-item conversation, presented in a laptop mockup" preload sizes="(max-width: 700px) 85vw, 850px" /></Link></DeviceFrame></div>
-          <a className={swiggy.heroEvidence} href="/portfolio/swiggy/evolution/evidence-detail.png" aria-label="Inspect the original evidence viewer"><Image unoptimized src="/portfolio/swiggy/evolution/evidence-detail.png" width={720} height={500} alt="A detail from the evidence viewer, layered in front of the workspace" preload sizes="(max-width: 700px) 40vw, 380px" /></a>
         </div>
       </div>
       <h1>{project.title}</h1>
@@ -55,7 +53,7 @@ export function SwiggyCaseStudy() {
       <p className={swiggy.context}>An independent concept, unaffiliated with Swiggy.</p>
     </div>
     <div className={styles.readingLayout}>
-      <CaseStudyNav contrastSection="insights" />
+      <CaseStudyNav />
       <div className={styles.story}>
         <section id="research" className={styles.stage} aria-labelledby="research-title">
           <h2 id="research-title">Understanding the work after a bot handover</h2>
@@ -73,12 +71,15 @@ export function SwiggyCaseStudy() {
           <h2 id="insights-title">A record is not a verdict</h2>
           <div className={styles.stageContent + " " + swiggy.narrative}>
             <p>A delivery status records what was marked in the system. A photograph shows what the customer submitted. A restaurant’s reply gives another account. None settles the whole complaint on&nbsp;its&nbsp;own.</p>
-            <p>I used that distinction to separate records, comparisons and agent actions. The photo viewer includes the source and submission time; the agent records Agree or Disagree. An authenticity score was considered and rejected because it would replace an inspectable record with a judgement about whether to believe it.</p>
-            <p>History needed similar care. Counts appear alongside totals for each party. A late photo or a previous refund can prompt another question, but neither determines whether this complaint is genuine.</p>
             <div className={swiggy.layeredWorkspace} data-layered-workspace>
-              <div className={swiggy.workspacePlane} aria-hidden="true" />
-              <div className={swiggy.workspaceMonitor} data-layer-depth="back"><DeviceFrame variant="desktop"><a href="/portfolio/swiggy/evolution/evidence-clean.png" aria-label="Inspect the original workspace at full size"><Image unoptimized src="/portfolio/swiggy/evolution/evidence-clean.png" width={1440} height={900} alt="Original Agent Desk interface with order information, customer conversation and policy checks in three columns" sizes="(max-width: 700px) 85vw, 900px" /></a></DeviceFrame></div>
-              <a className={swiggy.riderProof} data-layer-depth="front" href="/portfolio/swiggy/evolution/rider-detail.png" aria-label="Inspect the rider’s original trip record"><Image unoptimized src="/portfolio/swiggy/evolution/rider-detail.png" width={570} height={630} alt="Original rider trip log and checks, shown as a detail in front of the shared case" sizes="(max-width: 700px) 55vw, 340px" /></a>
+              <div className={swiggy.evidenceReading}>
+                <div><h3>Evidence before a score</h3><p>The photo viewer keeps the source and submission time beside Agree and Disagree. I rejected an authenticity score because it would replace a record the agent can inspect with a judgement about whether to believe it.</p></div>
+                <Crop file="evidence-detail" width={720} height={500} alt="Original photo viewer with the image source, submission time and agent observation controls" />
+              </div>
+              <div className={swiggy.evidenceReading}>
+                <div><h3>History as context</h3><p>Counts appear alongside totals for each party, with the rider’s trip events available to inspect. A late photo or previous refund can prompt another question; neither determines whether this complaint is genuine.</p></div>
+                <a className={swiggy.riderProof} href="/portfolio/swiggy/evolution/rider-detail.png" aria-label="Inspect the rider’s original trip record"><Image unoptimized src="/portfolio/swiggy/evolution/rider-detail.png" width={570} height={630} alt="Original rider record with trip events, contact attempts and checks" sizes="(max-width: 700px) 90vw, 460px" /></a>
+              </div>
             </div>
           </div>
         </section>

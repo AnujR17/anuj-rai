@@ -13,6 +13,7 @@ try {
  await page.goto(base+'/work/swiggy-agent-workflow',{waitUntil:'networkidle'});
  assert.equal(await page.locator('[data-device-motion]').count(),8);
  assert.equal(await page.locator('[data-device-motion] [data-device-scene]').count(),8);
+ assert.equal(await page.locator('[data-device-motion] [data-device="browser"]').count(),8);
  assert.equal(await page.locator('video[autoplay]').count(),0);
  const tabs=page.getByRole('tablist',{name:'Support scenarios'});
  await tabs.getByRole('tab').first().focus();await page.keyboard.press('ArrowRight');
@@ -60,6 +61,6 @@ try {
  assert.equal(await plain.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
  await plain.close();
  assert.deepEqual(errors,[]);
- const result={passed:true,sizes,runtimeErrors:errors,checks:['eight media scenes in physical device mockups','scenario tabs: keyboard, selected content and no-JavaScript fallback','play, pause and restart','fullscreen with native controls, restored on exit','automatic pause when scrolled out of view','original 8:5 source proportions','four viewport widths without overflow','no autoplay, including reduced motion','native video controls without JavaScript']};
+ const result={passed:true,sizes,runtimeErrors:errors,checks:['eight media scenes in consistent application-window mockups','scenario tabs: keyboard, selected content and no-JavaScript fallback','play, pause and restart','fullscreen with native controls, restored on exit','automatic pause when scrolled out of view','original 8:5 source proportions','four viewport widths without overflow','no autoplay, including reduced motion','native video controls without JavaScript']};
  fs.writeFileSync(out+'/devices-verification.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
 } finally { await browser.close(); }

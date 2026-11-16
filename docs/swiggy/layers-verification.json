@@ -1,147 +1,86 @@
 {
   "passed": true,
-  "foldResults": [
+  "folds": [
     {
       "width": 1440,
       "height": 900,
-      "titleBottom": 800,
-      "artworkBottom": 662.8151245117188
+      "titleBottom": 740,
+      "artworkBottom": 624.0234375
     },
     {
       "width": 1366,
       "height": 768,
-      "titleBottom": 744,
-      "artworkBottom": 615.1485595703125
+      "titleBottom": 740,
+      "artworkBottom": 627.75
     },
     {
       "width": 1280,
       "height": 720,
       "titleBottom": 696,
-      "artworkBottom": 575.4415283203125
+      "artworkBottom": 591.2890625
     },
     {
       "width": 1024,
       "height": 768,
-      "titleBottom": 744,
-      "artworkBottom": 631.0001220703125
+      "titleBottom": 740,
+      "artworkBottom": 618.453125
     },
     {
       "width": 390,
       "height": 844,
-      "titleBottom": 692,
-      "artworkBottom": 534.4985961914062
+      "titleBottom": 592,
+      "artworkBottom": 442.6328125
     },
     {
       "width": 375,
       "height": 667,
-      "titleBottom": 643,
-      "artworkBottom": 504.3966064453125
+      "titleBottom": 592,
+      "artworkBottom": 439.1484375
     },
     {
       "width": 320,
       "height": 568,
       "titleBottom": 544,
-      "artworkBottom": 434.201171875
+      "artworkBottom": 402.2421875
     },
     {
       "width": 844,
       "height": 390,
       "titleBottom": 366,
-      "artworkBottom": 294.56170654296875
+      "artworkBottom": 305.7890625
     }
   ],
-  "layeredWidths": [
-    1440,
-    768,
-    390,
-    320
+  "contrasts": [
+    {
+      "width": 1440,
+      "edge": "top",
+      "minimum": 5.115960783814849
+    },
+    {
+      "width": 1440,
+      "edge": "bottom",
+      "minimum": 5.647927430674284
+    },
+    {
+      "width": 768,
+      "edge": "top",
+      "minimum": 5.115960783814849
+    },
+    {
+      "width": 768,
+      "edge": "bottom",
+      "minimum": 5.647927430674284
+    }
   ],
-  "motionSupported": true,
-  "inkControlContrast": 13.129243692620303,
   "runtimeErrors": [],
   "checks": [
-    "title, complete laptop and source detail in one fold at eight viewports",
-    "hero overlap without obscuring the title",
-    "source-record overlap and keyboard access to full-size originals",
-    "all five layer compositions without horizontal overflow",
-    "scroll-linked depth with a static reduced-motion fallback",
-    "one accent section with readable index rows across twelve boundary positions",
-    "ink-scene control contrast",
-    "native source access and all versions without JavaScript"
-  ],
-  "date": "2026-11-16",
-  "featuredNavigation": [
-    {
-      "width": 1440,
-      "edge": "top",
-      "split": 0,
-      "minimumContrast": 4.679978330614811
-    },
-    {
-      "width": 1440,
-      "edge": "top",
-      "split": 2,
-      "minimumContrast": 4.679978330614811
-    },
-    {
-      "width": 1440,
-      "edge": "top",
-      "split": 3,
-      "minimumContrast": 4.679978330614811
-    },
-    {
-      "width": 1440,
-      "edge": "bottom",
-      "split": 0,
-      "minimumContrast": 4.679978330614811
-    },
-    {
-      "width": 1440,
-      "edge": "bottom",
-      "split": 2,
-      "minimumContrast": 4.745422250903343
-    },
-    {
-      "width": 1440,
-      "edge": "bottom",
-      "split": 3,
-      "minimumContrast": 4.745422250903343
-    },
-    {
-      "width": 768,
-      "edge": "top",
-      "split": 0,
-      "minimumContrast": 4.679978330614811
-    },
-    {
-      "width": 768,
-      "edge": "top",
-      "split": 2,
-      "minimumContrast": 4.679978330614811
-    },
-    {
-      "width": 768,
-      "edge": "top",
-      "split": 3,
-      "minimumContrast": 4.679978330614811
-    },
-    {
-      "width": 768,
-      "edge": "bottom",
-      "split": 0,
-      "minimumContrast": 4.679978330614811
-    },
-    {
-      "width": 768,
-      "edge": "bottom",
-      "split": 2,
-      "minimumContrast": 4.745422250903343
-    },
-    {
-      "width": 768,
-      "edge": "bottom",
-      "split": 3,
-      "minimumContrast": 4.745422250903343
-    }
+    "white case and header, including no-JavaScript",
+    "complete laptop and one-line title in eight first-fold sizes",
+    "one pale neutral emphasis with readable stage links",
+    "full-reading-width window mockups",
+    "six visible screen-selection criteria",
+    "keyboard/full-size source access",
+    "other case background preserved",
+    "native media and all versions without JavaScript"
   ]
 }

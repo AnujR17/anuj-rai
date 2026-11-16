@@ -11,11 +11,10 @@ type Props = {
   poster: string;
   gif: string;
   variant?: DeviceVariant;
-  tone?: "paper" | "ink";
   loop?: boolean;
 };
 
-export function DeviceMotion({ id, label, src, poster, gif, variant = "laptop", tone = "paper", loop = true }: Props) {
+export function DeviceMotion({ id, label, src, poster, gif, variant = "browser", loop = true }: Props) {
   const root = useRef<HTMLDivElement>(null);
   const video = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
@@ -64,7 +63,7 @@ export function DeviceMotion({ id, label, src, poster, gif, variant = "laptop", 
     } catch { media.controls = false; setError("Open the recording to view it at full size."); }
   }
 
-  return <div ref={root} className={styles.motion} data-device-motion={id} data-tone={tone}>
+  return <div ref={root} className={styles.motion} data-device-motion={id}>
     <div className={styles.scene} data-device-scene>
       <DeviceFrame variant={variant}>
         <video ref={video} controls muted loop={loop} playsInline preload="none" poster={poster} aria-label={label} onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} onEnded={() => setPlaying(false)}>

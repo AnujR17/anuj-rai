@@ -6,11 +6,11 @@ const chunks = '.next/static/chunks';
 const faces = fs.readdirSync(chunks).filter(file => file.endsWith('.css')).flatMap(file => fs.readFileSync(path.join(chunks, file), 'utf8').match(/@font-face\{font-family:DM Sans;[^}]+\}/g) || []);
 if (!faces.length) throw Error('Build the site first to make DM Sans available.');
 const fonts = [...new Set(faces)].map(face => face.replace(/url\(([^)]+)\)/, (_, url) => 'url(data:font/woff2;base64,' + fs.readFileSync(path.resolve(chunks, url)).toString('base64') + ')')).join('');
-const ink = '#242522', paper = '#f7f7f2', pale = '#eeece4', line = '#c9c4b9';
+const ink = '#242522', paper = '#ffffff', pale = '#f2f4f4', line = '#d5dadd';
 const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 const text = (x, y, value, size = 20, extra = '') => `<text x="${x}" y="${y}" font-size="${size}" ${extra}>${escape(value)}</text>`;
 const lines = (x, y, values, size = 20, extra = '') => values.map((value, i) => text(x, y + i * (size + 7), value, size, extra)).join('');
-const box = (x, y, w, h, fill = paper) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="8" fill="${fill}" stroke="${line}"/>`;
+const box = (x, y, w, h, fill = paper) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="3" fill="${fill}" stroke="${line}"/>`;
 const connector = d => `<path d="${d}" fill="none" stroke="${line}" stroke-width="2"/>`;
 function save(id, w, h, title, description, body) {
   fs.writeFileSync(`public/portfolio/swiggy/diagrams/${id}.svg`, `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-labelledby="title description"><title id="title">${escape(title)}</title><desc id="description">${escape(description)}</desc><style>${fonts}text{font-family:'DM Sans',sans-serif;font-weight:400;fill:${ink}}.strong{font-weight:500}</style>${body}</svg>\n`);

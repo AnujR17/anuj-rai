@@ -96,22 +96,28 @@
       }
     },
     "sha256": {
-      "not-delivered.gif": "eb794ddcabc04a1138817558748d56c9e4e8f172ffc02bfbf2946538b4024be5",
-      "late-delivery.gif": "7ca15902be56018d80614f62d5279e8231b89273b40eff1bbc491dada2a1067c",
+      "not-delivered.gif": "e2af471fd10834b1fd5499d5a612e1d29ab274a0c707000dba55d3788b10ccff",
+      "late-delivery.gif": "404bca8be22d7863fb4ed2eb8fa3d0a877cdada9d0f811c7c53b5cf5bd4c3328",
       "not-delivered.mp4": "d0d37f09925939f33e1bcbb6e2d4a1eb4e99fad81b8b7d844ace752a22a9f01f",
       "quality-complaint.png": "90ead88194f2733f528947ea8c467d53126b8d05960be02bb6fe468a24504796",
       "quality-complaint.mp4": "60436ff003dc175638c5202003811aaf9853eba032819afa0a4fc0c9cb8f85a4",
       "missing-item.mp4": "2843844a65214089eaa20861fb63c9a96600b9be875b7b32ff224b9529deac92",
-      "wrong-item.gif": "fe5af9127eb46eb1f4f8913c171aa06bb8c9730b1596f1b5896b2f4dd540d829",
+      "wrong-item.gif": "1105da9f130fc16843ecd2b0a3d35710993d8b9fd4e648da496dffd208992c4c",
       "wrong-item.png": "a0764e905288e1664e0176b13b66612b806e91a40bea6fdb11fd5d1c9f35bdd4",
       "late-delivery.png": "87f21df84f07fe4d086fdafbf5e1cf61f2ef2d615c647d955d52796e75cad51d",
       "missing-item.png": "43a4cf0e5378c6401f3466811e45d5dc34e2373e47dc8a7c7b9e0067cf7316fa",
-      "missing-item.gif": "466af626050286c6e12e83599ce4522b510ef75b268f2ac756d2548cbd623c76",
+      "missing-item.gif": "0408d01305971070c1730e5fe32cd4726835206ecae75add385abc5eb7d567fb",
       "late-delivery.mp4": "375ef4433ca3f674dbe879985ceb9f45012ac024d5f6d87909e5813948d79e05",
       "wrong-item.mp4": "864350e202c2cf27978f5396c18b393974d0cbbdb331854d788f4da4a82fd803",
-      "quality-complaint.gif": "b7abc4abbea6979ad3e5d315c00620f9abf4661c812bf2606eef4bc586aaa405",
-      "not-delivered.png": "1ff3921a5e46743058016d3611b0fe8e698a51b9a950693bf688d118da6a6f35"
-    }
+      "quality-complaint.gif": "32ed7921a98ff56cdc37785cd0e63c9693cddd508b1c40d39e5c18ce5e3f9ac8",
+      "not-delivered.png": "1ff3921a5e46743058016d3611b0fe8e698a51b9a950693bf688d118da6a6f35",
+      "wrong-item-mockup.json": "81c3a26cea07afbcd870a11a7e21325e347c12deffc4d034990f3c195f4491f0",
+      "not-delivered-mockup.json": "80c38f70625b106d621963e45c00d5c0a87ba51380dcd9f2f408d08facae71bc",
+      "quality-complaint-mockup.json": "53d912d4af416f7c3ad395c9edaf6c86f03dd77e8facdb337507ffebfeb678b2",
+      "missing-item-mockup.json": "40be1d2ab9ac32dcb35991c2402ab87930f3cf07bb002dacc71725c52263d68d",
+      "late-delivery-mockup.json": "9f033a4ddbf71f446694c3e1d204a8b9a194f9100b9735fa6df9e281d9c5d308"
+    },
+    "gif_presentation": "16 November: all five existing recordings proportionately framed with neutral window chrome; source MP4s unchanged."
   },
   "new_sources": {
     "S2 Wireframe · Agent Panel1.html": {
@@ -208,17 +214,17 @@
   },
   "device_motion_2026_11_09": {
     "source": "Unchanged Agent Desk v7.1, captured through visible browser inputs with scripts/capture-swiggy-motion.mjs",
-    "presentation": "New CSS laptop/desktop mockups, clean UI clips and deterministic framed GIF exports; not physical deployment evidence",
+    "presentation": "16 November: original UI clips in restrained application-window mockups and corresponding FFmpeg GIF exports; not physical deployment evidence.",
     "decision_branch": "Both customer photos agreed before restaurant contact; restaurant confirms swapped bags; confirmed in inspected source frame",
     "party_clip_edit": "The actual final Held state is extended for reading",
     "assets": {
       "decision-mockup.gif": {
-        "sha256": "29e75f428610318e98f3506c368f22a42e2f835c4889b8677b668c937e1449fc",
-        "bytes": 891756
+        "sha256": "6a3bb22707e6d0dbfc5c538a0c9c294c4629a3036a50e38155df484e6bb9bd70",
+        "bytes": 1024736
       },
       "decision-mockup.json": {
-        "sha256": "09419ea022fee416b8b96b25c7b2ab3ddd3833c77d06e7491eff4604f8657c06",
-        "bytes": 307
+        "sha256": "62db147f64996f845bbc2df8382e361e5d1504d0acecb4ae335cd48dc25108b9",
+        "bytes": 396
       },
       "decision.json": {
         "sha256": "983bd374418f937db41ac8ea105069b856970c27a4c35b4556f2f8410d2ef8a2",
@@ -233,12 +239,12 @@
         "bytes": 282373
       },
       "evidence-mockup.gif": {
-        "sha256": "48f38f43f567ebbf5713ad1bf95bc70d0a846c00d02d776ecba49726d1e2f430",
-        "bytes": 2983584
+        "sha256": "160eee015a51a78622421a4e028f6e37471c076634348b774b9272bb709dca8a",
+        "bytes": 2814220
       },
       "evidence-mockup.json": {
-        "sha256": "bdd9dcb0788d8765b7e8f644bf75d385b54c9c87b215b1b4fb90eca241dee746",
-        "bytes": 307
+        "sha256": "c3c3bb1319333510e564158a4a84c01be06a6e965005c5d4c44c3fa1e4ab3b11",
+        "bytes": 396
       },
       "evidence.json": {
         "sha256": "44edcd4170999c4e51987621579f7cec39277bd0f8a0baeff4f1b9b1e02f2043",
@@ -253,12 +259,12 @@
         "bytes": 701011
       },
       "parties-mockup.gif": {
-        "sha256": "1a39cb6b41850d02ba106da94f8df58842810c1227625819295c26d5870549e2",
-        "bytes": 1276292
+        "sha256": "37a1177d1efae8bc55389a401bcb1fb9c12410e3f55d7beec6b3f472f9dc2256",
+        "bytes": 1125826
       },
       "parties-mockup.json": {
-        "sha256": "14dad5ba66382674be7ff4ad5d603a762bf166b5a83fe8237ca08d06078dd1ac",
-        "bytes": 300
+        "sha256": "a5c0cbf964ac247ae590e901ce3dcd1b4e00be1351eb4b0d5624f9051f6e6fa8",
+        "bytes": 389
       },
       "parties.json": {
         "sha256": "9d5abc7f18f465bb6423dcbb0714e75aac559036a62cad0496ab7532b2e30ab1",
@@ -275,19 +281,19 @@
     }
   },
   "case_layout": {
-    "date": "2026-11-09",
-    "treatment": "CSS editorial composition of unchanged original captures: laptop and evidence detail in the hero, monitor and rider record in Insights, original-version stack, alternating interaction scenes and an ink decision section. Static and reduced-motion fallbacks; full-size original links retained.",
+    "date": "2026-11-16",
+    "treatment": "White editorial surface and header, scoped to Swiggy. One pale neutral Insights band; original evidence and rider details beside their design reasoning. Single laptop hero, open contribution, consistent full-width application-window media and unstacked original iterations. Six supplied design criteria visible in the main story.",
     "sources": [
       "media/wrong-item.png",
       "evolution/evidence-detail.png",
-      "evolution/evidence-clean.png",
       "evolution/rider-detail.png",
       "evolution/wireframe-1.png",
       "evolution/wireframe-2.png",
       "evolution/wireframe-3.png"
     ],
-    "crop": "Rider detail masks empty lower source area in the composition; native link opens the entire source.",
-    "media": "Device MP4 and GIF source files are unchanged by this layout revision."
+    "crop": "Rider detail masks only the blank lower source area; its native link opens the entire unchanged record.",
+    "media": "MP4 sources unchanged; all eight GIF downloads re-exported with neutral application-window framing.",
+    "reference_review": "docs/swiggy/white-layout-and-reference-review.md"
   },
   "editorial_vectors": {
     "date": "2026-11-15",
@@ -299,42 +305,43 @@
     },
     "files": {
       "architecture-mobile.svg": {
-        "sha256": "4f9fa317961cee7fdd9cd1df50d3460ecd68b50e4c5b0466d6d92c0b08f9ccac",
-        "bytes": 76668,
+        "sha256": "2d1ba43f5bdcf25ba1d969bd94e617107b8706af1cbef6d1697ae91dd4491562",
+        "bytes": 76663,
         "width": 360,
         "height": 762
       },
       "architecture.svg": {
-        "sha256": "dff01d83b134ce48ca00d210a7703d5be712d3a4aba6cb778d45d24f79560753",
-        "bytes": 76555,
+        "sha256": "5ee807e4f3a7847d12a2da6b716d04b13fbd03bab07229eca6037521643809e5",
+        "bytes": 76550,
         "width": 960,
         "height": 560
       },
       "findings-mobile.svg": {
-        "sha256": "d8d76a607061eb2266430ff2b3345547061454d1fe4337a1cfe28c5d25b64751",
+        "sha256": "b2be14ec5302407ea52ebee1066e42ee5a78fe790f73eec714e301ff8daae08b",
         "bytes": 75558,
         "width": 360,
         "height": 330
       },
       "findings.svg": {
-        "sha256": "f23b1f2563344ba4006d3165df20cf533f0b8b5f762a2f20bf98168176eb9813",
+        "sha256": "f045949a8edcffaeabaebc73319f53b7527c3354045228fda1f59153ddb13d1c",
         "bytes": 75218,
         "width": 960,
         "height": 200
       },
       "refund-cost-mobile.svg": {
-        "sha256": "8361db4e948a24ea92afb53feb662c234ced2a79f03065a929967a073dc0e5b3",
-        "bytes": 76341,
+        "sha256": "6ead6a49451b269054493d6f5281f2f1b2b53bfe7fffaecd3ec4db41168aad95",
+        "bytes": 76245,
         "width": 360,
         "height": 710
       },
       "refund-cost.svg": {
-        "sha256": "0de71b8645c9dc38169357ab4f8b6016526ee627e0385254f255f8ab3c86d120",
-        "bytes": 76347,
+        "sha256": "b1614e1306b490b841376ac108b509458c661266aee4e317523f2278211d1218",
+        "bytes": 76251,
         "width": 960,
         "height": 430
       }
-    }
+    },
+    "presentation_revision": "16 November: white node fills, neutral lines, ink/grey chart and open cost calculation; content and source meaning retained."
   },
   "agent_desk_handbook": {
     "file": "agent-desk-handbook-v1.0.pdf",
@@ -383,22 +390,22 @@
       {
         "file": "diagrams/mental-model-mobile.svg",
         "source": "New reading layout of original Stage 5 mental-model/stakeholder records, inspected against FigJam root 0:1; generated by scripts/render-swiggy-research-vectors.mjs",
-        "sha256": "855c0864ec697f5de5f07414e748c2f7abe24cf29846ac305d1a96e273117ced"
+        "sha256": "3b66af98234a7d3a4429de2f6887376f28e91d69613f86da512f0895357d4b01"
       },
       {
         "file": "diagrams/mental-model.svg",
         "source": "New reading layout of original Stage 5 mental-model/stakeholder records, inspected against FigJam root 0:1; generated by scripts/render-swiggy-research-vectors.mjs",
-        "sha256": "3dda586e1f0b27be5290d62b620c08951278e64e7b0a26bb085f5375730904de"
+        "sha256": "123943dbcb7207b4749d663838c1ce03fc69499ea0d4aea611c6de832fef7590"
       },
       {
         "file": "diagrams/stakeholders-mobile.svg",
         "source": "New reading layout of original Stage 5 mental-model/stakeholder records, inspected against FigJam root 0:1; generated by scripts/render-swiggy-research-vectors.mjs",
-        "sha256": "e870d5275f2a1775341aab470ebab1fb56130a376182f8c5f2b02b882b3edc8f"
+        "sha256": "70f20956b6a876bad5ba618912e1c99a54754514a5c8932fe0d65885233266bb"
       },
       {
         "file": "diagrams/stakeholders.svg",
         "source": "New reading layout of original Stage 5 mental-model/stakeholder records, inspected against FigJam root 0:1; generated by scripts/render-swiggy-research-vectors.mjs",
-        "sha256": "9a15017151c474681b95d4745e9347ed792e62b69696830cf7920c36d1558097"
+        "sha256": "2722bbf013c4e01bdc3f409e8398f1d5af7b144b14a476c38a655bf085360e88"
       }
     ]
   },

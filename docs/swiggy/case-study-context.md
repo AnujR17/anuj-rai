@@ -1,5 +1,9 @@
 # Swiggy case study continuation
 
+Read `white-layout-and-reference-review.md` first for the latest white surface,
+quiet section emphasis, reference comparison and larger window mockups. This
+supersedes the earlier paper/vermilion backgrounds and decorative screen layers.
+
 Read `persona-presentation.md` for the 16 November persona photographs,
 open profile layout, responsive treatment and direct persona anchor.
 

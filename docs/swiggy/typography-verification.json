@@ -34,14 +34,14 @@
       "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
-      "veryShortEndings": 8
+      "veryShortEndings": 7
     },
     {
       "width": 1024,
       "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
-      "veryShortEndings": 11
+      "veryShortEndings": 10
     },
     {
       "width": 900,
@@ -62,7 +62,7 @@
       "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
-      "veryShortEndings": 7
+      "veryShortEndings": 8
     },
     {
       "width": 430,
@@ -120,6 +120,5 @@
     "single-line project title within the first fold",
     "natural word spacing without justification",
     "native typography and complete content without JavaScript"
-  ],
-  "date": "2026-11-16"
+  ]
 }
