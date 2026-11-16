@@ -6,28 +6,28 @@
       "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
-      "veryShortEndings": 0
+      "veryShortEndings": 1
     },
     {
       "width": 1440,
       "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
-      "veryShortEndings": 0
+      "veryShortEndings": 1
     },
     {
       "width": 1366,
       "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
-      "veryShortEndings": 0
+      "veryShortEndings": 1
     },
     {
       "width": 1280,
       "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
-      "veryShortEndings": 0
+      "veryShortEndings": 1
     },
     {
       "width": 1100,
@@ -41,7 +41,7 @@
       "paragraphs": 120,
       "orphanEndings": 0,
       "maximumWordGapEm": 0.265625,
-      "veryShortEndings": 10
+      "veryShortEndings": 11
     },
     {
       "width": 900,

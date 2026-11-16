@@ -20,17 +20,17 @@ The original extracts are retained in `source-records/research-models-2026-10.md
 
 | Artifact | Source and status | Public placement and purpose |
 | --- | --- | --- |
-| Operating assumptions | Frozen v1.3, later v2/v2.1 policy decisions, final engine; project choices | Research: records/contact access, photo condition, standing terms/cost and upstream checks. Explain what the prototype assumes |
-| Four conscious policy choices | 17–18 October handover and decision log | Research disclosure: refunds above terms, customer call, combined record and photo condition. Keep the project model distinct from public policy |
+| Operating assumptions | Frozen v1.3, later v2/v2.1 policy decisions, final engine; project choices | Concept: records/contact access, photo condition, standing terms/cost and upstream checks. Explain what the prototype assumes |
+| Four conscious policy choices | 17–18 October handover and decision log | Concept disclosure: refunds above terms, customer call, combined record and photo condition. Keep the project model distinct from public policy |
 | Ananya and Rohit | Stage 6 Define; two hypothetical personas; names/tenures are placeholders | Research: goals, risks and information requirements for newer/experienced agents. Representative photographs accompany the profiles; no invented quotation or observed-behaviour claim |
 | Nine-step mental model | Stage 5 Insights and FigJam `jdVOYesjFWTQOsQcxnVvV9`, root `0:1`; inferred | Research: readable responsive SVG, full nine-row table and original board overview/link. Explain history-as-context and the early agreement dependency |
-| Stakeholder map | Same Stage 5/board; research synthesis with reported/inferred relationships | Research: readable responsive SVG showing agent, customer, restaurant, rider, platform and external recourse. Explain comparable records and remedy/cost separation |
-| Value Opportunity Analysis | Stage 6; subjective Low/Medium/High ratings | Research disclosure: all six stakeholder rows, explicitly early judgements and expected value rather than a measured before/after |
+| Stakeholder map | Same Stage 5/board; research synthesis with reported/inferred relationships | Insights: readable responsive SVG showing agent, customer, restaurant, rider, platform and external recourse. Explain comparable records and remedy/cost separation |
+| Value Opportunity Analysis | Stage 6; subjective Low/Medium/High ratings | Insights disclosure: all six stakeholder rows, explicitly early judgements and expected value rather than a measured before/after |
 | Three-layer model | Stage 6; data, derived insight, decision support | Concept: connect photo provenance, history counts and agent choices to the information model |
-| Six admissibility questions | Stage 7 Ideation; selection criteria | Concept disclosure: objective, traceable, no prediction, no prescription, comparable party treatment, reduced lookup work |
+| Six admissibility questions | Stage 7 Ideation; selection criteria | Concept, visible main list: objective, traceable, no prediction, no prescription, comparable party treatment, reduced lookup work |
 | Creative matrix | Stage 7; early design ideas | Concept disclosure: all nine questions plus shared tools, paraphrased from the source. Identify the claim clock, permission and approval-limit ideas that later changed |
-| Five scenario flows | `10_user-flows/flow-*.png`, exports from 17 October | Design: original images inside scrollable native disclosures, first open, with full-size access. Different sample dishes, amounts and old branches are identified |
-| Information architecture, versions and Hold relocation | Existing prototype/wireframes | Concept, retained after the restored reasoning. Actual source images and four-version viewer remain available |
+| Five scenario flows | `10_user-flows/flow-*.png`, exports from 17 October | Concept: original images inside scrollable native disclosures, available on demand with full-size access. Different sample dishes, amounts and old branches are identified |
+| Information architecture, versions and Hold relocation | Existing prototype/wireframes | Concept: architecture first, then rules and scenario model, then grouped iterations. Actual source images and four-version viewer remain available |
 | Working interaction and review | v7.1, existing captures and heuristic results | Design/Outcome, retained. Eight mockup recordings and sixteen unresolved findings remain distinguishable from user-test outcomes |
 
 ## Evidence boundaries
@@ -66,8 +66,9 @@ assumptions through agent differences and decision relationships to screen
 selection, layout, flows and implementation. Longer source tables use native
 disclosures; the personas, maps and their main implications remain visible.
 
-The compact hero, Meditimer-informed typography, single vermilion Insights
-section, bottom-left stage labels, original UI/media and footer are preserved.
+The compact hero, established typography, white surface, single neutral Insights
+section, bottom-left stage labels and original UI/media are retained. The current
+chapter order and nested headings are in `case-study-information-architecture.md`.
 No extra case stages or project pages were added. The local editorial skill and
 acceptance review now explicitly require an artifact inventory before a case is
 condensed, so supplied work is not silently removed to meet a word target.

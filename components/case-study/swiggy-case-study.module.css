@@ -31,7 +31,7 @@
 .findingStories > div { display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:35px;align-items:center;margin-block:45px; }
 .findingStories img { width:100%;height:auto;display:block;border-radius:5px; }
 .findingStories a { display:block; }
-.case .findingStories h3 { font-size:25px; }
+.case .findingStories h4 { font-size:22px;line-height:1.25;font-weight:450;letter-spacing:-.03em; }
 .case .findingStories p { font-size:17px;line-height:1.7; }
 .scenarioCases { margin-block:40px 65px; }
 .scenarioCase { padding-block:28px; }
@@ -57,8 +57,8 @@
 .scenarioShowcase[data-enhanced="true"] .scenarioTabs { display:flex; }
 .scenarioShowcase[data-enhanced="true"] .scenarioPanel:not([data-active="true"]) { display:none; }
 .scenarioPanel { margin-block:30px; }
-.case .scenarioPanel h3 { display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px 24px; }
-.scenarioPanel h3 span { font-size:16px;letter-spacing:0;color:#6a675f; }
+.case .scenarioPanel h4 { font-size:22px;font-weight:450;line-height:1.2;letter-spacing:-.035em;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px 24px; }
+.scenarioPanel h4 span { font-size:16px;letter-spacing:0;color:#6a675f; }
 .case .scenarioPanel > p { max-width:710px;line-height:1.8; }
 .scenarioPanel > p+p { margin-top:18px; }
 .motionSteps { margin-top:15px; }
@@ -95,8 +95,8 @@
 .evolution[data-enhanced="true"] .versionTabs { display:flex; }
 .evolution[data-enhanced="true"] .versionPanel:not([data-active="true"]) { display:none; }
 .versionPanel { margin-block:30px; }
-.versionPanel>h3 { display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:baseline; }
-.versionPanel>h3 span { font-size:16px;letter-spacing:0;color:#6a675f; }
+.versionPanel>h4 { font-size:22px;font-weight:450;line-height:1.2;letter-spacing:-.035em;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:baseline; }
+.versionPanel>h4 span { font-size:16px;letter-spacing:0;color:#6a675f; }
 .versionPanel>a { display:block; }
 .versionPanel>a img { display:block;width:100%;height:auto;border-radius:8px; }
 .changeReading { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:30px; }
@@ -198,7 +198,7 @@
  .flowInvestigation::before,.flowBranches::before,.flowEnd::before { height:28px;top:-29px; }.flowBranches > div { padding:20px; }.case .taskFlow h3 { font-size:21px; }
  .case .lead { font-size:20px; }.case .overview { padding-block:45px 25px; }.case .overview [aria-label="Project numbers"] { min-height:360px; }
  .sourceExample { grid-template-columns:1fr;padding:25px;gap:28px; }.policyBoundary>div { grid-template-columns:115px 1fr;gap:0 16px; }.policyBoundary strong { font-size:35px; }
- .versionTabs { gap:2px 20px; }.versionTabs button { font-size:16px; }.versionPanel>h3 { font-size:24px; }
+ .versionTabs { gap:2px 20px; }.versionTabs button { font-size:16px; }.versionPanel>h4 { font-size:22px; }
  .changeReading { margin-top:25px;gap:22px; }.visualReading,.decisionStudy { margin-block:40px 50px; }
  .fitChart>div { grid-template-columns:1fr 80px;gap:12px; }.fitChart>div>span { grid-column:1/-1; }.fitChart strong { font-size:18px; }
  .boundaries { gap:30px 20px; }.case .boundaries h3 { font-size:21px; }.case .boundaries p { font-size:16px; }
@@ -392,3 +392,31 @@
  .persona .personaGoal dd { font-size:21px; }
  .originalFlowViewport { max-height:480px; }
 }
+
+/* The case has five chapters; artifacts and individual states sit below them. */
+.caseContents { margin-top:52px; }
+.case .caseContents h2 { font-size:16px;line-height:1.4;font-weight:500;letter-spacing:0; }
+.caseContents ol { list-style:none;padding:0;margin-top:20px;display:grid;gap:6px; }
+.caseContents a { display:grid;grid-template-columns:115px minmax(0,1fr);gap:24px;align-items:baseline;min-height:44px;padding-block:8px;font-size:20px;line-height:1.4;letter-spacing:-.02em; }
+.caseContents a span { font-size:16px;letter-spacing:0;color:#62696c; }
+.caseContents a:hover,.caseContents a:focus-visible { text-decoration:underline;text-underline-offset:6px; }
+.caseContents a:focus-visible { outline:2px solid currentColor;outline-offset:4px; }
+.iterationStudy { margin-block:64px;scroll-margin-top:45px; }
+.case .iterationStudy > p { max-width:64ch;line-height:1.7; }
+.iterationStudy .decisionStudy h4 { font-size:22px;font-weight:450;line-height:1.2;letter-spacing:-.035em; }
+.iterationStudy h5 { font-size:17px;line-height:1.4;font-weight:500;margin-bottom:18px; }
+.case .nextEvaluation { margin-top:56px; }
+@media(max-width:700px) {
+ .caseContents { margin-top:40px; }
+ .caseContents a { grid-template-columns:78px minmax(0,1fr);gap:16px;font-size:18px; }
+ .caseContents a span { font-size:15px; }
+ .iterationStudy { margin-block:48px; }
+}
+
+.case .projectFraming dt { font-size:16px;font-weight:500;line-height:1.4;margin-bottom:14px; }
+.case .projectFraming dd { font-size:17px;line-height:1.7;max-width:64ch; }
+
+.case :is(.researchStudy,.iterationStudy,.scenarioIntroduction,.reviewSummary) > h3,
+.case .vectorIntro h3,.case .nextEvaluation { font-size:clamp(26px,2.3vw,32px);line-height:1.18;font-weight:450; }
+
+.reviewSummary { margin-top:40px; }

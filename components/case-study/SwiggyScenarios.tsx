@@ -26,7 +26,7 @@ export function SwiggyScenarios() {
       }}>{scenario.title}</button>)}
     </div>
     {swiggyScenarios.map((scenario, index) => <section key={scenario.id} id={"scenario-panel-" + scenario.id} role="tabpanel" aria-labelledby={"scenario-tab-" + scenario.id} className={styles.scenarioPanel} data-active={active === index}>
-      <h3>{scenario.title}<span>{scenario.ticket}</span></h3>
+      <h4>{scenario.title}<span>{scenario.ticket}</span></h4>
       <p>{scenario.setup}</p><p>{scenario.alternatives}</p>
       <DeviceMotion id={scenario.id} label={scenario.title + " scenario"} src={"/portfolio/swiggy/media/" + scenario.id + ".mp4"} poster={"/portfolio/swiggy/media/" + scenario.id + ".png"} gif={"/portfolio/swiggy/media/" + scenario.id + ".gif"} loop={false} />
       <details className={styles.report}><summary>Case details</summary><p>{scenario.check}</p><p>{scenario.focus}</p></details>

@@ -5,7 +5,7 @@ import styles from "./swiggy-case-study.module.css";
 
 export function SwiggyAssumptions() {
   return <div className={styles.researchStudy} data-research-artifact="assumptions">
-    <h3>The working assumptions</h3>
+    <h3>The rules behind the scenarios</h3>
     <p>Public terms could inform the design, but they could not supply an internal agent handbook. I made the operating assumptions explicit so the scenarios had a consistent basis.</p>
     <dl className={styles.assumptionList}>
       {research.assumptions.map(item => <div key={item.title}><dt>{item.title}</dt><dd>{item.choice}</dd><dd>{item.consequence}</dd></div>)}
@@ -67,7 +67,7 @@ export function SwiggyStakeholders() {
 
 export function SwiggyDesignCriteria() {
   return <div className={styles.researchStudy} data-research-artifact="design-criteria">
-    <h3>Turning the research into screen content</h3>
+    <h3>Choosing what belongs on the screen</h3>
     <p>I separated recorded data, traceable comparisons and tools for the agent’s actions. A photo’s source belongs to the first layer; a history count with its total belongs to the second; choosing fault and editing a response belong to the third.</p>
     <dl className={styles.layerModel}><div><dt>Data</dt><dd>What was recorded, with its source and time.</dd></div><div><dt>Derived insight</dt><dd>What can be grouped, counted or compared against a rule.</dd></div><div><dt>Decision support</dt><dd>What helps the agent act and record a reason.</dd></div></dl>
     <p>The idea matrix applied those layers to the agent’s questions. It helped distinguish useful context from a score or suggested outcome that could steer the decision.</p>
@@ -85,7 +85,7 @@ export function SwiggyOriginalFlows() {
   return <div className={styles.researchStudy} data-research-artifact="original-flows">
     <h3>The original scenario flows</h3>
     <p>These five flowcharts were exported on 17 October, before the final interface. They show a scripted route, other decision branches and places to return for more information. Dishes, amounts and some rules changed later; the recordings below show the final version.</p>
-    {research.flows.map((flow, index) => <details className={styles.researchDisclosure + " " + styles.originalFlow} key={flow.id} open={index === 0}>
+    {research.flows.map(flow => <details className={styles.researchDisclosure + " " + styles.originalFlow} key={flow.id}>
       <summary>{flow.label}</summary><p>{flow.summary}</p>
       <div className={styles.originalFlowViewport} role="region" aria-label={`${flow.label} original flowchart, scroll to inspect`} tabIndex={0}><Image unoptimized src={`/portfolio/swiggy/research/${flow.file}`} alt={`Original 17 October ${flow.label.toLowerCase()} flowchart, with the scripted path and alternative agent decisions`} width={flow.width} height={flow.height} sizes="960px" /></div>
       <a className={styles.researchLink} href={`/portfolio/swiggy/research/${flow.file}`}>Open original flow at full size</a>

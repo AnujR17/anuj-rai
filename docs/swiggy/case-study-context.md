@@ -1,5 +1,8 @@
 # Swiggy case study continuation
 
+Read `case-study-information-architecture.md` for the latest chapter order,
+contents navigation, artifact grouping and heading hierarchy.
+
 Read `white-layout-and-reference-review.md` first for the latest white surface,
 quiet section emphasis, reference comparison and larger window mockups. This
 supersedes the earlier paper/vermilion backgrounds and decorative screen layers.

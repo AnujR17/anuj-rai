@@ -435,5 +435,19 @@
         "sha256": "e0fab2554896f4d8d3107b8066de41ed5f6a54997aef1107044b2b4e8669284d"
       }
     ]
+  },
+  "case_information_architecture": {
+    "date": "2026-11-16",
+    "chapters": [
+      "The agent and the task",
+      "The priorities for the screen",
+      "Designing the workspace",
+      "Investigating a complaint",
+      "Reviewing the prototype"
+    ],
+    "arrangement": "Contents and chapter headings share one definition. User/task models precede priorities; architecture, criteria, rules, cost model, original flows and iterations form the concept chapter; the working investigation has three actions and five case variants; review findings and next evaluation close the story.",
+    "hierarchy": "Chapter H2, artifact group H3, iteration/scenario/finding H4; front-matter facts are description-list terms. Group type 26–32px and individual state type 22px.",
+    "source_access": "All original artifacts retained. Five historical flowcharts start collapsed in native inline disclosures. Personas and research maps remain visible.",
+    "brief": "docs/swiggy/case-study-information-architecture.md"
   }
 }
