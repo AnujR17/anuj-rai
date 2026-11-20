@@ -71,7 +71,8 @@ fs.mkdirSync(out, {recursive:true});
  await page.mouse.move(5,120);
  await disclosure.locator('summary').focus();await page.keyboard.press('Enter');
  assert.equal(await disclosure.getAttribute('open'),'');
- await page.locator('#research').scrollIntoViewIfNeeded();
+ await page.locator('#research').evaluate(section=>section.scrollIntoView({block:'start'}));
+ await page.waitForFunction(()=>document.querySelector('.lf-stage-index')?.dataset.visible==='true');
  await page.locator('[aria-label="Case study stages"] a[href="#design"]').click();
  await page.waitForFunction(()=>document.querySelector('[aria-label="Case study stages"] a[aria-current="location"]')?.getAttribute('href')==='#design');
  assert.equal(await page.locator('[aria-current="location"]').last().textContent(),'Design');
@@ -118,7 +119,7 @@ fs.mkdirSync(out, {recursive:true});
  // No-JavaScript routes retain every case link and native number disclosure.
  const plain=await browser.newContext({javaScriptEnabled:false});const fallback=await plain.newPage();
  await fallback.goto(base+'/work');assert.equal(await fallback.locator('[data-work-project]').count(),8);
- await fallback.locator('[data-work-project="myalumnus"]').click({noWaitAfter:true});await fallback.waitForURL('**/myalumnus',{waitUntil:'domcontentloaded'});
+ await fallback.locator('[data-work-project="myalumnus"]').evaluate(link=>link.click());await fallback.waitForURL('**/myalumnus',{waitUntil:'domcontentloaded'});
  assert.equal(await fallback.locator('h1').textContent(),'My Alumnus');
  assert.equal(await fallback.locator('[aria-label="Case study stages"] a').count(),5);
  const detail=fallback.locator('[aria-label="Project numbers"] details').first();await detail.locator('summary').click();assert.equal(await detail.getAttribute('open'),'');

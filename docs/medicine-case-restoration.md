@@ -1,5 +1,15 @@
 # Meditimer restoration and publication
 
+## Case-study update, 20 November 2026
+
+The Meditimer case-study update retains the bottom-aligned heading, five-stage index, DM Sans typography and responsive layout while replacing the older presentation with the selected case-study screens and flattened device mockups. The opening uses an opt-in setup sequence; the supporting sequences have pause controls and respect reduced-motion preferences. The gallery offers a full-size view of the selected setup screens and links to the original Figma work. The information-architecture section links to the FigJam board. The user's physical Post-it photograph is not present as a file in the repository.
+
+The app is a clickable prototype, not a deployed service. The Meditimer survey has 24 responses and seven interviews with some overlap. The earlier 56-response senior-care study is separate. Exhibition reactions were informal feedback, not a structured usability test. The history exploration and prospective caregiver permissions must not be presented as fully implemented or validated features.
+
+The new presentation assets are in `public/portfolio/meditimer-case`. The device mockup is a flattened derivative of the free iPhone 16 mockup from Mockups Design; do not redistribute its editable PSD. `scripts/verify-restored-medicine.mjs` checks the revised page against a running production build.
+
+The earlier restoration record below describes the layout that this update builds on; its old screen sequence and original-interface-viewer details have been superseded by the selected case-study screens.
+
 The user explicitly authorized merging concept/diagonal-intro into main on 24 October 2026, after fixing the mockup distortion and restoring the earlier case-study layout
 This authorizes this publication; it does not remove the standing approval requirement for later merges
 

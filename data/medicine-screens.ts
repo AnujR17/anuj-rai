@@ -1,61 +1,59 @@
-export const medicineScreens = [
-  {
-    "id": "capture",
-    "title": "Capture",
-    "reason": "Photograph the prescription to begin adding the medicine details",
-    "src": "/portfolio/screens/capture.png",
-    "mockup": "/portfolio/screens/capture-mockup.png",
-    "width": 840,
-    "height": 1780,
-    "sourceWidth": 402,
-    "sourceHeight": 874
-  },
-  {
-    "id": "review",
-    "title": "Review",
-    "reason": "Check the medicine details before saving them",
-    "src": "/portfolio/screens/review.png",
-    "mockup": "/portfolio/screens/review-mockup.png",
-    "width": 840,
-    "height": 1780,
-    "sourceWidth": 402,
-    "sourceHeight": 874
-  },
-  {
-    "id": "routine",
-    "title": "Routine",
-    "reason": "View the saved medicine and its schedule",
-    "src": "/portfolio/screens/routine.png",
-    "mockup": "/portfolio/screens/routine-mockup.png",
-    "width": 840,
-    "height": 1780,
-    "sourceWidth": 402,
-    "sourceHeight": 874
-  },
-  {
-    "id": "medicine",
-    "title": "Medicine-taker interface",
-    "reason": "The current dose and its recording action",
-    "src": "/portfolio/screens/medicine.png",
-    "mockup": "/portfolio/screens/medicine-mockup.png",
-    "width": 840,
-    "height": 2130,
-    "sourceWidth": 410,
-    "sourceHeight": 1071
-  },
-  {
-    "id": "caregiver",
-    "title": "Caregiver interface",
-    "reason": "The daily record and the caregiver\u2019s follow-up actions",
-    "src": "/portfolio/screens/caregiver.png",
-    "mockup": "/portfolio/screens/caregiver-mockup.png",
-    "width": 840,
-    "height": 1814,
-    "sourceWidth": 408,
-    "sourceHeight": 904
-  }
-] as const;
+export type MedicineScreen = {
+  id: string;
+  title: string;
+  reason: string;
+  mockup: string;
+  source: string;
+  figma: string;
+  alt: string;
+};
 
-export const setupScreens = medicineScreens.slice(0, 3);
-export const originalInterfaces = medicineScreens.slice(3);
-export type MedicineScreen = (typeof medicineScreens)[number];
+export const setupScreens: MedicineScreen[] = [
+  {
+    id: "scan",
+    title: "Scan",
+    reason: "A sample prescription starts the proposed setup, with an option to upload an image.",
+    mockup: "/portfolio/meditimer-case/scan.webp",
+    source: "/portfolio/meditimer-case/scan-screen.png",
+    figma: "https://www.figma.com/design/on1gbKHkUo4CLZ38uCiSza/?node-id=3137-596",
+    alt: "Meditimer prescription capture screen with a sample prescription in the camera frame",
+  },
+  {
+    id: "review",
+    title: "Review",
+    reason: "Medicine names, strength, frequency and notes are presented for review before the routine is saved.",
+    mockup: "/portfolio/meditimer-case/review.webp",
+    source: "/portfolio/meditimer-case/review-screen.png",
+    figma: "https://www.figma.com/design/on1gbKHkUo4CLZ38uCiSza/?node-id=3137-674",
+    alt: "Medicine review screen showing frequency, timing, notes and stock for a sample medicine",
+  },
+  {
+    id: "reminders",
+    title: "Reminders",
+    reason: "The person can check the proposed reminder times before confirming the schedule.",
+    mockup: "/portfolio/meditimer-case/reminders.webp",
+    source: "/portfolio/meditimer-case/reminders-screen.png",
+    figma: "https://www.figma.com/design/on1gbKHkUo4CLZ38uCiSza/?node-id=3131-340",
+    alt: "Reminder review screen with proposed times for a sample medicine routine",
+  },
+];
+
+export const personalScreen: MedicineScreen = {
+  id: "reminder",
+  title: "Taking medicine",
+  reason: "A reminder keeps the recording action close to the dose.",
+  mockup: "/portfolio/meditimer-case/reminder.webp",
+  source: "/portfolio/meditimer-case/reminder.webp",
+  figma: "https://www.figma.com/design/on1gbKHkUo4CLZ38uCiSza/?node-id=3131-496",
+  alt: "A medicine reminder with a mark as taken action",
+};
+
+export const caregiverScreen: MedicineScreen = {
+  id: "history",
+  title: "Supporting someone",
+  reason: "A caregiver can read the available record before deciding to check in.",
+  mockup: "/portfolio/meditimer-case/history.webp",
+  source: "/portfolio/meditimer-case/history.webp",
+  figma: "https://www.figma.com/design/on1gbKHkUo4CLZ38uCiSza/?node-id=3121-219",
+  alt: "Caregiver history showing taken, missed, partial and no-update examples, with a call action",
+};

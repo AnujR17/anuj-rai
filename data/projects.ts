@@ -7,79 +7,94 @@ export const mainProjects: Project[] = [
   {
     "slug": "medicine-app",
     "title": "Meditimer app",
-    "headline": "Recording a dose and knowing when to follow up",
-    "summary": "Meditimer gives the person taking medicine a daily record and gives their caregiver a separate view of the routine. I designed the two interfaces around the different decisions each person needs to make.",
-    "brief": "Design a medicine app that supports recording doses throughout the day and gives a caregiver enough context to decide when to check in.",
-    "problem": "The person taking medicine needs to see what is due and record an update. The caregiver needs to understand that record without treating every missing update as a missed dose. The same routine needs to make sense from both sides.",
+    "headline": "Making medicine routines easier to manage together",
+    "summary": "Meditimer is a medicine management app designed to help people keep track of their medicines and stay connected with someone who cares for them. It brings prescription setup, reminders, dose records and caregiver support into one experience.",
+    "brief": "Design a medicine reminder experience that helps a person manage their own routine and gives a loved one context for a supportive check-in.",
+    "problem": "People can forget a dose during a busy day, while a family member may be unsure whether to check in. A useful record needs to make clear what has been recorded without assuming that an unrecorded dose was missed.",
     "duration": "3 weeks",
-    "contribution": "Designed and developed the app independently, including the medicine-taker and caregiver interfaces",
+    "contribution": "Individual project covering research, information architecture, interaction design, interface design and a clickable Figma prototype.",
     "visual": "medicine",
     "resources": [
       {
-        "label": "Medicine-taker interface in Figma",
-        "href": "https://www.figma.com/design/on1gbKHkUo4CLZ38uCiSza/?node-id=797-3727"
+        "label": "Explore the setup screens in Figma",
+        "href": "https://www.figma.com/design/on1gbKHkUo4CLZ38uCiSza/?node-id=3137-596"
       },
       {
-        "label": "Caregiver interface in Figma",
-        "href": "https://www.figma.com/design/on1gbKHkUo4CLZ38uCiSza/?node-id=826-1236"
+        "label": "Explore the caregiver history in Figma",
+        "href": "https://www.figma.com/design/on1gbKHkUo4CLZ38uCiSza/?node-id=3121-219"
+      },
+      {
+        "label": "View the information architecture in FigJam",
+        "href": "https://www.figma.com/board/koDyOWomvBVtTlFdbcpNfD/Meditimer---IA--User-Flow"
+      },
+      {
+        "label": "Device mockup by Mockups Design",
+        "href": "https://mockups-design.com/free-iphone-16-mockup/"
       }
     ],
     "stages": {
       "research": [
         {
-          "title": "Understanding the two sides of a routine",
+          "title": "Understanding medicine routines",
           "paragraphs": [
-            "The related medicine-routine survey looks at storage, timing and reminder preferences through caregiver and direct senior response paths. I used that wider context to think about how support fits into a day, rather than treating another notification as the whole product.",
-            "The useful distinction for this app is between doing something and following what someone else has recorded. A person taking medicine needs an immediate action. A caregiver needs context before deciding whether to call or send a reminder.",
-            "The survey is a separate research project, linked through the portfolio. It provides background for these questions; the interfaces shown here are the material for examining the app’s actual design."
+            "For Meditimer, I received 24 survey responses about medicine routines and interviewed seven people. Some interviewees also completed the survey, so these are not a combined count of distinct participants.",
+            "An earlier, separate senior-care study provided context from 56 responses, most from caregivers or people who identified as both caregivers and seniors. It helped me think about support across a family, alongside an individual’s daily routine.",
+            "People described forgetting medicines and wanting to know whether a loved one had taken theirs without repeatedly asking. Those conversations shaped the idea of a record that can support a thoughtful check-in."
           ]
         }
       ],
       "insights": [
         {
-          "title": "A daily total needs a dose-level explanation",
+          "title": "A record needs to leave room for uncertainty",
           "paragraphs": [
-            "A progress count can give a quick sense of the day, but it cannot explain which medicine still needs attention. The caregiver view brings the overall record and individual doses together, so the summary has something concrete behind it.",
-            "The other distinction is what a record can mean. An update can show that someone marked a dose as taken. An empty record leaves a question open. That affects both the language of the interface and the follow-up it encourages."
+            "A reminder can bring a medicine to someone’s attention, but people also need to know what it relates to and be able to record their response.",
+            "An empty record can mean a dose was forgotten, taken without being recorded, or not yet acknowledged. I separated ‘no update yet’ from a dose explicitly marked as missed, so a caregiver has context before following up.",
+            "A day can also contain several doses. The history exploration shows individual entries and a partial state instead of using one colour to imply that every dose has been taken."
           ]
         }
       ],
       "concept": [
         {
-          "title": "Give each person a different starting point",
+          "title": "One routine, two perspectives",
           "paragraphs": [
-            "I kept the medicine-taker view focused on the current dose and the caregiver view focused on understanding the day. Both refer to a medicine routine, but they do not need to open with the same information.",
-            "This keeps the immediate recording action close to the person doing it, while giving the caregiver a way to move from a summary to a specific concern. Calling remains a direct option when a record alone cannot answer the question."
+            "The person taking medicine needs to see what is due and make a quick update. Someone supporting them needs to understand the record and decide whether to reach out.",
+            "I organised the concept around both perspectives: a routine a person can review and manage, and a separate caregiver view that brings the record and a call action together.",
+            "The pairing concept uses an invitation by phone number or contact, initiated by either person. Permissions and adding medicines on someone else’s behalf still need further design."
           ]
         }
       ],
       "design": [
         {
-          "title": "Keep the medicine and its action together",
+          "title": "Record a dose",
           "paragraphs": [
-            "The medicine-taker screen places the current dose beside “Mark as taken”. Morning, afternoon and night organise the rest of the day. The recording action belongs to a specific medicine, rather than a detached confirmation at the top of the page.",
-            "That relationship is the part I want the interface to make clear: which dose am I looking at, and which record will this action change? The daily progress remains visible without replacing the individual dose information."
+            "A reminder puts the medicine and ‘Mark as taken’ together, making the action specific to the dose. The record reflects what the person reports."
           ]
         },
         {
-          "title": "Let a caregiver read before acting",
+          "title": "Check in with care",
           "paragraphs": [
-            "The caregiver screen combines daily progress, medicine details and a call action. It supports moving from an overview to a dose and then to a conversation if a follow-up is needed.",
-            "Sample names and medicine details make the layouts readable as a daily routine. They let the recording action, day-level progress and follow-up controls be considered together."
+            "A proposed alert appears after 30 minutes without an update. The caregiver can open the history and choose to call or send a reminder; an empty record is not treated as confirmation that a dose was missed."
+          ]
+        },
+        {
+          "title": "Remember as-needed medicine",
+          "paragraphs": [
+            "A separate logging flow explores recording medicine taken when needed, including the time. It could help someone recall an allergy medicine at a later doctor’s visit."
           ]
         }
       ],
       "outcome": [
         {
-          "title": "Two interfaces and a clearer question to test",
+          "title": "A prototype for the next conversation",
           "paragraphs": [
-            "I designed and developed this as an individual app project. The original interfaces establish the two perspectives and their main actions; they give me a concrete way to discuss how recording and follow-up should work together.",
-            "The next evaluation should follow one dose through an unrecorded state, a recorded state and an update awaiting confirmation. I want to know whether both people understand those differences and choose an appropriate next action. The screens alone do not establish a deployed synchronization service or a change in medicine-taking behaviour."
+            "The outcome is a clickable Figma prototype covering key parts of onboarding, prescription setup, a daily medicine view and caregiver support. A separate linked history exploration shows taken, missed, partial and no-update states.",
+            "At an exhibition, I shared the concept with about five colleagues and other visitors. Informal conversations highlighted its potential for personal routines, checking on a parent, keeping prescriptions and recalling allergy medicine. This was feedback on the concept, not a structured usability test.",
+            "Prescription recognition, a medicine database, live reminders, calls, pairing and sharing would require implementation and evaluation. The separate history screens are an exploration and are not integrated with the original setup flow."
           ]
         }
       ]
     },
-    "note": "Original medicine-taker and caregiver interfaces, linked below. This independent app is separate from the physical Meditimer group project and the medicine-routine survey."
+    "note": "Screen sequences use example medicines and prescriptions. Device mockups are flattened presentation images from Mockups Design."
   },
   {
     "slug": "two-wheeler-dashboard",
