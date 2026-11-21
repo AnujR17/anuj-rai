@@ -21,7 +21,7 @@ export interface CaseBlock {
   title?: string;
   paragraphs: string[];
   figures?: ProjectImage[];
-  video?: { src: string; poster: string; label: string };
+  steps?: string[];
 }
 
 export interface Project {
@@ -35,7 +35,7 @@ export interface Project {
   contribution: string;
   image?: ProjectImage;
   caseOverview?: {
-    cover: ProjectImage;
+    demo: { src: string; poster: string; label: string };
     domain: string;
     team: string;
     tools: string;

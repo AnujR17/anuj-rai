@@ -4,15 +4,25 @@
 .hero > .textLink { grid-column: 1; grid-row: 1; }
 .hero h1 { grid-column: 1 / -1; grid-row: 3; font-size: var(--section-title-size); letter-spacing: -.055em; font-weight: 400; line-height: 1.05; overflow-wrap: normal; }
 .heroArtwork { grid-column: 2; grid-row: 2; width: 100%; align-self: center; min-width: 0; }
-.caseCover { display: block; width: min(100%, 600px); height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 20%; margin-inline: auto; border-radius: 12px; }
 .overview { padding-block: 80px 50px; margin-left: 26%; }
-.caseHeadline { font-size: clamp(30px, 4vw, 52px); font-weight: 400; line-height: 1.12; letter-spacing: -.045em; margin-bottom: 24px; }
 .introduction { max-width: 900px; font-size: clamp(22px, 2.1vw, 29px); line-height: 1.5; letter-spacing: -.025em; }
+.featuredHero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; column-gap: clamp(28px, 8vw, 125px); row-gap: 20px; padding-block: 10px 38px; }
+.featuredHero > .textLink { grid-column: 1 / -1; }
+.featuredIntro h1 { font-size: clamp(68px, 8vw, 118px); font-weight: 400; line-height: 1; letter-spacing: -.065em; }
+.featuredHeadline { max-width: 16ch; margin-block: 22px 18px; font-size: clamp(28px, 3.5vw, 50px); line-height: 1.08; letter-spacing: -.045em; }
+.featuredIntro .introduction { max-width: 45ch; font-size: 19px; line-height: 1.55; letter-spacing: -.01em; }
+.demo { display: block; width: min(100%, 460px); aspect-ratio: 480 / 456; justify-self: end; border-radius: 12px; }
+.featuredCase .overview { padding-block: 22px 38px; }
 .framing { display: flex; flex-direction: column; gap: 40px; margin-top: 55px; }
 .framing h2, .details dt { font-size: 20px; font-weight: 500; letter-spacing: -.025em; margin-bottom: 14px; }
 .framing p, .details dd { font-size: 18px; line-height: 1.7; max-width: 800px; }
 .details { display: grid; grid-template-columns: minmax(110px, .5fr) 1.8fr; gap: 35px; margin-top: 50px; }
 .details > div:only-child { grid-column: 1 / -1; }
+.featuredCase .details, .featuredCase .framing { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 24px; margin-top: 0; }
+.featuredCase .details > :last-child { grid-column: span 2; }
+.featuredCase .framing { margin-top: 32px; }
+.featuredCase .details dt, .featuredCase .framing h2 { margin-bottom: 6px; font-size: 16px; }
+.featuredCase .details dd, .featuredCase .framing p { font-size: 16px; line-height: 1.5; }
 .numbers { display: flex; gap: 60px; margin-top: 60px; min-height: 300px; }
 .number { flex: 1; min-width: 0; max-width: 350px; }
 .number summary { display: flex; flex-direction: column; gap: 16px; cursor: pointer; list-style: none; width: fit-content; }
@@ -22,6 +32,9 @@
 .number summary:hover, .number summary:focus-visible, .number[open] summary > span { color: var(--concept-accent); }
 .number summary:focus-visible { outline: 2px solid var(--concept-accent); outline-offset: 8px; }
 .number p { font-size: 16px; line-height: 1.6; margin-top: 20px; animation: detail-in 200ms ease both; }
+.featuredCase .numbers { gap: clamp(16px, 4vw, 42px); margin: 0 0 26px; min-height: 0; }
+.featuredCase .number summary > span { font-size: clamp(29px, 4vw, 52px); }
+.featuredCase .number summary { gap: 8px; }
 .readingLayout { display: grid; grid-template-columns: minmax(120px, 20%) minmax(0, 1fr); gap: 6%; align-items: start; }
 .story { min-width: 0; }
 .stageNav { position: sticky; top: max(30px, calc(100svh - 320px)); display: flex; flex-direction: column; align-items: start; gap: 5px; padding-bottom: var(--section-bottom); }
@@ -35,10 +48,11 @@
 .block h3, .sources h3 { font-size: 25px; font-weight: 400; letter-spacing: -.035em; line-height: 1.2; margin-bottom: 22px; }
 .block p, .sources p { font-size: 18px; line-height: 1.75; max-width: 800px; }
 .block p + p { margin-top: 20px; }
+.steps { max-width: 760px; padding-inline-start: 1.4em; margin-block: 18px 0; font-size: 18px; line-height: 1.55; list-style: decimal; }
+.steps li + li { margin-block-start: 8px; }
 .figures { display: grid; gap: 24px; margin-top: 35px; }
 .pair { grid-template-columns: 1fr 1fr; align-items: start; }
 .figures img { width: 100%; height: auto; border-radius: 12px; }
-.demo { display: block; width: min(100%, 480px); aspect-ratio: 480 / 456; margin-top: 35px; border-radius: 12px; }
 .visual { overflow: hidden; border-radius: 12px; margin-bottom: 40px; }
 .visual img { display: block; width: 100%; height: auto; }
 .stageContent > div:first-child:has(img) { margin-bottom: 35px; }
@@ -79,5 +93,14 @@
   .physical { padding: 20px; }
   .pair { grid-template-columns: 1fr; }
   .caseEnd { flex-direction: column; }
+  .featuredHero { grid-template-columns: 1fr; gap: 15px; padding-block: 2px 22px; }
+  .featuredHero > .textLink { grid-column: 1; }
+  .featuredHeadline { margin-block: 12px; }
+  .featuredIntro .introduction { font-size: 17px; }
+  .demo { justify-self: start; }
+  .featuredCase .details { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px 18px; }
+  .featuredCase .framing { grid-template-columns: 1fr; gap: 16px; margin-top: 24px; }
+  .featuredCase .readingLayout { gap: 26px; }
+  .featuredCase .stageNav { flex-direction: row; flex-wrap: wrap; column-gap: 17px; }
 }
 @media (prefers-reduced-motion: reduce) { .stageNav a { transition: none; } .number p { animation: none; } }

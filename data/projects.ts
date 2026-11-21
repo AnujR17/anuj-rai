@@ -3,6 +3,14 @@ import type { Project } from "@/data/case-study";
 import { additionalProjects } from "@/data/work-projects";
 export type { Project, ProjectImage } from "@/data/case-study";
 
+const tokiConceptImage = {
+  "src": "/portfolio/toki.jpg",
+  "alt": "Group concept visualization of Toki with a display, three touch controls and a large timer dial",
+  "width": 830,
+  "height": 830,
+  "caption": "Original group visualization from Figma ixlPXmsuwf48nzujHHUV4T, node 380:368"
+};
+
 export const mainProjects: Project[] = [
   {
     "slug": "medicine-app",
@@ -247,32 +255,24 @@ export const mainProjects: Project[] = [
   {
     "slug": "toki",
     "title": "Toki",
-    "headline": "What if MUJI designed a productivity tool?",
-    "summary": "Toki gives the task you’re working on a place on your desk. The app holds the full list, and the object keeps one task in view while you work. We explored using a physical dial to show the time set aside for a task and built a connected prototype to try the handoff from phone to desk.",
-    "brief": "In the Phygital Design module at DA-IICT, each group chose a domain and a brand, researched the opportunity, and developed an aesthetic mockup and a functional proof of concept. We chose productivity and used MUJI as our design reference. Our brief was to make a simple desk companion that helps people return to work after an interruption.",
-    "problem": "Students and people working from home can find it hard to pick up a task after a break. When the task lives on the phone, getting back to it can mean opening the screen where messages and notifications compete for attention.",
-    "duration": "Three-week module in August 2026, with prototype development documented in October 2026",
-    "contribution": "Co-developed the group concept and refined the task selection and allotted-time interaction for this case study.",
+    "headline": "A desk device for getting back to work",
+    "summary": "Send tasks from your phone and pick one on Toki. The e-paper display keeps it in view, and the touch controls let you start or finish it at the desk.",
+    "brief": "What if MUJI designed a productivity tool? For our Phygital Design module at DA-IICT, we took that question from research to a form model and a working proof of concept.",
+    "problem": "After a break or interruption, getting back to a task can mean reopening the phone and picking through messages and notifications just to see what you were doing.",
+    "duration": "Three weeks in August 2026, followed by prototype development",
+    "contribution": "Group concept development and refinement of the task and timer interaction",
     "caseOverview": {
-      "cover": {
-        "src": "/portfolio/toki/device.webp",
-        "alt": "Assembled white Toki prototype showing a task on its e-paper screen",
-        "width": 480,
-        "height": 456,
-        "caption": "Opening still from the supplied physical prototype video"
+      "demo": {
+        "src": "/portfolio/toki/device-demo.mp4",
+        "poster": "/portfolio/toki/device.webp",
+        "label": "Toki prototype demonstration showing task changes on the e-paper display"
       },
-      "domain": "Desk productivity and physical–digital interaction",
-      "team": "Anshu Kumar, Anuj Rai and Kalyani Agarwal. Guided by Umang Shah.",
-      "tools": "Google Forms, Figma, React Native with Expo, Arduino and ESP32, GitHub, and 3D printing",
-      "solution": "Write and order tasks on the phone, then select one on the desk. In the concept, turn the dial to set a duration. When the time runs out, the task stays visible until you decide it’s done."
+      "domain": "Desk productivity",
+      "team": "Anshu Kumar, Anuj Rai and Kalyani Agarwal, guided by Umang Shah",
+      "tools": "Google Forms, Figma, Expo, React Native, Arduino, ESP32, GitHub, 3D printing",
+      "solution": "Keep the current task visible where the work happens. Give the phone the full list and the desk object the controls needed during a session."
     },
-    "image": {
-      "src": "/portfolio/toki.jpg",
-      "alt": "Group concept visualization of Toki with a display, three touch controls and a large timer dial",
-      "width": 830,
-      "height": 830,
-      "caption": "Original group visualization from Figma ixlPXmsuwf48nzujHHUV4T, node 380:368"
-    },
+    "image": tokiConceptImage,
     "source": "https://github.com/AnujR17/toki",
     "resources": [
       {
@@ -299,30 +299,31 @@ export const mainProjects: Project[] = [
     "stages": {
       "research": [
         {
-          "title": "Focus habits and existing tools",
+          "title": "How people work at their desks",
           "paragraphs": [
-            "Our Google Forms survey asked how people work, what interrupts them and what they use to focus. The 35 responses included 16 students, 11 office workers, four hybrid workers and three people working from home.",
-            "We studied Time Timer, Timeular and MUJI desk storage. A written note and a timer already make a task and its duration visible. A connected object would need to make it easy to bring a task from a digital list to the desk."
+            "We surveyed 35 people about how they focus, what interrupts them and what helps them get back to work. The group included 16 students, 11 office workers, four hybrid workers and three people working from home.",
+            "We compared Time Timer, Timeular and MUJI desk storage. A sticky note and a timer already put the task and the time in view. Toki needed to make it easy to get a task from an existing digital list onto the desk."
           ]
         }
       ],
       "insights": [
         {
-          "title": "Getting back to a task",
+          "title": "Getting back was its own problem",
           "paragraphs": [
-            "Twenty respondents found it hard to regain focus after an interruption. Nine of the 18 who found starting easy also reported difficulty returning. That gave us a specific design goal: preserve the task someone was doing so they can see it when they come back.",
-            "Twenty-six respondents selected social media or phone use as a distraction. Twelve organised work equally with physical and digital tools. We gave the phone the writing and ordering jobs, and put the controls needed during a session on the desk."
+            "Nine of the 18 people who found it easy to start work still said it was difficult to regain focus after an interruption. That shifted our attention to what people see when they come back to the desk.",
+            "The phone was also a common source of distraction. We used it for writing and ordering tasks, then put the actions needed during work on Toki."
           ]
         }
       ],
       "concept": [
         {
-          "title": "Task and time",
+          "title": "One task on the display, time on the dial",
           "paragraphs": [
-            "The group explored a desk companion with ambient sound, reminders and a visible task list. I refined the concept around two decisions: choosing a task and deciding how much time to give it.",
-            "The MUJI reference shaped the soft form and the number of controls. The smaller touch points browse tasks, and the returning dial represents the time remaining. Completion stays a deliberate action."
+            "Our early concept put a list, ambient sound and reminders on the desk. I narrowed the interaction to one selected task and a dial for the time you want to spend on it.",
+            "The MUJI reference shaped how much we asked of the object. You choose a task with the touch controls, then set a duration with the dial. When the countdown reaches zero, you can keep working and mark the task done when you’re ready."
           ],
           "figures": [
+            tokiConceptImage,
             {
               "src": "/portfolio/toki/sketch.webp",
               "alt": "Original form sketch showing the display, three touch points and a separate dial",
@@ -335,9 +336,9 @@ export const mainProjects: Project[] = [
       ],
       "design": [
         {
-          "title": "Enclosure and controls",
+          "title": "The printed enclosure",
           "paragraphs": [
-            "The rounded, printed enclosure places the e-paper and three touch points on the front. The ports and the speaker opening sit on the side. The case and cover make up two separate printed parts."
+            "The rounded shell puts the e-paper and three touch points on the face. The port, switch and speaker grille sit on the side. We printed the case and cover as two pieces."
           ],
           "figures": [
             {
@@ -346,16 +347,7 @@ export const mainProjects: Project[] = [
               "width": 875,
               "height": 691,
               "caption": "Photograph of the original enclosure from the case study PDF, page 3"
-            }
-          ]
-        },
-        {
-          "title": "App and device",
-          "paragraphs": [
-            "The Android app separates Write, Tasks and Device. When Toki is connected and idle, the first four unfinished tasks sync by Bluetooth. The outer controls browse the queue. Tap the middle control to start tracking elapsed time and hold it to finish. The app records time and completed tasks in Activity.",
-            "The firmware acknowledges commands while the e-paper refreshes separately. The motor remains inactive in this build while the dial needs a reliable position reference."
-          ],
-          "figures": [
+            },
             {
               "src": "/portfolio/toki/circuit.webp",
               "alt": "Original circuit drawing connecting the ESP32, display, touch sensors, motor driver and speaker",
@@ -364,29 +356,42 @@ export const mainProjects: Project[] = [
               "caption": "Group electronics concept drawing from the case study PDF, page 5"
             }
           ]
+        },
+        {
+          "title": "From the phone to the desk",
+          "paragraphs": [
+            "In the connected build, the phone holds drafts and the full list. Toki receives the first four unfinished tasks when the device is connected and idle."
+          ],
+          "steps": [
+            "Write and order tasks in the Android app.",
+            "Use the outer touch controls to browse the four-task queue.",
+            "Tap the middle control to start tracking time. Hold it to mark the task done.",
+            "See time spent and completed tasks in Activity."
+          ]
+        },
+        {
+          "title": "What the electronics changed",
+          "paragraphs": [
+            "The e-paper can take around 20 seconds to refresh. The firmware handles Bluetooth separately so sync can complete while the screen catches up. The working build tracks elapsed time. The countdown dial stays inactive until the motor has a reliable zero position."
+          ]
         }
       ],
       "outcome": [
         {
-          "title": "Working prototype",
+          "title": "A working desk prototype",
           "paragraphs": [
-            "The video shows the outer touch controls changing which task is displayed. A separate bench test verified a wireless firmware update, Bluetooth reconnection after reboot and retention of all three stored test tasks."
-          ],
-          "video": {
-            "src": "/portfolio/toki/device-demo.mp4",
-            "poster": "/portfolio/toki/device.webp",
-            "label": "Toki prototype demonstration showing task changes on the e-paper display"
-          }
+            "The prototype video shows a touch changing which task is displayed. At the bench, a wireless firmware update completed, Bluetooth reconnected after reboot and all three stored tasks were still there."
+          ]
         },
         {
-          "title": "What to test next",
+          "title": "What I’d test next",
           "paragraphs": [
-            "The next test is to compare resuming an interrupted task with Toki and with someone’s usual setup. The survey established the difficulty people reported. The prototype gives us a way to test whether the desk object helps."
+            "Give someone a task, interrupt them, and see what they do when they return. I’d compare Toki with the note, app or timer they already use to find out whether keeping the task visible makes it easier to pick up."
           ]
         }
       ]
     },
-    "note": "The form sketch, enclosure photograph and circuit drawing come from the group’s presentation. The video records the assembled hardware in a later iteration."
+    "note": "The original group presentation supplied the concept image, form sketch, enclosure photo and circuit drawing. The video shows a later iteration of the assembled device."
   },
   {
     "slug": "india-in-orbit",

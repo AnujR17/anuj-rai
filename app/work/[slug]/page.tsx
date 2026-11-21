@@ -34,25 +34,26 @@ export default async function CaseStudy({ params }: Props) {
   const nextSlug = workProjectSlugs[(mainIndex + 1) % workProjectSlugs.length];
   const next = mainIndex >= 0 ? projects.find(item => item.slug === nextSlug) : undefined;
   return (
-    <article className={styles.caseStudy}>
-      <header className={styles.hero}>
+    <article className={overview ? `${styles.caseStudy} ${styles.featuredCase}` : styles.caseStudy}>
+      <header className={overview ? styles.featuredHero : styles.hero}>
         <Link href="/work" className={styles.textLink}>All work</Link>
-        <div className={styles.heroArtwork} data-project-artwork={slug}>
-          {overview ? <Image
-            className={styles.caseCover}
-            src={overview.cover.src}
-            alt={overview.cover.alt}
-            width={overview.cover.width}
-            height={overview.cover.height}
-            sizes="(max-width: 700px) 90vw, 600px"
-            preload
-          /> : <ProjectArtwork project={project} priority />}
-        </div>
-        <h1>{project.title}</h1>
+        {overview ? <>
+          <div className={styles.featuredIntro}>
+            <h1>{project.title}</h1>
+            <p className={styles.featuredHeadline}>{project.headline}</p>
+            <p className={styles.introduction}>{project.summary}</p>
+          </div>
+          <video className={styles.demo} controls playsInline preload="metadata" poster={overview.demo.poster} aria-label={overview.demo.label}>
+            <source src={overview.demo.src} type="video/mp4" />
+            <a href={overview.demo.src}>Open the prototype video</a>
+          </video>
+        </> : <>
+          <div className={styles.heroArtwork} data-project-artwork={slug}><ProjectArtwork project={project} priority /></div>
+          <h1>{project.title}</h1>
+        </>}
       </header>
       <div className={styles.overview}>
-        {overview && <h2 className={styles.caseHeadline}>{project.headline}</h2>}
-        <p className={styles.introduction}>{project.summary}</p>
+        {!overview && <p className={styles.introduction}>{project.summary}</p>}
         <dl className={styles.details}>
           {project.duration && <div><dt>Duration</dt><dd>{project.duration}</dd></div>}
           <div><dt>My contribution</dt><dd>{project.contribution}</dd></div>
@@ -67,7 +68,7 @@ export default async function CaseStudy({ params }: Props) {
           <div><h2>Problem statement</h2><p>{project.problem}</p></div>
           {overview && <div><h2>Solution at a glance</h2><p>{overview.solution}</p></div>}
         </div>
-        <CaseNumbers slug={slug} />
+        {!overview && <CaseNumbers slug={slug} />}
       </div>
       <div className={styles.readingLayout}>
         <CaseStudyNav />
@@ -76,18 +77,18 @@ export default async function CaseStudy({ params }: Props) {
             <section key={stage.id} id={stage.id} className={styles.stage} aria-labelledby={`${stage.id}-title`}>
               <h2 id={`${stage.id}-title`}>{caseHeadings[slug]?.[stageIndex]?.[0] ?? project.stages[stage.id][0]?.title ?? stage.title}</h2>
               <div className={styles.stageContent}>
-                {stage.id === "design" && <ProjectVisual project={project} />}
+                {stage.id === "design" && !overview && <ProjectVisual project={project} />}
+                {stage.id === "insights" && overview && <CaseNumbers slug={slug} />}
                 {project.stages[stage.id].map((block, index) => (
                   <div className={styles.block} key={`${stage.id}-${index}`}>
                     {index > 0 && block.title && <h3>{caseHeadings[slug]?.[stageIndex]?.[index] ?? block.title}</h3>}
                     {block.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+                    {block.steps && <ol className={styles.steps}>
+                      {block.steps.map(step => <li key={step}>{step}</li>)}
+                    </ol>}
                     {block.figures && <div className={`${styles.figures} ${block.figures.length > 1 ? styles.pair : ""}`}>
                       {block.figures.map(image => <figure key={image.src}><a href={image.src} aria-label="View image at full size"><Image src={image.src} alt={image.alt} width={image.width} height={image.height} sizes="(max-width: 700px) 90vw, 800px" /></a></figure>)}
                     </div>}
-                    {block.video && <video className={styles.demo} controls playsInline preload="none" poster={block.video.poster} aria-label={block.video.label}>
-                      <source src={block.video.src} type="video/mp4" />
-                      <a href={block.video.src}>Open the prototype video</a>
-                    </video>}
                   </div>
                 ))}
                 {stage.id === "outcome" && <div className={styles.sources}>
