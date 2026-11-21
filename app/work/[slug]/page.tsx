@@ -29,6 +29,7 @@ export default async function CaseStudy({ params }: Props) {
   const project = projects.find(item => item.slug === slug);
   if (!project) notFound();
   if (slug === "medicine-app") return <MedicineCaseStudy project={project} />;
+  const overview = project.caseOverview;
   const mainIndex = workProjectSlugs.findIndex(item => item === slug);
   const nextSlug = workProjectSlugs[(mainIndex + 1) % workProjectSlugs.length];
   const next = mainIndex >= 0 ? projects.find(item => item.slug === nextSlug) : undefined;
@@ -36,18 +37,35 @@ export default async function CaseStudy({ params }: Props) {
     <article className={styles.caseStudy}>
       <header className={styles.hero}>
         <Link href="/work" className={styles.textLink}>All work</Link>
-        <div className={styles.heroArtwork} data-project-artwork={slug}><ProjectArtwork project={project} priority /></div>
+        <div className={styles.heroArtwork} data-project-artwork={slug}>
+          {overview ? <Image
+            className={styles.caseCover}
+            src={overview.cover.src}
+            alt={overview.cover.alt}
+            width={overview.cover.width}
+            height={overview.cover.height}
+            sizes="(max-width: 700px) 90vw, 600px"
+            preload
+          /> : <ProjectArtwork project={project} priority />}
+        </div>
         <h1>{project.title}</h1>
       </header>
       <div className={styles.overview}>
+        {overview && <h2 className={styles.caseHeadline}>{project.headline}</h2>}
         <p className={styles.introduction}>{project.summary}</p>
         <dl className={styles.details}>
           {project.duration && <div><dt>Duration</dt><dd>{project.duration}</dd></div>}
           <div><dt>My contribution</dt><dd>{project.contribution}</dd></div>
+          {overview && <>
+            <div><dt>Domain</dt><dd>{overview.domain}</dd></div>
+            <div><dt>Team</dt><dd>{overview.team}</dd></div>
+            <div><dt>Tools used</dt><dd>{overview.tools}</dd></div>
+          </>}
         </dl>
         <div className={styles.framing}>
           <div><h2>Project brief</h2><p>{project.brief}</p></div>
           <div><h2>Problem statement</h2><p>{project.problem}</p></div>
+          {overview && <div><h2>Solution at a glance</h2><p>{overview.solution}</p></div>}
         </div>
         <CaseNumbers slug={slug} />
       </div>
@@ -66,6 +84,10 @@ export default async function CaseStudy({ params }: Props) {
                     {block.figures && <div className={`${styles.figures} ${block.figures.length > 1 ? styles.pair : ""}`}>
                       {block.figures.map(image => <figure key={image.src}><a href={image.src} aria-label="View image at full size"><Image src={image.src} alt={image.alt} width={image.width} height={image.height} sizes="(max-width: 700px) 90vw, 800px" /></a></figure>)}
                     </div>}
+                    {block.video && <video className={styles.demo} controls playsInline preload="none" poster={block.video.poster} aria-label={block.video.label}>
+                      <source src={block.video.src} type="video/mp4" />
+                      <a href={block.video.src}>Open the prototype video</a>
+                    </video>}
                   </div>
                 ))}
                 {stage.id === "outcome" && <div className={styles.sources}>

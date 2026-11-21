@@ -247,86 +247,146 @@ export const mainProjects: Project[] = [
   {
     "slug": "toki",
     "title": "Toki",
-    "headline": "Planning on a phone, working through tasks on Toki",
-    "summary": "Toki pairs a task app with an ESP32 desk object. I use the phone for writing and arranging tasks, and the object for working through a small queue with physical controls and an e-paper display.",
-    "brief": "Develop a connected desk object and companion app that let someone capture tasks on a phone and work through them on the object, with understandable controls and connection behaviour.",
-    "problem": "Returning to a full phone or computer workspace can interrupt the task someone is doing. A smaller object needs to show the current task, make its actions clear and keep the app and device understandable when their connection changes.",
-    "duration": "3 weeks",
-    "contribution": "Developed the product concept, companion app and device prototype as an individual project",
+    "headline": "What if MUJI designed a productivity tool?",
+    "summary": "Toki gives the task you’re working on a place on your desk. The app holds the full list, and the object keeps one task in view while you work. We explored using a physical dial to show the time set aside for a task and built a connected prototype to try the handoff from phone to desk.",
+    "brief": "In the Phygital Design module at DA-IICT, each group chose a domain and a brand, researched the opportunity, and developed an aesthetic mockup and a functional proof of concept. We chose productivity and used MUJI as our design reference. Our brief was to make a simple desk companion that helps people return to work after an interruption.",
+    "problem": "Students and people working from home can find it hard to pick up a task after a break. When the task lives on the phone, getting back to it can mean opening the screen where messages and notifications compete for attention.",
+    "duration": "Three-week module in August 2026, with prototype development documented in October 2026",
+    "contribution": "Co-developed the group concept and refined the task selection and allotted-time interaction for this case study.",
+    "caseOverview": {
+      "cover": {
+        "src": "/portfolio/toki/device.webp",
+        "alt": "Assembled white Toki prototype showing a task on its e-paper screen",
+        "width": 480,
+        "height": 456,
+        "caption": "Opening still from the supplied physical prototype video"
+      },
+      "domain": "Desk productivity and physical–digital interaction",
+      "team": "Anshu Kumar, Anuj Rai and Kalyani Agarwal. Guided by Umang Shah.",
+      "tools": "Google Forms, Figma, React Native with Expo, Arduino and ESP32, GitHub, and 3D printing",
+      "solution": "Write and order tasks on the phone, then select one on the desk. In the concept, turn the dial to set a duration. When the time runs out, the task stays visible until you decide it’s done."
+    },
     "image": {
       "src": "/portfolio/toki.jpg",
-      "alt": "Original Toki desk-object concept visualization, showing the intended object rather than a photograph of integrated hardware",
+      "alt": "Group concept visualization of Toki with a display, three touch controls and a large timer dial",
       "width": 830,
       "height": 830,
-      "caption": "Concept visualization recovered from portfolioSerene; Figma ixlPXmsuwf48nzujHHUV4T, node 380:368"
+      "caption": "Original group visualization from Figma ixlPXmsuwf48nzujHHUV4T, node 380:368"
     },
     "source": "https://github.com/AnujR17/toki",
     "resources": [
       {
-        "label": "Original Toki visualization in Figma",
-        "href": "https://www.figma.com/design/ixlPXmsuwf48nzujHHUV4T/?node-id=380-368"
+        "label": "Original group presentation",
+        "href": "https://www.figma.com/design/ixlPXmsuwf48nzujHHUV4T/?node-id=434-98"
+      },
+      {
+        "label": "Starting and restarting survey chart",
+        "href": "https://www.figma.com/design/ixlPXmsuwf48nzujHHUV4T/?node-id=380-231"
+      },
+      {
+        "label": "MUJI’s design philosophy",
+        "href": "https://www.muji.com/jp/about/en/"
       },
       {
         "label": "App and device interaction documentation",
         "href": "https://github.com/AnujR17/toki/blob/main/docs/EXPERIENCE.md"
+      },
+      {
+        "label": "Wireless update bench test",
+        "href": "https://github.com/AnujR17/toki/blob/main/docs/OTA_ASSESSMENT.md"
       }
     ],
     "stages": {
       "research": [
         {
-          "title": "Work through what a connected object has to remember",
+          "title": "Focus habits and existing tools",
           "paragraphs": [
-            "The implementation work includes Bluetooth connection probes, recovery notes and an examination of changes to app, storage and device state. A connection is only one part of the experience; the task and its state also have to remain understandable when a connection is interrupted.",
-            "The current documentation identifies practical constraints: slow e-paper refresh, phone background limits and a motor without a position reference. These affect what feedback and movement the object can reliably offer.",
-            "This is the part of connected products I enjoy working on. A screen, a physical control and the connection between them each change what the person expects the product to do next."
+            "Our Google Forms survey asked how people work, what interrupts them and what they use to focus. The 35 responses included 16 students, 11 office workers, four hybrid workers and three people working from home.",
+            "We studied Time Timer, Timeular and MUJI desk storage. A written note and a timer already make a task and its duration visible. A connected object would need to make it easy to bring a task from a digital list to the desk."
           ]
         }
       ],
       "insights": [
         {
-          "title": "Writing and working need different spaces",
+          "title": "Getting back to a task",
           "paragraphs": [
-            "Capturing a task should not depend on the desk object being connected. The phone can hold drafts and the full list, while the object receives a smaller queue. This gives each part a specific job without making the phone unavailable when the object is absent.",
-            "Elapsed time also needs to stay separate from completion. Time passing does not tell the product whether the work is finished. The interaction therefore keeps starting, pausing and completing as distinct actions controlled by the person."
+            "Twenty respondents found it hard to regain focus after an interruption. Nine of the 18 who found starting easy also reported difficulty returning. That gave us a specific design goal: preserve the task someone was doing so they can see it when they come back.",
+            "Twenty-six respondents selected social media or phone use as a distraction. Twelve organised work equally with physical and digital tools. We gave the phone the writing and ordering jobs, and put the controls needed during a session on the desk."
           ]
         }
       ],
       "concept": [
         {
-          "title": "Keep the next action on the object",
+          "title": "Task and time",
           "paragraphs": [
-            "The app handles writing, ordering and the full task list. The object presents one task at a time from a queue of four. It gives someone a smaller set of things to act on while leaving planning on the phone.",
-            "I kept the sequence under the person’s control. Priority does not silently reorder the queue, and editing the app during a running task does not immediately replace what the person is working on."
+            "The group explored a desk companion with ambient sound, reminders and a visible task list. I refined the concept around two decisions: choosing a task and deciding how much time to give it.",
+            "The MUJI reference shaped the soft form and the number of controls. The smaller touch points browse tasks, and the returning dial represents the time remaining. Completion stays a deliberate action."
+          ],
+          "figures": [
+            {
+              "src": "/portfolio/toki/sketch.webp",
+              "alt": "Original form sketch showing the display, three touch points and a separate dial",
+              "width": 961,
+              "height": 961,
+              "caption": "Original group form sketch from the case study PDF, page 2"
+            }
           ]
         }
       ],
       "design": [
         {
-          "title": "Separate writing, tasks and the device",
+          "title": "Enclosure and controls",
           "paragraphs": [
-            "The documented app has Write, Tasks and Device tabs. Drafts remain local. The first four unfinished tasks synchronize while the object is idle; changes made during a running task wait until pause or completion.",
-            "That timing matters. An edit on the phone and an action on the object should not leave someone wondering which task is current. Deferring the update protects the running task while keeping the full list editable."
+            "The rounded, printed enclosure places the e-paper and three touch points on the front. The ports and the speaker opening sit on the side. The case and cover make up two separate printed parts."
+          ],
+          "figures": [
+            {
+              "src": "/portfolio/toki/enclosure.webp",
+              "alt": "Empty printed Toki enclosure showing the display opening and side grille",
+              "width": 875,
+              "height": 691,
+              "caption": "Photograph of the original enclosure from the case study PDF, page 3"
+            }
           ]
         },
         {
-          "title": "Give physical actions different meanings",
+          "title": "App and device",
           "paragraphs": [
-            "The firmware presents one task on the e-paper display. A middle tap starts tracking, a middle hold completes the task and a left hold pauses it. These are separate state changes, rather than a countdown that decides completion automatically.",
-            "The motor remains inactive until a position-reference strategy is established. The concept visualization communicates the intended desk object; the app and firmware documentation describe the current build and the behaviours still awaiting physical acceptance."
+            "The Android app separates Write, Tasks and Device. When Toki is connected and idle, the first four unfinished tasks sync by Bluetooth. The outer controls browse the queue. Tap the middle control to start tracking elapsed time and hold it to finish. The app records time and completed tasks in Activity.",
+            "The firmware acknowledges commands while the e-paper refreshes separately. The motor remains inactive in this build while the dial needs a reliable position reference."
+          ],
+          "figures": [
+            {
+              "src": "/portfolio/toki/circuit.webp",
+              "alt": "Original circuit drawing connecting the ESP32, display, touch sensors, motor driver and speaker",
+              "width": 1200,
+              "height": 896,
+              "caption": "Group electronics concept drawing from the case study PDF, page 5"
+            }
           ]
         }
       ],
       "outcome": [
         {
-          "title": "An app and firmware prototype to test together",
+          "title": "Working prototype",
           "paragraphs": [
-            "The repository documents app and firmware builds, state tests and recovery behaviour. The project has moved beyond its earlier connection-only experiment into a defined task interaction across the app and object.",
-            "A signed app build and physical acceptance are still required. The next demonstration should follow a task through reading, starting, pausing, completion and reconnection on the actual phone and object, including touch response, audio and queue retention. Build results alone do not establish those physical behaviours."
+            "The video shows the outer touch controls changing which task is displayed. A separate bench test verified a wireless firmware update, Bluetooth reconnection after reboot and retention of all three stored test tasks."
+          ],
+          "video": {
+            "src": "/portfolio/toki/device-demo.mp4",
+            "poster": "/portfolio/toki/device.webp",
+            "label": "Toki prototype demonstration showing task changes on the e-paper display"
+          }
+        },
+        {
+          "title": "What to test next",
+          "paragraphs": [
+            "The next test is to compare resuming an interrupted task with Toki and with someone’s usual setup. The survey established the difficulty people reported. The prototype gives us a way to test whether the desk object helps."
           ]
         }
       ]
     },
-    "note": "Individual app and device prototype. The image is the original concept visualization, not a photograph of the integrated hardware. The repository contains the current implementation, interaction documentation and development status."
+    "note": "The form sketch, enclosure photograph and circuit drawing come from the group’s presentation. The video records the assembled hardware in a later iteration."
   },
   {
     "slug": "india-in-orbit",

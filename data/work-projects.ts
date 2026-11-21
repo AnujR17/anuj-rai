@@ -54,7 +54,6 @@ export const caseHeadings: Record<string, string[][]> = {
   "medicine-app": [["Medicine routines"], ["Dose records"], ["App structure"], ["Medicine-taker view", "Caregiver view"], ["Prototype and next steps"]],
   "two-wheeler-dashboard": [["Dashboard research"], ["Information hierarchy"], ["Display layout"], ["Dashboard states", "Controls and feedback"], ["Prototype and next steps"]],
   medtimer: [["Field research"], ["Reminders and storage"], ["Product concept"], ["Physical model"], ["Model and next steps"]],
-  toki: [["Device constraints"], ["Planning and completion"], ["App and device"], ["Task queue", "Physical controls"], ["Prototype and next steps"]],
   "india-in-orbit": [["Content research"], ["Reading and exploration"], ["Website structure"], ["Satellite information", "Implementation"], ["Website and next steps"]],
   "gandhinagar-roundabouts": [["Field research"], ["Traffic movement"], ["Communication concepts"], ["Poster concepts", "Feedback"], ["Findings and next steps"]],
   "medicine-storage-research": [["Survey responses"], ["Routines and preferences"], ["Reminder support"], ["Survey analysis"], ["Findings and next steps"]],
