@@ -435,14 +435,14 @@ export const mainProjects: Project[] = [
               "alt": "Toki Write screen with Toki Case Study in the writing area and the Add to Tasks button below it",
               "width": 780,
               "height": 1320,
-              "caption": "Captured from the running Expo web build of AnujR17/toki at b032909. Native Bluetooth and reminder services were unavailable in the browser."
+              "caption": "Captured from the running Expo web build of AnujR17/toki at b032909. The capture used browser-only adapters for native services and corrected Web tab-label clipping."
             },
             {
               "src": "/portfolio/toki/app-tasks.png",
               "alt": "Toki Tasks screen with Toki Case Study at the top of the queue, followed by two other example tasks",
               "width": 780,
               "height": 1320,
-              "caption": "Captured from the running Expo web build of AnujR17/toki at b032909 after creating three example tasks through Write."
+              "caption": "Captured from the same Expo web build after creating three example tasks through Write."
             }
           ]
         },
