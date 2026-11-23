@@ -290,10 +290,6 @@ export const mainProjects: Project[] = [
     "source": "https://github.com/AnujR17/toki",
     "resources": [
       {
-        "label": "Watch the assembled prototype",
-        "href": "/portfolio/toki/device-demo.mp4"
-      },
-      {
         "label": "Original group presentation",
         "href": "https://www.figma.com/design/ixlPXmsuwf48nzujHHUV4T/?node-id=434-98"
       },
@@ -408,22 +404,29 @@ export const mainProjects: Project[] = [
       ],
       "insights": [
         {
-          "title": "Getting back was its own problem",
+          "title": "Finding the opportunity between planning and doing",
           "paragraphs": [
-            "Nine of the 18 people who found it easy to start work still said it was difficult to regain focus after an interruption. That shifted our attention to what people see when they come back to the desk.",
-            "The phone was also a common source of distraction. We used it for writing and ordering tasks, then put the actions needed during work on Toki."
+            "A written note beside a timer already keeps an activity and its duration visible. Simply combining those two functions would not offer much that existing tools cannot do.",
+            "The more useful question was what happens when a person plans digitally but works away from that list. The survey described both mixed physical–digital habits and difficulty returning after interruptions. Taken together with the product study, this suggested an opportunity to preserve the chosen activity as a point of return, without bringing the whole planning interface to the desk.",
+            "Could a connected object make that handoff more useful than a note and a timer?"
           ]
         }
       ],
       "concept": [
         {
-          "title": "One task on the display, time on the dial",
+          "title": "One plan, two surfaces",
           "paragraphs": [
-            "Our early concept put a list, ambient sound and reminders on the desk. I narrowed the interaction to one selected task and a dial for the time you want to spend on it.",
-            "The MUJI reference shaped how much we asked of the object. You choose a task with the touch controls, then set a duration with the dial. When the countdown reaches zero, you can keep working and mark the task done when you’re ready."
+            "The concept assigns different roles to the phone and the desk object. The app is where activities are written, organised and reordered. Toki brings a smaller selection into the workspace and shows one activity at a time, with basic actions available directly on the object.",
+            "The intention was not to replace the planning app, but to make the next action accessible at the point where the work happens."
+          ]
+        },
+        {
+          "title": "Exploring a physical representation of time",
+          "paragraphs": [
+            "A timer-inspired dial was explored as a way to give an allotted work session a visible physical form. The concept separated time passing from work being finished: the user would decide whether to continue, pause or mark the activity complete.",
+            "The countdown dial remains an intended physical interaction, not an operational feature verified on the current prototype."
           ],
           "figures": [
-            tokiConceptImage,
             {
               "src": "/portfolio/toki/sketch.webp",
               "alt": "Original form sketch showing the display, three touch points and a separate dial",
@@ -436,9 +439,23 @@ export const mainProjects: Project[] = [
       ],
       "design": [
         {
-          "title": "The printed enclosure",
+          "title": "Writing and organising on the app",
           "paragraphs": [
-            "The rounded shell puts the e-paper and three touch points on the face. The port, switch and speaker grille sit on the side. We printed the case and cover as two pieces."
+            "The React Native app separates capturing ideas from arranging activities. Write provides a dedicated place to add tasks without requiring a device connection. Tasks holds the full list, its order and the activity history. Device handles connection and maintenance.",
+            "The first four unfinished tasks can synchronise to Toki over Bluetooth while it is idle. Changes made in the app during an active session wait until the session is paused or completed, so the current activity is not replaced unexpectedly."
+          ]
+        },
+        {
+          "title": "Working with the desk object",
+          "paragraphs": [
+            "The e-paper display presents one activity at a time, supported by a small position indicator and session status. Left and right touch controls browse tasks; a centre tap starts elapsed-time tracking; holding the left control pauses; holding the centre control completes the activity.",
+            "Starting a timer does not complete the task, and completion remains a deliberate action. The e-paper's slow refresh is a hardware constraint addressed in the firmware, not a phone-like animation."
+          ]
+        },
+        {
+          "title": "Translating the product language",
+          "paragraphs": [
+            "The enclosure explores rounded geometry and restrained detailing, with the display and touch controls brought to the front. The MUJI references informed how edges, controls and functional parts could be treated as one coherent object rather than separate decorative features."
           ],
           "figures": [
             {
@@ -456,51 +473,36 @@ export const mainProjects: Project[] = [
               "caption": "Group electronics concept drawing from the case study PDF, page 5"
             }
           ]
-        },
-        {
-          "title": "From the phone to the desk",
-          "paragraphs": [
-            "In the connected build, the phone holds drafts and the full list. Toki receives the first four unfinished tasks when the device is connected and idle."
-          ],
-          "steps": [
-            "Write and order tasks in the Android app.",
-            "Use the outer touch controls to browse the four-task queue.",
-            "Tap the middle control to start tracking time. Hold it to mark the task done.",
-            "See time spent and completed tasks in Activity."
-          ],
-          "figures": [
-            {
-              "src": "/portfolio/toki/device.webp",
-              "alt": "Assembled Toki prototype showing a selected task on its e-paper screen, above three touch controls",
-              "width": 480,
-              "height": 456,
-              "caption": "Still from the supplied video of the assembled Toki prototype"
-            }
-          ]
-        },
-        {
-          "title": "What the electronics changed",
-          "paragraphs": [
-            "The e-paper can take around 20 seconds to refresh. The firmware handles Bluetooth separately so sync can complete while the screen catches up. The working build tracks elapsed time. The countdown dial stays inactive until the motor has a reliable zero position."
-          ]
         }
       ],
       "outcome": [
         {
-          "title": "A working desk prototype",
+          "title": "A connected prototype, with clear next tests",
           "paragraphs": [
-            "The prototype video shows a touch changing which task is displayed. At the bench, a wireless firmware update completed, Bluetooth reconnected after reboot and all three stored tasks were still there."
+            "The project produced a physical enclosure and an app-and-firmware prototype for an ESP32-powered e-paper desk companion. The repository documents task synchronisation, elapsed-time tracking, explicit completion, and software build and state tests."
           ]
         },
         {
-          "title": "What I’d test next",
+          "title": "The assembled device in use",
           "paragraphs": [
-            "Give someone a task, interrupt them, and see what they do when they return. I’d compare Toki with the note, app or timer they already use to find out whether keeping the task visible makes it easier to pick up."
+            "The prototype video shows a touch changing which task appears on the e-paper display. A separate bench check verified a wireless firmware update, Bluetooth reconnection after reboot, and retention of the three stored test tasks."
+          ],
+          "video": {
+            "src": "/portfolio/toki/device-demo.mp4",
+            "poster": "/portfolio/toki/device.webp",
+            "label": "Working Toki prototype changing the task shown on the e-paper display"
+          }
+        },
+        {
+          "title": "What still needs testing",
+          "paragraphs": [
+            "The latest hardware implementation still requires physical acceptance of the full app-to-device experience. The motorised dial is inactive pending a reliable position reference; documented audio logic is not the same as a confirmed audible result on the assembled device.",
+            "The next evaluation should compare how someone resumes an unfinished activity with Toki and with the tools they already use. Until then, improvements in focus, task completion or resumption time remain unverified."
           ]
         }
       ]
     },
-    "note": "Group project by Anshu Kumar, Anuj Rai and Kalyani Agarwal, guided by Umang Shah. The opening artwork is the original concept rendering. The enclosure photo and the later device footage document the physical build."
+    "note": "Group project by Anshu Kumar, Anuj Rai and Kalyani Agarwal, guided by Umang Shah. The sketch is from the original group presentation. The enclosure photo and circuit drawing document the build, and the Outcome video shows the assembled prototype."
   },
   {
     "slug": "india-in-orbit",

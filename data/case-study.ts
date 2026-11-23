@@ -25,6 +25,7 @@ export interface CaseBlock {
   surveyResults?: boolean;
   patterns?: { label: string; sequence: string }[];
   links?: { label: string; href: string }[];
+  video?: { src: string; poster: string; label: string };
 }
 
 export interface Project {

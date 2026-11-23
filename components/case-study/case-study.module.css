@@ -45,6 +45,7 @@
 .figures { display: grid; gap: 24px; margin-top: 35px; }
 .pair { grid-template-columns: 1fr 1fr; align-items: start; }
 .figures img { width: 100%; height: auto; border-radius: 12px; }
+.prototypeVideo { display: block; width: min(100%, 520px); aspect-ratio: 480 / 456; margin-top: 28px; border-radius: 12px; }
 .visual { overflow: hidden; border-radius: 12px; margin-bottom: 40px; }
 .visual img { display: block; width: 100%; height: auto; }
 .stageContent > div:first-child:has(img) { margin-bottom: 35px; }
@@ -89,5 +90,36 @@
 .numbers.inlineNumbers { gap: clamp(16px, 4vw, 42px); margin-top: 26px; min-height: 0; }
 .inlineNumbers .number summary > span { font-size: clamp(28px, 4vw, 52px); }
 .inlineNumbers .number summary { gap: 8px; }
+
+.tokiCase { --concept-accent: #852e39; --toki-deep-red: #722a34; }
+.tokiCase .hero {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  min-height: clamp(250px, 32vw, 410px);
+  padding: clamp(18px, 3vw, 42px) clamp(24px, 5vw, 72px);
+  gap: 18px;
+  background: #f1dad7;
+}
+.tokiCase .hero h1 { grid-row: 2; align-self: end; color: var(--toki-deep-red); }
+.tokiCase .introHeadline, .tokiCase .stage > h2, .tokiCase .inlineNumbers summary > span { color: var(--concept-accent); }
+.tokiCase .researchLinks a, .tokiCase .sourceLinks a { color: var(--concept-accent); }
+.tokiCase .stage { position: relative; isolation: isolate; padding-inline-end: clamp(16px, 3vw, 42px); }
+.tokiCase .stage::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 24px calc(-1 * clamp(12px, 2vw, 24px));
+  z-index: -1;
+  background: var(--toki-stage-tone, transparent);
+}
+.tokiCase [id="research"] { --toki-stage-tone: #f7ebe8; }
+.tokiCase [id="insights"] { --toki-stage-tone: var(--toki-deep-red); color: #fff8f4; }
+.tokiCase [id="insights"] > h2 { color: inherit; }
+.tokiCase [id="insights"] .block p:last-child { font-weight: 500; }
+.tokiCase [id="design"] { --toki-stage-tone: #f7eee7; }
+.tokiCase [id="outcome"] { --toki-stage-tone: #f1dad7; }
+@media (max-width: 700px) {
+  .tokiCase .stage { padding-block: 24px 54px; }
+  .tokiCase .stage::before { inset-block-end: 18px; }
+}
 @media (max-width: 420px) { .patterns > div { grid-template-columns: 1fr; gap: 2px; } }
 @media (prefers-reduced-motion: reduce) { .stageNav a { transition: none; } .number p { animation: none; } }

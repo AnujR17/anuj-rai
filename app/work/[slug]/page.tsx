@@ -29,6 +29,7 @@ export default async function CaseStudy({ params }: Props) {
   const project = projects.find(item => item.slug === slug);
   if (!project) notFound();
   if (slug === "medicine-app") return <MedicineCaseStudy project={project} />;
+  const isToki = slug === "toki";
   const overview = project.caseOverview;
   const researchHasNumbers = project.stages.research.some(block => block.surveyResults);
   const framing = [
@@ -40,10 +41,10 @@ export default async function CaseStudy({ params }: Props) {
   const nextSlug = workProjectSlugs[(mainIndex + 1) % workProjectSlugs.length];
   const next = mainIndex >= 0 ? projects.find(item => item.slug === nextSlug) : undefined;
   return (
-    <article className={styles.caseStudy}>
+    <article className={isToki ? `${styles.caseStudy} ${styles.tokiCase}` : styles.caseStudy}>
       <header className={styles.hero}>
         <Link href="/work" className={styles.textLink}>All work</Link>
-        <div className={styles.heroArtwork} data-project-artwork={slug}><ProjectArtwork project={project} priority /></div>
+        {!isToki && <div className={styles.heroArtwork} data-project-artwork={slug}><ProjectArtwork project={project} priority /></div>}
         <h1>{project.title}</h1>
       </header>
       <div className={styles.overview}>
@@ -74,7 +75,7 @@ export default async function CaseStudy({ params }: Props) {
             <section key={stage.id} id={stage.id} className={styles.stage} aria-labelledby={`${stage.id}-title`}>
               <h2 id={`${stage.id}-title`}>{caseHeadings[slug]?.[stageIndex]?.[0] ?? project.stages[stage.id][0]?.title ?? stage.title}</h2>
               <div className={styles.stageContent}>
-                {stage.id === "design" && <ProjectVisual project={project} />}
+                {stage.id === "design" && !isToki && <ProjectVisual project={project} />}
                 {project.stages[stage.id].map((block, index) => (
                   <div className={styles.block} key={`${stage.id}-${index}`}>
                     {index > 0 && block.title && <h3>{caseHeadings[slug]?.[stageIndex]?.[index] ?? block.title}</h3>}
@@ -94,6 +95,10 @@ export default async function CaseStudy({ params }: Props) {
                     {block.figures && <div className={`${styles.figures} ${block.figures.length > 1 ? styles.pair : ""}`}>
                       {block.figures.map(image => <figure key={image.src}><a href={image.src} aria-label="View image at full size"><Image src={image.src} alt={image.alt} width={image.width} height={image.height} sizes="(max-width: 700px) 90vw, 800px" /></a></figure>)}
                     </div>}
+                    {block.video && <video className={styles.prototypeVideo} controls playsInline preload="metadata" poster={block.video.poster} aria-label={block.video.label}>
+                      <source src={block.video.src} type="video/mp4" />
+                      <a href={block.video.src}>Open the prototype video</a>
+                    </video>}
                   </div>
                 ))}
                 {stage.id === "outcome" && <div className={styles.sources}>
