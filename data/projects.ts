@@ -256,35 +256,35 @@ export const mainProjects: Project[] = [
     "slug": "toki",
     "title": "Toki",
     "headline": "What if your to-do list had a place on your desk?",
-    "summary": "Toki explores how digital task management can extend into the physical workspace through a connected desk companion. It pairs a mobile app for organising tasks with an e-paper device that keeps the current task visible, with physical controls to track time and mark work complete.",
-    "brief": "Explore the design of a phygital product by studying a chosen domain and brand. Identify opportunities through user research, product benchmarking, and an understanding of the brand's design language.\n\nTranslate these findings into a product concept that integrates physical form, digital interaction, and embedded electronics, supported by an aesthetic mockup and functional proof of concept.",
-    "problem": "While digital productivity tools help people capture and organise tasks, those tasks often slip out of sight once the app is closed. After an interruption, resuming work can mean returning to the same phone where notifications, messages, and other distractions compete for attention.\n\nThe challenge lies in maintaining task visibility and continuity without introducing additional distractions into the workspace.",
+    "summary": "Toki pairs a mobile task list with an e-paper desk companion that keeps one task visible and provides controls for time tracking and completion.",
+    "brief": "Design a phygital product for a chosen domain and brand. Use research and benchmarking to connect physical form, digital interaction and embedded electronics in a mockup and functional proof of concept.",
+    "problem": "Tasks slip out of view when a planning app closes. After an interruption, reopening it means returning to the phone and its distractions.",
     "duration": "1 Month",
     "contribution": "Interaction Designer",
     "caseOverview": {
       "details": [
         {
           "label": "Discipline",
-          "value": "Phygital Product Design  "
+          "value": "Phygital Product Design"
         },
         {
           "label": "Role",
-          "value": "Interaction Designer  "
+          "value": "Interaction Designer"
         },
         {
           "label": "Domain",
-          "value": "Productivity  "
+          "value": "Productivity"
         },
         {
           "label": "Duration",
-          "value": "1 Month  "
+          "value": "1 Month"
         },
         {
           "label": "Tools & Technologies",
           "value": "Figma, React Native, Expo, ESP32, Arduino IDE, 3D Printing"
         }
       ],
-      "solution": "Toki reframes the to-do list as a series of intentional work sessions. Rather than managing everything at once, users prioritise a task, allocate time to it, and maintain a clear sense of progress as they work.\n\nThe experience establishes a simple rhythm between planning, acting, and returning, making time more perceptible while keeping the pace and completion of work in the user's control."
+      "solution": "Plan on the phone, then keep the selected task on the desk. Use Toki to track time and choose when to pause or finish."
     },
     "image": tokiConceptImage,
     "source": "https://github.com/AnujR17/toki",
@@ -302,6 +302,14 @@ export const mainProjects: Project[] = [
         "href": "https://www.muji.com/jp/about/en/"
       },
       {
+        "label": "MUJI CD player photo crop by Gwern, public domain",
+        "href": "https://commons.wikimedia.org/wiki/File:Muji_NYC_inside_CD_players.jpg"
+      },
+      {
+        "label": "MUJI clock photo crop by Gwern, public domain",
+        "href": "https://commons.wikimedia.org/wiki/File:Muji_NYC_inside_clocks_2.jpg"
+      },
+      {
         "label": "App and device interaction documentation",
         "href": "https://github.com/AnujR17/toki/blob/main/docs/EXPERIENCE.md"
       },
@@ -313,36 +321,28 @@ export const mainProjects: Project[] = [
     "stages": {
       "research": [
         {
-          "title": "Understanding how people plan, work, and return",
-          "paragraphs": [
-            "The research focused on activities that require sustained attention at a desk, such as studying, writing, and project work. It examined how people organise what they need to do, manage their time, and resume an activity after an interruption.",
-            "An exploratory survey of 35 respondents was supported by a study of existing productivity tools and MUJI's approach to product form and interaction."
-          ]
+          "title": "Planning and focus at the desk",
+          "paragraphs": []
         },
         {
-          "title": "What we wanted to understand",
-          "paragraphs": [
-            "Three questions guided the investigation:"
-          ],
+          "title": "Research questions",
+          "paragraphs": ["We looked at studying, writing and project work."],
           "steps": [
-            "How do people keep track of activities they intend to finish?",
-            "What competes for their attention, and what happens when they return after an interruption?",
-            "Which methods and objects already help them manage their activities and time?"
+            "How do people keep track of unfinished work?",
+            "What distracts them, and how do they resume?",
+            "What helps them manage tasks and time?"
           ]
         },
         {
-          "title": "Surveying existing working habits",
+          "title": "What 35 respondents reported",
           "paragraphs": [
-            "The Google Forms questionnaire combined agreement ratings, multiple-choice questions and an optional written response to examine planning preferences, distractions, working routines and interruption recovery. Respondents included students and people in office, hybrid, remote and other circumstances.",
-            "The survey describes what respondents reported, not observed working behaviour or proof that a physical device improves attention."
+            "Exploratory Google Forms survey with students and workers across office, hybrid and remote settings. It used ratings, multiple-choice questions and an optional written response. Results reflect reported habits."
           ]
         },
         {
-          "title": "Context from published research",
+          "title": "Published research",
           "paragraphs": [
-            "I reviewed these two studies while preparing this case study.",
-            "Research on interrupted tasks offers additional context for the difficulty of resuming an activity. Trafton and colleagues (2003) examined how preparing to resume a suspended goal can affect returning to a task. Stothart and colleagues (2015) found that receiving phone notifications disrupted performance in an attention-demanding experiment even when participants did not interact with the phone.",
-            "These studies help situate the survey responses, but neither tests Toki or demonstrates that an always-visible task is an effective intervention."
+            "Reviewed for the case study. Trafton et al. studied how preparation can help resume an interrupted task. Stothart et al. found that a phone notification can disrupt attention even without a response."
           ],
           "links": [
             {
@@ -356,19 +356,15 @@ export const mainProjects: Project[] = [
           ]
         },
         {
-          "title": "Examining existing approaches",
+          "title": "How existing tools work",
           "paragraphs": [
-            "The parallel product study examined different ways of organising activities, representing time, and interacting with information.",
-            "Written lists and planners provide a persistent reference for unfinished activities. Visual timers make the passage of time easier to observe, while physical time trackers introduce tangible actions into the process. Digital planning tools offer greater flexibility in organising and updating information.",
-            "The comparison considered what remains visible during an activity, how time is communicated, and what interactions are required to move between planning and carrying out work."
+            "We compared what stays visible and what changes as people plan, work and return."
           ]
         },
         {
-          "title": "Understanding MUJI's design language",
+          "title": "MUJI product references",
           "paragraphs": [
-            "MUJI's product philosophy informed a study of how everyday objects communicate their purpose through form, material, and interaction.",
-            "Appliances designed by Naoto Fukasawa, along with MUJI's clocks and desk accessories, provided references for examining softened geometric forms, restrained control layouts, surface finishes, and familiar methods of interaction.",
-            "The study looked beyond visual simplicity to understand how individual details serve a practical purpose. Rounded surfaces, control placement, and the integration of functional elements were examined as part of the object's use, rather than decoration alone."
+            "We studied familiar controls, shape and finish in Naoto Fukasawa’s MUJI appliances and in MUJI’s clocks and desk accessories."
           ],
           "links": [
             {
@@ -388,27 +384,21 @@ export const mainProjects: Project[] = [
       ],
       "insights": [
         {
-          "title": "Finding the opportunity between planning and doing",
+          "title": "Keep the task in view",
           "paragraphs": [
-            "A written note beside a timer already keeps an activity and its duration visible. Simply combining those two functions would not offer much that existing tools cannot do.",
-            "The more useful question was what happens when a person plans digitally but works away from that list. The survey described both mixed physical–digital habits and difficulty returning after interruptions. Taken together with the product study, this suggested an opportunity to preserve the chosen activity as a point of return, without bringing the whole planning interface to the desk.",
-            "Could a connected object make that handoff more useful than a note and a timer?"
+            "A note and timer already make a task and its duration visible. Toki explores what happens when a task planned digitally needs to stay in view after the phone is put away."
           ]
         }
       ],
       "concept": [
         {
           "title": "One plan, two surfaces",
-          "paragraphs": [
-            "The concept assigns different roles to the phone and the desk object. The app is where activities are written, organised and reordered. Toki brings a smaller selection into the workspace and shows one activity at a time, with basic actions available directly on the object.",
-            "The intention was not to replace the planning app, but to make the next action accessible at the point where the work happens."
-          ]
+          "paragraphs": []
         },
         {
-          "title": "Exploring a physical representation of time",
+          "title": "Conceptual countdown dial",
           "paragraphs": [
-            "A timer-inspired dial was explored as a way to give an allotted work session a visible physical form. The concept separated time passing from work being finished: the user would decide whether to continue, pause or mark the activity complete.",
-            "The countdown dial remains an intended physical interaction, not an operational feature verified on the current prototype."
+            "The sketch proposes a dial that makes allotted time visible. Finishing the task is a separate decision. The built prototype tracks elapsed time on e-paper."
           ],
           "figures": [
             {
@@ -423,11 +413,9 @@ export const mainProjects: Project[] = [
       ],
       "design": [
         {
-          "title": "Writing and organising on the app",
+          "title": "Plan on the phone",
           "paragraphs": [
-            "The React Native app separates capturing ideas from arranging activities. Write provides a dedicated place to add tasks without requiring a device connection. Tasks holds the full list, its order and the activity history. Device handles connection and maintenance.",
-            "The first four unfinished tasks can synchronise to Toki over Bluetooth while it is idle. Changes made in the app during an active session wait until the session is paused or completed, so the current activity is not replaced unexpectedly.",
-            "The screens show the app running in a browser with the example task “Toki Case Study”. The e-paper photo shows the same task on the physical prototype in a separate run."
+            "Write captures tasks offline. Tasks manages order and history. The Device tab handles connection and maintenance."
           ],
           "figures": [
             {
@@ -447,10 +435,10 @@ export const mainProjects: Project[] = [
           ]
         },
         {
-          "title": "Working with the desk object",
+          "title": "Work from the desk",
           "paragraphs": [
-            "The e-paper display presents one activity at a time, supported by a small position indicator and session status. Left and right touch controls browse tasks; a centre tap starts elapsed-time tracking; holding the left control pauses; holding the centre control completes the activity.",
-            "Starting a timer does not complete the task, and completion remains a deliberate action. The e-paper's slow refresh is a hardware constraint addressed in the firmware, not a phone-like animation."
+            "The display shows one task, its position in the queue and session status. E-paper refresh is slow.",
+            "Tap left or right to browse. Tap centre to start elapsed time. Hold left to pause or centre to mark the task complete."
           ],
           "figures": [
             {
@@ -463,9 +451,9 @@ export const mainProjects: Project[] = [
           ]
         },
         {
-          "title": "Translating the product language",
+          "title": "Enclosure and electronics",
           "paragraphs": [
-            "The enclosure explores rounded geometry and restrained detailing, with the display and touch controls brought to the front. The MUJI references informed how edges, controls and functional parts could be treated as one coherent object rather than separate decorative features."
+            "Rounded edges and front-facing controls translate the MUJI study into a printed enclosure. The circuit drawing shows how the ESP32 connects to the display and controls."
           ],
           "figures": [
             {
@@ -487,15 +475,13 @@ export const mainProjects: Project[] = [
       ],
       "outcome": [
         {
-          "title": "A connected prototype, with clear next tests",
-          "paragraphs": [
-            "The project produced a physical enclosure and an app-and-firmware prototype for an ESP32-powered e-paper desk companion. The repository documents task synchronisation, elapsed-time tracking, explicit completion, and software build and state tests."
-          ]
+          "title": "The prototype in use",
+          "paragraphs": []
         },
         {
-          "title": "The assembled device in use",
+          "title": "What the prototype demonstrates",
           "paragraphs": [
-            "The prototype video shows a touch changing which task appears on the e-paper display. A separate bench check verified a wireless firmware update, Bluetooth reconnection after reboot, and retention of the three stored test tasks."
+            "The working demo shows a touch changing the task on the e-paper display. A separate bench test verified a wireless update, Bluetooth reconnection after reboot and retention of three tasks. The repository records software build and state checks."
           ],
           "video": {
             "src": "/portfolio/toki/device-demo.mp4",
@@ -506,13 +492,12 @@ export const mainProjects: Project[] = [
         {
           "title": "What still needs testing",
           "paragraphs": [
-            "The latest hardware implementation still requires physical acceptance of the full app-to-device experience. The motorised dial is inactive pending a reliable position reference; documented audio logic is not the same as a confirmed audible result on the assembled device.",
-            "The next evaluation should compare how someone resumes an unfinished activity with Toki and with the tools they already use. Until then, improvements in focus, task completion or resumption time remain unverified."
+            "End-to-end hardware and audio still need testing. The motorised dial is inactive pending a reliable position reference. A follow-up test would compare task resumption with Toki and participants’ existing tools."
           ]
         }
       ]
     },
-    "note": "Group project by Anshu Kumar, Anuj Rai and Kalyani Agarwal, guided by Umang Shah. The sketch is from the original group presentation. The enclosure photo and circuit drawing document the build, and the Outcome video shows the assembled prototype."
+    "note": "Group project by Anshu Kumar, Anuj Rai and Kalyani Agarwal, guided by Umang Shah. The desk render and form sketch show the concept. The prototype still and video document the build."
   },
   {
     "slug": "india-in-orbit",

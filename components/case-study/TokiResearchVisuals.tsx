@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 import styles from "./toki-case-study.module.css";
 
@@ -68,33 +69,29 @@ export function TokiBenchmarks() {
 
 const brandDetails = [
   {
-    title: "Rounded edges",
-    application: "The curved transition on the rice cooker informed the rounded edges of Toki’s printed enclosure.",
-    drawing: <><path d="M-4 17h97c49 0 67 19 67 66v58H-4z" className={styles.diagramFill} />
-      <path d="M-4 17h97c49 0 67 19 67 66v58M-4 37h97c34 0 47 14 47 46v58" />
-      <path d="M93 17c49 0 67 19 67 66" className={styles.diagramAccent} /></>,
+    title: "Curved geometry",
+    application: "The CD player’s rounded housing illustrates the kind of edge treatment explored in Toki’s enclosure.",
+    src: "/portfolio/toki/muji-curve.webp",
+    alt: "Rounded corner and curved disc recess of the white MUJI wall-mounted CD player",
   },
   {
-    title: "Controls on the front",
-    application: "Moving the rice cooker controls to the front keeps the lid clear. Toki groups its display and three touch controls on one face.",
-    drawing: <><path d="M-4 24h200v84H-4z" className={styles.diagramFill} />
-      <path d="M-4 24h200M-4 108h200" /><rect x="22" y="45" width="58" height="41" rx="4" />
-      <path d="M36 66h30" className={styles.diagramAccent} />
-      <circle cx="106" cy="66" r="7" /><circle cx="132" cy="66" r="7" /><circle cx="158" cy="66" r="7" /></>,
+    title: "Control placement",
+    application: "The CD player tucks its power pull beneath the housing. Toki groups its touch controls below the screen.",
+    src: "/portfolio/toki/muji-controls.webp",
+    alt: "Power pull cord emerging from the underside of the dark MUJI wall-mounted CD player",
   },
   {
-    title: "Readable time at a glance",
-    application: "Clear clock markings informed the proposed timer scale. The working prototype shows elapsed time on e-paper.",
-    drawing: <><circle cx="97" cy="104" r="84" className={styles.diagramFill} />
-      <circle cx="97" cy="104" r="84" /><path d="M97 27v13m38 1-6 9m32 19-9 5m21 30h-13m-126 0H21m20-30-9-5m33-19-6-9" />
-      <path d="m97 104 42-37" className={styles.diagramAccent} /><circle cx="97" cy="104" r="3" /></>,
+    title: "Clock legibility",
+    application: "Clear numerals and hands informed the proposed timer scale.",
+    src: "/portfolio/toki/muji-clock.webp",
+    alt: "MUJI analogue clock with dark numerals and hands against a white face",
   },
 ];
 
 export function TokiBrandDetails() {
   return <div className={styles.brandDetails}>
-    {brandDetails.map(({ title, application, drawing }) => <div className={styles.brandDetail} key={title}>
-      <svg viewBox="0 0 192 126" aria-hidden="true">{drawing}</svg>
+    {brandDetails.map(({ title, application, src, alt }) => <div className={styles.brandDetail} key={title}>
+      <Image src={src} alt={alt} width={525} height={375} sizes="(max-width: 560px) 38vw, (max-width: 1050px) 28vw, 365px" />
       <h4>{title}</h4>
       <p>{application}</p>
     </div>)}
