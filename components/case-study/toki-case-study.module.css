@@ -1,0 +1,91 @@
+.case {
+  --toki-paper: #faf6f1;
+  --toki-wash: #f6eae3;
+  --toki-red: #84382a;
+  --toki-deep-red: #6d2a1e;
+  --concept-accent: var(--toki-red);
+  background: var(--toki-paper);
+}
+
+.case .opening {
+  min-height: clamp(300px, 55svh, 560px);
+  grid-template-rows: auto;
+  padding-block: 72px clamp(36px, 6vw, 80px);
+}
+.case .opening h1 { color: var(--toki-deep-red); }
+.case .openingCopy p {
+  max-width: 20ch;
+  font-size: clamp(26px, 3.25vw, 48px);
+  letter-spacing: -.045em;
+  line-height: 1.1;
+}
+
+.case :global(.lf-overview),
+.case :global(.lf-concept),
+.case :global(.lf-case-end) { background: var(--toki-paper); }
+.case :global(.lf-research) { background: var(--toki-wash); }
+.case :global(.lf-insights) { background: #f1e0d7; color: #1c1917; }
+.case :global(.lf-design) { background: #f5f0e9; }
+.case :global(.lf-outcome) { background: #f7ebe4; }
+.case :global(.lf-stage-index a[aria-current="location"]) { color: var(--toki-red); }
+.case :is(a, summary, select, video):focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+.case :global(.lf-stage-index) a:focus-visible { outline-color: currentColor; }
+
+.overviewLead, .framing {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(30px, 5vw, 70px);
+  align-items: start;
+}
+.framing {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 3vw, 45px);
+  margin-top: 56px;
+}
+.metadata { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 24px; font-size: 16px; line-height: 1.5; }
+.metadata > div:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.metadata dt { color: var(--toki-red); font-weight: 500; margin-bottom: 4px; }
+.case .readingBlock h3 { margin: 0 0 16px; font-size: 23px; font-weight: 450; line-height: 1.2; letter-spacing: -.03em; }
+.readingBlock p + p { margin-top: 18px; }
+.framing p { font-size: 16px; line-height: 1.65; }
+
+.questions { list-style: decimal; padding-inline-start: 1.25em; font-size: 17px; line-height: 1.55; margin-top: 12px; }
+.questions li + li { margin-top: 10px; }
+.case .survey { margin-top: 64px; align-items: start; }
+.brand { margin-top: 62px; max-width: 740px; }
+.patterns { margin-top: 24px; font-size: 16px; line-height: 1.55; }
+.patterns > div { display: grid; grid-template-columns: minmax(90px, .8fr) 1.5fr; gap: 12px; }
+.patterns > div + div { margin-top: 13px; }
+.patterns dt { font-weight: 500; }
+.links { display: flex; flex-wrap: wrap; gap: 0 20px; margin-top: 12px; }
+.links a { display: inline-flex; min-height: 44px; align-items: center; color: var(--toki-red); text-decoration: underline; text-underline-offset: 5px; }
+
+.insightCopy { max-width: 54ch; }
+.case .insightQuestion { font-weight: 550; font-size: clamp(19px, 2vw, 25px); line-height: 1.35; }
+.case .conceptStudy { align-items: center; }
+.conceptCopy { margin-top: 24px; }
+.dialCopy { margin-top: 42px; }
+.artifact { margin: 0; min-width: 0; }
+.artifact a { display: block; }
+.artifact img { display: block; width: 100%; height: auto; border-radius: 10px; }
+.designGallery, .prototype { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-items: center; gap: clamp(24px, 4vw, 56px); margin-top: 52px; }
+.case .designReading { margin-top: 53px; gap: 38px 54px; }
+.prototype { align-items: start; }
+.prototype video { display: block; width: min(100%, 480px); aspect-ratio: 480 / 456; border-radius: 10px; }
+.prototypeCopy > div + div { margin-top: 36px; }
+
+@media (max-width: 1050px) {
+  .overviewLead, .framing { grid-template-columns: 1fr; gap: 32px; }
+  .metadata { max-width: 560px; }
+  .case .conceptStudy { align-items: start; }
+}
+
+@media (max-width: 700px) {
+  .case .opening { grid-template-rows: auto auto; gap: 14px; min-height: 290px; padding-block: 76px 32px; }
+  .case .opening h1 { grid-row: 1; }
+  .case .openingCopy { grid-row: 2; }
+  .framing { margin-top: 40px; }
+  .case .survey, .brand { margin-top: 40px; }
+  .designGallery, .prototype { grid-template-columns: 1fr; gap: 25px; margin-top: 34px; }
+  .case .designReading { margin-top: 36px; }
+}

@@ -5,14 +5,12 @@
 .hero h1 { grid-column: 1 / -1; grid-row: 3; font-size: var(--section-title-size); letter-spacing: -.055em; font-weight: 400; line-height: 1.05; overflow-wrap: normal; }
 .heroArtwork { grid-column: 2; grid-row: 2; width: 100%; align-self: center; min-width: 0; }
 .overview { padding-block: 80px 50px; margin-left: 26%; }
-.introHeadline { font-size: clamp(26px, 3.4vw, 46px); font-weight: 400; line-height: 1.15; letter-spacing: -.04em; margin-bottom: 20px; }
 .introduction { max-width: 900px; font-size: clamp(22px, 2.1vw, 29px); line-height: 1.5; letter-spacing: -.025em; }
 .framing { display: flex; flex-direction: column; gap: 40px; margin-top: 55px; }
 .framing h2, .details dt { font-size: 20px; font-weight: 500; letter-spacing: -.025em; margin-bottom: 14px; }
 .framing p, .details dd { font-size: 18px; line-height: 1.7; max-width: 800px; }
-.framing p + p { margin-top: 16px; }
 .details { display: grid; grid-template-columns: minmax(110px, .5fr) 1.8fr; gap: 35px; margin-top: 50px; }
-.details > div:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.details > div:only-child { grid-column: 1 / -1; }
 .numbers { display: flex; gap: 60px; margin-top: 60px; min-height: 300px; }
 .number { flex: 1; min-width: 0; max-width: 350px; }
 .number summary { display: flex; flex-direction: column; gap: 16px; cursor: pointer; list-style: none; width: fit-content; }
@@ -35,17 +33,9 @@
 .block h3, .sources h3 { font-size: 25px; font-weight: 400; letter-spacing: -.035em; line-height: 1.2; margin-bottom: 22px; }
 .block p, .sources p { font-size: 18px; line-height: 1.75; max-width: 800px; }
 .block p + p { margin-top: 20px; }
-.steps, .patterns { margin-top: 18px; font-size: 18px; line-height: 1.55; }
-.steps { padding-inline-start: 1.4em; list-style: decimal; }
-.steps li + li, .patterns > div + div { margin-top: 10px; }
-.patterns > div { display: grid; grid-template-columns: minmax(120px, 1fr) 3fr; gap: 8px 18px; max-width: 760px; }
-.patterns dt { font-weight: 500; }
-.researchLinks { display: flex; flex-wrap: wrap; gap: 0 24px; margin-top: 12px; }
-.researchLinks a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: 5px; }
 .figures { display: grid; gap: 24px; margin-top: 35px; }
 .pair { grid-template-columns: 1fr 1fr; align-items: start; }
 .figures img { width: 100%; height: auto; border-radius: 12px; }
-.prototypeVideo { display: block; width: min(100%, 520px); aspect-ratio: 480 / 456; margin-top: 28px; border-radius: 12px; }
 .visual { overflow: hidden; border-radius: 12px; margin-bottom: 40px; }
 .visual img { display: block; width: 100%; height: auto; }
 .stageContent > div:first-child:has(img) { margin-bottom: 35px; }
@@ -90,36 +80,4 @@
 .numbers.inlineNumbers { gap: clamp(16px, 4vw, 42px); margin-top: 26px; min-height: 0; }
 .inlineNumbers .number summary > span { font-size: clamp(28px, 4vw, 52px); }
 .inlineNumbers .number summary { gap: 8px; }
-
-.tokiCase { --concept-accent: #852e39; --toki-deep-red: #722a34; }
-.tokiCase .hero {
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
-  min-height: clamp(250px, 32vw, 410px);
-  padding: clamp(18px, 3vw, 42px) clamp(24px, 5vw, 72px);
-  gap: 18px;
-  background: #f1dad7;
-}
-.tokiCase .hero h1 { grid-row: 2; align-self: end; color: var(--toki-deep-red); }
-.tokiCase .introHeadline, .tokiCase .stage > h2, .tokiCase .inlineNumbers summary > span { color: var(--concept-accent); }
-.tokiCase .researchLinks a, .tokiCase .sourceLinks a { color: var(--concept-accent); }
-.tokiCase .stage { position: relative; isolation: isolate; padding-inline-end: clamp(16px, 3vw, 42px); }
-.tokiCase .stage::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 24px calc(-1 * clamp(12px, 2vw, 24px));
-  z-index: -1;
-  background: var(--toki-stage-tone, transparent);
-}
-.tokiCase [id="research"] { --toki-stage-tone: #f7ebe8; }
-.tokiCase [id="insights"] { --toki-stage-tone: var(--toki-deep-red); color: #fff8f4; }
-.tokiCase [id="insights"] > h2 { color: inherit; }
-.tokiCase [id="insights"] .block p:last-child { font-weight: 500; }
-.tokiCase [id="design"] { --toki-stage-tone: #f7eee7; }
-.tokiCase [id="outcome"] { --toki-stage-tone: #f1dad7; }
-@media (max-width: 700px) {
-  .tokiCase .stage { padding-block: 24px 54px; }
-  .tokiCase .stage::before { inset-block-end: 18px; }
-}
-@media (max-width: 420px) { .patterns > div { grid-template-columns: 1fr; gap: 2px; } }
 @media (prefers-reduced-motion: reduce) { .stageNav a { transition: none; } .number p { animation: none; } }

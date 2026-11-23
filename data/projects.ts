@@ -336,8 +336,7 @@ export const mainProjects: Project[] = [
             "The Google Forms questionnaire combined agreement ratings, multiple-choice questions and an optional written response to examine planning preferences, distractions, working routines and interruption recovery. Respondents included students and people in office, hybrid, remote and other circumstances.",
             "Twenty respondents reported difficulty getting back to focused work after an interruption. Twenty-six selected phone or social media use among their distractions. For task organisation, fourteen primarily used physical methods, twelve used physical and digital methods equally, six primarily used digital methods, and three selected neither listed approach.",
             "The survey describes what respondents reported, not observed working behaviour or proof that a physical device improves attention."
-          ],
-          "surveyResults": true
+          ]
         },
         {
           "title": "Context from published research",
