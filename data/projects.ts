@@ -4,11 +4,11 @@ import { additionalProjects } from "@/data/work-projects";
 export type { Project, ProjectImage } from "@/data/case-study";
 
 const tokiConceptImage = {
-  "src": "/portfolio/toki.jpg",
-  "alt": "Group concept visualization of Toki with a display, three touch controls and a large timer dial",
-  "width": 830,
-  "height": 830,
-  "caption": "Original group visualization from Figma ixlPXmsuwf48nzujHHUV4T, node 380:368"
+  "src": "/portfolio/toki/desk-render.webp",
+  "alt": "Toki concept render showing a focus session display, three touch controls and a countdown dial on a dark desk",
+  "width": 1445,
+  "height": 1088,
+  "caption": "Desk concept render supplied by Anuj Rai for the case study"
 };
 
 export const mainProjects: Project[] = [

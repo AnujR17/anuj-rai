@@ -100,11 +100,10 @@ export function TokiCaseStudy({ project, next }: { project: Project; next?: Proj
       <Link href="/work" className="lf-all-work">All work</Link>
       <div className={styles.openingCopy}>
         <h1 id="toki-title">{project.title}</h1>
-        <p>{project.headline}</p>
       </div>
-      <Image className={styles.deskRender} src="/portfolio/toki/desk-concept.webp"
-        alt="Generated Toki concept render on a wooden desk, with a neutral cable behind the device"
-        width={830} height={830} sizes="(max-width: 700px) 90vw, 52vw" preload />
+      {project.image && <Image className={styles.deskRender} src={project.image.src}
+        alt={project.image.alt} width={project.image.width} height={project.image.height}
+        sizes="(max-width: 700px) 90vw, 52vw" preload />}
     </header>
 
     <section className="lf-overview" id="overview" aria-labelledby="overview-title">
@@ -112,7 +111,7 @@ export function TokiCaseStudy({ project, next }: { project: Project; next?: Proj
         <div className={styles.overviewLead}>
           <div>
             <h2 id="overview-title">Project overview</h2>
-            <p className="lf-overview-summary">{project.summary}</p>
+            <p className="lf-overview-summary">{project.headline} {project.summary}</p>
             {overview && <dl className={styles.metadata}>
               {overview.details.map(({ label, value }) => (
                 <div key={label}><dt>{label}</dt><dd>{value}</dd></div>
