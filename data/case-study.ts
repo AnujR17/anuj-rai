@@ -22,7 +22,6 @@ export interface CaseBlock {
   paragraphs: string[];
   figures?: ProjectImage[];
   steps?: string[];
-  patterns?: { label: string; sequence: string }[];
   links?: { label: string; href: string }[];
   video?: { src: string; poster: string; label: string };
 }

@@ -13,10 +13,6 @@ const numbers: Record<string, NumberItem[]> = {
     { value: "3", label: "Weeks", detail: "The confirmed duration of the individual dashboard project" },
   ],
   medtimer: [{ value: "3", label: "Weeks", detail: "The confirmed group-project duration. Anuj developed the concept and interactions; teammates contributed mockups and documentation" }],
-  toki: [
-    { value: "20 / 35", label: "Found it difficult to return to focused work after an interruption", detail: "Respondents who agreed or strongly agreed with the survey statement" },
-    { value: "26 / 35", label: "Selected phone or social media use as a distraction", detail: "Respondents could select more than one source of distraction" },
-  ],
   "india-in-orbit": [{ value: "3", label: "Weeks", detail: "The confirmed duration for designing and developing the interactive website, with guidance from Dr Anupam Rana" }],
   "gandhinagar-roundabouts": [
     { value: "298", label: "Record rows", detail: "98 Sector-21, 87 Sector-7 and 113 Infocity rows after excluding its header. These are records, not exposure-adjusted crash rates" },

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { CaseBlock, Project, ProjectImage } from "@/data/case-study";
-import { CaseNumbers } from "./CaseNumbers";
 import { LayeredCaseNav } from "./LayeredCaseNav";
+import { TokiBenchmarks, TokiBrandDetails } from "./TokiResearchVisuals";
 import "./restored-medicine.css";
 import styles from "./toki-case-study.module.css";
 
@@ -17,25 +17,74 @@ function ReadingBlock({ block }: { block: CaseBlock }) {
     {block.steps && <ol className={styles.questions}>
       {block.steps.map(step => <li key={step}>{step}</li>)}
     </ol>}
-    {block.patterns && <dl className={styles.patterns}>
-      {block.patterns.map(({ label, sequence }) => (
-        <div key={label}><dt>{label}</dt><dd>{sequence}</dd></div>
-      ))}
-    </dl>}
     {block.links && <div className={styles.links}>
       {block.links.map(({ label, href }) => <a href={href} key={href}>{label}</a>)}
     </div>}
   </div>;
 }
 
-function Artifact({ image }: { image: ProjectImage }) {
+function Artifact({ image, sizes = "(max-width: 700px) 90vw, (max-width: 1050px) 70vw, 530px" }: { image: ProjectImage; sizes?: string }) {
   return <figure className={styles.artifact}>
     <a href={image.src} aria-label={`Open image at full size: ${image.alt}`}>
       <Image src={image.src} alt={image.alt} width={image.width} height={image.height}
-        sizes="(max-width: 700px) 90vw, (max-width: 1050px) 70vw, 530px" />
+        sizes={sizes} />
     </a>
   </figure>;
 }
+
+const surveyFindings = [
+  { value: 20, label: "Found it difficult to resume focused work after an interruption", detail: "Agreed or strongly agreed" },
+  { value: 26, label: "Selected phone or social media use as a distraction", detail: "Multiple choices allowed" },
+];
+
+const planningMethods = [
+  { value: 14, label: "Mostly physical" },
+  { value: 12, label: "Both equally" },
+  { value: 6, label: "Mostly digital" },
+  { value: 3, label: "None of the above" },
+];
+
+function SurveyEvidence({ block }: { block: CaseBlock }) {
+  return <section className={styles.survey} aria-labelledby="toki-survey">
+    <h3 id="toki-survey">{block.title}</h3>
+    <ul className={styles.surveyFindings} role="list">
+      {surveyFindings.map(({ value, label, detail }) => (
+        <li className={styles.surveyFinding} key={label}>
+          <strong>{value} <span>/ 35</span></strong>
+          <span>{label}</span>
+          <small>{detail}</small>
+        </li>
+      ))}
+    </ul>
+    <div className={styles.surveyPlanning}>
+      <h4>How respondents organise their tasks</h4>
+      <dl>
+        {planningMethods.map(({ value, label }) => (
+          <div key={label}><dt>{label}</dt><dd>{value}</dd></div>
+        ))}
+      </dl>
+    </div>
+    <div className={styles.surveyMethod}><Paragraphs paragraphs={block.paragraphs} /></div>
+  </section>;
+}
+
+function Handoff({ steps, label }: { steps: { title: string; text: string }[]; label: string }) {
+  return <ol className={styles.handoff} role="list" aria-label={label}>
+    {steps.map(({ title, text }) => <li key={title}><strong>{title}</strong><span>{text}</span></li>)}
+  </ol>;
+}
+
+const conceptHandoff = [
+  { title: "Plan on the phone", text: "Write the tasks and decide which to do next." },
+  { title: "See one task at the desk", text: "The desk display keeps the selected task visible." },
+  { title: "Work from the desk", text: "Start, pause, return to the same task or mark it done." },
+];
+
+const bluetoothHandoff = [
+  { title: "Task queue", text: "The first four unfinished tasks in app order." },
+  { title: "Bluetooth", text: "The app sends queue changes when Toki is idle." },
+  { title: "E-paper", text: "The device displays one task from that queue at a time." },
+];
 
 export function TokiCaseStudy({ project, next }: { project: Project; next?: Project }) {
   const overview = project.caseOverview;
@@ -43,8 +92,7 @@ export function TokiCaseStudy({ project, next }: { project: Project; next?: Proj
   const [insight] = project.stages.insights;
   const [concept, dial] = project.stages.concept;
   const [outcome, demonstration, nextTests] = project.stages.outcome;
-  const design = project.stages.design;
-  const designImages = design.flatMap(block => block.figures ?? []);
+  const [app, object, form] = project.stages.design;
   const prototype = demonstration.video;
   const insightCopy = insight.paragraphs.slice(0, -1);
   const insightQuestion = insight.paragraphs.at(-1);
@@ -85,15 +133,16 @@ export function TokiCaseStudy({ project, next }: { project: Project; next?: Proj
             <div><h2 id="research-title">{research.title}</h2><Paragraphs paragraphs={research.paragraphs} /></div>
             <ReadingBlock block={questions} />
           </div>
-          <div className={`lf-concept-heading ${styles.survey}`}>
-            <ReadingBlock block={survey} />
-            <CaseNumbers slug={project.slug} inline />
-          </div>
-          <div className="lf-reading-pair lf-research-reading">
-            <ReadingBlock block={literature} />
+          <SurveyEvidence block={survey} />
+          <div className={styles.literature}><ReadingBlock block={literature} /></div>
+          <div className={styles.evidenceSection}>
             <ReadingBlock block={precedents} />
+            <TokiBenchmarks />
           </div>
-          <div className={styles.brand}><ReadingBlock block={brand} /></div>
+          <div className={styles.evidenceSection}>
+            <ReadingBlock block={brand} />
+            <TokiBrandDetails />
+          </div>
         </div>
       </section>
 
@@ -109,12 +158,11 @@ export function TokiCaseStudy({ project, next }: { project: Project; next?: Proj
 
       <section className="lf-scene lf-concept" id="concept" data-tone="light" aria-labelledby="concept-title">
         <div className="lf-scene-content">
+          <h2 id="concept-title">{concept.title}</h2>
+          <div className={styles.conceptCopy}><Paragraphs paragraphs={concept.paragraphs} /></div>
+          <Handoff steps={conceptHandoff} label="Concept interaction from the phone to the desk" />
           <div className={`lf-concept-heading ${styles.conceptStudy}`}>
-            <div>
-              <h2 id="concept-title">{concept.title}</h2>
-              <div className={styles.conceptCopy}><Paragraphs paragraphs={concept.paragraphs} /></div>
-              <div className={styles.dialCopy}><ReadingBlock block={dial} /></div>
-            </div>
+            <ReadingBlock block={dial} />
             <div>{dial.figures?.map(image => <Artifact image={image} key={image.src} />)}</div>
           </div>
         </div>
@@ -123,11 +171,26 @@ export function TokiCaseStudy({ project, next }: { project: Project; next?: Proj
       <section className="lf-scene lf-design" id="design" data-tone="light" aria-labelledby="design-title">
         <div className="lf-scene-content">
           <h2 id="design-title">The app and desk object</h2>
-          <div className={styles.designGallery}>
-            {designImages.map(image => <Artifact image={image} key={image.src} />)}
+          <div className={styles.designApps}>
+            <h3>{app.title}</h3>
+            {app.figures && <div className={styles.appScreens}>
+              {app.figures.map(image => <Artifact image={image} key={image.src}
+                sizes="(max-width: 700px) min(90vw, 320px), (max-width: 1050px) 38vw, 310px" />)}
+            </div>}
+            <div className={styles.readingBlock}><Paragraphs paragraphs={app.paragraphs} /></div>
           </div>
+          <Handoff steps={bluetoothHandoff} label="How tasks sync to the prototype" />
           <div className={`lf-reading-pair ${styles.designReading}`}>
-            {design.map(block => <ReadingBlock block={block} key={block.title} />)}
+            <div>
+              <div className={styles.displayDetail}>
+                {object.figures?.map(image => <Artifact image={image} key={image.src} sizes="480px" />)}
+              </div>
+              <ReadingBlock block={object} />
+            </div>
+            <ReadingBlock block={form} />
+          </div>
+          <div className={styles.designGallery}>
+            {form.figures?.map(image => <Artifact image={image} key={image.src} />)}
           </div>
         </div>
       </section>

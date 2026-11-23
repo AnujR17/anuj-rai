@@ -334,7 +334,6 @@ export const mainProjects: Project[] = [
           "title": "Surveying existing working habits",
           "paragraphs": [
             "The Google Forms questionnaire combined agreement ratings, multiple-choice questions and an optional written response to examine planning preferences, distractions, working routines and interruption recovery. Respondents included students and people in office, hybrid, remote and other circumstances.",
-            "Twenty respondents reported difficulty getting back to focused work after an interruption. Twenty-six selected phone or social media use among their distractions. For task organisation, fourteen primarily used physical methods, twelve used physical and digital methods equally, six primarily used digital methods, and three selected neither listed approach.",
             "The survey describes what respondents reported, not observed working behaviour or proof that a physical device improves attention."
           ]
         },
@@ -362,24 +361,6 @@ export const mainProjects: Project[] = [
             "The parallel product study examined different ways of organising activities, representing time, and interacting with information.",
             "Written lists and planners provide a persistent reference for unfinished activities. Visual timers make the passage of time easier to observe, while physical time trackers introduce tangible actions into the process. Digital planning tools offer greater flexibility in organising and updating information.",
             "The comparison considered what remains visible during an activity, how time is communicated, and what interactions are required to move between planning and carrying out work."
-          ],
-          "patterns": [
-            {
-              "label": "Written list",
-              "sequence": "Write a task, leave it visible, revisit it or mark it done."
-            },
-            {
-              "label": "Visual timer",
-              "sequence": "Set a duration, glance at the remaining time, then reset."
-            },
-            {
-              "label": "Physical tracker",
-              "sequence": "Move the object, log an activity, then change or stop the session."
-            },
-            {
-              "label": "Digital planner",
-              "sequence": "Capture an activity, organise it, then update it."
-            }
           ]
         },
         {
@@ -397,6 +378,10 @@ export const mainProjects: Project[] = [
             {
               "label": "MUJI appliance design references",
               "href": "https://randomwire.com/muji-appliances-by-naoto-fukasawa/"
+            },
+            {
+              "label": "MUJI Station Clock",
+              "href": "https://www.muji.us/products/station-clock"
             }
           ]
         }
@@ -441,7 +426,24 @@ export const mainProjects: Project[] = [
           "title": "Writing and organising on the app",
           "paragraphs": [
             "The React Native app separates capturing ideas from arranging activities. Write provides a dedicated place to add tasks without requiring a device connection. Tasks holds the full list, its order and the activity history. Device handles connection and maintenance.",
-            "The first four unfinished tasks can synchronise to Toki over Bluetooth while it is idle. Changes made in the app during an active session wait until the session is paused or completed, so the current activity is not replaced unexpectedly."
+            "The first four unfinished tasks can synchronise to Toki over Bluetooth while it is idle. Changes made in the app during an active session wait until the session is paused or completed, so the current activity is not replaced unexpectedly.",
+            "The screens show the app running in a browser with the example task “Toki Case Study”. The e-paper photo shows the same task on the physical prototype in a separate run."
+          ],
+          "figures": [
+            {
+              "src": "/portfolio/toki/app-write.png",
+              "alt": "Toki Write screen with Toki Case Study in the writing area and the Add to Tasks button below it",
+              "width": 780,
+              "height": 1320,
+              "caption": "Captured from the running Expo web build of AnujR17/toki at b032909. Native Bluetooth and reminder services were unavailable in the browser."
+            },
+            {
+              "src": "/portfolio/toki/app-tasks.png",
+              "alt": "Toki Tasks screen with Toki Case Study at the top of the queue, followed by two other example tasks",
+              "width": 780,
+              "height": 1320,
+              "caption": "Captured from the running Expo web build of AnujR17/toki at b032909 after creating three example tasks through Write."
+            }
           ]
         },
         {
@@ -449,6 +451,15 @@ export const mainProjects: Project[] = [
           "paragraphs": [
             "The e-paper display presents one activity at a time, supported by a small position indicator and session status. Left and right touch controls browse tasks; a centre tap starts elapsed-time tracking; holding the left control pauses; holding the centre control completes the activity.",
             "Starting a timer does not complete the task, and completion remains a deliberate action. The e-paper's slow refresh is a hardware constraint addressed in the firmware, not a phone-like animation."
+          ],
+          "figures": [
+            {
+              "src": "/portfolio/toki/device.webp",
+              "alt": "The prototype’s e-paper display showing Toki Case Study and prompting a centre tap to begin",
+              "width": 480,
+              "height": 456,
+              "caption": "Detail from the actual prototype video, with the assembled device visible in Outcome"
+            }
           ]
         },
         {
