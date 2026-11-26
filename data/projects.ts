@@ -45,9 +45,7 @@ export const mainProjects: Project[] = [
         {
           "title": "Understanding medicine routines",
           "paragraphs": [
-            "I received 24 survey responses and interviewed seven people about medicine routines. Some took part in both.",
-            "A separate senior-care survey of 56 respondents helped frame the caregiver perspective.",
-            "Families wanted to know when to check in without repeatedly asking about a dose."
+            "I used a survey, interviews and earlier senior-care research to understand how people manage medicine and how families support them."
           ]
         }
       ],

@@ -50,14 +50,12 @@ export function MedicineCaseStudy({ project }: { project: Project }) {
         <div className="lf-scene-content">
           <div className="lf-research-opening">
             <div><h2 id="research-title">Understanding routines</h2><p>{research[0]}</p></div>
-            <div className="lf-research-findings" aria-label="Findings from the 24-response survey">
-              <div><strong>13 / 24</strong><p>selected a meal-linked schedule</p></div>
-              <div><strong>8 / 24</strong><p>selected an as-needed schedule</p></div>
-              <div><strong>10 / 24</strong><p>reported a missing record as a gap</p></div>
-              <p className="lf-research-note">People could select more than one answer.</p>
+            <div className="lf-research-findings" aria-label="Research questions and findings">
+              <div><h3>How do routines fit into the day?</h3><p>Some people took medicine around meals, while others took it only when needed.</p></div>
+              <div><h3>Why do doses get missed?</h3><p>People mentioned forgetting or getting busy. Some found reminders easy to ignore or wanted a record of their doses.</p></div>
+              <div><h3>How can family help?</h3><p>People wanted to know if a parent had taken their medicine without having to ask every time.</p></div>
             </div>
           </div>
-          <div className="lf-reading-pair lf-research-reading">{research.slice(1).map(text => <p key={text}>{text}</p>)}</div>
         </div>
       </section>
 

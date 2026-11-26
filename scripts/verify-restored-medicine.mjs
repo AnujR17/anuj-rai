@@ -106,7 +106,12 @@ try {
   }
 
   await page.goto(base + '/work/medicine-app', { waitUntil: 'networkidle' });
-  assert.match(await page.locator('#research').innerText(), /24 survey responses/);
+  assert.deepEqual(await page.locator('#research .lf-research-findings h3').allTextContents(), [
+    'How do routines fit into the day?', 'Why do doses get missed?', 'How can family help?',
+  ]);
+  assert.deepEqual(await page.locator('#concept > .lf-scene-content > .lf-architecture .lf-architecture-steps strong').allTextContents(), [
+    'Add a prescription', 'Review and confirm', 'Follow the routine', 'See the history',
+  ]);
   assert.equal(await page.locator('#outcome h2').textContent(), 'What’s next');
   assert.match(await page.locator('#outcome').innerText(), /complete app and test it in daily use/);
   assert.doesNotMatch(await page.locator('#outcome').innerText(), /prototype|design steps/i);

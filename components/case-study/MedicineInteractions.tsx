@@ -40,14 +40,22 @@ export function MedicineGallery() {
 }
 
 function InformationStructure() {
-  return <div className="lf-architecture"><div className="lf-architecture-row"><div>Prescription</div><span className="lf-connector" aria-hidden="true" /><div>Review</div><span className="lf-connector" aria-hidden="true" /><div>Routine</div></div><div className="lf-architecture-branch" aria-hidden="true" /><div className="lf-architecture-row lf-architecture-children"><div>Record a dose</div><div>Understand an update</div></div></div>;
+  return <div className="lf-architecture" role="group" aria-label="Proposed flow from prescription setup to shared dose history">
+    <ol className="lf-architecture-steps">
+      <li><strong>Add a prescription</strong><span>Scan or upload it</span></li>
+      <li><strong>Review and confirm</strong><span>Check medicine details and reminder times</span></li>
+      <li><strong>Follow the routine</strong><span>Respond to reminders and record doses</span></li>
+      <li><strong>See the history</strong><span>View taken, missed and unrecorded doses</span></li>
+    </ol>
+    <div className="lf-architecture-shared"><strong>Caregiver view</strong><span>A connected caregiver can check the record and choose to call.</span></div>
+  </div>;
 }
 
 export function MedicineStructure() {
   const dialog = useRef<HTMLDialogElement>(null);
   useEffect(() => { const node = dialog.current; return () => node?.close(); }, []);
   return <>
-    <div className="lf-architecture-heading"><div><h3>From ideas to structure</h3><p>The information architecture brought prescription setup, daily records and family support into one flow.</p></div><button type="button" onClick={() => dialog.current?.showModal()}>Inspect structure</button></div>
+    <div className="lf-architecture-heading"><div><h3>From ideas to structure</h3><p>I organised the app around setting up a routine, recording doses and sharing the record with a caregiver.</p></div><button type="button" onClick={() => dialog.current?.showModal()}>Inspect structure</button></div>
     <InformationStructure />
     <a className="lf-board-link" href="https://www.figma.com/board/koDyOWomvBVtTlFdbcpNfD/Meditimer---IA--User-Flow">View the information architecture in FigJam</a>
     <dialog ref={dialog} className="lf-structure-dialog lf-modal" aria-labelledby="medicine-structure-title" onClick={event => { if (event.target === event.currentTarget) dialog.current?.close(); }}><div className="lf-dialog-heading"><h2 id="medicine-structure-title">Proposed information structure</h2><button type="button" onClick={() => dialog.current?.close()}>Close structure</button></div><InformationStructure /></dialog>
@@ -55,9 +63,9 @@ export function MedicineStructure() {
 }
 
 const facts = [
-  { value: "3", title: "Weeks", detail: "The duration of this individual app design project." },
-  { value: "24", title: "Survey responses", detail: "Responses to the Meditimer medicine-routine survey." },
-  { value: "7", title: "Interviews", detail: "Some interview participants also completed the survey, so the two counts overlap." },
+  { value: "3", title: "Weeks", detail: "The project covered research, information architecture and a clickable prototype in three weeks." },
+  { value: "24", title: "Survey responses", detail: "The survey asked about medicine schedules, reasons for forgetting and gaps in existing reminders." },
+  { value: "7", title: "Interviews", detail: "The conversations explored personal routines and how people keep track of a parent’s medicine." },
 ];
 
 export function MedicineFacts() {
