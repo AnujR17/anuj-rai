@@ -73,6 +73,7 @@ try {
     const indexBox = await stageNav.boundingBox();
     assert.ok(indexBox.x < width / 4 && height - indexBox.y - indexBox.height < 80);
     assert.ok(indexBox.x + indexBox.width <= width && indexBox.y + indexBox.height <= height);
+    if (width <= 700) assert.equal(indexBox.height, 44, 'Mobile stage links fit in one row');
     if ([1440, 390, 320].includes(width)) await page.screenshot({ path: `${out}/research-${width}.png` });
 
     await page.locator('.lf-gallery-item').nth(1).click();
