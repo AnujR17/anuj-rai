@@ -3,14 +3,15 @@
 import { useEffect, useRef, useState } from "react";
 import { caseStages, type StageId } from "@/data/case-study";
 
-export function LayeredCaseNav({ showInOpening = false }: { showInOpening?: boolean }) {
+export function LayeredCaseNav({ startAtResearch = false }: { startAtResearch?: boolean }) {
   const nav = useRef<HTMLElement>(null);
   const mobile = useRef<HTMLLabelElement>(null);
-  const [active, setActive] = useState<StageId>();
+  const [active, setActive] = useState<StageId>("research");
   useEffect(() => {
     const story = document.getElementById("lf-case-story");
     const article = story?.closest<HTMLElement>(".lf-main");
     if (!story || !article || !nav.current || !mobile.current) return;
+    const sections = caseStages.map(stage => document.getElementById(stage.id)!);
     article.dataset.enhanced = "true";
     let pending = 0, alive = true;
     const update = () => {
@@ -20,10 +21,10 @@ export function LayeredCaseNav({ showInOpening = false }: { showInOpening?: bool
       const height = index.getBoundingClientRect().height;
       const inset = Math.max(32, Math.min(64, innerHeight * .06));
       index.style.top = Math.min(desktop ? innerHeight - inset - height : 0, bounds.bottom - height - (desktop ? 24 : 0)) + "px";
-      nav.current!.dataset.visible = String(desktop && (showInOpening || bounds.top <= 120) && bounds.bottom > 24);
-      mobile.current!.dataset.visible = String(!desktop && bounds.top <= 96 && bounds.bottom > 0);
-      let current: StageId | undefined = showInOpening ? undefined : "research";
-      const sections = caseStages.map(stage => document.getElementById(stage.id)!);
+      const firstStageOffset = startAtResearch ? parseFloat(getComputedStyle(sections[0]).scrollMarginTop) + 1 : desktop ? 120 : 96;
+      nav.current!.dataset.visible = String(desktop && bounds.top <= firstStageOffset && bounds.bottom > 24);
+      mobile.current!.dataset.visible = String(!desktop && bounds.top <= firstStageOffset && bounds.bottom > 0);
+      let current: StageId = "research";
       for (const section of sections) if (section.getBoundingClientRect().top <= (desktop ? Math.min(180, innerHeight * .25) : 96)) current = section.id as StageId;
       setActive(current);
       for (const link of Array.from(nav.current!.querySelectorAll("a"))) {
@@ -37,9 +38,9 @@ export function LayeredCaseNav({ showInOpening = false }: { showInOpening?: bool
     window.addEventListener("scroll", queue, { passive: true }); window.addEventListener("resize", queue); window.addEventListener("hashchange", queue);
     document.fonts.ready.then(queue); queue();
     return () => { alive = false; cancelAnimationFrame(pending); resize.disconnect(); window.removeEventListener("scroll", queue); window.removeEventListener("resize", queue); window.removeEventListener("hashchange", queue); delete article.dataset.enhanced; };
-  }, [showInOpening]);
+  }, [startAtResearch]);
   return <>
     <nav ref={nav} className="lf-stage-index" aria-label="Case study stages">{caseStages.map(stage => <a href={`#${stage.id}`} key={stage.id} aria-current={active === stage.id ? "location" : undefined}>{stage.title}</a>)}</nav>
-    <label ref={mobile} className="lf-mobile-index">Stage<select aria-label="Case study stage" value={active ?? "research"} onChange={event => { location.hash = event.target.value; }}>{caseStages.map(stage => <option value={stage.id} key={stage.id}>{stage.title}</option>)}</select></label>
+    <label ref={mobile} className="lf-mobile-index">Stage<select aria-label="Case study stage" value={active} onChange={event => { location.hash = event.target.value; }}>{caseStages.map(stage => <option value={stage.id} key={stage.id}>{stage.title}</option>)}</select></label>
   </>;
 }

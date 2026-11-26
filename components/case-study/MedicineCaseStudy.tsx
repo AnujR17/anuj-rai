@@ -1,6 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Project } from "@/data/case-study";
-import { caregiverRoutine, historyExamples, openingScreens, personalRoutine } from "@/data/medicine-screens";
+import { caregiverRoutine, historyExamples, personalRoutine } from "@/data/medicine-screens";
 import { LayeredCaseNav } from "./LayeredCaseNav";
 import { MedicineFacts, MedicineGallery, MedicineStructure, StaticMedicineScreen } from "./MedicineInteractions";
 import { MedicineMotion } from "./MedicineMotion";
@@ -18,16 +19,17 @@ export function MedicineCaseStudy({ project }: { project: Project }) {
   return <article className="lf-main" data-restored-case="medicine-app">
     <header className="lf-hero lf-medicine-hero" id="hero" aria-labelledby="lf-hero-title">
       <Link href="/work" className="lf-all-work">All work</Link>
-      <div className="lf-medicine-intro">
-        <h1 id="lf-hero-title">Meditimer</h1>
-        <p>Manage your own medicine routine and share it with someone who supports you.</p>
+      <div className="lf-opening-visual">
+        <div className="lf-motion-visual">
+          <picture>
+            <source media="(max-width: 700px)" srcSet={`${media}/scan.webp`} width="540" height="900" />
+            <Image src={`${media}/hero.webp`} alt="Meditimer prescription setup and medicine routine"
+              width={1280} height={720} unoptimized loading="eager" fetchPriority="high" />
+          </picture>
+        </div>
       </div>
-      <ul className="lf-hero-phones" role="list" aria-label="Five Meditimer screens">
-        {openingScreens.map(screen => (
-          <li key={screen.mockup}><StaticMedicineScreen screen={screen} sizes="(max-width: 700px) 30vw, 175px" eager /></li>
-        ))}
-      </ul>
-      <LayeredCaseNav showInOpening />
+      <h1 id="lf-hero-title">Meditimer</h1>
+      <div className="lf-hero-copy"><p>A medicine routine you can manage and share with someone who cares for you</p></div>
     </header>
 
     <section className="lf-overview" id="overview" aria-labelledby="overview-title">
@@ -43,6 +45,7 @@ export function MedicineCaseStudy({ project }: { project: Project }) {
     </section>
 
     <div className="lf-case-story" id="lf-case-story">
+      <LayeredCaseNav startAtResearch />
       <section className="lf-scene lf-research" id="research" data-tone="light" aria-labelledby="research-title">
         <div className="lf-scene-content">
           <div className="lf-research-opening">
@@ -107,7 +110,6 @@ export function MedicineCaseStudy({ project }: { project: Project }) {
             <h2 id="outcome-title">{outcome.title}</h2>
             <div>{outcome.paragraphs.map(text => <p key={text}>{text}</p>)}</div>
           </div>
-          <div className="lf-next-steps"><h3>Next design steps</h3><p>Test how people correct a dose record and interpret missing entries. Explore scan errors, alert timing and caregiver permissions.</p></div>
         </div>
       </section>
     </div>

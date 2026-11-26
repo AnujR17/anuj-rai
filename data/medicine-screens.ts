@@ -57,14 +57,6 @@ export const caregiverRoutine: MedicineDeviceImage = {
   height: 1814,
 };
 
-export const openingScreens: MedicineDeviceImage[] = [
-  { mockup: "/portfolio/screens/capture-mockup.png", alt: "Capture a prescription", width: 840, height: 1780 },
-  { mockup: "/portfolio/screens/review-mockup.png", alt: "Review medicines from a prescription", width: 840, height: 1780 },
-  personalRoutine,
-  { mockup: "/portfolio/screens/routine-mockup.png", alt: "Confirm a medicine schedule", width: 840, height: 1780 },
-  caregiverRoutine,
-];
-
 export const historyExamples: (MedicineDeviceImage & { title: string })[] = [
   {
     title: "Partly recorded",

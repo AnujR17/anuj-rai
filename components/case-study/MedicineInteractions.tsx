@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { setupScreens, type MedicineDeviceImage } from "@/data/medicine-screens";
 
-export function StaticMedicineScreen({ screen, sizes = "(max-width: 700px) 85vw, 320px", eager = false }: { screen: MedicineDeviceImage; sizes?: string; eager?: boolean }) {
+export function StaticMedicineScreen({ screen, sizes = "(max-width: 700px) 85vw, 320px" }: { screen: MedicineDeviceImage; sizes?: string }) {
   return <Image className="lf-static-device" src={screen.mockup} width={screen.width ?? 540} height={screen.height ?? 900}
-    alt={screen.alt} sizes={sizes} loading={eager ? "eager" : undefined} />;
+    alt={screen.alt} sizes={sizes} />;
 }
 
 export function MedicineGallery() {

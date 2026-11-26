@@ -93,11 +93,9 @@ export const mainProjects: Project[] = [
       ],
       "outcome": [
         {
-          "title": "What the prototype covers",
+          "title": "What’s next",
           "paragraphs": [
-            "The Figma prototype covers prescription setup, daily reminders and caregiver support. Caregiver history is a separate exploration.",
-            "Informal exhibition feedback highlighted everyday routines and checking on a parent.",
-            "Prescription recognition, live notifications and shared access remain to be built and tested."
+            "Build Meditimer into a complete app and test it in daily use with people who take medicine and the caregivers who support them. I want to understand where routines break down, when a check-in helps, and what the app needs to do better."
           ]
         }
       ]

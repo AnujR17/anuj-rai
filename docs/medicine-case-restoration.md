@@ -1,10 +1,10 @@
 # Meditimer restoration and publication
 
-## Five-screen opening and history comparison
+## Original opening and history comparison
 
-The opening uses the original transparent mockups. The Insights assets `history-partial.webp` and `history-taken.webp` show Figma nodes `3121:48` and `3121:109` in file `on1gbKHkUo4CLZ38uCiSza`. Each frame was exported at its original size and fitted into the same fixed, transparent phone shell as the opening images.
+The opening uses the original desktop composition and mobile scan image, with the page background matched to each export. The Insights assets `history-partial.webp` and `history-taken.webp` show Figma nodes `3121:48` and `3121:109` in file `on1gbKHkUo4CLZ38uCiSza`. Each frame was exported at its original size and fitted into a fixed, transparent phone shell.
 
-The five-stage index is available from the opening. The supporting Design clips still respect reduced motion, and their surrounding surface matches the baked-in backgrounds.
+The five-stage index appears when Research reaches its anchor offset. The supporting Design clips respect reduced motion, and their surrounding surface matches the baked-in backgrounds.
 
 ## Case-study update, 20 November 2026
 

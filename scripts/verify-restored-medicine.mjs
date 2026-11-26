@@ -26,10 +26,19 @@ try {
     assert.deepEqual(await page.locator('.lf-scene').evaluateAll(sections => sections.map(section => section.id)), stages);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `Overflow at ${width}px`);
     assert.equal(await page.locator('.lf-facts details').count(), 3);
-    assert.equal(await page.locator('#hero .lf-hero-phones img').count(), 5);
+    const heroImage = page.locator('#hero .lf-opening-visual img');
+    assert.equal(await heroImage.count(), 1);
+    await heroImage.evaluate(image => image.decode());
+    assert.match(decodeURIComponent(await heroImage.evaluate(image => image.currentSrc)), width > 700 ? /hero\.webp/ : /scan\.webp/);
+    assert.deepEqual(await page.locator('#hero').evaluate(hero => [
+      getComputedStyle(hero).backgroundColor,
+      getComputedStyle(hero.querySelector('.lf-motion-visual')).backgroundColor,
+    ]), Array(2).fill(width > 700 ? 'rgb(234, 234, 234)' : 'rgb(235, 235, 235)'));
     assert.equal(await page.locator('#hero video, #hero .lf-motion-toggle').count(), 0);
-    assert.deepEqual(await page.locator('#hero .lf-stage-index a').allTextContents(), ['Research', 'Insights', 'Concept', 'Design', 'Outcome']);
-    await page.locator('#hero .lf-stage-index').waitFor({ state: 'visible' });
+    assert.deepEqual(await page.locator('.lf-stage-index a').allTextContents(), ['Research', 'Insights', 'Concept', 'Design', 'Outcome']);
+    const stageNav = page.locator(width > 700 ? '.lf-stage-index' : '.lf-mobile-index');
+    await page.locator('.lf-main[data-enhanced="true"]').waitFor({ state: 'attached' });
+    await stageNav.waitFor({ state: 'hidden' });
     assert.equal(await page.locator('#insights .lf-history-pair img').count(), 2);
     assert.match(await page.locator('#design .lf-design-tools').innerText(), /Design tools\s+Figma and FigJam/);
     assert.doesNotMatch(await page.locator('article').innerText(), /No update yet|Sources and credits|A prototype for the next conversation/i);
@@ -50,6 +59,11 @@ try {
       imageChecks++;
     }
     if ([1440, 390].includes(width)) await page.screenshot({ path: `${out}/hero-${width}.png` });
+    await page.locator('#overview').evaluate(section => section.scrollIntoView({ behavior: 'instant' }));
+    await page.waitForFunction(() => document.querySelector('#research').getBoundingClientRect().top > 120);
+    await stageNav.waitFor({ state: 'hidden' });
+    await page.locator('#research').evaluate(section => section.scrollIntoView({ behavior: 'instant' }));
+    await stageNav.waitFor({ state: 'visible' });
 
     await page.locator('.lf-gallery-item').nth(1).click();
     assert.equal(await page.locator('.lf-design-gallery').getAttribute('data-active'), '1');
@@ -78,7 +92,9 @@ try {
 
   await page.goto(base + '/work/medicine-app', { waitUntil: 'networkidle' });
   assert.match(await page.locator('#research').innerText(), /24 survey responses/);
-  assert.match(await page.locator('#outcome').innerText(), /Informal exhibition feedback/);
+  assert.equal(await page.locator('#outcome h2').textContent(), 'What’s next');
+  assert.match(await page.locator('#outcome').innerText(), /complete app and test it in daily use/);
+  assert.doesNotMatch(await page.locator('#outcome').innerText(), /prototype|design steps/i);
   assert.doesNotMatch(await page.locator('article').innerText(), /developed the app independently/);
   await page.close();
 
@@ -105,7 +121,7 @@ try {
   await plainContext.close();
   assert.deepEqual(errors, []);
 
-  const report = { passed: true, viewports: 5, imageChecks, runtimeErrors: errors, checks: ['Five-stage navigation from the opening', 'Responsive flattened mockups', 'Five-screen static opening', 'Pauseable supporting sequences and reduced motion', 'Keyboard gallery and full-size screen fallback', 'Information structure dialog', 'Original caregiver-history screens', 'Other case routes', 'No-JavaScript image access'] };
+  const report = { passed: true, viewports: 5, imageChecks, runtimeErrors: errors, checks: ['Stage navigation starts at Research', 'Responsive flattened mockups', 'Original static opening and matched background', 'Pauseable supporting sequences and reduced motion', 'Keyboard gallery and full-size screen fallback', 'Information structure dialog', 'Original caregiver-history screens', 'What’s next copy', 'Other case routes', 'No-JavaScript image access'] };
   fs.writeFileSync(out + '/verification.json', JSON.stringify(report, null, 2));
   console.log(JSON.stringify(report));
 } finally {

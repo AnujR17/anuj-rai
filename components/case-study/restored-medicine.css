@@ -104,46 +104,28 @@
 .lf-feature-grid section { min-width:0; }
 .lf-feature-grid h3 { margin:24px 0 18px; font-size:23px; line-height:1.2; font-weight:450; letter-spacing:-.035em; }
 .lf-feature-grid p { font-size:16px; line-height:1.65; }
-.lf-next-steps { display:grid; grid-template-columns:1.2fr 1fr; gap:70px; margin-top:100px; }
-.lf-next-steps h3 { font-size:25px; font-weight:450; letter-spacing:-.03em; }
 @media (max-width:1050px) and (min-width:701px) {
  .lf-opening-visual { left:auto; right:var(--lf-inset); width:min(75%, 760px); }
  .lf-design-gallery,.lf-design-gallery[data-active] { grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 20px; }
  .lf-gallery-item { order:1; }.lf-gallery-item[aria-pressed=true] { order:0; grid-column:1 / -1; width:84%; }
  .lf-feature-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:48px 24px; }
- .lf-feature-heading,.lf-next-steps { grid-template-columns:1fr; gap:28px; }
+ .lf-feature-heading { grid-template-columns:1fr; gap:28px; }
 }
 @media (max-width:700px) {
  .lf-hero { grid-template-rows:570px auto auto; }
  .lf-opening-visual { top:56px; left:50%; right:auto; width:min(78%, 300px); transform:translateX(-50%); }
  .lf-opening-visual .lf-motion-visual { aspect-ratio:3 / 5; }
  .lf-overview-contribution { grid-template-columns:1fr; }
- .lf-feature-heading,.lf-next-steps { grid-template-columns:1fr; gap:24px; }
+ .lf-feature-heading { grid-template-columns:1fr; gap:24px; }
  .lf-feature-heading { margin-top:80px; }
  .lf-feature-grid { grid-template-columns:1fr; gap:56px; margin-top:36px; }
  .lf-feature-grid .lf-motion { max-width:400px; }
  .lf-feature-grid h3 { margin-top:20px; }
- .lf-next-steps { margin-top:70px; }
 }
 
-/* The Meditimer opening and the original caregiver-history screens. */
-.lf-main .lf-medicine-hero {
-  min-height: clamp(590px, calc(100svh - 84px), 820px);
-  padding-block: 78px 76px;
-  grid-template-columns: minmax(218px, .74fr) minmax(0, 1.96fr);
-  grid-template-rows: auto;
-  align-items: center;
-  align-content: center;
-  gap: clamp(24px, 3.5vw, 56px);
-  background: #edf0e9;
-}
-.lf-medicine-intro p { max-width: 32ch; margin-top: 22px; font-size: clamp(16px, 1.55vw, 22px); line-height: 1.45; }
-.lf-hero-phones { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; align-items: center; padding-block: 26px; }
-.lf-hero-phones li { min-width: 0; }
-.lf-hero-phones li:nth-child(2) { transform: translateY(-19px); }
-.lf-hero-phones li:nth-child(4) { transform: translateY(23px); }
-.lf-hero-phones li:nth-child(5) { transform: translateY(-11px); }
-.lf-main .lf-medicine-hero .lf-stage-index { grid-column: 1 / -1; margin-left: 0; }
+/* Match the opening surface to the original desktop and mobile exports. */
+.lf-medicine-hero { --lf-hero-surface: #eaeaea; background: var(--lf-hero-surface); }
+.lf-main .lf-medicine-hero .lf-motion-visual { background: var(--lf-hero-surface); }
 .lf-main[data-restored-case="medicine-app"] .lf-overview-reading { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 56px; }
 .lf-main[data-restored-case="medicine-app"] .lf-overview-contribution { grid-template-columns: 1fr; }
 .lf-main[data-restored-case="medicine-app"] .lf-insight-copy h2 { margin-bottom: 27px; }
@@ -152,7 +134,7 @@
 .lf-history-pair > div:nth-child(2) { margin-top: clamp(20px, 4vw, 64px); }
 .lf-history-pair h3 { font-size: 16px; margin-bottom: 14px; }
 .lf-main[data-restored-case="medicine-app"] .lf-design,
-.lf-main[data-restored-case="medicine-app"] .lf-motion-visual { background: #ebebeb; }
+.lf-main[data-restored-case="medicine-app"] .lf-feature-grid .lf-motion-visual { background: #ebebeb; }
 .lf-design-tools { flex-shrink: 0; min-width: 140px; font-size: 16px; line-height: 1.5; }
 .lf-design-tools dt { font-weight: 550; color: #28583b; }
 .lf-design-tools dd { margin-top: 4px; }
@@ -162,37 +144,12 @@
 .lf-main[data-restored-case="medicine-app"] .lf-feature-grid > section:has(.lf-feature-phone) h3 { margin-top: 60px; }
 
 @media (min-width: 701px) and (max-width: 960px) {
-  .lf-main .lf-medicine-hero { grid-template-columns: 1fr; padding-bottom: 60px; }
-  .lf-hero-phones { margin-inline-start: 140px; }
   .lf-med-history-layout { grid-template-columns: 1fr; }
   .lf-history-pair { max-width: 540px; }
 }
 
 @media (max-width: 700px) {
-  .lf-main .lf-medicine-hero {
-    min-height: 0;
-    padding-block: 70px 25px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 16px;
-  }
-  .lf-medicine-intro p { margin-top: 12px; }
-  .lf-hero-phones { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 9px 12px; padding-block: 12px; }
-  .lf-hero-phones li { grid-column: span 2; }
-  .lf-hero-phones li:nth-child(4) { grid-column: 2 / span 2; }
-  .lf-hero-phones li:nth-child(5) { grid-column: 4 / span 2; }
-  .lf-hero-phones li:nth-child(n) { transform: none; }
-  .lf-main .lf-medicine-hero .lf-stage-index {
-    display: flex;
-    position: static;
-    visibility: visible;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: auto;
-    gap: 0 15px;
-    padding: 0;
-  }
-  .lf-medicine-hero .lf-stage-index a { min-height: 44px; font-size: 14px; }
+  .lf-medicine-hero { --lf-hero-surface: #ebebeb; }
   .lf-main[data-restored-case="medicine-app"] .lf-overview-reading,
   .lf-med-history-layout { grid-template-columns: 1fr; }
   .lf-main[data-restored-case="medicine-app"] .lf-paired-study { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
