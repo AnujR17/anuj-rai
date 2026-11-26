@@ -2,10 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { setupScreens, type MedicineScreen } from "@/data/medicine-screens";
+import { setupScreens, type MedicineDeviceImage } from "@/data/medicine-screens";
 
-export function StaticMedicineScreen({ screen }: { screen: MedicineScreen }) {
-  return <Image className="lf-static-device" src={screen.mockup} width={540} height={900} alt={screen.alt} sizes="(max-width: 700px) 85vw, 320px" />;
+export function StaticMedicineScreen({ screen, sizes = "(max-width: 700px) 85vw, 320px", eager = false }: { screen: MedicineDeviceImage; sizes?: string; eager?: boolean }) {
+  return <Image className="lf-static-device" src={screen.mockup} width={screen.width ?? 540} height={screen.height ?? 900}
+    alt={screen.alt} sizes={sizes} loading={eager ? "eager" : undefined} />;
 }
 
 export function MedicineGallery() {
@@ -51,19 +52,6 @@ export function MedicineStructure() {
     <a className="lf-board-link" href="https://www.figma.com/board/koDyOWomvBVtTlFdbcpNfD/Meditimer---IA--User-Flow">View the information architecture in FigJam</a>
     <dialog ref={dialog} className="lf-structure-dialog lf-modal" aria-labelledby="medicine-structure-title" onClick={event => { if (event.target === event.currentTarget) dialog.current?.close(); }}><div className="lf-dialog-heading"><h2 id="medicine-structure-title">Proposed information structure</h2><button type="button" onClick={() => dialog.current?.close()}>Close structure</button></div><InformationStructure /></dialog>
   </>;
-}
-
-const recordStates = [
-  { label: "No update", title: "No update yet", detail: "No response has been recorded, so the outcome remains unknown." },
-  { label: "Taken", title: "Marked as taken", detail: "The person recorded that they took this dose." },
-  { label: "Missed", title: "Marked as missed", detail: "The person recorded that they missed this dose." },
-] as const;
-
-export function DoseRecordStudy() {
-  const [selected, setSelected] = useState(0);
-  return <div className="lf-status-study"><div className="lf-status-card"><span>Afternoon medicine</span><strong>{recordStates[selected].title}</strong><div className="lf-status-line" aria-hidden="true" /><span>{recordStates[selected].detail}</span></div>
-    <div className="lf-status-options" role="group" aria-label="Explore dose record states">{recordStates.map((state, index) => <button type="button" key={state.label} aria-pressed={selected === index} onClick={() => setSelected(index)}>{state.label}</button>)}</div>
-  </div>;
 }
 
 const facts = [

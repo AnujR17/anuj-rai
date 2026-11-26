@@ -1,5 +1,11 @@
 # Meditimer restoration and publication
 
+## Five-screen opening and history comparison
+
+The opening uses the original transparent mockups. The Insights assets `history-partial.webp` and `history-taken.webp` show Figma nodes `3121:48` and `3121:109` in file `on1gbKHkUo4CLZ38uCiSza`. Each frame was exported at its original size and fitted into the same fixed, transparent phone shell as the opening images.
+
+The five-stage index is available from the opening. The supporting Design clips still respect reduced motion, and their surrounding surface matches the baked-in backgrounds.
+
 ## Case-study update, 20 November 2026
 
 The Meditimer case-study update retains the bottom-aligned heading, five-stage index, DM Sans typography and responsive layout while replacing the older presentation with the selected case-study screens and flattened device mockups. The opening uses an opt-in setup sequence; the supporting sequences have pause controls and respect reduced-motion preferences. The gallery offers a full-size view of the selected setup screens and links to the original Figma work. The information-architecture section links to the FigJam board. The user's physical Post-it photograph is not present as a file in the repository.

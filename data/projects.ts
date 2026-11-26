@@ -8,11 +8,11 @@ export const mainProjects: Project[] = [
     "slug": "medicine-app",
     "title": "Meditimer app",
     "headline": "Making medicine routines easier to manage together",
-    "summary": "Meditimer is a medicine management app designed to help people keep track of their medicines and stay connected with someone who cares for them. It brings prescription setup, reminders, dose records and caregiver support into one experience.",
-    "brief": "Design a medicine reminder experience that helps a person manage their own routine and gives a loved one context for a supportive check-in.",
-    "problem": "People can forget a dose during a busy day, while a family member may be unsure whether to check in. A useful record needs to make clear what has been recorded without assuming that an unrecorded dose was missed.",
+    "summary": "Meditimer brings prescription setup, reminders and shared dose records into one medicine routine.",
+    "brief": "Design a medicine routine that a person can manage and share with a caregiver.",
+    "problem": "When a dose goes unrecorded, a caregiver lacks the context to decide whether to check in.",
     "duration": "3 weeks",
-    "contribution": "Individual project covering research, information architecture, interaction design, interface design and a clickable Figma prototype.",
+    "contribution": "Research, information architecture, interaction design and prototyping",
     "visual": "medicine",
     "resources": [
       {
@@ -37,9 +37,9 @@ export const mainProjects: Project[] = [
         {
           "title": "Understanding medicine routines",
           "paragraphs": [
-            "For Meditimer, I received 24 survey responses about medicine routines and interviewed seven people. Some interviewees also completed the survey, so these are not a combined count of distinct participants.",
-            "An earlier, separate senior-care study provided context from 56 responses, most from caregivers or people who identified as both caregivers and seniors. It helped me think about support across a family, alongside an individual’s daily routine.",
-            "People described forgetting medicines and wanting to know whether a loved one had taken theirs without repeatedly asking. Those conversations shaped the idea of a record that can support a thoughtful check-in."
+            "I received 24 survey responses and interviewed seven people about medicine routines. Some took part in both.",
+            "A separate senior-care survey of 56 respondents helped frame the caregiver perspective.",
+            "Families wanted to know when to check in without repeatedly asking about a dose."
           ]
         }
       ],
@@ -47,9 +47,9 @@ export const mainProjects: Project[] = [
         {
           "title": "A record needs to leave room for uncertainty",
           "paragraphs": [
-            "A reminder can bring a medicine to someone’s attention, but people also need to know what it relates to and be able to record their response.",
-            "An empty record can mean a dose was forgotten, taken without being recorded, or not yet acknowledged. I separated ‘no update yet’ from a dose explicitly marked as missed, so a caregiver has context before following up.",
-            "A day can also contain several doses. The history exploration shows individual entries and a partial state instead of using one colour to imply that every dose has been taken."
+            "A caregiver needs to see what someone recorded for each dose.",
+            "An unrecorded dose is still unknown. A missed dose is one the person explicitly marked as missed.",
+            "The history shows individual entries so a partly recorded day is visible at a glance."
           ]
         }
       ],
@@ -57,9 +57,9 @@ export const mainProjects: Project[] = [
         {
           "title": "One routine, two perspectives",
           "paragraphs": [
-            "The person taking medicine needs to see what is due and make a quick update. Someone supporting them needs to understand the record and decide whether to reach out.",
-            "I organised the concept around both perspectives: a routine a person can review and manage, and a separate caregiver view that brings the record and a call action together.",
-            "The pairing concept uses an invitation by phone number or contact, initiated by either person. Permissions and adding medicines on someone else’s behalf still need further design."
+            "One person records what they take. The other uses the shared record to decide when to reach out.",
+            "The personal view shows the next dose. The caregiver view pairs the record with a way to call.",
+            "Either person can initiate pairing by phone number or contact. Caregiver permissions need further design."
           ]
         }
       ],
@@ -67,29 +67,29 @@ export const mainProjects: Project[] = [
         {
           "title": "Record a dose",
           "paragraphs": [
-            "A reminder puts the medicine and ‘Mark as taken’ together, making the action specific to the dose. The record reflects what the person reports."
+            "The reminder names the medicine and lets the person record that dose."
           ]
         },
         {
           "title": "Check in with care",
           "paragraphs": [
-            "A proposed alert appears after 30 minutes without an update. The caregiver can open the history and choose to call or send a reminder; an empty record is not treated as confirmation that a dose was missed."
+            "A proposed alert after 30 minutes lets a caregiver review the record before calling or sending a reminder."
           ]
         },
         {
           "title": "Remember as-needed medicine",
           "paragraphs": [
-            "A separate logging flow explores recording medicine taken when needed, including the time. It could help someone recall an allergy medicine at a later doctor’s visit."
+            "Log an as-needed medicine and the time it was taken."
           ]
         }
       ],
       "outcome": [
         {
-          "title": "A prototype for the next conversation",
+          "title": "What the prototype covers",
           "paragraphs": [
-            "The outcome is a clickable Figma prototype covering key parts of onboarding, prescription setup, a daily medicine view and caregiver support. A separate linked history exploration shows taken, missed, partial and no-update states.",
-            "At an exhibition, I shared the concept with about five colleagues and other visitors. Informal conversations highlighted its potential for personal routines, checking on a parent, keeping prescriptions and recalling allergy medicine. This was feedback on the concept, not a structured usability test.",
-            "Prescription recognition, a medicine database, live reminders, calls, pairing and sharing would require implementation and evaluation. The separate history screens are an exploration and are not integrated with the original setup flow."
+            "The Figma prototype covers prescription setup, daily reminders and caregiver support. Caregiver history is a separate exploration.",
+            "Informal exhibition feedback highlighted everyday routines and checking on a parent.",
+            "Prescription recognition, live notifications and shared access remain to be built and tested."
           ]
         }
       ]

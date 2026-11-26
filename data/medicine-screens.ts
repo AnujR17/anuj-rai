@@ -1,11 +1,16 @@
-export type MedicineScreen = {
+export type MedicineDeviceImage = {
+  mockup: string;
+  alt: string;
+  width?: number;
+  height?: number;
+};
+
+export type MedicineScreen = MedicineDeviceImage & {
   id: string;
   title: string;
   reason: string;
-  mockup: string;
   source: string;
   figma: string;
-  alt: string;
 };
 
 export const setupScreens: MedicineScreen[] = [
@@ -38,22 +43,41 @@ export const setupScreens: MedicineScreen[] = [
   },
 ];
 
-export const personalScreen: MedicineScreen = {
-  id: "reminder",
-  title: "Taking medicine",
-  reason: "A reminder keeps the recording action close to the dose.",
-  mockup: "/portfolio/meditimer-case/reminder.webp",
-  source: "/portfolio/meditimer-case/reminder.webp",
-  figma: "https://www.figma.com/design/on1gbKHkUo4CLZ38uCiSza/?node-id=3131-496",
-  alt: "A medicine reminder with a mark as taken action",
+export const personalRoutine: MedicineDeviceImage = {
+  mockup: "/portfolio/screens/medicine-mockup.png",
+  alt: "Personal routine with upcoming doses, progress for the day and an action to mark a dose as taken",
+  width: 840,
+  height: 2130,
 };
 
-export const caregiverScreen: MedicineScreen = {
-  id: "history",
-  title: "Supporting someone",
-  reason: "A caregiver can read the available record before deciding to check in.",
-  mockup: "/portfolio/meditimer-case/history.webp",
-  source: "/portfolio/meditimer-case/history.webp",
-  figma: "https://www.figma.com/design/on1gbKHkUo4CLZ38uCiSza/?node-id=3121-219",
-  alt: "Caregiver history showing taken, missed, partial and no-update examples, with a call action",
+export const caregiverRoutine: MedicineDeviceImage = {
+  mockup: "/portfolio/screens/caregiver-mockup.png",
+  alt: "Caregiver routine with recorded doses and options to call or send a reminder",
+  width: 840,
+  height: 1814,
 };
+
+export const openingScreens: MedicineDeviceImage[] = [
+  { mockup: "/portfolio/screens/capture-mockup.png", alt: "Capture a prescription", width: 840, height: 1780 },
+  { mockup: "/portfolio/screens/review-mockup.png", alt: "Review medicines from a prescription", width: 840, height: 1780 },
+  personalRoutine,
+  { mockup: "/portfolio/screens/routine-mockup.png", alt: "Confirm a medicine schedule", width: 840, height: 1780 },
+  caregiverRoutine,
+];
+
+export const historyExamples: (MedicineDeviceImage & { title: string })[] = [
+  {
+    title: "Partly recorded",
+    mockup: "/portfolio/meditimer-case/history-partial.webp",
+    alt: "Original Meditimer caregiver history for a partly recorded day, showing individual doses",
+    width: 840,
+    height: 1828,
+  },
+  {
+    title: "Taken",
+    mockup: "/portfolio/meditimer-case/history-taken.webp",
+    alt: "Original Meditimer caregiver history for a day with a dose marked as taken",
+    width: 840,
+    height: 1828,
+  },
+];
