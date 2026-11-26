@@ -63,17 +63,19 @@ try {
     await page.waitForFunction(() => document.querySelector('#research').getBoundingClientRect().top > 120);
     await stageNav.waitFor({ state: 'hidden' });
     await page.locator('#research').evaluate(async section => {
-      window.scrollTo({ top: window.scrollY + section.getBoundingClientRect().top - 30, behavior: 'instant' });
+      window.scrollTo({ top: window.scrollY + section.getBoundingClientRect().top - 160, behavior: 'instant' });
       await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
     });
     assert.equal(await stageNav.isVisible(), false);
-    await page.locator('#research').evaluate(section => section.scrollIntoView({ behavior: 'instant' }));
+    await page.locator('#research').evaluate(section => {
+      window.scrollTo({ top: window.scrollY + section.getBoundingClientRect().top - 46, behavior: 'instant' });
+    });
     await stageNav.waitFor({ state: 'visible' });
     assert.equal(await page.locator('.lf-mobile-index').isVisible(), false);
     const indexBox = await stageNav.boundingBox();
     assert.ok(indexBox.x < width / 4 && height - indexBox.y - indexBox.height < 80);
     assert.ok(indexBox.x + indexBox.width <= width && indexBox.y + indexBox.height <= height);
-    if (width <= 700) assert.equal(indexBox.height, 44, 'Mobile stage links fit in one row');
+    if (width <= 700) assert.equal(indexBox.height, 46, 'Mobile stage links fit in one row');
     if ([1440, 390, 320].includes(width)) await page.screenshot({ path: `${out}/research-${width}.png` });
 
     await page.locator('.lf-gallery-item').nth(1).click();
@@ -90,6 +92,12 @@ try {
     await page.getByRole('button', { name: 'Close structure' }).click();
     assert.equal(await page.locator('.lf-structure-dialog').evaluate(dialog => dialog.open), false);
     await page.locator('#insights').evaluate(section => section.scrollIntoView({ behavior: 'instant' }));
+    await stageNav.locator('a[href="#insights"][aria-current="location"]').waitFor();
+    assert.deepEqual(await stageNav.evaluate(nav => ({
+      surface: getComputedStyle(nav).backgroundColor,
+      active: getComputedStyle(nav.querySelector('[aria-current="location"]')).color,
+      inactive: getComputedStyle(nav.querySelector('a[href="#research"]')).color,
+    })), { surface: 'rgb(229, 235, 231)', active: 'rgb(40, 88, 59)', inactive: 'rgb(68, 85, 72)' });
     if ([1440, 390].includes(width)) await page.screenshot({ path: `${out}/insights-${width}.png` });
     await stageNav.getByRole('link', { name: 'Design' }).click();
     await page.waitForURL(url => url.hash === '#design');

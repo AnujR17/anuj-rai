@@ -127,6 +127,24 @@
 .lf-medicine-hero { --lf-hero-surface: #eaeaea; background: var(--lf-hero-surface); }
 .lf-main .lf-medicine-hero .lf-motion-visual { background: var(--lf-hero-surface); }
 .lf-main[data-restored-case="medicine-app"] #research { scroll-margin-top: 0; }
+.lf-main[data-restored-case="medicine-app"] .lf-stage-index {
+  width: max-content;
+  gap: 5px;
+  padding: 4px 12px;
+  border: 1px solid #a9b8aa;
+  border-radius: 4px;
+  background: var(--lf-pale);
+}
+.lf-main[data-restored-case="medicine-app"] .lf-stage-index a {
+  min-height: 44px;
+  font-size: 17px;
+  color: #445548;
+}
+.lf-main[data-restored-case="medicine-app"] .lf-stage-index a:is(:hover, :focus-visible, [aria-current="location"]) {
+  color: #28583b;
+  outline-color: currentColor;
+  text-decoration: underline;
+}
 .lf-main[data-restored-case="medicine-app"] .lf-overview-reading { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 56px; }
 .lf-main[data-restored-case="medicine-app"] .lf-overview-contribution { grid-template-columns: 1fr; }
 .lf-main[data-restored-case="medicine-app"] .lf-insight-copy h2 { margin-bottom: 27px; }
@@ -153,16 +171,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     left: 16px;
-    width: max-content;
     max-width: calc(100% - 32px);
     gap: 0 8px;
-    padding-inline: 8px;
-    border-radius: 4px;
-    background: #f7f7f2;
+    padding: 0 8px;
     box-shadow: 0 1px 6px #1c19172b;
   }
-  .lf-main[data-enhanced=true] .lf-stage-index[data-mobile-links=true]:has(a[data-tone=dark]) { background: #28583b; }
-  .lf-stage-index[data-mobile-links=true] a { min-height: 44px; font-size: 12px; }
+  .lf-main[data-restored-case="medicine-app"] .lf-stage-index a { font-size: 12px; }
   .lf-main[data-restored-case="medicine-app"] .lf-overview-reading,
   .lf-med-history-layout { grid-template-columns: 1fr; }
   .lf-main[data-restored-case="medicine-app"] .lf-paired-study { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }

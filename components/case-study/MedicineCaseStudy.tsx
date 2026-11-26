@@ -45,7 +45,7 @@ export function MedicineCaseStudy({ project }: { project: Project }) {
     </section>
 
     <div className="lf-case-story" id="lf-case-story">
-      <LayeredCaseNav startAtResearch mobileLinks />
+      <LayeredCaseNav mobileLinks />
       <section className="lf-scene lf-research" id="research" data-tone="light" aria-labelledby="research-title">
         <div className="lf-scene-content">
           <div className="lf-research-opening">
