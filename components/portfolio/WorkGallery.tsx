@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./work-gallery.module.css";
 
-type WorkItem = { slug: string; title: string };
+type WorkItem = { slug: string; title: string; cover: string };
 const aspect = 16 / 9;
 const speed = .18;
 const scale = .65;
@@ -232,7 +232,7 @@ export function WorkGallery({ items }: { items: WorkItem[] }) {
     <div ref={track} className={styles.track}>
       {items.map((item, index) => <Link key={item.slug} href={`/work/${item.slug}`} className={styles.project} data-work-project={item.slug} draggable={false}>
         <h2 className={styles.fallbackTitle}>{item.title}</h2>
-        <Image src={`/portfolio/banners/${item.slug}.png`} width={1600} height={900} alt={`${item.title} project cover`} draggable={false} preload={index === 0} loading={index === 0 ? undefined : "eager"} sizes="(max-width: 700px) 65vw, 40vw" />
+        <Image src={item.cover} width={1600} height={900} alt={`${item.title} project cover`} draggable={false} preload={index === 0} loading={index === 0 ? undefined : "eager"} sizes="(max-width: 700px) 65vw, 40vw" />
       </Link>)}
     </div>
     <div ref={labelContainer} className={styles.labels}>

@@ -13,10 +13,6 @@ const numbers: Record<string, NumberItem[]> = {
     { value: "3", label: "Weeks", detail: "The confirmed duration of the individual dashboard project" },
   ],
   medtimer: [{ value: "3", label: "Weeks", detail: "The confirmed group-project duration. Anuj developed the concept and interactions; teammates contributed mockups and documentation" }],
-  toki: [
-    { value: "4", label: "Tasks in the queue", detail: "The first four unfinished tasks synchronize while the device is idle. Updates wait during a running task" },
-    { value: "3", label: "App tabs", detail: "Write, Tasks and Device separate capturing an idea, arranging work and connecting the object" },
-  ],
   "india-in-orbit": [{ value: "3", label: "Weeks", detail: "The confirmed duration for designing and developing the interactive website, with guidance from Dr Anupam Rana" }],
   "gandhinagar-roundabouts": [
     { value: "298", label: "Record rows", detail: "98 Sector-21, 87 Sector-7 and 113 Infocity rows after excluding its header. These are records, not exposure-adjusted crash rates" },
@@ -33,10 +29,10 @@ const numbers: Record<string, NumberItem[]> = {
   ],
 };
 
-export function CaseNumbers({ slug }: { slug: string }) {
+export function CaseNumbers({ slug, inline = false }: { slug: string; inline?: boolean }) {
   const items = numbers[slug];
   if (!items) return null;
-  return <div className={styles.numbers} aria-label="Project numbers">
+  return <div className={inline ? `${styles.numbers} ${styles.inlineNumbers}` : styles.numbers} aria-label="Project numbers">
     {items.map(item => <details key={item.label} className={styles.number}
       onMouseEnter={event => { event.currentTarget.open = true; }}
       onMouseLeave={event => { if (!event.currentTarget.matches(":focus-within")) event.currentTarget.open = false; }}>

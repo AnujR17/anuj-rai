@@ -77,4 +77,7 @@
   .pair { grid-template-columns: 1fr; }
   .caseEnd { flex-direction: column; }
 }
+.numbers.inlineNumbers { gap: clamp(16px, 4vw, 42px); margin-top: 26px; min-height: 0; }
+.inlineNumbers .number summary > span { font-size: clamp(28px, 4vw, 52px); }
+.inlineNumbers .number summary { gap: 8px; }
 @media (prefers-reduced-motion: reduce) { .stageNav a { transition: none; } .number p { animation: none; } }

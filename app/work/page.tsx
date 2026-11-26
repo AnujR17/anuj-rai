@@ -8,7 +8,8 @@ export const metadata: Metadata = { title: "Work | Anuj Rai", description: "Eigh
 export default function Work() {
   const items = workProjectSlugs.map(slug => {
     const project = projects.find(item => item.slug === slug)!;
-    return { slug, title: project.title };
+    const cover = slug === "toki" ? "/portfolio/banners/toki-desk.png" : `/portfolio/banners/${slug}.png`;
+    return { slug, title: project.title, cover };
   });
   return <WorkGallery items={items} />;
 }

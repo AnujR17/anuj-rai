@@ -21,6 +21,9 @@ export interface CaseBlock {
   title?: string;
   paragraphs: string[];
   figures?: ProjectImage[];
+  steps?: string[];
+  links?: { label: string; href: string }[];
+  video?: { src: string; poster: string; label: string };
 }
 
 export interface Project {
@@ -33,6 +36,10 @@ export interface Project {
   duration?: string;
   contribution: string;
   image?: ProjectImage;
+  caseOverview?: {
+    details: { label: string; value: string }[];
+    solution: string;
+  };
   visual?: "medicine";
   live?: string;
   liveLabel?: string;

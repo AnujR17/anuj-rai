@@ -10,6 +10,7 @@ import { CaseStudyNav } from "@/components/case-study/CaseStudyNav";
 import { ProjectArtwork } from "@/components/case-study/ProjectArtwork";
 import { CaseNumbers } from "@/components/case-study/CaseNumbers";
 import { MedicineCaseStudy } from "@/components/case-study/MedicineCaseStudy";
+import { TokiCaseStudy } from "@/components/case-study/TokiCaseStudy";
 import styles from "@/components/case-study/case-study.module.css";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -32,6 +33,7 @@ export default async function CaseStudy({ params }: Props) {
   const mainIndex = workProjectSlugs.findIndex(item => item === slug);
   const nextSlug = workProjectSlugs[(mainIndex + 1) % workProjectSlugs.length];
   const next = mainIndex >= 0 ? projects.find(item => item.slug === nextSlug) : undefined;
+  if (slug === "toki") return <TokiCaseStudy project={project} next={next} />;
   return (
     <article className={styles.caseStudy}>
       <header className={styles.hero}>
