@@ -36,11 +36,11 @@ try {
     ]), Array(2).fill(width > 700 ? 'rgb(234, 234, 234)' : 'rgb(235, 235, 235)'));
     assert.equal(await page.locator('#hero video, #hero .lf-motion-toggle').count(), 0);
     assert.deepEqual(await page.locator('.lf-stage-index a').allTextContents(), ['Research', 'Insights', 'Concept', 'Design', 'Outcome']);
-    const stageNav = page.locator(width > 700 ? '.lf-stage-index' : '.lf-mobile-index');
+    const stageNav = page.locator('.lf-stage-index');
     await page.locator('.lf-main[data-enhanced="true"]').waitFor({ state: 'attached' });
     await stageNav.waitFor({ state: 'hidden' });
     assert.equal(await page.locator('#insights .lf-history-pair img').count(), 2);
-    assert.match(await page.locator('#design .lf-design-tools').innerText(), /Design tools\s+Figma and FigJam/);
+    assert.doesNotMatch(await page.locator('#design').innerText(), /Design tools/i);
     assert.doesNotMatch(await page.locator('article').innerText(), /No update yet|Sources and credits|A prototype for the next conversation/i);
     assert.equal(await page.locator('.lf-motion video').count(), 0, 'Reduced motion starts with still images');
     await page.locator('.lf-static-device').evaluateAll(async images => { for (const image of images) { image.loading = 'eager'; await image.decode(); } });
@@ -62,8 +62,18 @@ try {
     await page.locator('#overview').evaluate(section => section.scrollIntoView({ behavior: 'instant' }));
     await page.waitForFunction(() => document.querySelector('#research').getBoundingClientRect().top > 120);
     await stageNav.waitFor({ state: 'hidden' });
+    await page.locator('#research').evaluate(async section => {
+      window.scrollTo({ top: window.scrollY + section.getBoundingClientRect().top - 30, behavior: 'instant' });
+      await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+    });
+    assert.equal(await stageNav.isVisible(), false);
     await page.locator('#research').evaluate(section => section.scrollIntoView({ behavior: 'instant' }));
     await stageNav.waitFor({ state: 'visible' });
+    assert.equal(await page.locator('.lf-mobile-index').isVisible(), false);
+    const indexBox = await stageNav.boundingBox();
+    assert.ok(indexBox.x < width / 4 && height - indexBox.y - indexBox.height < 80);
+    assert.ok(indexBox.x + indexBox.width <= width && indexBox.y + indexBox.height <= height);
+    if ([1440, 390, 320].includes(width)) await page.screenshot({ path: `${out}/research-${width}.png` });
 
     await page.locator('.lf-gallery-item').nth(1).click();
     assert.equal(await page.locator('.lf-design-gallery').getAttribute('data-active'), '1');
@@ -80,13 +90,9 @@ try {
     assert.equal(await page.locator('.lf-structure-dialog').evaluate(dialog => dialog.open), false);
     await page.locator('#insights').evaluate(section => section.scrollIntoView({ behavior: 'instant' }));
     if ([1440, 390].includes(width)) await page.screenshot({ path: `${out}/insights-${width}.png` });
-    if (width > 700) {
-      await page.locator('.lf-stage-index a[href="#design"]').click();
-      await page.waitForFunction(() => document.querySelector('.lf-stage-index a[aria-current="location"]')?.getAttribute('href') === '#design');
-    } else {
-      await page.locator('.lf-mobile-index select').selectOption('design');
-      assert.ok(page.url().endsWith('#design'));
-    }
+    await stageNav.getByRole('link', { name: 'Design' }).click();
+    await page.waitForURL(url => url.hash === '#design');
+    await page.waitForFunction(() => document.querySelector('.lf-stage-index a[aria-current="location"]')?.getAttribute('href') === '#design');
     console.log(`Responsive case and interactions passed at ${width}px`);
   }
 
@@ -116,7 +122,7 @@ try {
   await plain.goto(base + '/work/medicine-app');
   assert.equal(await plain.locator('h1').textContent(), 'Meditimer');
   assert.equal(await plain.locator('[aria-label="Case study stages"] a').count(), 5);
-  await plain.getByRole('link', { name: 'View screen full size' }).click({ noWaitAfter: true });
+  await plain.getByRole('link', { name: 'View screen full size' }).press('Enter');
   await plain.waitForURL('**/scan-screen.png', { waitUntil: 'domcontentloaded' });
   await plainContext.close();
   assert.deepEqual(errors, []);

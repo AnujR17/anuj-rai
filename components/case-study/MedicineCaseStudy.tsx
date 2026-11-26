@@ -45,7 +45,7 @@ export function MedicineCaseStudy({ project }: { project: Project }) {
     </section>
 
     <div className="lf-case-story" id="lf-case-story">
-      <LayeredCaseNav startAtResearch />
+      <LayeredCaseNav startAtResearch mobileLinks />
       <section className="lf-scene lf-research" id="research" data-tone="light" aria-labelledby="research-title">
         <div className="lf-scene-content">
           <div className="lf-research-opening">
@@ -91,7 +91,6 @@ export function MedicineCaseStudy({ project }: { project: Project }) {
         <div className="lf-scene-content">
           <div className="lf-design-heading">
             <h2 id="design-title">From prescription to routine</h2>
-            <dl className="lf-design-tools"><div><dt>Design tools</dt><dd>Figma and FigJam</dd></div></dl>
           </div>
           <p className="lf-design-intro">Review the prescription and suggested reminders before confirming a schedule.</p>
           <MedicineGallery />

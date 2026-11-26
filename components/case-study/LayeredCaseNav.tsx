@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { caseStages, type StageId } from "@/data/case-study";
 
-export function LayeredCaseNav({ startAtResearch = false }: { startAtResearch?: boolean }) {
+export function LayeredCaseNav({ startAtResearch = false, mobileLinks = false }: { startAtResearch?: boolean; mobileLinks?: boolean }) {
   const nav = useRef<HTMLElement>(null);
   const mobile = useRef<HTMLLabelElement>(null);
   const [active, setActive] = useState<StageId>("research");
@@ -17,13 +17,15 @@ export function LayeredCaseNav({ startAtResearch = false }: { startAtResearch?: 
     const update = () => {
       pending = 0;
       const bounds = story.getBoundingClientRect(), desktop = innerWidth > 700;
-      const index = desktop ? nav.current! : mobile.current!;
+      const useLinks = desktop || mobileLinks;
+      const index = useLinks ? nav.current! : mobile.current!;
       const height = index.getBoundingClientRect().height;
-      const inset = Math.max(32, Math.min(64, innerHeight * .06));
-      index.style.top = Math.min(desktop ? innerHeight - inset - height : 0, bounds.bottom - height - (desktop ? 24 : 0)) + "px";
-      const firstStageOffset = startAtResearch ? parseFloat(getComputedStyle(sections[0]).scrollMarginTop) + 1 : desktop ? 120 : 96;
-      nav.current!.dataset.visible = String(desktop && bounds.top <= firstStageOffset && bounds.bottom > 24);
-      mobile.current!.dataset.visible = String(!desktop && bounds.top <= firstStageOffset && bounds.bottom > 0);
+      const inset = desktop ? Math.max(32, Math.min(64, innerHeight * .06)) : 16;
+      const linkClearance = desktop ? 24 : 12;
+      index.style.top = Math.min(useLinks ? innerHeight - inset - height : 0, bounds.bottom - height - (useLinks ? linkClearance : 0)) + "px";
+      const firstStageOffset = startAtResearch ? 1 : desktop ? 120 : 96;
+      nav.current!.dataset.visible = String(useLinks && bounds.top <= firstStageOffset && bounds.bottom > linkClearance);
+      mobile.current!.dataset.visible = String(!useLinks && bounds.top <= firstStageOffset && bounds.bottom > 0);
       let current: StageId = "research";
       for (const section of sections) if (section.getBoundingClientRect().top <= (desktop ? Math.min(180, innerHeight * .25) : 96)) current = section.id as StageId;
       setActive(current);
@@ -38,9 +40,9 @@ export function LayeredCaseNav({ startAtResearch = false }: { startAtResearch?: 
     window.addEventListener("scroll", queue, { passive: true }); window.addEventListener("resize", queue); window.addEventListener("hashchange", queue);
     document.fonts.ready.then(queue); queue();
     return () => { alive = false; cancelAnimationFrame(pending); resize.disconnect(); window.removeEventListener("scroll", queue); window.removeEventListener("resize", queue); window.removeEventListener("hashchange", queue); delete article.dataset.enhanced; };
-  }, [startAtResearch]);
+  }, [startAtResearch, mobileLinks]);
   return <>
-    <nav ref={nav} className="lf-stage-index" aria-label="Case study stages">{caseStages.map(stage => <a href={`#${stage.id}`} key={stage.id} aria-current={active === stage.id ? "location" : undefined}>{stage.title}</a>)}</nav>
+    <nav ref={nav} className="lf-stage-index" data-mobile-links={mobileLinks || undefined} aria-label="Case study stages">{caseStages.map(stage => <a href={`#${stage.id}`} key={stage.id} aria-current={active === stage.id ? "location" : undefined}>{stage.title}</a>)}</nav>
     <label ref={mobile} className="lf-mobile-index">Stage<select aria-label="Case study stage" value={active} onChange={event => { location.hash = event.target.value; }}>{caseStages.map(stage => <option value={stage.id} key={stage.id}>{stage.title}</option>)}</select></label>
   </>;
 }

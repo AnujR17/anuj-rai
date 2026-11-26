@@ -126,6 +126,7 @@
 /* Match the opening surface to the original desktop and mobile exports. */
 .lf-medicine-hero { --lf-hero-surface: #eaeaea; background: var(--lf-hero-surface); }
 .lf-main .lf-medicine-hero .lf-motion-visual { background: var(--lf-hero-surface); }
+.lf-main[data-restored-case="medicine-app"] #research { scroll-margin-top: 0; }
 .lf-main[data-restored-case="medicine-app"] .lf-overview-reading { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 56px; }
 .lf-main[data-restored-case="medicine-app"] .lf-overview-contribution { grid-template-columns: 1fr; }
 .lf-main[data-restored-case="medicine-app"] .lf-insight-copy h2 { margin-bottom: 27px; }
@@ -135,9 +136,6 @@
 .lf-history-pair h3 { font-size: 16px; margin-bottom: 14px; }
 .lf-main[data-restored-case="medicine-app"] .lf-design,
 .lf-main[data-restored-case="medicine-app"] .lf-feature-grid .lf-motion-visual { background: #ebebeb; }
-.lf-design-tools { flex-shrink: 0; min-width: 140px; font-size: 16px; line-height: 1.5; }
-.lf-design-tools dt { font-weight: 550; color: #28583b; }
-.lf-design-tools dd { margin-top: 4px; }
 .lf-feature-phone { aspect-ratio: 3 / 5; display: grid; place-items: center; }
 .lf-feature-phone .lf-static-device { width: 60%; }
 .lf-main[data-restored-case="medicine-app"] .lf-feature-grid h3 { margin-block: 16px 8px; }
@@ -150,11 +148,24 @@
 
 @media (max-width: 700px) {
   .lf-medicine-hero { --lf-hero-surface: #ebebeb; }
+  .lf-main[data-enhanced=true] .lf-stage-index[data-mobile-links=true] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: max-content;
+    max-width: calc(100% - 2 * var(--lf-inset));
+    gap: 0 9px;
+    padding-inline: 8px;
+    border-radius: 4px;
+    background: #f7f7f2;
+    box-shadow: 0 1px 6px #1c19172b;
+  }
+  .lf-main[data-enhanced=true] .lf-stage-index[data-mobile-links=true]:has(a[data-tone=dark]) { background: #28583b; }
+  .lf-stage-index[data-mobile-links=true] a { min-height: 44px; font-size: 12px; }
   .lf-main[data-restored-case="medicine-app"] .lf-overview-reading,
   .lf-med-history-layout { grid-template-columns: 1fr; }
   .lf-main[data-restored-case="medicine-app"] .lf-paired-study { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
   .lf-main[data-restored-case="medicine-app"] .lf-paired-study h3 { margin-bottom: 12px; }
-  .lf-design-tools { margin-top: 18px; }
   .lf-feature-phone { max-width: 400px; }
   .lf-main[data-restored-case="medicine-app"] .lf-feature-grid > section:has(.lf-feature-phone) h3 { margin-top: 16px; }
 }
