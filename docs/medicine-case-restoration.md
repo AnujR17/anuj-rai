@@ -1,5 +1,11 @@
 # Meditimer restoration and publication
 
+## Overview and screen selection
+
+The overview now identifies Meditimer as a mobile application, with interaction design as the role, healthcare as the domain, a duration of 15 days, and Figma and FigJam as the tools. This duration supersedes the earlier three-week entry for this app.
+
+The Concept section shows the original prescription-capture, medicine-review and schedule wireframes from Figma nodes `28:508`, `31:958` and `31:1085`. Design adds the original prescription-introduction, role-selection and meal-time onboarding screens from nodes `797:4623`, `797:4987` and `797:4771`. All six images retain the original artboard proportions and open at full size.
+
 ## Original opening and history comparison
 
 The opening uses the original desktop composition and mobile scan image, with the page background matched to each export. The Insights assets `history-partial.webp` and `history-taken.webp` show Figma nodes `3121:48` and `3121:109` in file `on1gbKHkUo4CLZ38uCiSza`. Each frame was exported at its original size and fitted into a fixed, transparent phone shell.

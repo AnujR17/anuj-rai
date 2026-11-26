@@ -26,6 +26,11 @@ try {
     assert.deepEqual(await page.locator('.lf-scene').evaluateAll(sections => sections.map(section => section.id)), stages);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `Overflow at ${width}px`);
     assert.equal(await page.locator('.lf-facts details').count(), 3);
+    assert.deepEqual(await page.locator('.lf-medicine-metadata dt').allTextContents(), ['Discipline', 'Role', 'Domain', 'Duration', 'Tools & Technologies']);
+    assert.match(await page.locator('.lf-medicine-metadata').innerText(), /15 days/);
+    assert.equal(await page.locator('#overview').getByText('My contribution', { exact: true }).count(), 0);
+    assert.equal(await page.locator('#concept .lf-screen-strip img').count(), 3);
+    assert.equal(await page.locator('#design .lf-screen-strip img').count(), 3);
     const heroImage = page.locator('#hero .lf-opening-visual img');
     assert.equal(await heroImage.count(), 1);
     await heroImage.evaluate(image => image.decode());

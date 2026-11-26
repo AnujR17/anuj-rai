@@ -19,7 +19,7 @@ export const mainProjects: Project[] = [
     "summary": "Meditimer brings prescription setup, reminders and shared dose records into one medicine routine.",
     "brief": "Design a medicine routine that a person can manage and share with a caregiver.",
     "problem": "When a dose goes unrecorded, a caregiver lacks the context to decide whether to check in.",
-    "duration": "3 weeks",
+    "duration": "15 days",
     "contribution": "Research, information architecture, interaction design and prototyping",
     "visual": "medicine",
     "resources": [

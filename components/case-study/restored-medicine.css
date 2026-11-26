@@ -19,6 +19,10 @@
 .lf-overview-layout { display:block; max-width:1280px; margin:auto; padding-left:200px; }
 .lf-overview h2 { font-size:25px; font-weight:450; line-height:1.25; letter-spacing:-.025em; }
 .lf-overview-summary { margin-top:24px; font-size:16px; line-height:1.65; }
+.lf-medicine-metadata { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:16px 28px; max-width:700px; margin-top:28px; }
+.lf-medicine-metadata dt { margin-bottom:4px; color:#3d7653; font-size:15px; font-weight:500; }
+.lf-medicine-metadata dd { font-size:16px; line-height:1.5; }
+.lf-medicine-metadata > div:last-child:nth-child(odd) { grid-column:1 / -1; }
 .lf-overview-reading { display:grid; gap:34px; margin-top:45px; }
 .lf-overview-reading h3,.lf-overview-contribution dt { font-size:15px; font-weight:500; margin-bottom:16px; }
 .lf-overview-reading p,.lf-overview-contribution dd { font-size:16px; line-height:1.7; }
@@ -107,6 +111,16 @@
 .lf-architecture-heading > div { max-width:590px; }
 .lf-architecture-heading p { margin-top:18px; }
 .lf-board-link { display:inline-flex; align-items:center; min-height:44px; margin-top:16px; font-size:15px; text-decoration:underline; text-underline-offset:6px; }
+.lf-screen-section { margin-top:100px; }
+.lf-screen-section-heading { display:grid; grid-template-columns:1fr 1fr; gap:30px 60px; align-items:start; }
+.lf-screen-section-heading h3,.lf-setup-heading { font-size:25px; font-weight:450; line-height:1.25; letter-spacing:-.03em; }
+.lf-screen-section-heading p { max-width:52ch; }
+.lf-screen-strip { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:clamp(16px, 3vw, 42px); align-items:start; margin-top:38px; padding:clamp(24px, 3.5vw, 44px); background:#e5ebe7; }
+.lf-screen-strip a { display:block; width:min(100%, 230px); justify-self:center; }
+.lf-screen-strip img { display:block; width:100%; height:auto; }
+.lf-onboarding-section { margin-top:60px; }
+.lf-setup-heading { margin-top:96px; }
+.lf-setup-heading + .lf-design-intro { margin-top:16px; }
 .lf-design-intro { max-width:64ch; margin-top:30px; }
 .lf-screen-links { display:flex; flex-wrap:wrap; gap:0 28px; }
 .lf-image-dialog>img { max-width:402px; }
@@ -126,6 +140,12 @@
 @media (max-width:700px) {
  .lf-hero { grid-template-rows:570px auto auto; }
  .lf-research-findings > div { grid-template-columns:1fr; gap:8px; padding:20px 0; }
+ .lf-screen-section { margin-top:70px; }
+ .lf-screen-section-heading { grid-template-columns:1fr; gap:16px; }
+ .lf-screen-strip { grid-template-columns:repeat(2, minmax(0, 1fr)); gap:18px; margin-top:26px; padding:20px; }
+ .lf-screen-strip a:last-child { grid-column:1 / -1; width:min(calc((100% - 18px) / 2), 230px); }
+ .lf-onboarding-section { margin-top:45px; }
+ .lf-setup-heading { margin-top:70px; }
  .lf-opening-visual { top:56px; left:50%; right:auto; width:min(78%, 300px); transform:translateX(-50%); }
  .lf-opening-visual .lf-motion-visual { aspect-ratio:3 / 5; }
  .lf-overview-contribution { grid-template-columns:1fr; }

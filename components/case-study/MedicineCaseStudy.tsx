@@ -9,6 +9,26 @@ import "./restored-medicine.css";
 
 const media = "/portfolio/meditimer-case";
 
+const wireframes = [
+  { src: "/portfolio/screens/capture.png", alt: "Early wireframe for scanning or uploading a prescription" },
+  { src: "/portfolio/screens/review.png", alt: "Early wireframe for reviewing a medicine and its timing" },
+  { src: "/portfolio/screens/routine.png", alt: "Early wireframe for confirming the medicine schedule" },
+];
+
+const onboardingScreens = [
+  { src: `${media}/onboarding-scan.png`, alt: "Onboarding screen introducing prescription scanning" },
+  { src: `${media}/onboarding-person.png`, alt: "Onboarding screen for choosing a personal or caregiver routine" },
+  { src: `${media}/onboarding-meals.png`, alt: "Onboarding screen for setting usual meal times" },
+];
+
+function ScreenStrip({ screens, label }: { screens: { src: string; alt: string }[]; label: string }) {
+  return <div className="lf-screen-strip" role="group" aria-label={label}>
+    {screens.map(screen => <a href={screen.src} key={screen.src} aria-label={`Open full-size image: ${screen.alt}`}>
+      <Image src={screen.src} alt={screen.alt} width={402} height={874} sizes="(max-width: 700px) 42vw, 230px" />
+    </a>)}
+  </div>;
+}
+
 export function MedicineCaseStudy({ project }: { project: Project }) {
   const research = project.stages.research[0].paragraphs;
   const insights = project.stages.insights[0].paragraphs;
@@ -34,12 +54,19 @@ export function MedicineCaseStudy({ project }: { project: Project }) {
 
     <section className="lf-overview" id="overview" aria-labelledby="overview-title">
       <div className="lf-overview-layout">
-        <div className="lf-overview-content"><h2 id="overview-title">Project overview</h2><p className="lf-overview-summary">{project.summary}</p></div>
+        <div className="lf-overview-content"><h2 id="overview-title">Project overview</h2><p className="lf-overview-summary">{project.summary}</p>
+          <dl className="lf-medicine-metadata">
+            <div><dt>Discipline</dt><dd>Mobile Application</dd></div>
+            <div><dt>Role</dt><dd>Interaction Designer</dd></div>
+            <div><dt>Domain</dt><dd>Healthcare</dd></div>
+            <div><dt>Duration</dt><dd>{project.duration}</dd></div>
+            <div><dt>Tools &amp; Technologies</dt><dd>Figma, FigJam</dd></div>
+          </dl>
+        </div>
         <div className="lf-overview-reading">
           <section><h3>Project brief</h3><p>{project.brief}</p></section>
           <section><h3>Problem statement</h3><p>{project.problem}</p></section>
         </div>
-        <dl className="lf-overview-contribution"><div><dt>My contribution</dt><dd>{project.contribution}</dd></div></dl>
         <MedicineFacts />
       </div>
     </section>
@@ -82,6 +109,10 @@ export function MedicineCaseStudy({ project }: { project: Project }) {
           </div>
           <div className="lf-concept-explanation"><p>{concept[2]}</p></div>
           <MedicineStructure />
+          <section className="lf-screen-section" aria-labelledby="wireframes-title">
+            <div className="lf-screen-section-heading"><h3 id="wireframes-title">Exploring the setup</h3><p>Early wireframes follow the path from scanning a prescription to reviewing medicines and confirming a schedule.</p></div>
+            <ScreenStrip screens={wireframes} label="Early prescription setup wireframes" />
+          </section>
         </div>
       </section>
 
@@ -90,6 +121,11 @@ export function MedicineCaseStudy({ project }: { project: Project }) {
           <div className="lf-design-heading">
             <h2 id="design-title">From prescription to routine</h2>
           </div>
+          <section className="lf-screen-section lf-onboarding-section" aria-labelledby="onboarding-title">
+            <div className="lf-screen-section-heading"><h3 id="onboarding-title">Getting started</h3><p>Onboarding introduces prescription scanning, asks who the routine is for and sets meal times for reminders.</p></div>
+            <ScreenStrip screens={onboardingScreens} label="Meditimer onboarding screens" />
+          </section>
+          <h3 className="lf-setup-heading">Reviewing the prescription</h3>
           <p className="lf-design-intro">Review the prescription and suggested reminders before confirming a schedule.</p>
           <MedicineGallery />
           <div className="lf-feature-heading"><h3>After setup</h3></div>

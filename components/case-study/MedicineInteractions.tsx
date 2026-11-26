@@ -63,7 +63,7 @@ export function MedicineStructure() {
 }
 
 const facts = [
-  { value: "3", title: "Weeks", detail: "The project covered research, information architecture and a clickable prototype in three weeks." },
+  { value: "15", title: "Days", detail: "The project covered research, information architecture and a clickable prototype in 15 days." },
   { value: "24", title: "Survey responses", detail: "The survey asked about medicine schedules, reasons for forgetting and gaps in existing reminders." },
   { value: "7", title: "Interviews", detail: "The conversations explored personal routines and how people keep track of a parent’s medicine." },
 ];
